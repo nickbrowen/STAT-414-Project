@@ -1,0 +1,162 @@
+---
+title: "Merge"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(reshape2)
+```
+
+
+```{r}
+olympics <- read.csv(
+  url("https://raw.githubusercontent.com/nickbrowen/STAT-414-Project/master/Track%20Results.csv"))
+pop <- read.csv("population.csv")
+gdp <- read.csv("gdp.csv")
+codes <- read.csv("country-codes.csv")
+```
+
+```{r}
+head(olympics)
+head(pop)
+head(gdp)
+head(codes)
+```
+
+```{r}
+codes
+```
+
+
+
+
+
+goal: long data format
+Geo   Year    GDP
+---------------------
+Afg   1800    3280000
+Afg   1801    3280000
+...
+
+```{r}
+# Convert gdp and pop data into long format
+pop_long <- pop %>% 
+  melt() %>% 
+  mutate(year = variable %>% substr(2,5) %>% as.numeric()) %>%
+  select(geo, year, value)
+
+colnames(pop_long) <- c("country", "year", "population")
+
+gdp_long <- gdp %>% 
+  melt() %>%
+  mutate(year = variable %>% substr(2,5) %>% as.numeric()) %>%
+  select(geo, value, year)
+
+colnames(gdp_long) <- c("country", "gdp", "year")
+
+# Join the two data sets
+country_data <- full_join(gdp_long, pop_long, by=c("country", "year")) %>%
+  select(year, country, gdp, population)
+```
+
+
+```{r}
+colnames(codes) <- c("x", "country", "code")
+codes <- codes %>% select(code, country)
+codes$code <- codes$code %>% as.character()
+codes$country <- codes$country %>% as.character()
+```
+
+
+USA
+GBR
+```{r}
+codes
+```
+
+
+do a join on x=country data, y=codes to get the country codes and keep all observations in x
+
+```{r}
+country_codes <- full_join(country_data, codes, by="country")
+
+country_codes %>% filter(year == 1801) %>% filter(is.na(code)) %>% select(year, country)
+
+codes %>% filter(country == "Bolivia")
+```
+
+
+
+
+
+
+
+
+Now merge country_codes with olympics.
+
+goal: keep each row in olympics, include that athlete's country, gdp, population
+
+gender  event location  year  medal name  nationality result  gdp, population
+
+```{r}
+colnames(olympics) <- c("gender", "event", "hostCity", "year", 
+                        "medal", "name", "code", "result", "X")
+olympics <- olympics %>% select(name, code, year, event, medal, result, hostCity, gender)
+```
+
+```{r}
+data <- full_join(olympics, country_codes, by=c("year", "code"))
+```
+Events to filter out:
+
+Heptathlon Women
+Decathlon Men
+Discus Throw Men
+Hammer Throw Men
+High Jump Men
+Javelin Throw Men
+Long Jump Men
+Pole Vault Men
+Shot Put Men
+Triple Jump Men
+Discus Throw Women
+Hammer Throw Women
+High Jump Women
+Javelin Throw Women
+Long Jump Women
+ Pole Vault Women
+ Shot Put Women
+ Triple Jump Women
+```{r}
+data
+```
+
+```{r}
+drop_events <- c("Heptathlon Women", "Decathlon Men", "Discus Throw Men", "Hammer Throw Men", "High Jump Men", "Javelin Throw Men", 
+                 "Long Jump Men", "Pole Vault Men", "Shot Put Men", "Triple Jump Men", "Discus Throw Women", "Hammer Throw Women", 
+                 "High Jump Women", "Javelin Throw Women", "Long Jump Women", "Pole Vault Women", "Shot Put Women", "Triple Jump Women")
+
+'%!in%' <- function(x,y)!('%in%'(x,y))
+
+track_data <- data %>% filter(event %!in% drop_events) %>%
+  filter(!is.na(event))
+```
+
+
+
+```{r}
+#track_data %>% write.csv("track_data.csv")
+```
+
+
+
+
+
+
+
+
+
+
+
+
