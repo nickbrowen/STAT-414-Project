@@ -4,6 +4,8 @@
 #### Eric
 I merged much of the data. we now have a file containing infor on each medalist to compete in the olympics as well as their country's population and gdp for that year. File name is `track_data.csv`.
 
+Note that gdp data only goes up to 2013. We could either try to find data on 2013 - present or we could just filter out all years after 2013. I'd be happy to just take out the years after 2013 once we start analysis.
+
 
 #### Nick
 
