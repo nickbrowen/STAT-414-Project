@@ -144,6 +144,27 @@ track_data <- data %>% filter(event %!in% drop_events) %>%
 ```
 
 
+```{r}
+track_data$name <- track_data$name %>% tolower()
+track_data
+```
+
+
+```{r}
+medalists <- read.csv("track_medalists.csv")
+medalists$Name <- medalists$Name %>% tolower()
+medalists
+```
+
+```{r}
+medalists %>% 
+```
+
+
+
+
+
+
 
 ```{r}
 #track_data %>% write.csv("track_data.csv")
