@@ -153,16 +153,76 @@ track_data
 ```{r}
 medalists <- read.csv("track_medalists.csv")
 medalists$Name <- medalists$Name %>% tolower()
-medalists
 ```
 
 ```{r}
-medalists %>% 
+medalists <- medalists %>% mutate(
+  Medal = case_when(Medal == "Gold" ~ "G",
+            Medal == "Silver" ~ "S",
+            Medal == "Bronze" ~ "B")
+)
+
 ```
 
 
+```{r}
+medalists
+```
+```{r}
+track_data
+```
+year, event, medal
+
+```{r}
+track_data %>% select(event) %>% unique()
+```
 
 
+Athletics Men's 1,500 metres               
+Athletics Men's 10,000 metres              
+Athletics Men's Marathon        
+Athletics Women's 5,000 metres             
+Athletics Men's 4 x 400 metres Relay
+Athletics Men's 100 metres                 
+Athletics Men's 4 x 100 metres Relay        
+Athletics Men's 400 metres Hurdles
+Athletics Women's 4 x 400 metres Relay     
+Athletics Women's 4 x 100 metres Relay     
+Athletics Women's 100 metres Hurdles
+Athletics Men's Cross-Country, Team        
+Athletics Men's 10 kilometres Walk
+Athletics Men's 3,000 metres Steeplechase  
+Athletics Women's 400 metres
+Athletics Men's 800 metres                 
+[27] Athletics Men's Pole Vault                  Athletics Women's Marathon                 
+[29] Athletics Men's 110 metres Hurdles          Athletics Men's Cross-Country, Individual  
+[31] Athletics Men's Shot Put                    Athletics Men's 20 kilometres Walk         
+[33] Athletics Women's Discus Throw              Athletics Women's 400 metres Hurdles       
+[35] Athletics Men's 5,000 metres                Athletics Men's 200 metres                 
+[37] Athletics Men's 50 kilometres Walk          Athletics Women's 100 metres               
+[39] Athletics Women's 3,000 metres Steeplechase Athletics Women's High Jump                
+[41] Athletics Men's Decathlon                   Athletics Women's 10,000 metres            
+[43] Athletics Men's 400 metres                  Athletics Men's Javelin Throw              
+[45] Athletics Men's 3,000 metres, Team          Athletics Women's 1,500 metres             
+[47] Athletics Men's Standing Triple Jump        Athletics Women's Heptathlon               
+[49] Athletics Women's 800 metres                Athletics Men's 4,000 metres Steeplechase  
+[51] Athletics Men's 5,000 metres, Team          Athletics Men's Pentathlon                 
+[53] Athletics Women's Pentathlon                Athletics Women's 200 metres               
+[55] Athletics Women's 80 metres Hurdles         Athletics Men's 1,600 metres Medley Relay  
+[57] Athletics Men's 1,500 metres Walk           Athletics Men's 3 mile, Team               
+[59] Athletics Men's 200 metres Hurdles          Athletics Women's 3,000 metres             
+[61] Athletics Men's 2,500 metres Steeplechase   Athletics Women's 10 kilometres Walk       
+[63] Athletics Men's 4 mile, Team                Athletics Women's Hammer Throw             
+[65] Athletics Men's 5 mile                      Athletics Men's 2,590 metres Steeplechase  
+[67] Athletics Men's 56-pound Weight Throw       Athletics Women's Triple Jump              
+[69] Athletics Men's Stone Throw                 Athletics Men's Javelin Throw, Freestyle   
+[71] Athletics Women's Pole Vault                Athletics Men's 3,200 metres Steeplechase  
+[73] Athletics Men's 3,000 metres Walk           Athletics Men's Discus Throw, Greek Style  
+[75] Athletics Women's 20 kilometres Walk        Athletics Men's All-Around Championship    
+[77] Athletics Men's 60 metres                   Athletics Men's 3,500 metres Walk          
+[79] Athletics Men's 10 mile Walk                Athletics Men's Pentathlon (Ancient)       
+[81] Athletics Men's Discus Throw, Both Hands    Athletics Men's Shot Put, Both Hands       
+[83] Athletics Men's Javelin Throw, Both Hands  
 
 
 
