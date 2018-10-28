@@ -10,8 +10,7 @@ library(reshape2)
 
 
 ```{r}
-olympics <- read.csv(
-  url("https://raw.githubusercontent.com/nickbrowen/STAT-414-Project/master/Track%20Results.csv"))
+olympics <- read.csv("Track-Results.csv")
 pop <- read.csv("population.csv")
 gdp <- read.csv("gdp.csv")
 codes <- read.csv("country-codes.csv")
@@ -100,6 +99,7 @@ goal: keep each row in olympics, include that athlete's country, gdp, population
 gender  event location  year  medal name  nationality result  gdp, population
 
 ```{r}
+olympics
 colnames(olympics) <- c("gender", "event", "hostCity", "year", 
                         "medal", "name", "code", "result", "X")
 olympics <- olympics %>% select(name, code, year, event, medal, result, hostCity, gender)
@@ -135,18 +135,22 @@ data
 ```{r}
 drop_events <- c("Heptathlon Women", "Decathlon Men", "Discus Throw Men", "Hammer Throw Men", "High Jump Men", "Javelin Throw Men", 
                  "Long Jump Men", "Pole Vault Men", "Shot Put Men", "Triple Jump Men", "Discus Throw Women", "Hammer Throw Women", 
-                 "High Jump Women", "Javelin Throw Women", "Long Jump Women", "Pole Vault Women", "Shot Put Women", "Triple Jump Women")
+                 "High Jump Women", "Javelin Throw Women", "Long Jump Women", "Pole Vault Women", "Shot Put Women", "Triple Jump Women",
+                 "Decathlon Men", "Discus Throw Men", "Discus Throw Women", "Hammer Throw Men", "Hammer Throw Women", "Heptathlon Women", 
+                 "High Jump Men", "High Jump Women", "Javelin Throw Men", "Javelin Throw Women", "Long Jump Men", "Long Jump Women",
+                 "Pole Vault Men", "Pole Vault Women", "Shot Put Men", "Shot Put Women", "Triple Jump Men", "Triple Jump Women")
 
 '%!in%' <- function(x,y)!('%in%'(x,y))
 
 track_data <- data %>% filter(event %!in% drop_events) %>%
   filter(!is.na(event))
+
 ```
 
 
 ```{r}
 track_data$name <- track_data$name %>% tolower()
-track_data
+track_data$event %>% unique()
 ```
 
 
@@ -159,75 +163,96 @@ medalists$Name <- medalists$Name %>% tolower()
 medalists <- medalists %>% mutate(
   Medal = case_when(Medal == "Gold" ~ "G",
             Medal == "Silver" ~ "S",
-            Medal == "Bronze" ~ "B")
+            Medal == "Bronze" ~ "B")) %>%
+  select(-one_of("X"))
+```
+
+
+```{r}
+#Pare this down to the 29 events in track data
+keep.events <- c("Athletics Men's 10,000 metres", "Athletics Men's 100 metres", "Athletics Men's 110 metres Hurdles",
+  "Athletics Men's 1,500 metres", "Athletics Men's 200 metres", "Athletics Men's 20 kilometres Walk",
+  "Athletics Men's 3,000 metres Steeplechase", "Athletics Men's 400 metres Hurdles", "Athletics Men's 400 metres",
+  "Athletics Men's 4 x 100 metres Relay", "Athletics Men's 4 x 400 metres Relay", "Athletics Men's 5,000 metres",
+  "Athletics Men's 50 kilometres Walk", "Athletics Men's 800 metres", "Athletics Men's Marathon",
+  "Athletics Women's 10,000 metres", "Athletics Women's 100 metres Hurdles", "Athletics Women's 100 metres", 
+  "Athletics Women's 10,000 metres", "Athletics Women's 200 metres", "Athletics Women's 20 kilometres Walk",
+  "Athletics Women's 3,000 metres Steeplechase", "Athletics Women's 400 metres Hurdles", "Athletics Women's 400 metres",
+  "Athletics Women's 4 x 100 metres Relay", "Athletics Women's 4 x 400 metres Relay", "Athletics Women's 5,000 metres",
+  "Athletics Women's 800 metres", "Athletics Women's Marathon")
+
+medalists <- medalists %>% filter(Event %in% keep.events)
+```
+
+```{r}
+colnames(medalists) <- c("name", "year", "sex", "age", "height", "weight", "country", "code",
+                         "event", "medal")
+medalists <- medalists %>% select(name, event, year, medal, code, country, sex, age, height, weight, country)
+```
+
+```{r}
+medalists <- medalists %>% mutate(
+  event = case_when(event == "Athletics Men's 10,000 metres" ~ "10000M Men",
+                    event == "Athletics Men's 100 metres" ~ "100M Men",
+                    event == "Athletics Men's 110 metres Hurdles" ~ "110M Hurdles Men",
+                    event == "Athletics Men's 1,500 metres" ~ "1500M Men",
+                    event == "Athletics Men's 200 metres" ~ "200M Men",                 
+                    event == "Athletics Men's 20 kilometres Walk" ~ "20Km Race Walk Men",      
+                    event == "Athletics Men's 3,000 metres Steeplechase" ~ "3000M Steeplechase Men",  
+                    event == "Athletics Men's 400 metres Hurdles" ~ "400M Hurdles Men",       
+                    event == "Athletics Men's 400 metres" ~ "400M Men",                 
+                    event == "Athletics Men's 4 x 100 metres Relay" ~ "4X100M Relay Men",     
+                    event == "Athletics Men's 4 x 400 metres Relay" ~ "4X400M Relay Men",       
+                    event == "Athletics Men's 5,000 metres" ~ "5000M Men",               
+                    event == "Athletics Men's 50 kilometres Walk" ~ "50Km Race Walk Men",         
+                    event == "Athletics Men's 800 metres" ~ "800M Men",                
+                    event == "Athletics Men's Marathon" ~ "Marathon Men",                   
+                    event == "Athletics Women's 10,000 metres" ~ "10000M Women",
+                    event == "Athletics Women's 100 metres Hurdles" ~ "100M Hurdles Women",
+                    event == "Athletics Women's 100 metres" ~ "100M Women", 
+                    event == "Athletics Women's 10,000 metres" ~ "10000M Women",
+                    event == "Athletics Women's 200 metres" ~ "200M Women",
+                    event == "Athletics Women's 20 kilometres Walk" ~ "20Km Race Walk Women", 
+                    event == "Athletics Women's 3,000 metres Steeplechase" ~ "3000M Steeplechase Women",
+                    event == "Athletics Women's 400 metres Hurdles" ~ "400M Hurdles Women",   
+                    event == "Athletics Women's 400 metres" ~ "400M Women",
+                    event == "Athletics Women's 4 x 100 metres Relay" ~ "4X100M Relay Women", 
+                    event == "Athletics Women's 4 x 400 metres Relay" ~ "4X400M Relay Women",  
+                    event == "Athletics Women's 5,000 metres" ~ "5000M Women",     
+                    event == "Athletics Women's 800 metres" ~ "800M Women",             
+                    event == "Athletics Women's Marathon" ~ "Marathon Women")
 )
 
+medalists$medal <- medalists$medal %>% as.factor()
+medalists$event <- medalists$event %>% as.factor()
+track_data$code <- track_data$code %>% as.factor()
 ```
 
 
-```{r}
-medalists
-```
+year, event, medal, code
 ```{r}
 track_data
+medalists
 ```
-year, event, medal
 
 ```{r}
-track_data %>% select(event) %>% unique()
+joined_data <- full_join(track_data, medalists, by = c("code", "event", "medal", "year")) %>% 
+  select(name.x, event, result, code, country.x, year, medal, hostCity, gender, 
+        gdp, population, age, height, weight) %>% 
+  filter(!is.na(gender))
+
+na_removed_data <- joined_data %>% filter(!is.na(gdp) & !is.na(age) & !is.na(height) & !is.na(weight))
 ```
-
-
-Athletics Men's 1,500 metres               
-Athletics Men's 10,000 metres              
-Athletics Men's Marathon        
-Athletics Women's 5,000 metres             
-Athletics Men's 4 x 400 metres Relay
-Athletics Men's 100 metres                 
-Athletics Men's 4 x 100 metres Relay        
-Athletics Men's 400 metres Hurdles
-Athletics Women's 4 x 400 metres Relay     
-Athletics Women's 4 x 100 metres Relay     
-Athletics Women's 100 metres Hurdles
-Athletics Men's Cross-Country, Team        
-Athletics Men's 10 kilometres Walk
-Athletics Men's 3,000 metres Steeplechase  
-Athletics Women's 400 metres
-Athletics Men's 800 metres                 
-[27] Athletics Men's Pole Vault                  Athletics Women's Marathon                 
-[29] Athletics Men's 110 metres Hurdles          Athletics Men's Cross-Country, Individual  
-[31] Athletics Men's Shot Put                    Athletics Men's 20 kilometres Walk         
-[33] Athletics Women's Discus Throw              Athletics Women's 400 metres Hurdles       
-[35] Athletics Men's 5,000 metres                Athletics Men's 200 metres                 
-[37] Athletics Men's 50 kilometres Walk          Athletics Women's 100 metres               
-[39] Athletics Women's 3,000 metres Steeplechase Athletics Women's High Jump                
-[41] Athletics Men's Decathlon                   Athletics Women's 10,000 metres            
-[43] Athletics Men's 400 metres                  Athletics Men's Javelin Throw              
-[45] Athletics Men's 3,000 metres, Team          Athletics Women's 1,500 metres             
-[47] Athletics Men's Standing Triple Jump        Athletics Women's Heptathlon               
-[49] Athletics Women's 800 metres                Athletics Men's 4,000 metres Steeplechase  
-[51] Athletics Men's 5,000 metres, Team          Athletics Men's Pentathlon                 
-[53] Athletics Women's Pentathlon                Athletics Women's 200 metres               
-[55] Athletics Women's 80 metres Hurdles         Athletics Men's 1,600 metres Medley Relay  
-[57] Athletics Men's 1,500 metres Walk           Athletics Men's 3 mile, Team               
-[59] Athletics Men's 200 metres Hurdles          Athletics Women's 3,000 metres             
-[61] Athletics Men's 2,500 metres Steeplechase   Athletics Women's 10 kilometres Walk       
-[63] Athletics Men's 4 mile, Team                Athletics Women's Hammer Throw             
-[65] Athletics Men's 5 mile                      Athletics Men's 2,590 metres Steeplechase  
-[67] Athletics Men's 56-pound Weight Throw       Athletics Women's Triple Jump              
-[69] Athletics Men's Stone Throw                 Athletics Men's Javelin Throw, Freestyle   
-[71] Athletics Women's Pole Vault                Athletics Men's 3,200 metres Steeplechase  
-[73] Athletics Men's 3,000 metres Walk           Athletics Men's Discus Throw, Greek Style  
-[75] Athletics Women's 20 kilometres Walk        Athletics Men's All-Around Championship    
-[77] Athletics Men's 60 metres                   Athletics Men's 3,500 metres Walk          
-[79] Athletics Men's 10 mile Walk                Athletics Men's Pentathlon (Ancient)       
-[81] Athletics Men's Discus Throw, Both Hands    Athletics Men's Shot Put, Both Hands       
-[83] Athletics Men's Javelin Throw, Both Hands  
-
 
 
 ```{r}
-#track_data %>% write.csv("track_data.csv")
+joined_data %>% dim()
+```
+
+
+```{r}
+joined_data %>% write.csv("final_data.csv")
+na_removed_data %>% write.csv("final_data_noNA.csv")
 ```
 
 
