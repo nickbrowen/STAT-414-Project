@@ -12,11 +12,11 @@ n = 1973
 n = 1368
 
 ##### Tidying
-I cleaned the "Result" variable which recorded the time athletes finished their time in. It was formatted differently for different years and events and was a character type. It is now two new variables.
+I cleaned the "Result" variable which recorded the time athletes finished their time in. It was formatted differently for different years and events, and it was a stubborn character type. It is now two new variables.
 * `timeSecs` is the time in seconds. Type is numeric.
 * `timeMins` is the time in minutes. Type is numeric.
 
-*Note:* I had to remove long distance events like the marathon, 20km walk, and 50km walk because the times were obviously wrong. Many of the finishing time for marathon had values like "35:15:10". Obviously nobody medaled in the marathon by finishing in either 35 minutes or 35 hours. Enough of these wierd values were present that I just removed these events.
+*Note:* I had to remove long distance events like the marathon, 20km walk, and 50km walk because the times were obviously wrong. Many of the finishing times for marathon had vague, incorrect values like "35:15:10". Obviously nobody medaled in the marathon by finishing in either 35 minutes or 35 hours. Enough of these wierd values were present that I just removed these events.
 
 ##### EDA
 I made a couple of quick plots but I didnt have much time. Just wanted to look at the relationships between a couple of variables quickly.
