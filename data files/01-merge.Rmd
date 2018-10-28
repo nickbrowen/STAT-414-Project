@@ -6,6 +6,7 @@ output: html_notebook
 ```{r}
 library(tidyverse)
 library(reshape2)
+library(lubridate)
 ```
 
 
@@ -132,19 +133,25 @@ Long Jump Women
 data
 ```
 
+
 ```{r}
 drop_events <- c("Heptathlon Women", "Decathlon Men", "Discus Throw Men", "Hammer Throw Men", "High Jump Men", "Javelin Throw Men", 
                  "Long Jump Men", "Pole Vault Men", "Shot Put Men", "Triple Jump Men", "Discus Throw Women", "Hammer Throw Women", 
                  "High Jump Women", "Javelin Throw Women", "Long Jump Women", "Pole Vault Women", "Shot Put Women", "Triple Jump Women",
                  "Decathlon Men", "Discus Throw Men", "Discus Throw Women", "Hammer Throw Men", "Hammer Throw Women", "Heptathlon Women", 
                  "High Jump Men", "High Jump Women", "Javelin Throw Men", "Javelin Throw Women", "Long Jump Men", "Long Jump Women",
-                 "Pole Vault Men", "Pole Vault Women", "Shot Put Men", "Shot Put Women", "Triple Jump Men", "Triple Jump Women")
+                 "Pole Vault Men", "Pole Vault Women", "Shot Put Men", "Shot Put Women", "Triple Jump Men", "Triple Jump Women",
+                 "20Km Race Walk Men", "50Km Race Walk Men", "Marathon Men", "20Km Race Walk Women", "Marathon Women")
 
 '%!in%' <- function(x,y)!('%in%'(x,y))
 
 track_data <- data %>% filter(event %!in% drop_events) %>%
   filter(!is.na(event))
 
+```
+
+```{r}
+track_data$event %>% unique()
 ```
 
 
@@ -170,16 +177,18 @@ medalists <- medalists %>% mutate(
 
 ```{r}
 #Pare this down to the 29 events in track data
-keep.events <- c("Athletics Men's 10,000 metres", "Athletics Men's 100 metres", "Athletics Men's 110 metres Hurdles",
-  "Athletics Men's 1,500 metres", "Athletics Men's 200 metres", "Athletics Men's 20 kilometres Walk",
-  "Athletics Men's 3,000 metres Steeplechase", "Athletics Men's 400 metres Hurdles", "Athletics Men's 400 metres",
-  "Athletics Men's 4 x 100 metres Relay", "Athletics Men's 4 x 400 metres Relay", "Athletics Men's 5,000 metres",
-  "Athletics Men's 50 kilometres Walk", "Athletics Men's 800 metres", "Athletics Men's Marathon",
-  "Athletics Women's 10,000 metres", "Athletics Women's 100 metres Hurdles", "Athletics Women's 100 metres", 
-  "Athletics Women's 10,000 metres", "Athletics Women's 200 metres", "Athletics Women's 20 kilometres Walk",
-  "Athletics Women's 3,000 metres Steeplechase", "Athletics Women's 400 metres Hurdles", "Athletics Women's 400 metres",
-  "Athletics Women's 4 x 100 metres Relay", "Athletics Women's 4 x 400 metres Relay", "Athletics Women's 5,000 metres",
-  "Athletics Women's 800 metres", "Athletics Women's Marathon")
+keep.events <- c("Athletics Men's 10,000 metres", "Athletics Men's 100 metres", 
+                 "Athletics Men's 110 metres Hurdles", "Athletics Men's 1,500 metres", 
+                 "Athletics Men's 200 metres", "Athletics Men's 3,000 metres Steeplechase", 
+                 "Athletics Men's 400 metres Hurdles", "Athletics Men's 400 metres", 
+                 "Athletics Men's 4 x 100 metres Relay", "Athletics Men's 4 x 400 metres Relay", 
+                 "Athletics Men's 5,000 metres", "Athletics Men's 800 metres",
+                 "Athletics Women's 10,000 metres", "Athletics Women's 100 metres Hurdles", 
+                 "Athletics Women's 100 metres", "Athletics Women's 10,000 metres", 
+                 "Athletics Women's 200 metres", "Athletics Women's 3,000 metres Steeplechase", 
+                 "Athletics Women's 400 metres Hurdles", "Athletics Women's 400 metres",
+                 "Athletics Women's 4 x 100 metres Relay", "Athletics Women's 4 x 400 metres Relay", 
+                 "Athletics Women's 5,000 metres", "Athletics Women's 800 metres")
 
 medalists <- medalists %>% filter(Event %in% keep.events)
 ```
@@ -197,31 +206,25 @@ medalists <- medalists %>% mutate(
                     event == "Athletics Men's 110 metres Hurdles" ~ "110M Hurdles Men",
                     event == "Athletics Men's 1,500 metres" ~ "1500M Men",
                     event == "Athletics Men's 200 metres" ~ "200M Men",                 
-                    event == "Athletics Men's 20 kilometres Walk" ~ "20Km Race Walk Men",      
                     event == "Athletics Men's 3,000 metres Steeplechase" ~ "3000M Steeplechase Men",  
                     event == "Athletics Men's 400 metres Hurdles" ~ "400M Hurdles Men",       
                     event == "Athletics Men's 400 metres" ~ "400M Men",                 
                     event == "Athletics Men's 4 x 100 metres Relay" ~ "4X100M Relay Men",     
                     event == "Athletics Men's 4 x 400 metres Relay" ~ "4X400M Relay Men",       
                     event == "Athletics Men's 5,000 metres" ~ "5000M Men",               
-                    event == "Athletics Men's 50 kilometres Walk" ~ "50Km Race Walk Men",         
                     event == "Athletics Men's 800 metres" ~ "800M Men",                
-                    event == "Athletics Men's Marathon" ~ "Marathon Men",                   
                     event == "Athletics Women's 10,000 metres" ~ "10000M Women",
                     event == "Athletics Women's 100 metres Hurdles" ~ "100M Hurdles Women",
                     event == "Athletics Women's 100 metres" ~ "100M Women", 
                     event == "Athletics Women's 10,000 metres" ~ "10000M Women",
                     event == "Athletics Women's 200 metres" ~ "200M Women",
-                    event == "Athletics Women's 20 kilometres Walk" ~ "20Km Race Walk Women", 
                     event == "Athletics Women's 3,000 metres Steeplechase" ~ "3000M Steeplechase Women",
                     event == "Athletics Women's 400 metres Hurdles" ~ "400M Hurdles Women",   
                     event == "Athletics Women's 400 metres" ~ "400M Women",
                     event == "Athletics Women's 4 x 100 metres Relay" ~ "4X100M Relay Women", 
                     event == "Athletics Women's 4 x 400 metres Relay" ~ "4X400M Relay Women",  
                     event == "Athletics Women's 5,000 metres" ~ "5000M Women",     
-                    event == "Athletics Women's 800 metres" ~ "800M Women",             
-                    event == "Athletics Women's Marathon" ~ "Marathon Women")
-)
+                    event == "Athletics Women's 800 metres" ~ "800M Women"))
 
 medalists$medal <- medalists$medal %>% as.factor()
 medalists$event <- medalists$event %>% as.factor()
@@ -231,8 +234,8 @@ track_data$code <- track_data$code %>% as.factor()
 
 year, event, medal, code
 ```{r}
-track_data
-medalists
+track_data$event %>% unique()
+medalists$event %>% unique()
 ```
 
 ```{r}
@@ -241,12 +244,52 @@ joined_data <- full_join(track_data, medalists, by = c("code", "event", "medal",
         gdp, population, age, height, weight) %>% 
   filter(!is.na(gender))
 
-na_removed_data <- joined_data %>% filter(!is.na(gdp) & !is.na(age) & !is.na(height) & !is.na(weight))
+colnames(joined_data) <- c("name", "event", "time", "country", "country2", "year", "medal", "city", "sex", "gdp",
+                           "pop", "age", "height", "weight")
 ```
 
 
+
+
+
 ```{r}
-joined_data %>% dim()
+timeToDecimal <- function(t){
+  # t is Time in seconds
+  t <- gsub("[^\\d]+", ".", t, perl=TRUE)
+    #as.duration()
+  lent <- nchar(t)
+
+  if(lent == 1){
+    t = NA
+  }else if(lent == 2){
+    # put in else at end
+    t = t
+  }else if(lent == 3){
+    # else at end
+    t = t
+  }else if(lent == 4){
+    # else at end
+    t = t
+  }else if(lent == 5){
+    t = t
+  } else if(lent == 7){
+    min <- substr(t, 1, 2) %>% as.numeric() %>% prod(60)
+    sec <- substr(t, 4, 7) %>% as.numeric() %>% sum(min)
+    t = sec %>% as.character()
+  }
+
+  return(t)
+}
+
+joined_data$timeSecs <- joined_data$time %>% sapply(timeToDecimal) %>% as.numeric()
+joined_data$timeMins <- joined_data$timeSecs / 60
+
+joined_data <- joined_data %>% filter(!is.na(timeMins))
+
+joined_data <- joined_data %>% select(name, event, timeSecs, timeMins, country, country2, year, medal, 
+                                      city, sex, gdp, pop, age, height, weight)
+
+na_removed_data <- joined_data %>% filter(!is.na(gdp) & !is.na(age) & !is.na(height) & !is.na(weight))
 ```
 
 
@@ -257,9 +300,19 @@ na_removed_data %>% write.csv("final_data_noNA.csv")
 
 
 
+# Final Datasets
+### 1. Joined Data
+is the full data set, including missing values
 
+```{r}
+joined_data
+```
 
-
+### 2. na_removed_data
+Removed the na values for EV's from `joined_data`
+```{r}
+na_removed_data
+```
 
 
 

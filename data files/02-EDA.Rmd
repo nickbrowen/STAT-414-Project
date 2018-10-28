@@ -1,0 +1,27 @@
+---
+title: "EDA"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+```
+
+```{r}
+data <- read.csv("final_data_noNA.csv") %>% select(-one_of("X"))
+head(data)
+```
+# Preliminary plots
+
+
+```{r}
+# Filters out China and India because they have huge populations
+ggplot(data=data %>% filter(pop < 1E+09)) + geom_boxplot(aes(x=gdp, y=pop, fill=medal))
+```
+
+
+```{r}
+ggplot(data=data) + geom_point(aes(x = year, y=timeMins, color = event)) + 
+  geom_line(aes(x=year, y=timeMins, color=event))
+```
+
+
