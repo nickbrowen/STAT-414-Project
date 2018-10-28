@@ -2,9 +2,13 @@
 
 ## What I did:
 #### Eric
-I merged much of the data. we now have a file containing infor on each medalist to compete in the olympics as well as their country's population and gdp for that year. File name is `track_data.csv`.
+I think the merge is complete. We have two new data files: 
 
-Note that gdp data only goes up to 2013. We could either try to find data on 2013 - present or we could just filter out all years after 2013. I'd be happy to just take out the years after 2013 once we start analysis.
+1. `final_data.csv` is data on each athlete, with NA values included for each of the EV's we are considering. We can use this file to do some more cleaning if we decide to omit or include any of the EV's.
+n = 2294
+
+2. `final_data_noNA.csv` is the data on each athlete with NA values omitted. We will probably end up using this file for EDA.
+n = 1536
 
 
 #### Nick
