@@ -287,7 +287,8 @@ joined_data$timeMins <- joined_data$timeSecs / 60
 joined_data <- joined_data %>% filter(!is.na(timeMins))
 
 joined_data <- joined_data %>% select(name, event, timeSecs, timeMins, country, country2, year, medal, 
-                                      city, sex, gdp, pop, age, height, weight)
+                                      city, sex, gdp, pop, age, height, weight) %>% 
+  filter(event %!in% c("4X400M Relay Men", "4X100M Relay Men", "4X100M Relay Women", "4X400M Relay Women"))
 
 na_removed_data <- joined_data %>% filter(!is.na(gdp) & !is.na(age) & !is.na(height) & !is.na(weight))
 ```

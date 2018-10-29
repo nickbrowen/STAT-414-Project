@@ -6,9 +6,13 @@ output: html_notebook
 library(tidyverse)
 ```
 
+
+
+
+
 ```{r}
 data <- read.csv("final_data_noNA.csv") %>% select(-one_of("X"))
-head(data)
+data
 ```
 # Preliminary plots
 
@@ -20,7 +24,7 @@ ggplot(data=data %>% filter(pop < 1E+09)) + geom_boxplot(aes(x=gdp, y=pop, fill=
 
 
 ```{r}
-ggplot(data=data) + geom_point(aes(x = year, y=timeMins, color = event)) + 
+ggplot(data=data %>% filter(timeMins < .5)) + geom_point(aes(x = year, y=timeMins, color = event)) + 
   geom_line(aes(x=year, y=timeMins, color=event))
 ```
 

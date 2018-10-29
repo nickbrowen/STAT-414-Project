@@ -474,896 +474,304 @@
 "473","frank waller","400M Men",49.9,0.831666666666667,"USA","United States",1904,"S","St Louis","M",-1.26,83900000,20,176,71
 "474","thomas burke","400M Men",54.2,0.903333333333333,"USA","United States",1896,"G","Athens","M",-2.04,72100000,21,183,66
 "475","herbert jamison","400M Men",55.2,0.92,"USA","United States",1896,"S","Athens","M",-2.04,72100000,20,173,69
-"476","null","4X100M Relay Men",37.61,0.626833333333333,"USA","United States",2000,"G","Sydney","M",4.16,282000000,31,179,77
-"477","null","4X100M Relay Men",37.61,0.626833333333333,"USA","United States",2000,"G","Sydney","M",4.16,282000000,32,175,75
-"478","null","4X100M Relay Men",37.61,0.626833333333333,"USA","United States",2000,"G","Sydney","M",4.16,282000000,26,176,80
-"479","null","4X100M Relay Men",37.61,0.626833333333333,"USA","United States",2000,"G","Sydney","M",4.16,282000000,25,170,72
-"480","null","4X100M Relay Men",37.61,0.626833333333333,"USA","United States",2000,"G","Sydney","M",4.16,282000000,25,178,73
-"481","null","4X100M Relay Men",37.61,0.626833333333333,"USA","United States",2000,"G","Sydney","M",4.16,282000000,22,183,81
-"482","null","4X100M Relay Men",37.9,0.631666666666667,"BRA","Brazil",2000,"S","Sydney","M",4.52,175000000,27,187,78
-"483","null","4X100M Relay Men",37.9,0.631666666666667,"BRA","Brazil",2000,"S","Sydney","M",4.52,175000000,29,186,88
-"484","null","4X100M Relay Men",37.9,0.631666666666667,"BRA","Brazil",2000,"S","Sydney","M",4.52,175000000,23,166,66
-"485","null","4X100M Relay Men",37.9,0.631666666666667,"BRA","Brazil",2000,"S","Sydney","M",4.52,175000000,27,190,95
-"486","null","4X100M Relay Men",37.9,0.631666666666667,"BRA","Brazil",2000,"S","Sydney","M",4.52,175000000,26,168,72
-"487","null","4X100M Relay Men",38.04,0.634,"CUB","Cuba",2000,"B","Sydney","M",5.35,11200000,22,178,75
-"488","null","4X100M Relay Men",38.04,0.634,"CUB","Cuba",2000,"B","Sydney","M",5.35,11200000,28,182,75
-"489","null","4X100M Relay Men",38.04,0.634,"CUB","Cuba",2000,"B","Sydney","M",5.35,11200000,22,176,74
-"490","null","4X100M Relay Men",38.04,0.634,"CUB","Cuba",2000,"B","Sydney","M",5.35,11200000,31,172,72
-"491","null","4X100M Relay Men",37.4,0.623333333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,25,183,82
-"492","null","4X100M Relay Men",37.4,0.623333333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,21,180,75
-"493","null","4X100M Relay Men",37.4,0.623333333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,31,188,80
-"494","null","4X100M Relay Men",37.4,0.623333333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,24,178,75
-"495","null","4X100M Relay Men",37.4,0.623333333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,26,175,70
-"496","null","4X100M Relay Men",38,0.633333333333333,"CUB","Cuba",1992,"B","Barcelona","M",-13.9,10700000,26,172,64
-"497","null","4X100M Relay Men",38,0.633333333333333,"CUB","Cuba",1992,"B","Barcelona","M",-13.9,10700000,24,167,69
-"498","null","4X100M Relay Men",38,0.633333333333333,"CUB","Cuba",1992,"B","Barcelona","M",-13.9,10700000,21,172,70
-"499","null","4X100M Relay Men",38,0.633333333333333,"CUB","Cuba",1992,"B","Barcelona","M",-13.9,10700000,31,161,64
-"500","null","4X100M Relay Men",37.83,0.6305,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,23,180,84
-"501","null","4X100M Relay Men",37.83,0.6305,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,20,178,70
-"502","null","4X100M Relay Men",37.83,0.6305,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,23,188,80
-"503","null","4X100M Relay Men",37.83,0.6305,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,23,178,69
-"504","null","4X100M Relay Men",38.62,0.643666666666667,"JAM","Jamaica",1984,"S","Los Angeles","M",0.339,2310000,21,185,82
-"505","null","4X100M Relay Men",38.62,0.643666666666667,"JAM","Jamaica",1984,"S","Los Angeles","M",0.339,2310000,23,175,76
-"506","null","4X100M Relay Men",38.62,0.643666666666667,"JAM","Jamaica",1984,"S","Los Angeles","M",0.339,2310000,18,180,74
-"507","null","4X100M Relay Men",38.62,0.643666666666667,"JAM","Jamaica",1984,"S","Los Angeles","M",0.339,2310000,33,175,70
-"508","null","4X100M Relay Men",38.62,0.643666666666667,"JAM","Jamaica",1984,"S","Los Angeles","M",0.339,2310000,19,178,73
-"509","null","4X100M Relay Men",38.7,0.645,"CAN","Canada",1984,"B","Los Angeles","M",5.85,25600000,22,180,82
-"510","null","4X100M Relay Men",38.7,0.645,"CAN","Canada",1984,"B","Los Angeles","M",5.85,25600000,22,177,75
-"511","null","4X100M Relay Men",38.7,0.645,"CAN","Canada",1984,"B","Los Angeles","M",5.85,25600000,23,178,73
-"512","null","4X100M Relay Men",38.7,0.645,"CAN","Canada",1984,"B","Los Angeles","M",5.85,25600000,25,175,72
-"513","null","4X100M Relay Men",38.33,0.638833333333333,"USA","United States",1976,"G","Montreal","M",5.22,221000000,19,173,67
-"514","null","4X100M Relay Men",38.33,0.638833333333333,"USA","United States",1976,"G","Montreal","M",5.22,221000000,20,180,75
-"515","null","4X100M Relay Men",38.33,0.638833333333333,"USA","United States",1976,"G","Montreal","M",5.22,221000000,18,183,77
-"516","null","4X100M Relay Men",38.33,0.638833333333333,"USA","United States",1976,"G","Montreal","M",5.22,221000000,24,190,75
-"517","null","4X100M Relay Men",38.2,0.636666666666667,"USA","United States",1968,"G","Mexico","M",4.71,206000000,23,173,69
-"518","null","4X100M Relay Men",38.2,0.636666666666667,"USA","United States",1968,"G","Mexico","M",4.71,206000000,22,183,81
-"519","null","4X100M Relay Men",38.2,0.636666666666667,"USA","United States",1968,"G","Mexico","M",4.71,206000000,30,165,68
-"520","null","4X100M Relay Men",38.2,0.636666666666667,"USA","United States",1968,"G","Mexico","M",4.71,206000000,19,173,73
-"521","null","4X100M Relay Men",38.3,0.638333333333333,"CUB","Cuba",1968,"S","Mexico","M",-5.79,8410000,30,167,67
-"522","null","4X100M Relay Men",38.3,0.638333333333333,"CUB","Cuba",1968,"S","Mexico","M",-5.79,8410000,20,184,83
-"523","null","4X100M Relay Men",38.3,0.638333333333333,"CUB","Cuba",1968,"S","Mexico","M",-5.79,8410000,20,181,73
-"524","null","4X100M Relay Men",38.3,0.638333333333333,"CUB","Cuba",1968,"S","Mexico","M",-5.79,8410000,20,178,66
-"525","null","4X100M Relay Men",38.4,0.64,"FRA","France",1968,"B","Mexico","M",4.15,50100000,22,180,75
-"526","null","4X100M Relay Men",38.4,0.64,"FRA","France",1968,"B","Mexico","M",4.15,50100000,33,175,67
-"527","null","4X100M Relay Men",38.4,0.64,"FRA","France",1968,"B","Mexico","M",4.15,50100000,23,177,72
-"528","null","4X100M Relay Men",38.4,0.64,"FRA","France",1968,"B","Mexico","M",4.15,50100000,29,172,65
-"529","null","4X100M Relay Men",40.2,0.67,"GBR","United Kingdom",1960,"B","Rome","M",5.15,52400000,20,179,76
-"530","null","4X100M Relay Men",40.2,0.67,"GBR","United Kingdom",1960,"B","Rome","M",5.15,52400000,20,180,61
-"531","null","4X100M Relay Men",40.2,0.67,"GBR","United Kingdom",1960,"B","Rome","M",5.15,52400000,23,179,67
-"532","null","4X100M Relay Men",40.2,0.67,"GBR","United Kingdom",1960,"B","Rome","M",5.15,52400000,27,180,71
-"533","null","4X100M Relay Men",40.1,0.668333333333333,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,29,178,69
-"534","null","4X100M Relay Men",40.1,0.668333333333333,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,21,173,67
-"535","null","4X100M Relay Men",40.1,0.668333333333333,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,20,180,72
-"536","null","4X100M Relay Men",40.1,0.668333333333333,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,24,187,79
-"537","null","4X100M Relay Men",40.5,0.675,"HUN","Hungary",1952,"B","Helsinki","M",3.75,9600000,30,177,68
-"538","null","4X100M Relay Men",40.5,0.675,"HUN","Hungary",1952,"B","Helsinki","M",3.75,9600000,26,176,78
-"539","null","4X100M Relay Men",40.5,0.675,"HUN","Hungary",1952,"B","Helsinki","M",3.75,9600000,23,172,69
-"540","null","4X100M Relay Men",39.8,0.663333333333333,"USA","United States",1936,"G","Berlin","M",14.2,131000000,22,165,54
-"541","null","4X100M Relay Men",39.8,0.663333333333333,"USA","United States",1936,"G","Berlin","M",14.2,131000000,26,180,82
-"542","null","4X100M Relay Men",39.8,0.663333333333333,"USA","United States",1936,"G","Berlin","M",14.2,131000000,22,178,71
-"543","null","4X100M Relay Men",39.8,0.663333333333333,"USA","United States",1936,"G","Berlin","M",14.2,131000000,26,178,68
-"544","null","4X100M Relay Men",41.1,0.685,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,22,180,70
-"545","null","4X100M Relay Men",41.1,0.685,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,23,184,78
-"546","null","4X100M Relay Men",41.1,0.685,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,21,179,76
-"547","null","4X100M Relay Men",41.1,0.685,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,25,178,64
-"548","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,22,178,68
-"549","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,21,175,66
-"550","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,23,185,77
-"551","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,18,178,68
-"552","null","4X100M Relay Men",42.2,0.703333333333333,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,24,178,77
-"553","null","4X100M Relay Men",42.2,0.703333333333333,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,21,174,68
-"554","null","4X100M Relay Men",42.2,0.703333333333333,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,19,172,75
-"555","null","4X100M Relay Men",42.2,0.703333333333333,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,23,172,61
-"556","null","4X100M Relay Men",42.6,0.71,"FRA","France",1920,"S","Antwerp","M",7.49,39100000,17,180,69
-"557","null","4X100M Relay Men",42.6,0.71,"FRA","France",1920,"S","Antwerp","M",7.49,39100000,20,175,68
-"558","null","4X100M Relay Men",42.6,0.71,"FRA","France",1920,"S","Antwerp","M",7.49,39100000,26,169,65
-"559","null","4X100M Relay Men",42.6,0.71,"FRA","France",1920,"S","Antwerp","M",7.49,39100000,20,180,68
-"560","null","4X100M Relay Men",42.9,0.715,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,26,197,84
-"561","null","4X100M Relay Men",42.9,0.715,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,24,184,78
-"562","null","4X100M Relay Men",36.84,0.614,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,20,193,84
-"563","null","4X100M Relay Men",36.84,0.614,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,22,180,80
-"564","null","4X100M Relay Men",36.84,0.614,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,25,196,95
-"565","null","4X100M Relay Men",36.84,0.614,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,26,178,70
-"566","null","4X100M Relay Men",36.84,0.614,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,29,170,67
-"567","null","4X100M Relay Men",38.12,0.635333333333333,"TTO","Trinidad and Tobago",2012,"S","London","M",1.26,1340000,24,180,88
-"568","null","4X100M Relay Men",38.12,0.635333333333333,"TTO","Trinidad and Tobago",2012,"S","London","M",1.26,1340000,29,183,91
-"569","null","4X100M Relay Men",38.12,0.635333333333333,"TTO","Trinidad and Tobago",2012,"S","London","M",1.26,1340000,28,189,86
-"570","null","4X100M Relay Men",38.12,0.635333333333333,"TTO","Trinidad and Tobago",2012,"S","London","M",1.26,1340000,27,188,80
-"571","null","4X100M Relay Men",38.16,0.636,"FRA","France",2012,"B","London","M",0.0508,63600000,22,190,74
-"572","null","4X100M Relay Men",38.16,0.636,"FRA","France",2012,"B","London","M",0.0508,63600000,24,181,70
-"573","null","4X100M Relay Men",38.16,0.636,"FRA","France",2012,"B","London","M",0.0508,63600000,29,185,75
-"574","null","4X100M Relay Men",38.16,0.636,"FRA","France",2012,"B","London","M",0.0508,63600000,20,188,83
-"575","null","4X100M Relay Men",38.07,0.6345,"GBR","United Kingdom",2004,"G","Athens","M",2.95,59900000,30,183,83
-"576","null","4X100M Relay Men",38.07,0.6345,"GBR","United Kingdom",2004,"G","Athens","M",2.95,59900000,28,183,76
-"577","null","4X100M Relay Men",38.07,0.6345,"GBR","United Kingdom",2004,"G","Athens","M",2.95,59900000,28,176,75
-"578","null","4X100M Relay Men",38.07,0.6345,"GBR","United Kingdom",2004,"G","Athens","M",2.95,59900000,21,183,89
-"579","null","4X100M Relay Men",38.08,0.634666666666667,"USA","United States",2004,"S","Athens","M",3.49,293000000,26,181,86
-"580","null","4X100M Relay Men",38.08,0.634666666666667,"USA","United States",2004,"S","Athens","M",3.49,293000000,22,186,80
-"581","null","4X100M Relay Men",38.08,0.634666666666667,"USA","United States",2004,"S","Athens","M",3.49,293000000,30,176,80
-"582","null","4X100M Relay Men",38.08,0.634666666666667,"USA","United States",2004,"S","Athens","M",3.49,293000000,27,168,68
-"583","null","4X100M Relay Men",38.08,0.634666666666667,"USA","United States",2004,"S","Athens","M",3.49,293000000,26,183,79
-"584","null","4X100M Relay Men",37.69,0.628166666666667,"CAN","Canada",1996,"G","Atlanta","M",1.34,29600000,28,183,82
-"585","null","4X100M Relay Men",37.69,0.628166666666667,"CAN","Canada",1996,"G","Atlanta","M",1.34,29600000,21,183,73
-"586","null","4X100M Relay Men",37.69,0.628166666666667,"CAN","Canada",1996,"G","Atlanta","M",1.34,29600000,24,175,64
-"587","null","4X100M Relay Men",37.69,0.628166666666667,"CAN","Canada",1996,"G","Atlanta","M",1.34,29600000,27,183,79
-"588","null","4X100M Relay Men",37.69,0.628166666666667,"CAN","Canada",1996,"G","Atlanta","M",1.34,29600000,29,180,81
-"589","null","4X100M Relay Men",38.05,0.634166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,27,175,75
-"590","null","4X100M Relay Men",38.05,0.634166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,22,178,77
-"591","null","4X100M Relay Men",38.05,0.634166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,28,178,75
-"592","null","4X100M Relay Men",38.05,0.634166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,30,175,70
-"593","null","4X100M Relay Men",38.05,0.634166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,21,178,73
-"594","null","4X100M Relay Men",38.41,0.640166666666667,"BRA","Brazil",1996,"B","Atlanta","M",2.82,165000000,23,187,78
-"595","null","4X100M Relay Men",38.41,0.640166666666667,"BRA","Brazil",1996,"B","Atlanta","M",2.82,165000000,32,174,71
-"596","null","4X100M Relay Men",38.41,0.640166666666667,"BRA","Brazil",1996,"B","Atlanta","M",2.82,165000000,31,187,74
-"597","null","4X100M Relay Men",38.41,0.640166666666667,"BRA","Brazil",1996,"B","Atlanta","M",2.82,165000000,23,190,95
-"598","null","4X100M Relay Men",38.33,0.638833333333333,"POL","Poland",1980,"S","Moscow","M",-2.48,35500000,23,180,73
-"599","null","4X100M Relay Men",38.33,0.638833333333333,"POL","Poland",1980,"S","Moscow","M",-2.48,35500000,25,182,74
-"600","null","4X100M Relay Men",38.33,0.638833333333333,"POL","Poland",1980,"S","Moscow","M",-2.48,35500000,23,181,77
-"601","null","4X100M Relay Men",38.33,0.638833333333333,"POL","Poland",1980,"S","Moscow","M",-2.48,35500000,21,175,70
-"602","null","4X100M Relay Men",38.53,0.642166666666667,"FRA","France",1980,"B","Moscow","M",1.6,54100000,21,174,66
-"603","null","4X100M Relay Men",38.53,0.642166666666667,"FRA","France",1980,"B","Moscow","M",1.6,54100000,21,172,63
-"604","null","4X100M Relay Men",38.53,0.642166666666667,"FRA","France",1980,"B","Moscow","M",1.6,54100000,22,180,77
-"605","null","4X100M Relay Men",38.53,0.642166666666667,"FRA","France",1980,"B","Moscow","M",1.6,54100000,19,174,63
-"606","null","4X100M Relay Men",38.19,0.6365,"USA","United States",1972,"G","Munich","M",5.12,213000000,21,186,80
-"607","null","4X100M Relay Men",38.19,0.6365,"USA","United States",1972,"G","Munich","M",5.12,213000000,23,178,69
-"608","null","4X100M Relay Men",38.19,0.6365,"USA","United States",1972,"G","Munich","M",5.12,213000000,23,183,80
-"609","null","4X100M Relay Men",38.19,0.6365,"USA","United States",1972,"G","Munich","M",5.12,213000000,21,180,76
-"610","null","4X100M Relay Men",39,0.65,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,22,180,75
-"611","null","4X100M Relay Men",39,0.65,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,25,183,73
-"612","null","4X100M Relay Men",39,0.65,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,21,183,86
-"613","null","4X100M Relay Men",39,0.65,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,19,180,68
-"614","null","4X100M Relay Men",39.3,0.655,"POL","Poland",1964,"S","Tokyo","M",4.86,31100000,23,181,81
-"615","null","4X100M Relay Men",39.3,0.655,"POL","Poland",1964,"S","Tokyo","M",4.86,31100000,31,172,69
-"616","null","4X100M Relay Men",39.3,0.655,"POL","Poland",1964,"S","Tokyo","M",4.86,31100000,26,171,74
-"617","null","4X100M Relay Men",39.3,0.655,"POL","Poland",1964,"S","Tokyo","M",4.86,31100000,28,173,69
-"618","null","4X100M Relay Men",39.3,0.655,"FRA","France",1964,"B","Tokyo","M",6.72,48400000,29,175,67
-"619","null","4X100M Relay Men",39.3,0.655,"FRA","France",1964,"B","Tokyo","M",6.72,48400000,25,174,74
-"620","null","4X100M Relay Men",39.3,0.655,"FRA","France",1964,"B","Tokyo","M",6.72,48400000,22,180,75
-"621","null","4X100M Relay Men",39.3,0.655,"FRA","France",1964,"B","Tokyo","M",6.72,48400000,25,172,65
-"622","null","4X100M Relay Men",39.5,0.658333333333333,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,25,183,72
-"623","null","4X100M Relay Men",39.5,0.658333333333333,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,20,180,64
-"624","null","4X100M Relay Men",39.5,0.658333333333333,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,21,186,75
-"625","null","4X100M Relay Men",39.5,0.658333333333333,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,165,65
-"626","null","4X100M Relay Men",40.6,0.676666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,25,178,69
-"627","null","4X100M Relay Men",40.6,0.676666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,30,180,71
-"628","null","4X100M Relay Men",40.6,0.676666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,23,185,72
-"629","null","4X100M Relay Men",40.6,0.676666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,21,173,70
-"630","null","4X100M Relay Men",41.3,0.688333333333333,"GBR","United Kingdom",1948,"S","London","M",3.03,50000000,26,180,75
-"631","null","4X100M Relay Men",41.3,0.688333333333333,"GBR","United Kingdom",1948,"S","London","M",3.03,50000000,22,183,78
-"632","null","4X100M Relay Men",41.5,0.691666666666667,"ITA","Italy",1948,"B","London","M",6.35,46400000,28,172,64
-"633","null","4X100M Relay Men",41.5,0.691666666666667,"ITA","Italy",1948,"B","London","M",6.35,46400000,25,177,73
-"634","null","4X100M Relay Men",40,0.666666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,22,188,75
-"635","null","4X100M Relay Men",40,0.666666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,20,178,70
-"636","null","4X100M Relay Men",40,0.666666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,23,171,68
-"637","null","4X100M Relay Men",40,0.666666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,22,178,68
-"638","null","4X100M Relay Men",41.2,0.686666666666667,"ITA","Italy",1932,"B","Los Angeles","M",4.43,41400000,27,186,78
-"639","null","4X100M Relay Men",41.2,0.686666666666667,"ITA","Italy",1932,"B","Los Angeles","M",4.43,41400000,22,187,80
-"640","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1924,"G","Paris","M",3.07,117000000,22,178,70
-"641","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1924,"G","Paris","M",3.07,117000000,19,178,70
-"642","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1924,"G","Paris","M",3.07,117000000,23,180,72
-"643","null","4X100M Relay Men",41,0.683333333333333,"USA","United States",1924,"G","Paris","M",3.07,117000000,25,174,68
-"644","null","4X100M Relay Men",41.2,0.686666666666667,"GBR","United Kingdom",1924,"S","Paris","M",4.72,44900000,24,183,75
-"645","null","4X100M Relay Men",41.2,0.686666666666667,"GBR","United Kingdom",1924,"S","Paris","M",4.72,44900000,20,174,65
-"646","null","4X100M Relay Men",42.4,0.706666666666667,"GBR","United Kingdom",1912,"G","Stockholm","M",1.5,42400000,21,170,59
-"647","null","4X100M Relay Men",42.4,0.706666666666667,"GBR","United Kingdom",1912,"G","Stockholm","M",1.5,42400000,24,172,63
-"648","null","4X100M Relay Men",42.4,0.706666666666667,"GBR","United Kingdom",1912,"G","Stockholm","M",1.5,42400000,24,175,70
-"649","null","4X100M Relay Men",42.4,0.706666666666667,"GBR","United Kingdom",1912,"G","Stockholm","M",1.5,42400000,19,173,66
-"650","null","4X100M Relay Men",42.6,0.71,"SWE","Sweden",1912,"S","Stockholm","M",4.74,5580000,30,179,72
-"651","null","4X100M Relay Men",42.6,0.71,"SWE","Sweden",1912,"S","Stockholm","M",4.74,5580000,26,179,64
-"652","null","4X100M Relay Men",42.6,0.71,"SWE","Sweden",1912,"S","Stockholm","M",4.74,5580000,19,188,80
-"653","null","4X400M Relay Men",175.4,2.92333333333333,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,22,188,86
-"654","null","4X400M Relay Men",175.4,2.92333333333333,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,22,191,86
-"655","null","4X400M Relay Men",175.4,2.92333333333333,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,24,193,77
-"656","null","4X400M Relay Men",175.4,2.92333333333333,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,29,188,84
-"657","null","4X400M Relay Men",175.4,2.92333333333333,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,24,188,71
-"658","null","4X400M Relay Men",175.4,2.92333333333333,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,23,178,79
-"659","null","4X400M Relay Men",178.8,2.98,"JAM","Jamaica",2000,"S","Sydney","M",1,2660000,20,188,84
-"660","null","4X400M Relay Men",178.8,2.98,"JAM","Jamaica",2000,"S","Sydney","M",1,2660000,21,190,79
-"661","null","4X400M Relay Men",178.8,2.98,"JAM","Jamaica",2000,"S","Sydney","M",1,2660000,26,185,79
-"662","null","4X400M Relay Men",178.8,2.98,"JAM","Jamaica",2000,"S","Sydney","M",1,2660000,25,183,85
-"663","null","4X400M Relay Men",178.8,2.98,"JAM","Jamaica",2000,"S","Sydney","M",1,2660000,28,183,75
-"664","null","4X400M Relay Men",178.8,2.98,"JAM","Jamaica",2000,"S","Sydney","M",1,2660000,28,178,68
-"665","null","4X400M Relay Men",175.7,2.92833333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,20,183,78
-"666","null","4X400M Relay Men",175.7,2.92833333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,28,186,77
-"667","null","4X400M Relay Men",175.7,2.92833333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,24,183,77
-"668","null","4X400M Relay Men",175.7,2.92833333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,23,188,84
-"669","null","4X400M Relay Men",175.7,2.92833333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,27,185,78
-"670","null","4X400M Relay Men",175.7,2.92833333333333,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,22,190,88
-"671","null","4X400M Relay Men",179.5,2.99166666666667,"CUB","Cuba",1992,"S","Barcelona","M",-13.9,10700000,25,179,74
-"672","null","4X400M Relay Men",179.5,2.99166666666667,"CUB","Cuba",1992,"S","Barcelona","M",-13.9,10700000,33,185,82
-"673","null","4X400M Relay Men",179.5,2.99166666666667,"CUB","Cuba",1992,"S","Barcelona","M",-13.9,10700000,29,183,77
-"674","null","4X400M Relay Men",179.5,2.99166666666667,"CUB","Cuba",1992,"S","Barcelona","M",-13.9,10700000,20,186,78
-"675","null","4X400M Relay Men",179.7,2.995,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,33,185,81
-"676","null","4X400M Relay Men",179.7,2.995,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,26,190,79
-"677","null","4X400M Relay Men",179.7,2.995,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,19,188,79
-"678","null","4X400M Relay Men",179.7,2.995,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,21,187,84
-"679","null","4X400M Relay Men",179.7,2.995,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,25,181,98
-"680","null","4X400M Relay Men",179.7,2.995,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,19,178,74
-"681","null","4X400M Relay Men",177.9,2.965,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,24,187,76
-"682","null","4X400M Relay Men",177.9,2.965,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,22,188,70
-"683","null","4X400M Relay Men",177.9,2.965,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,25,178,72
-"684","null","4X400M Relay Men",177.9,2.965,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,20,183,77
-"685","null","4X400M Relay Men",177.9,2.965,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,22,175,65
-"686","null","4X400M Relay Men",177.9,2.965,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,28,173,73
-"687","null","4X400M Relay Men",179.1,2.985,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,25,185,81
-"688","null","4X400M Relay Men",179.1,2.985,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,22,170,64
-"689","null","4X400M Relay Men",179.1,2.985,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,22,180,73
-"690","null","4X400M Relay Men",179.1,2.985,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,26,185,72
-"691","null","4X400M Relay Men",178.6,2.97666666666667,"USA","United States",1976,"G","Montreal","M",5.22,221000000,22,180,74
-"692","null","4X400M Relay Men",178.6,2.97666666666667,"USA","United States",1976,"G","Montreal","M",5.22,221000000,21,184,73
-"693","null","4X400M Relay Men",178.6,2.97666666666667,"USA","United States",1976,"G","Montreal","M",5.22,221000000,27,175,68
-"694","null","4X400M Relay Men",178.6,2.97666666666667,"USA","United States",1976,"G","Montreal","M",5.22,221000000,25,188,78
-"695","null","4X400M Relay Men",181.4,3.02333333333333,"POL","Poland",1976,"S","Montreal","M",2.43,34300000,27,182,75
-"696","null","4X400M Relay Men",181.4,3.02333333333333,"POL","Poland",1976,"S","Montreal","M",2.43,34300000,21,190,76
-"697","null","4X400M Relay Men",181.4,3.02333333333333,"POL","Poland",1976,"S","Montreal","M",2.43,34300000,21,171,63
-"698","null","4X400M Relay Men",181.4,3.02333333333333,"POL","Poland",1976,"S","Montreal","M",2.43,34300000,29,191,86
-"699","null","4X400M Relay Men",176.1,2.935,"USA","United States",1968,"G","Mexico","M",4.71,206000000,21,180,78
-"700","null","4X400M Relay Men",176.1,2.935,"USA","United States",1968,"G","Mexico","M",4.71,206000000,21,183,82
-"701","null","4X400M Relay Men",176.1,2.935,"USA","United States",1968,"G","Mexico","M",4.71,206000000,20,181,70
-"702","null","4X400M Relay Men",176.1,2.935,"USA","United States",1968,"G","Mexico","M",4.71,206000000,20,187,81
-"703","null","4X400M Relay Men",179.6,2.99333333333333,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,22,178,68
-"704","null","4X400M Relay Men",179.6,2.99333333333333,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,23,177,61
-"705","null","4X400M Relay Men",179.6,2.99333333333333,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,25,170,68
-"706","null","4X400M Relay Men",179.6,2.99333333333333,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,23,180,76
-"707","null","4X400M Relay Men",182.2,3.03666666666667,"USA","United States",1960,"G","Rome","M",2.5,187000000,25,183,73
-"708","null","4X400M Relay Men",182.2,3.03666666666667,"USA","United States",1960,"G","Rome","M",2.5,187000000,28,185,74
-"709","null","4X400M Relay Men",182.2,3.03666666666667,"USA","United States",1960,"G","Rome","M",2.5,187000000,21,183,81
-"710","null","4X400M Relay Men",182.2,3.03666666666667,"USA","United States",1960,"G","Rome","M",2.5,187000000,19,190,79
-"711","null","4X400M Relay Men",183.9,3.065,"JAM","Jamaica",1952,"G","Helsinki","M",8.83,1470000,27,164,55
-"712","null","4X400M Relay Men",183.9,3.065,"JAM","Jamaica",1952,"G","Helsinki","M",8.83,1470000,30,185,72
-"713","null","4X400M Relay Men",183.9,3.065,"JAM","Jamaica",1952,"G","Helsinki","M",8.83,1470000,25,178,68
-"714","null","4X400M Relay Men",183.9,3.065,"JAM","Jamaica",1952,"G","Helsinki","M",8.83,1470000,32,194,77
-"715","null","4X400M Relay Men",184,3.06666666666667,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,23,182,78
-"716","null","4X400M Relay Men",184,3.06666666666667,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,22,188,89
-"717","null","4X400M Relay Men",184,3.06666666666667,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,22,185,77
-"718","null","4X400M Relay Men",184,3.06666666666667,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,27,185,76
-"719","null","4X400M Relay Men",189,3.15,"GBR","United Kingdom",1936,"G","Berlin","M",4.77,47200000,21,183,70
-"720","null","4X400M Relay Men",189,3.15,"GBR","United Kingdom",1936,"G","Berlin","M",4.77,47200000,27,185,75
-"721","null","4X400M Relay Men",189,3.15,"GBR","United Kingdom",1936,"G","Berlin","M",4.77,47200000,24,173,70
-"722","null","4X400M Relay Men",189,3.15,"GBR","United Kingdom",1936,"G","Berlin","M",4.77,47200000,25,184,79
-"723","null","4X400M Relay Men",191,3.18333333333333,"USA","United States",1936,"S","Berlin","M",14.2,131000000,22,178,64
-"724","null","4X400M Relay Men",191,3.18333333333333,"USA","United States",1936,"S","Berlin","M",14.2,131000000,23,178,68
-"725","null","4X400M Relay Men",191,3.18333333333333,"USA","United States",1936,"S","Berlin","M",14.2,131000000,21,182,77
-"726","null","4X400M Relay Men",191,3.18333333333333,"USA","United States",1936,"S","Berlin","M",14.2,131000000,20,184,77
-"727","null","4X400M Relay Men",194.2,3.23666666666667,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,22,177,75
-"728","null","4X400M Relay Men",194.2,3.23666666666667,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,21,175,66
-"729","null","4X400M Relay Men",194.2,3.23666666666667,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,22,183,82
-"730","null","4X400M Relay Men",194.2,3.23666666666667,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,21,183,72
-"731","null","4X400M Relay Men",177.1,2.95166666666667,"USA","United States",2012,"S","London","M",2.94,313000000,20,191,82
-"732","null","4X400M Relay Men",177.1,2.95166666666667,"USA","United States",2012,"S","London","M",2.94,313000000,22,181,72
-"733","null","4X400M Relay Men",177.1,2.95166666666667,"USA","United States",2012,"S","London","M",2.94,313000000,25,185,79
-"734","null","4X400M Relay Men",177.1,2.95166666666667,"USA","United States",2012,"S","London","M",2.94,313000000,23,183,80
-"735","null","4X400M Relay Men",177.1,2.95166666666667,"USA","United States",2012,"S","London","M",2.94,313000000,33,188,84
-"736","null","4X400M Relay Men",179.4,2.99,"TTO","Trinidad and Tobago",2012,"B","London","M",1.26,1340000,23,180,73
-"737","null","4X400M Relay Men",179.4,2.99,"TTO","Trinidad and Tobago",2012,"B","London","M",1.26,1340000,23,179,83
-"738","null","4X400M Relay Men",179.4,2.99,"TTO","Trinidad and Tobago",2012,"B","London","M",1.26,1340000,19,179,75
-"739","null","4X400M Relay Men",179.4,2.99,"TTO","Trinidad and Tobago",2012,"B","London","M",1.26,1340000,26,165,73
-"740","null","4X400M Relay Men",175.9,2.93166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,26,185,81
-"741","null","4X400M Relay Men",175.9,2.93166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,22,185,83
-"742","null","4X400M Relay Men",175.9,2.93166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,22,185,79
-"743","null","4X400M Relay Men",175.9,2.93166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,20,188,71
-"744","null","4X400M Relay Men",175.9,2.93166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,21,187,77
-"745","null","4X400M Relay Men",175.9,2.93166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,21,177,72
-"746","null","4X400M Relay Men",180.6,3.01,"AUS","Australia",2004,"S","Athens","M",2.82,19900000,26,186,81
-"747","null","4X400M Relay Men",180.6,3.01,"AUS","Australia",2004,"S","Athens","M",2.82,19900000,24,186,77
-"748","null","4X400M Relay Men",180.6,3.01,"AUS","Australia",2004,"S","Athens","M",2.82,19900000,21,185,73
-"749","null","4X400M Relay Men",180.6,3.01,"AUS","Australia",2004,"S","Athens","M",2.82,19900000,21,180,71
-"750","null","4X400M Relay Men",176,2.93333333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,22,188,80
-"751","null","4X400M Relay Men",176,2.93333333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,26,188,81
-"752","null","4X400M Relay Men",176,2.93333333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,24,175,68
-"753","null","4X400M Relay Men",176,2.93333333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,26,198,84
-"754","null","4X400M Relay Men",176,2.93333333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,23,188,73
-"755","null","4X400M Relay Men",176.6,2.94333333333333,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,23,173,71
-"756","null","4X400M Relay Men",176.6,2.94333333333333,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,30,190,79
-"757","null","4X400M Relay Men",176.6,2.94333333333333,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,19,176,69
-"758","null","4X400M Relay Men",176.6,2.94333333333333,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,25,187,84
-"759","null","4X400M Relay Men",176.6,2.94333333333333,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,23,178,74
-"760","null","4X400M Relay Men",176.6,2.94333333333333,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,22,186,85
-"761","null","4X400M Relay Men",179.4,2.99,"JAM","Jamaica",1996,"B","Atlanta","M",-1.85,2560000,25,186,70
-"762","null","4X400M Relay Men",179.4,2.99,"JAM","Jamaica",1996,"B","Atlanta","M",-1.85,2560000,20,178,78
-"763","null","4X400M Relay Men",179.4,2.99,"JAM","Jamaica",1996,"B","Atlanta","M",-1.85,2560000,22,185,79
-"764","null","4X400M Relay Men",179.4,2.99,"JAM","Jamaica",1996,"B","Atlanta","M",-1.85,2560000,26,178,66
-"765","null","4X400M Relay Men",179.4,2.99,"JAM","Jamaica",1996,"B","Atlanta","M",-1.85,2560000,21,183,85
-"766","null","4X400M Relay Men",179.4,2.99,"JAM","Jamaica",1996,"B","Atlanta","M",-1.85,2560000,25,175,75
-"767","null","4X400M Relay Men",184.3,3.07166666666667,"ITA","Italy",1980,"B","Moscow","M",3.44,56400000,21,180,73
-"768","null","4X400M Relay Men",184.3,3.07166666666667,"ITA","Italy",1980,"B","Moscow","M",3.44,56400000,28,180,73
-"769","null","4X400M Relay Men",184.3,3.07166666666667,"ITA","Italy",1980,"B","Moscow","M",3.44,56400000,21,180,72
-"770","null","4X400M Relay Men",184.3,3.07166666666667,"ITA","Italy",1980,"B","Moscow","M",3.44,56400000,20,175,62
-"771","null","4X400M Relay Men",179.8,2.99666666666667,"KEN","Kenya",1972,"G","Munich","M",5.03,12100000,26,178,68
-"772","null","4X400M Relay Men",179.8,2.99666666666667,"KEN","Kenya",1972,"G","Munich","M",5.03,12100000,29,170,68
-"773","null","4X400M Relay Men",179.8,2.99666666666667,"KEN","Kenya",1972,"G","Munich","M",5.03,12100000,23,173,68
-"774","null","4X400M Relay Men",179.8,2.99666666666667,"KEN","Kenya",1972,"G","Munich","M",5.03,12100000,26,175,69
-"775","null","4X400M Relay Men",180.5,3.00833333333333,"GBR","United Kingdom",1972,"S","Munich","M",3.61,56000000,28,187,72
-"776","null","4X400M Relay Men",180.5,3.00833333333333,"GBR","United Kingdom",1972,"S","Munich","M",3.61,56000000,20,190,82
-"777","null","4X400M Relay Men",180.5,3.00833333333333,"GBR","United Kingdom",1972,"S","Munich","M",3.61,56000000,24,185,74
-"778","null","4X400M Relay Men",180.5,3.00833333333333,"GBR","United Kingdom",1972,"S","Munich","M",3.61,56000000,23,185,77
-"779","null","4X400M Relay Men",180.7,3.01166666666667,"FRA","France",1972,"B","Munich","M",4.24,51700000,23,176,63
-"780","null","4X400M Relay Men",180.7,3.01166666666667,"FRA","France",1972,"B","Munich","M",4.24,51700000,25,176,63
-"781","null","4X400M Relay Men",180.7,3.01166666666667,"FRA","France",1972,"B","Munich","M",4.24,51700000,21,178,66
-"782","null","4X400M Relay Men",180.7,3.01166666666667,"FRA","France",1972,"B","Munich","M",4.24,51700000,28,175,70
-"783","null","4X400M Relay Men",180.7,3.01166666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,21,191,84
-"784","null","4X400M Relay Men",180.7,3.01166666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,27,185,75
-"785","null","4X400M Relay Men",180.7,3.01166666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,30,186,77
-"786","null","4X400M Relay Men",180.7,3.01166666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,22,185,75
-"787","null","4X400M Relay Men",181.6,3.02666666666667,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,24,188,81
-"788","null","4X400M Relay Men",181.6,3.02666666666667,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,23,188,85
-"789","null","4X400M Relay Men",181.6,3.02666666666667,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,25,178,65
-"790","null","4X400M Relay Men",181.6,3.02666666666667,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,22,188,87
-"791","null","4X400M Relay Men",181.7,3.02833333333333,"TTO","Trinidad and Tobago",1964,"B","Tokyo","M",2.19,903000,22,185,77
-"792","null","4X400M Relay Men",181.7,3.02833333333333,"TTO","Trinidad and Tobago",1964,"B","Tokyo","M",2.19,903000,23,173,72
-"793","null","4X400M Relay Men",181.7,3.02833333333333,"TTO","Trinidad and Tobago",1964,"B","Tokyo","M",2.19,903000,23,173,68
-"794","null","4X400M Relay Men",181.7,3.02833333333333,"TTO","Trinidad and Tobago",1964,"B","Tokyo","M",2.19,903000,23,180,76
-"795","null","4X400M Relay Men",184.8,3.08,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,188,81
-"796","null","4X400M Relay Men",184.8,3.08,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,22,186,74
-"797","null","4X400M Relay Men",184.8,3.08,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,24,183,76
-"798","null","4X400M Relay Men",184.8,3.08,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,189,85
-"799","null","4X400M Relay Men",186.2,3.10333333333333,"AUS","Australia",1956,"S","Melbourne / Stockholm","M",3.32,9420000,22,188,77
-"800","null","4X400M Relay Men",186.2,3.10333333333333,"AUS","Australia",1956,"S","Melbourne / Stockholm","M",3.32,9420000,21,182,65
-"801","null","4X400M Relay Men",187.2,3.12,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,28,179,67
-"802","null","4X400M Relay Men",187.2,3.12,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,23,176,66
-"803","null","4X400M Relay Men",187.2,3.12,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,22,180,70
-"804","null","4X400M Relay Men",187.2,3.12,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,21,187,76
-"805","null","4X400M Relay Men",190.4,3.17333333333333,"USA","United States",1948,"G","London","M",3.79,150000000,27,183,75
-"806","null","4X400M Relay Men",190.4,3.17333333333333,"USA","United States",1948,"G","London","M",3.79,150000000,29,178,70
-"807","null","4X400M Relay Men",190.4,3.17333333333333,"USA","United States",1948,"G","London","M",3.79,150000000,24,176,73
-"808","null","4X400M Relay Men",190.4,3.17333333333333,"USA","United States",1948,"G","London","M",3.79,150000000,23,185,76
-"809","null","4X400M Relay Men",194.8,3.24666666666667,"FRA","France",1948,"S","London","M",13.2,41200000,26,177,68
-"810","null","4X400M Relay Men",194.8,3.24666666666667,"FRA","France",1948,"S","London","M",13.2,41200000,30,183,76
-"811","null","4X400M Relay Men",194.8,3.24666666666667,"FRA","France",1948,"S","London","M",13.2,41200000,25,181,72
-"812","null","4X400M Relay Men",194.8,3.24666666666667,"FRA","France",1948,"S","London","M",13.2,41200000,28,180,72
-"813","null","4X400M Relay Men",196,3.26666666666667,"SWE","Sweden",1948,"B","London","M",2.27,6840000,28,182,70
-"814","null","4X400M Relay Men",196,3.26666666666667,"SWE","Sweden",1948,"B","London","M",2.27,6840000,24,178,70
-"815","null","4X400M Relay Men",196,3.26666666666667,"SWE","Sweden",1948,"B","London","M",2.27,6840000,22,190,75
-"816","null","4X400M Relay Men",196,3.26666666666667,"SWE","Sweden",1948,"B","London","M",2.27,6840000,19,178,70
-"817","null","4X400M Relay Men",188.2,3.13666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,19,182,68
-"818","null","4X400M Relay Men",188.2,3.13666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,22,172,66
-"819","null","4X400M Relay Men",188.2,3.13666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,22,175,64
-"820","null","4X400M Relay Men",188.2,3.13666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,24,176,71
-"821","null","4X400M Relay Men",191.2,3.18666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,27,180,70
-"822","null","4X400M Relay Men",191.2,3.18666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,24,184,69
-"823","null","4X400M Relay Men",191.2,3.18666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,23,185,75
-"824","null","4X400M Relay Men",191.2,3.18666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,21,163,51
-"825","null","4X400M Relay Men",192.8,3.21333333333333,"CAN","Canada",1932,"B","Los Angeles","M",-7.12,10800000,29,180,69
-"826","null","4X400M Relay Men",192.8,3.21333333333333,"CAN","Canada",1932,"B","Los Angeles","M",-7.12,10800000,24,176,64
-"827","null","4X400M Relay Men",192.8,3.21333333333333,"CAN","Canada",1932,"B","Los Angeles","M",-7.12,10800000,21,186,74
-"828","null","4X400M Relay Men",192.8,3.21333333333333,"CAN","Canada",1932,"B","Los Angeles","M",-7.12,10800000,24,178,66
-"829","null","4X400M Relay Men",196,3.26666666666667,"USA","United States",1924,"G","Paris","M",3.07,117000000,22,185,75
-"830","null","4X400M Relay Men",196,3.26666666666667,"USA","United States",1924,"G","Paris","M",3.07,117000000,23,178,70
-"831","null","4X400M Relay Men",196,3.26666666666667,"USA","United States",1924,"G","Paris","M",3.07,117000000,20,180,70
-"832","null","4X400M Relay Men",196,3.26666666666667,"USA","United States",1924,"G","Paris","M",3.07,117000000,23,183,77
-"833","null","4X400M Relay Men",197,3.28333333333333,"SWE","Sweden",1924,"S","Paris","M",7.47,6020000,26,172,61
-"834","null","4X400M Relay Men",197,3.28333333333333,"SWE","Sweden",1924,"S","Paris","M",7.47,6020000,25,165,57
-"835","null","4X400M Relay Men",196.6,3.27666666666667,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,25,177,76
-"836","null","4X400M Relay Men",196.6,3.27666666666667,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,20,175,71
-"837","null","4X400M Relay Men",196.6,3.27666666666667,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,22,181,76
-"838","null","4X400M Relay Men",196.6,3.27666666666667,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,28,177,67
-"839","kenenisa bekele","5000M Men",777.8,12.9633333333333,"ETH","Ethiopia",2008,"G","Beijing","M",10.3,83200000,26,165,56
-"840","eliud kipchoge rotich","5000M Men",782.8,13.0466666666667,"KEN","Kenya",2008,"S","Beijing","M",1.53,39100000,23,167,57
-"841","edwin cheruiyot soi","5000M Men",786.2,13.1033333333333,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,22,168,53
-"842","millon wolde","5000M Men",815.5,13.5916666666667,"ETH","Ethiopia",2000,"G","Sydney","M",5.83,66500000,21,175,59
-"843","brahim lahlafi","5000M Men",816.5,13.6083333333333,"MAR","Morocco",2000,"B","Sydney","M",0.455,28800000,32,172,62
-"844","paul bitok","5000M Men",792.7,13.2116666666667,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,22,173,58
-"845","fita bayissa","5000M Men",793,13.2166666666667,"ETH","Ethiopia",1992,"B","Barcelona","M",-8.78,51600000,19,173,52
-"846","saã¯d aouita","5000M Men",785.6,13.0933333333333,"MAR","Morocco",1984,"G","Los Angeles","M",4.13,22000000,24,175,58
-"847","antã³nio leitão","5000M Men",789.2,13.1533333333333,"POR","Portugal",1984,"B","Los Angeles","M",-1.83,9980000,24,176,68
-"848","lasse viren","5000M Men",804.8,13.4133333333333,"FIN","Finland",1976,"G","Montreal","M",-0.4,4730000,26,180,60
-"849","dick theodorus quax","5000M Men",805.2,13.42,"NZL","New Zealand",1976,"S","Montreal","M",2.13,3110000,28,183,65
-"850","mohamed gammoudi","5000M Men",845,14.0833333333333,"TUN","Tunisia",1968,"G","Mexico","M",10.4,4840000,30,172,60
-"851","kip keino","5000M Men",845.2,14.0866666666667,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,28,173,66
-"852","naftali temu","5000M Men",846.4,14.1066666666667,"KEN","Kenya",1968,"B","Mexico","M",0.0532,10500000,23,174,62
-"853","murray halberg","5000M Men",823.4,13.7233333333333,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,27,178,62
-"854","kazimierz zimny","5000M Men",824.8,13.7466666666667,"POL","Poland",1960,"B","Rome","M",5.16,29600000,25,172,60
-"855","alain mimoun","5000M Men",847.4,14.1233333333333,"FRA","France",1952,"S","Helsinki","M",2.25,42400000,31,170,56
-"856","gunnar hãckert","5000M Men",862.2,14.37,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,26,178,68
-"857","lauri lehtinen","5000M Men",865.8,14.43,"FIN","Finland",1936,"S","Berlin","M",6.76,3600000,27,174,64
-"858","henry jonsson-kãlarne","5000M Men",869,14.4833333333333,"SWE","Sweden",1936,"B","Berlin","M",3.62,6260000,24,181,70
-"859","ville ritola","5000M Men",878,14.6333333333333,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,32,175,66
-"860","paavo nurmi","5000M Men",880,14.6666666666667,"FIN","Finland",1928,"S","Amsterdam","M",6.75,3400000,30,174,65
-"861","edvin wide","5000M Men",881.2,14.6866666666667,"SWE","Sweden",1928,"B","Amsterdam","M",3.06,6120000,32,170,62
-"862","joseph guillemot","5000M Men",895.6,14.9266666666667,"FRA","France",1920,"G","Antwerp","M",7.49,39100000,20,160,55
-"863","paavo nurmi","5000M Men",900,15,"FIN","Finland",1920,"S","Antwerp","M",11.9,3140000,22,174,65
-"864","eric backman","5000M Men",913,15.2166666666667,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,23,172,64
-"865","mohamed farah","5000M Men",821.7,13.695,"GBR","United Kingdom",2012,"G","London","M",0.198,64300000,29,175,58
-"866","dejen gebremeskel","5000M Men",822,13.7,"ETH","Ethiopia",2012,"S","London","M",8.26,92400000,22,180,58
-"867","thomas pkemei longosiwa","5000M Men",822.4,13.7066666666667,"KEN","Kenya",2012,"B","London","M",4.56,43600000,30,175,57
-"868","hicham el guerrouj","5000M Men",794.4,13.24,"MAR","Morocco",2004,"G","Athens","M",4.59,30200000,29,176,58
-"869","kenenisa bekele","5000M Men",794.6,13.2433333333333,"ETH","Ethiopia",2004,"S","Athens","M",13.1,74600000,22,165,56
-"870","eliud kipchoge rotich","5000M Men",795.1,13.2516666666667,"KEN","Kenya",2004,"B","Athens","M",5.1,35100000,19,167,57
-"871","venuste niyongabo","5000M Men",788,13.1333333333333,"BDI","Burundi",1996,"G","Atlanta","M",-7.94,6040000,22,176,60
-"872","paul bitok","5000M Men",788.2,13.1366666666667,"KEN","Kenya",1996,"S","Atlanta","M",4.14,28100000,26,173,58
-"873","khalid boulami","5000M Men",788.4,13.14,"MAR","Morocco",1996,"B","Atlanta","M",11.6,27500000,26,167,60
-"874","miruts yifter","5000M Men",801,13.35,"ETH","Ethiopia",1980,"G","Moscow","M",2.18,35300000,36,162,53
-"875","kaarlo maaninka","5000M Men",802,13.3666666666667,"FIN","Finland",1980,"B","Moscow","M",5.38,4790000,26,178,61
-"876","lasse viren","5000M Men",806.4,13.44,"FIN","Finland",1972,"G","Munich","M",7.49,4650000,23,180,60
-"877","mohamed gammoudi","5000M Men",807.3,13.455,"TUN","Tunisia",1972,"S","Munich","M",17.6,5290000,34,172,60
-"878","ian stewart","5000M Men",807.6,13.46,"GBR","United Kingdom",1972,"B","Munich","M",3.61,56000000,23,178,65
-"879","robert keyser schul","5000M Men",828.8,13.8133333333333,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,27,184,66
-"880","bill dellinger","5000M Men",829.8,13.83,"USA","United States",1964,"B","Tokyo","M",5.68,197000000,30,175,62
-"881","gordon pirie","5000M Men",830.6,13.8433333333333,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,25,188,65
-"882","derek ibbotson","5000M Men",834.4,13.9066666666667,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,24,175,68
-"883","gaston reiff","5000M Men",857.6,14.2933333333333,"BEL","Belgium",1948,"G","London","M",6.31,8540000,27,173,61
-"884","lauri lehtinen","5000M Men",870,14.5,"FIN","Finland",1932,"G","Los Angeles","M",-0.427,3500000,23,174,64
-"885","ralph hill","5000M Men",870,14.5,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,23,180,66
-"886","lauri virtanen","5000M Men",884,14.7333333333333,"FIN","Finland",1932,"B","Los Angeles","M",-0.427,3500000,27,172,68
-"887","paavo nurmi","5000M Men",871.2,14.52,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,26,174,65
-"888","ville ritola","5000M Men",871.4,14.5233333333333,"FIN","Finland",1924,"S","Paris","M",2.61,3270000,28,175,66
-"889","edvin wide","5000M Men",901.8,15.03,"SWE","Sweden",1924,"B","Paris","M",7.47,6020000,28,170,62
-"890","hannes kolehmainen","5000M Men",876.6,14.61,"FIN","Finland",1912,"G","Stockholm","M",5.56,3000000,22,168,57.5
-"891","jean bouin","5000M Men",876.7,14.6116666666667,"FRA","France",1912,"S","Stockholm","M",8.25,41500000,23,172,70
-"892","wilfred bungei","800M Men",104.7,1.745,"KEN","Kenya",2008,"G","Beijing","M",1.53,39100000,28,172,60
-"893","alfred kirwa yego","800M Men",104.8,1.74666666666667,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,21,175,56
-"894","william tanui","800M Men",103.7,1.72833333333333,"KEN","Kenya",1992,"G","Barcelona","M",-0.793,25000000,28,183,70
-"895","nixon kiprotich","800M Men",103.7,1.72833333333333,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,29,185,68
-"896","johnny gray","800M Men",104,1.73333333333333,"USA","United States",1992,"B","Barcelona","M",2.96,257000000,32,191,75
-"897","joaquim cruz","800M Men",103,1.71666666666667,"BRA","Brazil",1984,"G","Los Angeles","M",5.58,133000000,21,187,74
-"898","sebastian coe","800M Men",103.6,1.72666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,27,175,54
-"899","earl jones","800M Men",103.8,1.73,"USA","United States",1984,"B","Los Angeles","M",7.38,239000000,20,180,73
-"900","alberto juantorena","800M Men",103.5,1.725,"CUB","Cuba",1976,"G","Montreal","M",2.55,9540000,25,190,84
-"901","ivo van damme","800M Men",103.9,1.73166666666667,"BEL","Belgium",1976,"S","Montreal","M",5.7,9790000,22,191,76
-"902","richard charles wohlhuter","800M Men",104.1,1.735,"USA","United States",1976,"B","Montreal","M",5.22,221000000,27,175,60
-"903","ralph doubell","800M Men",104.3,1.73833333333333,"AUS","Australia",1968,"G","Mexico","M",6.35,12300000,23,180,65
-"904","thomas francis farrell","800M Men",105.4,1.75666666666667,"USA","United States",1968,"B","Mexico","M",4.71,206000000,24,172,64
-"905","peter snell","800M Men",106.3,1.77166666666667,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,21,179,80
-"906","roger moens","800M Men",106.5,1.775,"BEL","Belgium",1960,"S","Rome","M",4.82,9170000,30,175,70
-"907","mal whitfield","800M Men",109.2,1.82,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,27,185,76
-"908","arthur wint","800M Men",109.4,1.82333333333333,"JAM","Jamaica",1952,"S","Helsinki","M",8.83,1470000,32,194,77
-"909","john woodruff","800M Men",112.9,1.88166666666667,"USA","United States",1936,"G","Berlin","M",14.2,131000000,21,189,75
-"910","mario lanzi","800M Men",113.3,1.88833333333333,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,21,180,76
-"911","philip edwards","800M Men",113.6,1.89333333333333,"CAN","Canada",1936,"B","Berlin","M",5.4,11200000,28,176,64
-"912","douglas lowe","800M Men",111.8,1.86333333333333,"GBR","United Kingdom",1928,"G","Amsterdam","M",0.893,45600000,25,183,70
-"913","erik bylãhn","800M Men",112.8,1.88,"SWE","Sweden",1928,"S","Amsterdam","M",3.06,6120000,30,172,61
-"914","albert hill","800M Men",113.4,1.89,"GBR","United Kingdom",1920,"G","Antwerp","M",-3.37,43800000,31,178,72
-"915","earl eby","800M Men",113.6,1.89333333333333,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,25,179,60
-"916","melvin sheppard","800M Men",112.8,1.88,"USA","United States",1908,"G","London","M",-8.18,90600000,24,177,67
-"917","emilio lunghi","800M Men",114.2,1.90333333333333,"ITA","Italy",1908,"S","London","M",2.23,35900000,21,179,70
-"918","alfred tysoe","800M Men",121.2,2.02,"GBR","United Kingdom",1900,"G","Paris","M",-0.184,38000000,26,175,70
-"919","david lekuta rudisha","800M Men",100.9,1.68166666666667,"KEN","Kenya",2012,"G","London","M",4.56,43600000,23,190,76
-"920","timothy kitum","800M Men",102.5,1.70833333333333,"KEN","Kenya",2012,"B","London","M",4.56,43600000,17,172,60
-"921","yuriy borzakovskiy","800M Men",104.5,1.74166666666667,"RUS","Russia",2004,"G","Athens","M",7.37,144000000,23,183,70
-"922","vebjã¸rn rodal","800M Men",102.6,1.71,"NOR","Norway",1996,"G","Atlanta","M",5.55,4390000,23,188,78
-"923","fred onyancha","800M Men",102.8,1.71333333333333,"KEN","Kenya",1996,"B","Atlanta","M",4.14,28100000,27,170,64
-"924","steve ovett","800M Men",105.4,1.75666666666667,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,24,183,70
-"925","sebastian coe","800M Men",105.9,1.765,"GBR","United Kingdom",1980,"S","Moscow","M",-2.23,56300000,23,175,54
-"926","david james wottle","800M Men",105.9,1.765,"USA","United States",1972,"G","Munich","M",5.12,213000000,22,183,66
-"927","mike boit","800M Men",106,1.76666666666667,"KEN","Kenya",1972,"B","Munich","M",5.03,12100000,23,180,68
-"928","peter snell","800M Men",105.1,1.75166666666667,"NZL","New Zealand",1964,"G","Tokyo","M",4.89,2580000,25,179,80
-"929","william crothers","800M Men",105.6,1.76,"CAN","Canada",1964,"S","Tokyo","M",6.42,19400000,23,183,71
-"930","thomas courtney","800M Men",107.7,1.795,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,188,81
-"931","derek johnson","800M Men",107.8,1.79666666666667,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,23,176,66
-"932","audun boysen","800M Men",108.1,1.80166666666667,"NOR","Norway",1956,"B","Melbourne / Stockholm","M",5.5,3460000,27,181,66
-"933","mal whitfield","800M Men",109.2,1.82,"USA","United States",1948,"G","London","M",3.79,150000000,23,185,76
-"934","arthur wint","800M Men",109.5,1.825,"JAM","Jamaica",1948,"S","London","M",-2.61,1350000,28,194,77
-"935","marcel hansenne","800M Men",109.8,1.83,"FRA","France",1948,"B","London","M",13.2,41200000,31,184,72
-"936","thomas hampson","800M Men",109.8,1.83,"GBR","United Kingdom",1932,"G","Los Angeles","M",0.0681,46400000,24,184,69
-"937","alex wilson","800M Men",109.9,1.83166666666667,"CAN","Canada",1932,"S","Los Angeles","M",-7.12,10800000,24,178,66
-"938","douglas lowe","800M Men",112.4,1.87333333333333,"GBR","United Kingdom",1924,"G","Paris","M",4.72,44900000,21,183,70
-"939","schuyler enck","800M Men",113,1.88333333333333,"USA","United States",1924,"B","Paris","M",3.07,117000000,24,178,73
-"940","james edwin meredith","800M Men",111.9,1.865,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,20,175,71
-"941","melvin sheppard","800M Men",112,1.86666666666667,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,28,177,67
-"942","ira davenport","800M Men",112,1.86666666666667,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,24,178,72
-"943","james lightbody","800M Men",116,1.93333333333333,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,22,173,61
-"944","tirunesh dibaba","10000M Women",1794.7,29.9116666666667,"ETH","Ethiopia",2008,"G","Beijing","W",10.3,83200000,23,166,50
-"945","derartu tulu","10000M Women",1817.5,30.2916666666667,"ETH","Ethiopia",2000,"G","Sydney","W",5.83,66500000,28,160,45
-"946","gete wami","10000M Women",1822.5,30.375,"ETH","Ethiopia",2000,"S","Sydney","W",5.83,66500000,25,152,42
-"947","fernanda ribeiro","10000M Women",1822.9,30.3816666666667,"POR","Portugal",2000,"B","Sydney","W",3.85,10400000,31,161,48
-"948","derartu tulu","10000M Women",1866,31.1,"ETH","Ethiopia",1992,"G","Barcelona","W",-8.78,51600000,20,160,45
-"949","lynn jennings","10000M Women",1879.9,31.3316666666667,"USA","United States",1992,"B","Barcelona","W",2.96,257000000,32,165,50
-"950","tirunesh dibaba","10000M Women",1820.8,30.3466666666667,"ETH","Ethiopia",2012,"G","London","W",8.26,92400000,27,166,50
-"951","sally jepkosgei kipyego","10000M Women",1826.4,30.44,"KEN","Kenya",2012,"S","London","W",4.56,43600000,26,157,40
-"952","vivian jepkemoi cheruiyot","10000M Women",1830.4,30.5066666666667,"KEN","Kenya",2012,"B","London","W",4.56,43600000,28,153,40
-"953","huina xing","10000M Women",1824.4,30.4066666666667,"CHN","China",2004,"G","Athens","W",10.2,1310000000,20,168,48
-"954","ejegayehu dibaba","10000M Women",1825,30.4166666666667,"ETH","Ethiopia",2004,"S","Athens","W",13.1,74600000,22,162,47
-"955","derartu tulu","10000M Women",1826.4,30.44,"ETH","Ethiopia",2004,"B","Athens","W",13.1,74600000,32,160,45
-"956","fernanda ribeiro","10000M Women",1861.6,31.0266666666667,"POR","Portugal",1996,"G","Atlanta","W",3.73,10200000,27,161,48
-"957","junxia wang","10000M Women",1862.6,31.0433333333333,"CHN","China",1996,"S","Atlanta","W",3.42,1250000000,33,162,50
-"958","gete wami","10000M Women",1866.6,31.11,"ETH","Ethiopia",1996,"B","Atlanta","W",12.3,59200000,21,152,42
-"959","dawn harper","100M Hurdles Women",12.54,0.209,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,24,168,61
-"960","sally pearson","100M Hurdles Women",12.64,0.210666666666667,"AUS","Australia",2008,"S","Beijing","W",2.6,21300000,21,167,60
-"961","priscilla lopes-schliep","100M Hurdles Women",12.64,0.210666666666667,"CAN","Canada",2008,"B","Beijing","W",0.996,33400000,25,163,67
-"962","olga shishigina","100M Hurdles Women",12.65,0.210833333333333,"KAZ","Kazakhstan",2000,"G","Sydney","W",9.27,15100000,31,165,57
-"963","melissa morrison","100M Hurdles Women",12.76,0.212666666666667,"USA","United States",2000,"B","Sydney","W",4.16,282000000,29,164,56
-"964","lavonna martin","100M Hurdles Women",12.69,0.2115,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,25,170,66
-"965","benita fitzgerald-brown","100M Hurdles Women",12.84,0.214,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,23,178,65
-"966","shirley strong","100M Hurdles Women",12.88,0.214666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","W",2.61,56400000,25,173,63
-"967","michã¨le chardonnet","100M Hurdles Women",13.06,0.217666666666667,"FRA","France",1984,"B","Los Angeles","W",1.59,55100000,27,170,60
-"968","kim turner","100M Hurdles Women",13.06,0.217666666666667,"USA","United States",1984,"B","Los Angeles","W",7.38,239000000,23,165,57
-"969","sally pearson","100M Hurdles Women",12.35,0.205833333333333,"AUS","Australia",2012,"G","London","W",3.19,22800000,25,167,60
-"970","dawn harper","100M Hurdles Women",12.37,0.206166666666667,"USA","United States",2012,"S","London","W",2.94,313000000,28,168,61
-"971","kellie wells","100M Hurdles Women",12.48,0.208,"USA","United States",2012,"B","London","W",2.94,313000000,30,163,57
-"972","joanna hayes","100M Hurdles Women",12.37,0.206166666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,27,167,58
-"973","olena krasovska","100M Hurdles Women",12.45,0.2075,"UKR","Ukraine",2004,"S","Athens","W",12.1,47200000,27,176,62
-"974","melissa morrison","100M Hurdles Women",12.56,0.209333333333333,"USA","United States",2004,"B","Athens","W",3.49,293000000,33,164,56
-"975","ludmila engquist","100M Hurdles Women",12.58,0.209666666666667,"SWE","Sweden",1996,"G","Atlanta","W",1.59,8860000,32,174,66
-"976","patricia girard","100M Hurdles Women",12.65,0.210833333333333,"FRA","France",1996,"B","Atlanta","W",0.998,58500000,28,164,51
-"977","lucyna langer","100M Hurdles Women",12.65,0.210833333333333,"POL","Poland",1980,"B","Moscow","W",-2.48,35500000,24,167,55
-"978","valeria bufanu","100M Hurdles Women",12.84,0.214,"ROU","Romania",1972,"S","Munich","W",6.48,21000000,25,170,60
-"979","shelly-ann fraser-pryce","100M Women",10.78,0.179666666666667,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,21,160,57
-"980","sherone simpson","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,23,163,59
-"981","sherone simpson","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,24,175,61
-"982","kerron stewart","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,23,163,59
-"983","kerron stewart","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,24,175,61
-"984","tanya lawrence","100M Women",11.18,0.186333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,24,163,61
-"985","merlene ottey","100M Women",11.19,0.1865,"JAM","Jamaica",2000,"B","Sydney","W",1,2660000,40,175,62
-"986","gail devers","100M Women",10.82,0.180333333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,25,160,55
-"987","juliet cuthbert","100M Women",10.83,0.1805,"JAM","Jamaica",1992,"S","Barcelona","W",2.4,2470000,28,160,54
-"988","evelyn ashford","100M Women",10.97,0.182833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,27,165,52
-"989","alice brown","100M Women",11.13,0.1855,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,23,159,59
-"990","merlene ottey","100M Women",11.16,0.186,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
-"991","wyomia tyus","100M Women",11,0.183333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,23,172,61
-"992","barbara ferrell","100M Women",11.1,0.185,"USA","United States",1968,"S","Mexico","W",4.71,206000000,21,159,47
-"993","irena kirszenstein","100M Women",11.1,0.185,"POL","Poland",1968,"B","Mexico","W",6.11,32100000,22,176,60
-"994","wilma rudolph","100M Women",11,0.183333333333333,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
-"995","dorothy hyman","100M Women",11.3,0.188333333333333,"GBR","United Kingdom",1960,"S","Rome","W",5.15,52400000,19,170,59
-"996","giuseppina leone","100M Women",11.3,0.188333333333333,"ITA","Italy",1960,"B","Rome","W",6.9,49700000,25,168,58
-"997","marjorie jackson","100M Women",11.5,0.191666666666667,"AUS","Australia",1952,"G","Helsinki","W",1.23,8620000,20,172,66
-"998","shirley strickland","100M Women",11.9,0.198333333333333,"AUS","Australia",1952,"B","Helsinki","W",1.23,8620000,26,172,57
-"999","helen stephens","100M Women",11.5,0.191666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,18,182,70
-"1000","stanislawa walasiewicz","100M Women",11.7,0.195,"POL","Poland",1936,"S","Berlin","W",2.9,30400000,25,174,60
-"1001","elizabeth robinson","100M Women",12.2,0.203333333333333,"USA","United States",1928,"G","Amsterdam","W",1.12,123000000,16,167,57
-"1002","shelly-ann fraser-pryce","100M Women",10.75,0.179166666666667,"JAM","Jamaica",2012,"G","London","W",-0.631,2840000,25,160,57
-"1003","carmelita jeter","100M Women",10.78,0.179666666666667,"USA","United States",2012,"S","London","W",2.94,313000000,32,163,59
-"1004","veronica campbell-brown","100M Women",10.81,0.180166666666667,"JAM","Jamaica",2012,"B","London","W",-0.631,2840000,30,168,58
-"1005","yuliya nestsiarenka","100M Women",10.93,0.182166666666667,"BLR","Belarus",2004,"G","Athens","W",11,9680000,25,176,62
-"1006","lauryn williams","100M Women",10.96,0.182666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,20,160,67
-"1007","veronica campbell-brown","100M Women",10.97,0.182833333333333,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,22,168,58
-"1008","gail devers","100M Women",10.94,0.182333333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,29,160,55
-"1009","merlene ottey","100M Women",10.94,0.182333333333333,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
-"1010","gwen torrence","100M Women",10.96,0.182666666666667,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,31,170,57
-"1011","raelene ann boyle","100M Women",11.23,0.187166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
-"1012","silvia chivas baro","100M Women",11.24,0.187333333333333,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,17,157,58
-"1013","wyomia tyus","100M Women",11.4,0.19,"USA","United States",1964,"G","Tokyo","W",5.68,197000000,19,172,61
-"1014","edith mcguire","100M Women",11.6,0.193333333333333,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,20,173,59
-"1015","ewa klobukowska","100M Women",11.6,0.193333333333333,"POL","Poland",1964,"B","Tokyo","W",4.86,31100000,18,170,60
-"1016","betty cuthbert","100M Women",11.5,0.191666666666667,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
-"1017","marlene mathews-willard","100M Women",11.7,0.195,"AUS","Australia",1956,"B","Melbourne / Stockholm","W",3.32,9420000,22,170,64
-"1018","dorothy hall","100M Women",12.2,0.203333333333333,"GBR","United Kingdom",1948,"S","London","W",3.03,50000000,21,165,51
-"1019","shirley strickland","100M Women",12.2,0.203333333333333,"AUS","Australia",1948,"B","London","W",6.44,7750000,23,172,57
-"1020","stanislawa walasiewicz","100M Women",11.9,0.198333333333333,"POL","Poland",1932,"G","Los Angeles","W",-7.8,29000000,21,174,60
-"1021","hilda strike","100M Women",11.9,0.198333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,21,159,48
-"1022","wilhelmina von bremen","100M Women",12,0.2,"USA","United States",1932,"B","Los Angeles","W",-13.2,128000000,22,182,68
-"1023","veronica campbell-brown","200M Women",21.74,0.362333333333333,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,26,168,58
-"1024","allyson felix","200M Women",21.93,0.3655,"USA","United States",2008,"S","Beijing","W",-0.392,303000000,22,168,56
-"1025","kerron stewart","200M Women",22,0.366666666666667,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,24,175,61
-"1026","beverly mcdonald","200M Women",22.35,0.3725,"JAM","Jamaica",2000,"B","Sydney","W",1,2660000,30,169,59
-"1027","gwen torrence","200M Women",21.81,0.3635,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,27,170,57
-"1028","juliet cuthbert","200M Women",22.02,0.367,"JAM","Jamaica",1992,"S","Barcelona","W",2.4,2470000,28,160,54
-"1029","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1992,"B","Barcelona","W",2.4,2470000,32,175,62
-"1030","valerie brisco","200M Women",21.81,0.3635,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
-"1031","florence griffith joyner","200M Women",22.04,0.367333333333333,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,24,170,57
-"1032","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
-"1033","irena kirszenstein","200M Women",22.5,0.375,"POL","Poland",1968,"G","Mexico","W",6.11,32100000,22,176,60
-"1034","raelene ann boyle","200M Women",22.7,0.378333333333333,"AUS","Australia",1968,"S","Mexico","W",6.35,12300000,17,168,57
-"1035","jennifer lamy","200M Women",22.8,0.38,"AUS","Australia",1968,"B","Mexico","W",6.35,12300000,19,173,60
-"1036","wilma rudolph","200M Women",24,0.4,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
-"1037","dorothy hyman","200M Women",24.7,0.411666666666667,"GBR","United Kingdom",1960,"B","Rome","W",5.15,52400000,19,170,59
-"1038","marjorie jackson","200M Women",23.7,0.395,"AUS","Australia",1952,"G","Helsinki","W",1.23,8620000,20,172,66
-"1039","allyson felix","200M Women",21.88,0.364666666666667,"USA","United States",2012,"G","London","W",2.94,313000000,26,168,56
-"1040","shelly-ann fraser-pryce","200M Women",22.09,0.368166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,25,160,57
-"1041","carmelita jeter","200M Women",22.14,0.369,"USA","United States",2012,"B","London","W",2.94,313000000,32,163,59
-"1042","veronica campbell-brown","200M Women",22.05,0.3675,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,22,168,58
-"1043","allyson felix","200M Women",22.18,0.369666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,18,168,56
-"1044","marie-josã© pãrec","200M Women",22.12,0.368666666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
-"1045","merlene ottey","200M Women",22.24,0.370666666666667,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
-"1046","merlene ottey","200M Women",22.2,0.37,"JAM","Jamaica",1980,"B","Moscow","W",-5.2,2160000,20,175,62
-"1047","raelene ann boyle","200M Women",22.45,0.374166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
-"1048","irena kirszenstein","200M Women",22.74,0.379,"POL","Poland",1972,"B","Munich","W",7.35,33100000,26,176,60
-"1049","edith mcguire","200M Women",23,0.383333333333333,"USA","United States",1964,"G","Tokyo","W",5.68,197000000,20,173,59
-"1050","irena kirszenstein","200M Women",23.1,0.385,"POL","Poland",1964,"S","Tokyo","W",4.86,31100000,18,176,60
-"1051","marilyn black","200M Women",23.1,0.385,"AUS","Australia",1964,"B","Tokyo","W",6.88,11100000,20,165,55
-"1052","betty cuthbert","200M Women",23.4,0.39,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
-"1053","marlene mathews-willard","200M Women",23.8,0.396666666666667,"AUS","Australia",1956,"B","Melbourne / Stockholm","W",3.32,9420000,22,170,64
-"1054","audrey patterson","200M Women",25.2,0.42,"USA","United States",1948,"B","London","W",3.79,150000000,21,170,51
-"1055","gulnara samitova","3000M Steeplechase Women",538.8,8.98,"RUS","Russia",2008,"G","Beijing","W",5.15,143000000,30,178,54
-"1056","eunice jepkorir","3000M Steeplechase Women",547.4,9.12333333333333,"KEN","Kenya",2008,"S","Beijing","W",1.53,39100000,26,164,48
-"1057","melaine walker","400M Hurdles Women",52.64,0.877333333333333,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,25,165,53
-"1058","sheena tosta","400M Hurdles Women",53.7,0.895,"USA","United States",2008,"S","Beijing","W",-0.392,303000000,25,165,57
-"1059","natasha danvers","400M Hurdles Women",53.84,0.897333333333333,"GBR","United Kingdom",2008,"B","Beijing","W",-1.16,62100000,30,173,64
-"1060","irina privalova","400M Hurdles Women",53.02,0.883666666666667,"RUS","Russia",2000,"G","Sydney","W",10.1,146000000,31,174,64
-"1061","deon marie hemmings","400M Hurdles Women",53.45,0.890833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,31,176,63
-"1062","nezha bidouane","400M Hurdles Women",53.57,0.892833333333333,"MAR","Morocco",2000,"B","Sydney","W",0.455,28800000,30,174,65
-"1063","sally gunnell","400M Hurdles Women",53.23,0.887166666666667,"GBR","United Kingdom",1992,"G","Barcelona","W",0.164,57500000,25,167,58
-"1064","sandra farmer-patrick","400M Hurdles Women",53.69,0.894833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,29,173,63
-"1065","janeene vickers","400M Hurdles Women",54.31,0.905166666666667,"USA","United States",1992,"B","Barcelona","W",2.96,257000000,23,170,62
-"1066","nawal el moutawakel","400M Hurdles Women",54.61,0.910166666666667,"MAR","Morocco",1984,"G","Los Angeles","W",4.13,22000000,22,162,50
-"1067","judi brown","400M Hurdles Women",55.2,0.92,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,23,180,67
-"1068","cristina cojocaru","400M Hurdles Women",55.41,0.9235,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,22,172,62
-"1069","natalya antyukh","400M Hurdles Women",52.7,0.878333333333333,"RUS","Russia",2012,"G","London","W",3.23,143000000,31,182,69
-"1070","lashinda demus","400M Hurdles Women",52.77,0.8795,"USA","United States",2012,"S","London","W",2.94,313000000,29,170,60
-"1071","zuzana hejnova","400M Hurdles Women",53.38,0.889666666666667,"CZE","Czech Republic",2012,"B","London","W",-0.903,10600000,25,173,63
-"1072","ionela tirlea","400M Hurdles Women",53.38,0.889666666666667,"ROU","Romania",2004,"S","Athens","W",8.22,21600000,28,169,57
-"1073","tetyana tereshchuk","400M Hurdles Women",53.44,0.890666666666667,"UKR","Ukraine",2004,"B","Athens","W",12.1,47200000,34,185,63
-"1074","deon marie hemmings","400M Hurdles Women",52.82,0.880333333333333,"JAM","Jamaica",1996,"G","Atlanta","W",-1.85,2560000,27,176,63
-"1075","kim batten","400M Hurdles Women",53.08,0.884666666666667,"USA","United States",1996,"S","Atlanta","W",3.72,269000000,27,170,57
-"1076","tonja buford-bailey","400M Hurdles Women",53.22,0.887,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,25,176,62
-"1077","christine ohuruogu","400M Women",49.62,0.827,"GBR","United Kingdom",2008,"G","Beijing","W",-1.16,62100000,24,172,70
-"1078","shericka williams","400M Women",49.69,0.828166666666667,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,22,170,64
-"1079","sanya richards-ross","400M Women",49.93,0.832166666666667,"USA","United States",2008,"B","Beijing","W",-0.392,303000000,23,173,62
-"1080","cathy freeman","400M Women",49.11,0.8185,"AUS","Australia",2000,"G","Sydney","W",2.04,19100000,27,164,56
-"1081","lorraine fenton","400M Women",49.58,0.826333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,27,174,59
-"1082","katharine merry","400M Women",49.72,0.828666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,25,173,62
-"1083","marie-josã© pãrec","400M Women",48.83,0.813833333333333,"FRA","France",1992,"G","Barcelona","W",1.59,57500000,24,180,60
-"1084","ximena restrepo","400M Women",49.64,0.827333333333333,"COL","Colombia",1992,"B","Barcelona","W",4.27,35600000,23,175,58
-"1085","valerie brisco","400M Women",48.83,0.813833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
-"1086","chandra cheeseborough","400M Women",49.05,0.8175,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,25,165,58
-"1087","kathryn smallwood-cook","400M Women",49.42,0.823666666666667,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,24,180,64
-"1088","irena kirszenstein","400M Women",49.29,0.8215,"POL","Poland",1976,"G","Montreal","W",2.43,34300000,30,176,60
-"1089","colette besson","400M Women",52,0.866666666666667,"FRA","France",1968,"G","Mexico","W",4.15,50100000,22,169,58
-"1090","lillian board","400M Women",52.1,0.868333333333333,"GBR","United Kingdom",1968,"S","Mexico","W",4.21,55200000,19,168,60
-"1091","sanya richards-ross","400M Women",49.55,0.825833333333333,"USA","United States",2012,"G","London","W",2.94,313000000,27,173,62
-"1092","christine ohuruogu","400M Women",49.7,0.828333333333333,"GBR","United Kingdom",2012,"S","London","W",0.198,64300000,28,172,70
-"1093","deedee trotter","400M Women",49.72,0.828666666666667,"USA","United States",2012,"B","London","W",2.94,313000000,29,178,64
-"1094","ana guevara","400M Women",49.56,0.826,"MEX","Mexico",2004,"S","Athens","W",4.42,107000000,27,173,61
-"1095","natalya antyukh","400M Women",49.89,0.8315,"RUS","Russia",2004,"B","Athens","W",7.37,144000000,23,182,69
-"1096","marie-josã© pãrec","400M Women",48.25,0.804166666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
-"1097","cathy freeman","400M Women",48.63,0.8105,"AUS","Australia",1996,"S","Atlanta","W",3.62,18300000,23,164,56
-"1098","kathleen hammond","400M Women",51.64,0.860666666666667,"USA","United States",1972,"B","Munich","W",5.12,213000000,20,170,55
-"1099","betty cuthbert","400M Women",52,0.866666666666667,"AUS","Australia",1964,"G","Tokyo","W",6.88,11100000,26,169,57
-"1100","ann packer","400M Women",52.2,0.87,"GBR","United Kingdom",1964,"S","Tokyo","W",5.48,53900000,22,169,57
-"1101","judith florence amoore-pollock","400M Women",53.4,0.89,"AUS","Australia",1964,"B","Tokyo","W",6.88,11100000,24,163,55
-"1102","null","4X100M Relay Women",42.13,0.702166666666667,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,18,168,58
-"1103","null","4X100M Relay Women",42.13,0.702166666666667,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,26,174,62
-"1104","null","4X100M Relay Women",42.13,0.702166666666667,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,24,163,61
-"1105","null","4X100M Relay Women",42.13,0.702166666666667,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,30,169,59
-"1106","null","4X100M Relay Women",42.13,0.702166666666667,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,40,175,62
-"1107","null","4X100M Relay Women",42.2,0.703333333333333,"USA","United States",2000,"B","Sydney","W",4.16,282000000,23,163,57
-"1108","null","4X100M Relay Women",42.2,0.703333333333333,"USA","United States",2000,"B","Sydney","W",4.16,282000000,29,170,57
-"1109","null","4X100M Relay Women",42.2,0.703333333333333,"USA","United States",2000,"B","Sydney","W",4.16,282000000,23,176,68
-"1110","null","4X100M Relay Women",42.2,0.703333333333333,"USA","United States",2000,"B","Sydney","W",4.16,282000000,25,155,51
-"1111","null","4X100M Relay Women",42.11,0.701833333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,35,165,52
-"1112","null","4X100M Relay Women",42.11,0.701833333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,27,165,52
-"1113","null","4X100M Relay Women",42.11,0.701833333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,23,168,50
-"1114","null","4X100M Relay Women",42.11,0.701833333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,23,171,61
-"1115","null","4X100M Relay Women",42.11,0.701833333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,27,170,57
-"1116","null","4X100M Relay Women",41.65,0.694166666666667,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,27,165,52
-"1117","null","4X100M Relay Women",41.65,0.694166666666667,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,174,65
-"1118","null","4X100M Relay Women",41.65,0.694166666666667,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,23,159,59
-"1119","null","4X100M Relay Women",41.65,0.694166666666667,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,25,165,58
-"1120","null","4X100M Relay Women",42.77,0.712833333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,22,157,56
-"1121","null","4X100M Relay Women",42.77,0.712833333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,17,167,59
-"1122","null","4X100M Relay Women",42.77,0.712833333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,23,173,57
-"1123","null","4X100M Relay Women",42.77,0.712833333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,25,167,61
-"1124","null","4X100M Relay Women",43.11,0.7185,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,27,170,59
-"1125","null","4X100M Relay Women",43.11,0.7185,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,24,163,64
-"1126","null","4X100M Relay Women",43.11,0.7185,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,17,155,51
-"1127","null","4X100M Relay Women",43.11,0.7185,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,24,180,64
-"1128","null","4X100M Relay Women",42.8,0.713333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,17,170,65
-"1129","null","4X100M Relay Women",42.8,0.713333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,21,159,47
-"1130","null","4X100M Relay Women",42.8,0.713333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,20,158,51
-"1131","null","4X100M Relay Women",42.8,0.713333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,23,172,61
-"1132","null","4X100M Relay Women",43.3,0.721666666666667,"CUB","Cuba",1968,"S","Mexico","W",-5.79,8410000,26,170,63
-"1133","null","4X100M Relay Women",43.3,0.721666666666667,"CUB","Cuba",1968,"S","Mexico","W",-5.79,8410000,17,172,65
-"1134","null","4X100M Relay Women",43.3,0.721666666666667,"CUB","Cuba",1968,"S","Mexico","W",-5.79,8410000,21,163,50
-"1135","null","4X100M Relay Women",43.3,0.721666666666667,"CUB","Cuba",1968,"S","Mexico","W",-5.79,8410000,24,165,58
-"1136","null","4X100M Relay Women",44.5,0.741666666666667,"USA","United States",1960,"G","Rome","W",2.5,187000000,21,152,53
-"1137","null","4X100M Relay Women",44.5,0.741666666666667,"USA","United States",1960,"G","Rome","W",2.5,187000000,23,171,60
-"1138","null","4X100M Relay Women",44.5,0.741666666666667,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
-"1139","null","4X100M Relay Women",44.5,0.741666666666667,"USA","United States",1960,"G","Rome","W",2.5,187000000,23,166,51
-"1140","null","4X100M Relay Women",45,0.75,"POL","Poland",1960,"B","Rome","W",5.16,29600000,22,166,60
-"1141","null","4X100M Relay Women",45,0.75,"POL","Poland",1960,"B","Rome","W",5.16,29600000,26,164,55
-"1142","null","4X100M Relay Women",45,0.75,"POL","Poland",1960,"B","Rome","W",5.16,29600000,23,163,60
-"1143","null","4X100M Relay Women",45,0.75,"POL","Poland",1960,"B","Rome","W",5.16,29600000,22,167,57
-"1144","null","4X100M Relay Women",45.9,0.765,"USA","United States",1952,"G","Helsinki","W",3.57,163000000,20,158,50
-"1145","null","4X100M Relay Women",45.9,0.765,"USA","United States",1952,"G","Helsinki","W",3.57,163000000,22,157,47
-"1146","null","4X100M Relay Women",45.9,0.765,"USA","United States",1952,"G","Helsinki","W",3.57,163000000,15,171,60
-"1147","null","4X100M Relay Women",45.9,0.765,"USA","United States",1952,"G","Helsinki","W",3.57,163000000,24,170,62
-"1148","null","4X100M Relay Women",46.2,0.77,"GBR","United Kingdom",1952,"B","Helsinki","W",-0.118,50700000,19,171,64
-"1149","null","4X100M Relay Women",46.2,0.77,"GBR","United Kingdom",1952,"B","Helsinki","W",-0.118,50700000,23,171,63
-"1150","null","4X100M Relay Women",46.2,0.77,"GBR","United Kingdom",1952,"B","Helsinki","W",-0.118,50700000,23,171,64
-"1151","null","4X100M Relay Women",46.2,0.77,"GBR","United Kingdom",1952,"B","Helsinki","W",-0.118,50700000,18,170,63
-"1152","null","4X100M Relay Women",46.9,0.781666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,21,163,50
-"1153","null","4X100M Relay Women",46.9,0.781666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,24,167,57
-"1154","null","4X100M Relay Women",46.9,0.781666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,22,162,50
-"1155","null","4X100M Relay Women",46.9,0.781666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,18,182,70
-"1156","null","4X100M Relay Women",47.6,0.793333333333333,"GBR","United Kingdom",1936,"S","Berlin","W",4.77,47200000,19,177,63
-"1157","null","4X100M Relay Women",47.6,0.793333333333333,"GBR","United Kingdom",1936,"S","Berlin","W",4.77,47200000,26,167,63
-"1158","null","4X100M Relay Women",47.6,0.793333333333333,"GBR","United Kingdom",1936,"S","Berlin","W",4.77,47200000,25,162,56
-"1159","null","4X100M Relay Women",47.8,0.796666666666667,"CAN","Canada",1936,"B","Berlin","W",5.4,11200000,25,168,55
-"1160","null","4X100M Relay Women",48.4,0.806666666666667,"CAN","Canada",1928,"G","Amsterdam","W",8.87,10100000,17,169,58
-"1161","null","4X100M Relay Women",48.4,0.806666666666667,"CAN","Canada",1928,"G","Amsterdam","W",8.87,10100000,26,168,55
-"1162","null","4X100M Relay Women",48.4,0.806666666666667,"CAN","Canada",1928,"G","Amsterdam","W",8.87,10100000,23,169,61
-"1163","null","4X100M Relay Women",48.4,0.806666666666667,"CAN","Canada",1928,"G","Amsterdam","W",8.87,10100000,20,165,54
-"1164","null","4X100M Relay Women",40.82,0.680333333333333,"USA","United States",2012,"G","London","W",2.94,313000000,26,168,56
-"1165","null","4X100M Relay Women",40.82,0.680333333333333,"USA","United States",2012,"G","London","W",2.94,313000000,32,163,59
-"1166","null","4X100M Relay Women",40.82,0.680333333333333,"USA","United States",2012,"G","London","W",2.94,313000000,23,160,63
-"1167","null","4X100M Relay Women",40.82,0.680333333333333,"USA","United States",2012,"G","London","W",2.94,313000000,26,168,58
-"1168","null","4X100M Relay Women",40.82,0.680333333333333,"USA","United States",2012,"G","London","W",2.94,313000000,22,165,59
-"1169","null","4X100M Relay Women",40.82,0.680333333333333,"USA","United States",2012,"G","London","W",2.94,313000000,28,160,67
-"1170","null","4X100M Relay Women",41.41,0.690166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,23,166,57
-"1171","null","4X100M Relay Women",41.41,0.690166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,30,168,58
-"1172","null","4X100M Relay Women",41.41,0.690166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,25,160,57
-"1173","null","4X100M Relay Women",41.41,0.690166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,23,163,58
-"1174","null","4X100M Relay Women",41.41,0.690166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,27,163,59
-"1175","null","4X100M Relay Women",41.41,0.690166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,28,175,61
-"1176","null","4X100M Relay Women",42.04,0.700666666666667,"UKR","Ukraine",2012,"B","London","W",-0.0839,45300000,22,173,63
-"1177","null","4X100M Relay Women",42.04,0.700666666666667,"UKR","Ukraine",2012,"B","London","W",-0.0839,45300000,24,167,63
-"1178","null","4X100M Relay Women",42.04,0.700666666666667,"UKR","Ukraine",2012,"B","London","W",-0.0839,45300000,24,171,61
-"1179","null","4X100M Relay Women",42.04,0.700666666666667,"UKR","Ukraine",2012,"B","London","W",-0.0839,45300000,24,168,60
-"1180","null","4X100M Relay Women",41.73,0.6955,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,23,170,64
-"1181","null","4X100M Relay Women",41.73,0.6955,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,22,168,58
-"1182","null","4X100M Relay Women",41.73,0.6955,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,28,163,61
-"1183","null","4X100M Relay Women",41.73,0.6955,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,34,169,59
-"1184","null","4X100M Relay Women",41.73,0.6955,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,19,163,59
-"1185","null","4X100M Relay Women",42.27,0.7045,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,21,172,75
-"1186","null","4X100M Relay Women",42.27,0.7045,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,38,170,63
-"1187","null","4X100M Relay Women",42.27,0.7045,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,31,166,63
-"1188","null","4X100M Relay Women",42.27,0.7045,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,24,165,55
-"1189","null","4X100M Relay Women",42.54,0.709,"FRA","France",2004,"B","Athens","W",2.27,60900000,30,177,64
-"1190","null","4X100M Relay Women",42.54,0.709,"FRA","France",2004,"B","Athens","W",2.27,60900000,26,174,58
-"1191","null","4X100M Relay Women",42.54,0.709,"FRA","France",2004,"B","Athens","W",2.27,60900000,25,180,68
-"1192","null","4X100M Relay Women",42.54,0.709,"FRA","France",2004,"B","Athens","W",2.27,60900000,19,173,59
-"1193","null","4X100M Relay Women",41.95,0.699166666666667,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,29,160,55
-"1194","null","4X100M Relay Women",41.95,0.699166666666667,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,25,170,57
-"1195","null","4X100M Relay Women",41.95,0.699166666666667,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,27,168,50
-"1196","null","4X100M Relay Women",41.95,0.699166666666667,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,24,163,55
-"1197","null","4X100M Relay Women",41.95,0.699166666666667,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,31,170,57
-"1198","null","4X100M Relay Women",42.24,0.704,"JAM","Jamaica",1996,"B","Atlanta","W",-1.85,2560000,32,160,54
-"1199","null","4X100M Relay Women",42.24,0.704,"JAM","Jamaica",1996,"B","Atlanta","W",-1.85,2560000,27,170,63
-"1200","null","4X100M Relay Women",42.24,0.704,"JAM","Jamaica",1996,"B","Atlanta","W",-1.85,2560000,24,170,66
-"1201","null","4X100M Relay Women",42.24,0.704,"JAM","Jamaica",1996,"B","Atlanta","W",-1.85,2560000,22,168,60
-"1202","null","4X100M Relay Women",42.24,0.704,"JAM","Jamaica",1996,"B","Atlanta","W",-1.85,2560000,36,175,62
-"1203","null","4X100M Relay Women",42.24,0.704,"JAM","Jamaica",1996,"B","Atlanta","W",-1.85,2560000,22,169,57
-"1204","null","4X100M Relay Women",42.43,0.707166666666667,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,23,170,59
-"1205","null","4X100M Relay Women",42.43,0.707166666666667,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,20,163,64
-"1206","null","4X100M Relay Women",42.43,0.707166666666667,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,24,165,57
-"1207","null","4X100M Relay Women",42.43,0.707166666666667,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,20,180,64
-"1208","null","4X100M Relay Women",43.36,0.722666666666667,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,17,157,58
-"1209","null","4X100M Relay Women",43.36,0.722666666666667,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,21,172,65
-"1210","null","4X100M Relay Women",43.36,0.722666666666667,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,28,165,58
-"1211","null","4X100M Relay Women",43.36,0.722666666666667,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,17,167,54
-"1212","null","4X100M Relay Women",43.6,0.726666666666667,"POL","Poland",1964,"G","Tokyo","W",4.86,31100000,26,166,60
-"1213","null","4X100M Relay Women",43.6,0.726666666666667,"POL","Poland",1964,"G","Tokyo","W",4.86,31100000,18,170,60
-"1214","null","4X100M Relay Women",43.6,0.726666666666667,"POL","Poland",1964,"G","Tokyo","W",4.86,31100000,26,167,57
-"1215","null","4X100M Relay Women",43.6,0.726666666666667,"POL","Poland",1964,"G","Tokyo","W",4.86,31100000,18,176,60
-"1216","null","4X100M Relay Women",43.9,0.731666666666667,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,20,173,59
-"1217","null","4X100M Relay Women",43.9,0.731666666666667,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,19,172,61
-"1218","null","4X100M Relay Women",43.9,0.731666666666667,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,19,161,52
-"1219","null","4X100M Relay Women",43.9,0.731666666666667,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,24,163,56
-"1220","null","4X100M Relay Women",44,0.733333333333333,"GBR","United Kingdom",1964,"B","Tokyo","W",5.48,53900000,22,167,60
-"1221","null","4X100M Relay Women",44,0.733333333333333,"GBR","United Kingdom",1964,"B","Tokyo","W",5.48,53900000,24,173,61
-"1222","null","4X100M Relay Women",44,0.733333333333333,"GBR","United Kingdom",1964,"B","Tokyo","W",5.48,53900000,23,170,59
-"1223","null","4X100M Relay Women",44,0.733333333333333,"GBR","United Kingdom",1964,"B","Tokyo","W",5.48,53900000,20,166,65
-"1224","null","4X100M Relay Women",44.5,0.741666666666667,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,22,173,61
-"1225","null","4X100M Relay Women",44.5,0.741666666666667,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
-"1226","null","4X100M Relay Women",44.5,0.741666666666667,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,31,172,57
-"1227","null","4X100M Relay Women",44.7,0.745,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","W",0.892,51300000,23,171,64
-"1228","null","4X100M Relay Women",44.7,0.745,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","W",0.892,51300000,22,170,63
-"1229","null","4X100M Relay Women",44.7,0.745,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","W",0.892,51300000,21,162,50
-"1230","null","4X100M Relay Women",44.7,0.745,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","W",0.892,51300000,21,170,61
-"1231","null","4X100M Relay Women",44.9,0.748333333333333,"USA","United States",1956,"B","Melbourne / Stockholm","W",1.95,175000000,19,166,61
-"1232","null","4X100M Relay Women",44.9,0.748333333333333,"USA","United States",1956,"B","Melbourne / Stockholm","W",1.95,175000000,24,158,50
-"1233","null","4X100M Relay Women",44.9,0.748333333333333,"USA","United States",1956,"B","Melbourne / Stockholm","W",1.95,175000000,21,165,57
-"1234","null","4X100M Relay Women",44.9,0.748333333333333,"USA","United States",1956,"B","Melbourne / Stockholm","W",1.95,175000000,16,180,59
-"1235","null","4X100M Relay Women",47.6,0.793333333333333,"AUS","Australia",1948,"S","London","W",6.44,7750000,23,172,57
-"1236","null","4X100M Relay Women",47,0.783333333333333,"USA","United States",1932,"G","Los Angeles","W",-13.2,128000000,18,157,45
-"1237","null","4X100M Relay Women",47,0.783333333333333,"USA","United States",1932,"G","Los Angeles","W",-13.2,128000000,18,158,43
-"1238","null","4X100M Relay Women",47,0.783333333333333,"USA","United States",1932,"G","Los Angeles","W",-13.2,128000000,18,162,50
-"1239","null","4X100M Relay Women",47,0.783333333333333,"USA","United States",1932,"G","Los Angeles","W",-13.2,128000000,22,182,68
-"1240","null","4X100M Relay Women",47,0.783333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,17,165,54
-"1241","null","4X100M Relay Women",47,0.783333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,19,160,51
-"1242","null","4X100M Relay Women",47,0.783333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,21,159,48
-"1243","null","4X100M Relay Women",47.6,0.793333333333333,"GBR","United Kingdom",1932,"B","Los Angeles","W",0.0681,46400000,22,167,63
-"1244","null","4X100M Relay Women",47.6,0.793333333333333,"GBR","United Kingdom",1932,"B","Los Angeles","W",0.0681,46400000,17,173,60
-"1245","null","4X400M Relay Women",198.5,3.30833333333333,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,22,168,56
-"1246","null","4X400M Relay Women",198.5,3.30833333333333,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,22,173,68
-"1247","null","4X400M Relay Women",198.5,3.30833333333333,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,25,170,54
-"1248","null","4X400M Relay Women",198.5,3.30833333333333,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,23,173,62
-"1249","null","4X400M Relay Women",198.5,3.30833333333333,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,28,178,62
-"1250","null","4X400M Relay Women",200.4,3.34,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,25,172,68
-"1251","null","4X400M Relay Women",200.4,3.34,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,21,174,65
-"1252","null","4X400M Relay Women",200.4,3.34,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,22,170,64
-"1253","null","4X400M Relay Women",200.4,3.34,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,26,168,57
-"1254","null","4X400M Relay Women",202.6,3.37666666666667,"USA","United States",2000,"G","Sydney","W",4.16,282000000,22,164,61
-"1255","null","4X400M Relay Women",202.6,3.37666666666667,"USA","United States",2000,"G","Sydney","W",4.16,282000000,24,168,52
-"1256","null","4X400M Relay Women",202.6,3.37666666666667,"USA","United States",2000,"G","Sydney","W",4.16,282000000,24,173,57
-"1257","null","4X400M Relay Women",202.6,3.37666666666667,"USA","United States",2000,"G","Sydney","W",4.16,282000000,24,178,68
-"1258","null","4X400M Relay Women",202.6,3.37666666666667,"USA","United States",2000,"G","Sydney","W",4.16,282000000,34,170,60
-"1259","null","4X400M Relay Women",203.3,3.38833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,23,170,62
-"1260","null","4X400M Relay Women",203.3,3.38833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,27,174,59
-"1261","null","4X400M Relay Women",203.3,3.38833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,31,176,63
-"1262","null","4X400M Relay Women",203.3,3.38833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,25,168,59
-"1263","null","4X400M Relay Women",203.3,3.38833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,27,174,61
-"1264","null","4X400M Relay Women",203.3,3.38833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,31,175,67
-"1265","null","4X400M Relay Women",203.5,3.39166666666667,"RUS","Russia",2000,"B","Sydney","W",10.1,146000000,29,173,63
-"1266","null","4X400M Relay Women",203.5,3.39166666666667,"RUS","Russia",2000,"B","Sydney","W",10.1,146000000,24,180,66
-"1267","null","4X400M Relay Women",203.5,3.39166666666667,"RUS","Russia",2000,"B","Sydney","W",10.1,146000000,21,168,57
-"1268","null","4X400M Relay Women",203.5,3.39166666666667,"RUS","Russia",2000,"B","Sydney","W",10.1,146000000,31,174,64
-"1269","null","4X400M Relay Women",203.5,3.39166666666667,"RUS","Russia",2000,"B","Sydney","W",10.1,146000000,29,170,60
-"1270","null","4X400M Relay Women",203.5,3.39166666666667,"RUS","Russia",2000,"B","Sydney","W",10.1,146000000,19,171,64
-"1271","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,27,165,55
-"1272","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,25,175,59
-"1273","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,25,170,60
-"1274","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,25,173,58
-"1275","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,27,170,57
-"1276","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,27,165,57
-"1277","null","4X400M Relay Women",204.2,3.40333333333333,"GBR","United Kingdom",1992,"B","Barcelona","W",0.164,57500000,25,162,55
-"1278","null","4X400M Relay Women",204.2,3.40333333333333,"GBR","United Kingdom",1992,"B","Barcelona","W",0.164,57500000,25,167,58
-"1279","null","4X400M Relay Women",204.2,3.40333333333333,"GBR","United Kingdom",1992,"B","Barcelona","W",0.164,57500000,26,169,62
-"1280","null","4X400M Relay Women",204.2,3.40333333333333,"GBR","United Kingdom",1992,"B","Barcelona","W",0.164,57500000,27,175,65
-"1281","null","4X400M Relay Women",198.3,3.305,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
-"1282","null","4X400M Relay Women",198.3,3.305,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,25,165,58
-"1283","null","4X400M Relay Women",198.3,3.305,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,19,165,54
-"1284","null","4X400M Relay Women",198.3,3.305,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,22,170,53
-"1285","null","4X400M Relay Women",198.3,3.305,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,19,165,55
-"1286","null","4X400M Relay Women",198.3,3.305,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,20,168,56
-"1287","null","4X400M Relay Women",201.2,3.35333333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,21,175,58
-"1288","null","4X400M Relay Women",201.2,3.35333333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,25,170,56
-"1289","null","4X400M Relay Women",201.2,3.35333333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,23,173,57
-"1290","null","4X400M Relay Women",201.2,3.35333333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,19,172,59
-"1291","null","4X400M Relay Women",201.2,3.35333333333333,"CAN","Canada",1984,"S","Los Angeles","W",5.85,25600000,24,163,56
-"1292","null","4X400M Relay Women",202.8,3.38,"USA","United States",1976,"S","Montreal","W",5.22,221000000,20,165,57
-"1293","null","4X400M Relay Women",202.8,3.38,"USA","United States",1976,"S","Montreal","W",5.22,221000000,19,161,51
-"1294","null","4X400M Relay Women",202.8,3.38,"USA","United States",1976,"S","Montreal","W",5.22,221000000,21,168,62
-"1295","null","4X400M Relay Women",202.8,3.38,"USA","United States",1976,"S","Montreal","W",5.22,221000000,24,170,52
-"1296","null","4X400M Relay Women",196.9,3.28166666666667,"USA","United States",2012,"G","London","W",2.94,313000000,24,170,62
-"1297","null","4X400M Relay Women",196.9,3.28166666666667,"USA","United States",2012,"G","London","W",2.94,313000000,20,168,51
-"1298","null","4X400M Relay Women",196.9,3.28166666666667,"USA","United States",2012,"G","London","W",2.94,313000000,26,168,56
-"1299","null","4X400M Relay Women",196.9,3.28166666666667,"USA","United States",2012,"G","London","W",2.94,313000000,23,171,68
-"1300","null","4X400M Relay Women",196.9,3.28166666666667,"USA","United States",2012,"G","London","W",2.94,313000000,27,173,62
-"1301","null","4X400M Relay Women",196.9,3.28166666666667,"USA","United States",2012,"G","London","W",2.94,313000000,29,178,64
-"1302","null","4X400M Relay Women",199,3.31666666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,21,170,54
-"1303","null","4X400M Relay Women",199,3.31666666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,28,173,57
-"1304","null","4X400M Relay Women",199,3.31666666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,19,173,62
-"1305","null","4X400M Relay Women",199,3.31666666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,23,170,59
-"1306","null","4X400M Relay Women",199,3.31666666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,21,178,64
-"1307","null","4X400M Relay Women",200.2,3.33666666666667,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,23,182,69
-"1308","null","4X400M Relay Women",200.2,3.33666666666667,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,21,174,59
-"1309","null","4X400M Relay Women",200.2,3.33666666666667,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,23,183,68
-"1310","null","4X400M Relay Women",200.2,3.33666666666667,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,25,171,60
-"1311","null","4X400M Relay Women",200.2,3.33666666666667,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,25,168,57
-"1312","null","4X400M Relay Women",200.2,3.33666666666667,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,23,171,64
-"1313","null","4X400M Relay Women",202,3.36666666666667,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,27,170,62
-"1314","null","4X400M Relay Women",202,3.36666666666667,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,23,168,54
-"1315","null","4X400M Relay Women",202,3.36666666666667,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,35,175,67
-"1316","null","4X400M Relay Women",202,3.36666666666667,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,24,168,59
-"1317","null","4X400M Relay Women",202,3.36666666666667,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,22,168,57
-"1318","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,25,163,58
-"1319","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,27,176,61
-"1320","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,29,170,60
-"1321","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,29,173,58
-"1322","null","4X400M Relay Women",200.9,3.34833333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,28,170,65
-"1323","null","4X400M Relay Women",207.5,3.45833333333333,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,25,163,52
-"1324","null","4X400M Relay Women",207.5,3.45833333333333,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,16,160,43
-"1325","null","4X400M Relay Women",207.5,3.45833333333333,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,25,170,55
-"1326","null","4X400M Relay Women",207.5,3.45833333333333,"GBR","United Kingdom",1980,"B","Moscow","W",-2.23,56300000,20,170,56
-"1327","null","4X400M Relay Women",205.2,3.42,"USA","United States",1972,"S","Munich","W",5.12,213000000,17,170,60
-"1328","null","4X400M Relay Women",205.2,3.42,"USA","United States",1972,"S","Munich","W",5.12,213000000,20,170,55
-"1329","null","4X400M Relay Women",205.2,3.42,"USA","United States",1972,"S","Munich","W",5.12,213000000,24,175,75
-"1330","null","4X400M Relay Women",205.2,3.42,"USA","United States",1972,"S","Munich","W",5.12,213000000,19,170,54
-"1331","tirunesh dibaba","5000M Women",941.4,15.69,"ETH","Ethiopia",2008,"G","Beijing","W",10.3,83200000,23,166,50
-"1332","elvan abeylegesse","5000M Women",942.7,15.7116666666667,"TUR","Turkey",2008,"S","Beijing","W",0.735,70400000,25,159,40
-"1333","meseret defar","5000M Women",944.1,15.735,"ETH","Ethiopia",2008,"B","Beijing","W",10.3,83200000,24,159,42
-"1334","gabriela szabo","5000M Women",880.8,14.68,"ROU","Romania",2000,"G","Sydney","W",1.81,22100000,24,158,42
-"1335","sonia o'sullivan","5000M Women",881,14.6833333333333,"IRL","Ireland",2000,"S","Sydney","W",9.7,3850000,30,175,55
-"1336","gete wami","5000M Women",882.2,14.7033333333333,"ETH","Ethiopia",2000,"B","Sydney","W",5.83,66500000,25,152,42
-"1337","meseret defar","5000M Women",904.3,15.0716666666667,"ETH","Ethiopia",2012,"G","London","W",8.26,92400000,28,159,42
-"1338","vivian jepkemoi cheruiyot","5000M Women",904.7,15.0783333333333,"KEN","Kenya",2012,"S","London","W",4.56,43600000,28,153,40
-"1339","tirunesh dibaba","5000M Women",905.2,15.0866666666667,"ETH","Ethiopia",2012,"B","London","W",8.26,92400000,27,166,50
-"1340","meseret defar","5000M Women",885.7,14.7616666666667,"ETH","Ethiopia",2004,"G","Athens","W",13.1,74600000,20,159,42
-"1341","isabella ochichi","5000M Women",888.2,14.8033333333333,"KEN","Kenya",2004,"S","Athens","W",5.1,35100000,24,152,41
-"1342","tirunesh dibaba","5000M Women",891.8,14.8633333333333,"ETH","Ethiopia",2004,"B","Athens","W",13.1,74600000,19,166,50
-"1343","junxia wang","5000M Women",899.9,14.9983333333333,"CHN","China",1996,"G","Atlanta","W",3.42,1250000000,33,162,50
-"1344","pauline konga","5000M Women",903.5,15.0583333333333,"KEN","Kenya",1996,"S","Atlanta","W",4.14,28100000,26,158,43
-"1345","roberta brunet","5000M Women",907.5,15.125,"ITA","Italy",1996,"B","Atlanta","W",0.865,57200000,31,170,58
-"1346","pamela jelimo","800M Women",114.9,1.915,"KEN","Kenya",2008,"G","Beijing","W",1.53,39100000,18,175,60
-"1347","janeth jepkosgei busienei","800M Women",116.1,1.935,"KEN","Kenya",2008,"S","Beijing","W",1.53,39100000,24,167,47
-"1348","hasna benhassi","800M Women",116.7,1.945,"MAR","Morocco",2008,"B","Beijing","W",5.49,31600000,30,166,47
-"1349","maria mutola","800M Women",116.2,1.93666666666667,"MOZ","Mozambique",2000,"G","Sydney","W",2.06,18100000,27,165,63
-"1350","stephanie graf","800M Women",116.6,1.94333333333333,"AUT","Austria",2000,"S","Sydney","W",3.38,8070000,27,170,60
-"1351","kelly holmes","800M Women",116.8,1.94666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,30,163,55
-"1352","ana fidelia quirot","800M Women",116.8,1.94666666666667,"CUB","Cuba",1992,"B","Barcelona","W",-13.9,10700000,29,165,59
-"1353","doina melinte","800M Women",117.6,1.96,"ROU","Romania",1984,"G","Los Angeles","W",4.18,23000000,27,171,59
-"1354","kim gallagher","800M Women",118.6,1.97666666666667,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,20,165,47
-"1355","fita lovin","800M Women",118.8,1.98,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,33,166,57
-"1356","madeline manning-jackson","800M Women",120.9,2.015,"USA","United States",1968,"G","Mexico","W",4.71,206000000,20,175,75
-"1357","ileana silai","800M Women",122.5,2.04166666666667,"ROU","Romania",1968,"S","Mexico","W",1.21,20100000,26,167,49
-"1358","brenda jones","800M Women",124.4,2.07333333333333,"AUS","Australia",1960,"S","Rome","W",4.04,10300000,23,173,55
-"1359","mariya savinova","800M Women",116.2,1.93666666666667,"RUS","Russia",2012,"G","London","W",3.23,143000000,26,172,60
-"1360","ekaterina poistogova","800M Women",117.5,1.95833333333333,"RUS","Russia",2012,"B","London","W",3.23,143000000,21,175,65
-"1361","kelly holmes","800M Women",116.4,1.94,"GBR","United Kingdom",2004,"G","Athens","W",2.95,59900000,34,163,55
-"1362","hasna benhassi","800M Women",116.4,1.94,"MAR","Morocco",2004,"S","Athens","W",4.59,30200000,26,166,47
-"1363","svetlana masterkova","800M Women",117.7,1.96166666666667,"RUS","Russia",1996,"G","Atlanta","W",-3.64,148000000,28,168,50
-"1364","ana fidelia quirot","800M Women",118.1,1.96833333333333,"CUB","Cuba",1996,"S","Atlanta","W",8.72,11000000,33,165,59
-"1365","maria mutola","800M Women",118.7,1.97833333333333,"MOZ","Mozambique",1996,"B","Atlanta","W",6.95,16200000,23,165,63
-"1366","ann packer","800M Women",121.1,2.01833333333333,"GBR","United Kingdom",1964,"G","Tokyo","W",5.48,53900000,22,169,57
-"1367","maryvonne dupureur","800M Women",121.9,2.03166666666667,"FRA","France",1964,"S","Tokyo","W",6.72,48400000,27,167,58
-"1368","ann marise chamberlain","800M Women",122.8,2.04666666666667,"NZL","New Zealand",1964,"B","Tokyo","W",4.89,2580000,28,169,55
+"476","kenenisa bekele","5000M Men",777.8,12.9633333333333,"ETH","Ethiopia",2008,"G","Beijing","M",10.3,83200000,26,165,56
+"477","eliud kipchoge rotich","5000M Men",782.8,13.0466666666667,"KEN","Kenya",2008,"S","Beijing","M",1.53,39100000,23,167,57
+"478","edwin cheruiyot soi","5000M Men",786.2,13.1033333333333,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,22,168,53
+"479","millon wolde","5000M Men",815.5,13.5916666666667,"ETH","Ethiopia",2000,"G","Sydney","M",5.83,66500000,21,175,59
+"480","brahim lahlafi","5000M Men",816.5,13.6083333333333,"MAR","Morocco",2000,"B","Sydney","M",0.455,28800000,32,172,62
+"481","paul bitok","5000M Men",792.7,13.2116666666667,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,22,173,58
+"482","fita bayissa","5000M Men",793,13.2166666666667,"ETH","Ethiopia",1992,"B","Barcelona","M",-8.78,51600000,19,173,52
+"483","saã¯d aouita","5000M Men",785.6,13.0933333333333,"MAR","Morocco",1984,"G","Los Angeles","M",4.13,22000000,24,175,58
+"484","antã³nio leitão","5000M Men",789.2,13.1533333333333,"POR","Portugal",1984,"B","Los Angeles","M",-1.83,9980000,24,176,68
+"485","lasse viren","5000M Men",804.8,13.4133333333333,"FIN","Finland",1976,"G","Montreal","M",-0.4,4730000,26,180,60
+"486","dick theodorus quax","5000M Men",805.2,13.42,"NZL","New Zealand",1976,"S","Montreal","M",2.13,3110000,28,183,65
+"487","mohamed gammoudi","5000M Men",845,14.0833333333333,"TUN","Tunisia",1968,"G","Mexico","M",10.4,4840000,30,172,60
+"488","kip keino","5000M Men",845.2,14.0866666666667,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,28,173,66
+"489","naftali temu","5000M Men",846.4,14.1066666666667,"KEN","Kenya",1968,"B","Mexico","M",0.0532,10500000,23,174,62
+"490","murray halberg","5000M Men",823.4,13.7233333333333,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,27,178,62
+"491","kazimierz zimny","5000M Men",824.8,13.7466666666667,"POL","Poland",1960,"B","Rome","M",5.16,29600000,25,172,60
+"492","alain mimoun","5000M Men",847.4,14.1233333333333,"FRA","France",1952,"S","Helsinki","M",2.25,42400000,31,170,56
+"493","gunnar hãckert","5000M Men",862.2,14.37,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,26,178,68
+"494","lauri lehtinen","5000M Men",865.8,14.43,"FIN","Finland",1936,"S","Berlin","M",6.76,3600000,27,174,64
+"495","henry jonsson-kãlarne","5000M Men",869,14.4833333333333,"SWE","Sweden",1936,"B","Berlin","M",3.62,6260000,24,181,70
+"496","ville ritola","5000M Men",878,14.6333333333333,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,32,175,66
+"497","paavo nurmi","5000M Men",880,14.6666666666667,"FIN","Finland",1928,"S","Amsterdam","M",6.75,3400000,30,174,65
+"498","edvin wide","5000M Men",881.2,14.6866666666667,"SWE","Sweden",1928,"B","Amsterdam","M",3.06,6120000,32,170,62
+"499","joseph guillemot","5000M Men",895.6,14.9266666666667,"FRA","France",1920,"G","Antwerp","M",7.49,39100000,20,160,55
+"500","paavo nurmi","5000M Men",900,15,"FIN","Finland",1920,"S","Antwerp","M",11.9,3140000,22,174,65
+"501","eric backman","5000M Men",913,15.2166666666667,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,23,172,64
+"502","mohamed farah","5000M Men",821.7,13.695,"GBR","United Kingdom",2012,"G","London","M",0.198,64300000,29,175,58
+"503","dejen gebremeskel","5000M Men",822,13.7,"ETH","Ethiopia",2012,"S","London","M",8.26,92400000,22,180,58
+"504","thomas pkemei longosiwa","5000M Men",822.4,13.7066666666667,"KEN","Kenya",2012,"B","London","M",4.56,43600000,30,175,57
+"505","hicham el guerrouj","5000M Men",794.4,13.24,"MAR","Morocco",2004,"G","Athens","M",4.59,30200000,29,176,58
+"506","kenenisa bekele","5000M Men",794.6,13.2433333333333,"ETH","Ethiopia",2004,"S","Athens","M",13.1,74600000,22,165,56
+"507","eliud kipchoge rotich","5000M Men",795.1,13.2516666666667,"KEN","Kenya",2004,"B","Athens","M",5.1,35100000,19,167,57
+"508","venuste niyongabo","5000M Men",788,13.1333333333333,"BDI","Burundi",1996,"G","Atlanta","M",-7.94,6040000,22,176,60
+"509","paul bitok","5000M Men",788.2,13.1366666666667,"KEN","Kenya",1996,"S","Atlanta","M",4.14,28100000,26,173,58
+"510","khalid boulami","5000M Men",788.4,13.14,"MAR","Morocco",1996,"B","Atlanta","M",11.6,27500000,26,167,60
+"511","miruts yifter","5000M Men",801,13.35,"ETH","Ethiopia",1980,"G","Moscow","M",2.18,35300000,36,162,53
+"512","kaarlo maaninka","5000M Men",802,13.3666666666667,"FIN","Finland",1980,"B","Moscow","M",5.38,4790000,26,178,61
+"513","lasse viren","5000M Men",806.4,13.44,"FIN","Finland",1972,"G","Munich","M",7.49,4650000,23,180,60
+"514","mohamed gammoudi","5000M Men",807.3,13.455,"TUN","Tunisia",1972,"S","Munich","M",17.6,5290000,34,172,60
+"515","ian stewart","5000M Men",807.6,13.46,"GBR","United Kingdom",1972,"B","Munich","M",3.61,56000000,23,178,65
+"516","robert keyser schul","5000M Men",828.8,13.8133333333333,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,27,184,66
+"517","bill dellinger","5000M Men",829.8,13.83,"USA","United States",1964,"B","Tokyo","M",5.68,197000000,30,175,62
+"518","gordon pirie","5000M Men",830.6,13.8433333333333,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,25,188,65
+"519","derek ibbotson","5000M Men",834.4,13.9066666666667,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,24,175,68
+"520","gaston reiff","5000M Men",857.6,14.2933333333333,"BEL","Belgium",1948,"G","London","M",6.31,8540000,27,173,61
+"521","lauri lehtinen","5000M Men",870,14.5,"FIN","Finland",1932,"G","Los Angeles","M",-0.427,3500000,23,174,64
+"522","ralph hill","5000M Men",870,14.5,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,23,180,66
+"523","lauri virtanen","5000M Men",884,14.7333333333333,"FIN","Finland",1932,"B","Los Angeles","M",-0.427,3500000,27,172,68
+"524","paavo nurmi","5000M Men",871.2,14.52,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,26,174,65
+"525","ville ritola","5000M Men",871.4,14.5233333333333,"FIN","Finland",1924,"S","Paris","M",2.61,3270000,28,175,66
+"526","edvin wide","5000M Men",901.8,15.03,"SWE","Sweden",1924,"B","Paris","M",7.47,6020000,28,170,62
+"527","hannes kolehmainen","5000M Men",876.6,14.61,"FIN","Finland",1912,"G","Stockholm","M",5.56,3000000,22,168,57.5
+"528","jean bouin","5000M Men",876.7,14.6116666666667,"FRA","France",1912,"S","Stockholm","M",8.25,41500000,23,172,70
+"529","wilfred bungei","800M Men",104.7,1.745,"KEN","Kenya",2008,"G","Beijing","M",1.53,39100000,28,172,60
+"530","alfred kirwa yego","800M Men",104.8,1.74666666666667,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,21,175,56
+"531","william tanui","800M Men",103.7,1.72833333333333,"KEN","Kenya",1992,"G","Barcelona","M",-0.793,25000000,28,183,70
+"532","nixon kiprotich","800M Men",103.7,1.72833333333333,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,29,185,68
+"533","johnny gray","800M Men",104,1.73333333333333,"USA","United States",1992,"B","Barcelona","M",2.96,257000000,32,191,75
+"534","joaquim cruz","800M Men",103,1.71666666666667,"BRA","Brazil",1984,"G","Los Angeles","M",5.58,133000000,21,187,74
+"535","sebastian coe","800M Men",103.6,1.72666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,27,175,54
+"536","earl jones","800M Men",103.8,1.73,"USA","United States",1984,"B","Los Angeles","M",7.38,239000000,20,180,73
+"537","alberto juantorena","800M Men",103.5,1.725,"CUB","Cuba",1976,"G","Montreal","M",2.55,9540000,25,190,84
+"538","ivo van damme","800M Men",103.9,1.73166666666667,"BEL","Belgium",1976,"S","Montreal","M",5.7,9790000,22,191,76
+"539","richard charles wohlhuter","800M Men",104.1,1.735,"USA","United States",1976,"B","Montreal","M",5.22,221000000,27,175,60
+"540","ralph doubell","800M Men",104.3,1.73833333333333,"AUS","Australia",1968,"G","Mexico","M",6.35,12300000,23,180,65
+"541","thomas francis farrell","800M Men",105.4,1.75666666666667,"USA","United States",1968,"B","Mexico","M",4.71,206000000,24,172,64
+"542","peter snell","800M Men",106.3,1.77166666666667,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,21,179,80
+"543","roger moens","800M Men",106.5,1.775,"BEL","Belgium",1960,"S","Rome","M",4.82,9170000,30,175,70
+"544","mal whitfield","800M Men",109.2,1.82,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,27,185,76
+"545","arthur wint","800M Men",109.4,1.82333333333333,"JAM","Jamaica",1952,"S","Helsinki","M",8.83,1470000,32,194,77
+"546","john woodruff","800M Men",112.9,1.88166666666667,"USA","United States",1936,"G","Berlin","M",14.2,131000000,21,189,75
+"547","mario lanzi","800M Men",113.3,1.88833333333333,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,21,180,76
+"548","philip edwards","800M Men",113.6,1.89333333333333,"CAN","Canada",1936,"B","Berlin","M",5.4,11200000,28,176,64
+"549","douglas lowe","800M Men",111.8,1.86333333333333,"GBR","United Kingdom",1928,"G","Amsterdam","M",0.893,45600000,25,183,70
+"550","erik bylãhn","800M Men",112.8,1.88,"SWE","Sweden",1928,"S","Amsterdam","M",3.06,6120000,30,172,61
+"551","albert hill","800M Men",113.4,1.89,"GBR","United Kingdom",1920,"G","Antwerp","M",-3.37,43800000,31,178,72
+"552","earl eby","800M Men",113.6,1.89333333333333,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,25,179,60
+"553","melvin sheppard","800M Men",112.8,1.88,"USA","United States",1908,"G","London","M",-8.18,90600000,24,177,67
+"554","emilio lunghi","800M Men",114.2,1.90333333333333,"ITA","Italy",1908,"S","London","M",2.23,35900000,21,179,70
+"555","alfred tysoe","800M Men",121.2,2.02,"GBR","United Kingdom",1900,"G","Paris","M",-0.184,38000000,26,175,70
+"556","david lekuta rudisha","800M Men",100.9,1.68166666666667,"KEN","Kenya",2012,"G","London","M",4.56,43600000,23,190,76
+"557","timothy kitum","800M Men",102.5,1.70833333333333,"KEN","Kenya",2012,"B","London","M",4.56,43600000,17,172,60
+"558","yuriy borzakovskiy","800M Men",104.5,1.74166666666667,"RUS","Russia",2004,"G","Athens","M",7.37,144000000,23,183,70
+"559","vebjã¸rn rodal","800M Men",102.6,1.71,"NOR","Norway",1996,"G","Atlanta","M",5.55,4390000,23,188,78
+"560","fred onyancha","800M Men",102.8,1.71333333333333,"KEN","Kenya",1996,"B","Atlanta","M",4.14,28100000,27,170,64
+"561","steve ovett","800M Men",105.4,1.75666666666667,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,24,183,70
+"562","sebastian coe","800M Men",105.9,1.765,"GBR","United Kingdom",1980,"S","Moscow","M",-2.23,56300000,23,175,54
+"563","david james wottle","800M Men",105.9,1.765,"USA","United States",1972,"G","Munich","M",5.12,213000000,22,183,66
+"564","mike boit","800M Men",106,1.76666666666667,"KEN","Kenya",1972,"B","Munich","M",5.03,12100000,23,180,68
+"565","peter snell","800M Men",105.1,1.75166666666667,"NZL","New Zealand",1964,"G","Tokyo","M",4.89,2580000,25,179,80
+"566","william crothers","800M Men",105.6,1.76,"CAN","Canada",1964,"S","Tokyo","M",6.42,19400000,23,183,71
+"567","thomas courtney","800M Men",107.7,1.795,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,188,81
+"568","derek johnson","800M Men",107.8,1.79666666666667,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,23,176,66
+"569","audun boysen","800M Men",108.1,1.80166666666667,"NOR","Norway",1956,"B","Melbourne / Stockholm","M",5.5,3460000,27,181,66
+"570","mal whitfield","800M Men",109.2,1.82,"USA","United States",1948,"G","London","M",3.79,150000000,23,185,76
+"571","arthur wint","800M Men",109.5,1.825,"JAM","Jamaica",1948,"S","London","M",-2.61,1350000,28,194,77
+"572","marcel hansenne","800M Men",109.8,1.83,"FRA","France",1948,"B","London","M",13.2,41200000,31,184,72
+"573","thomas hampson","800M Men",109.8,1.83,"GBR","United Kingdom",1932,"G","Los Angeles","M",0.0681,46400000,24,184,69
+"574","alex wilson","800M Men",109.9,1.83166666666667,"CAN","Canada",1932,"S","Los Angeles","M",-7.12,10800000,24,178,66
+"575","douglas lowe","800M Men",112.4,1.87333333333333,"GBR","United Kingdom",1924,"G","Paris","M",4.72,44900000,21,183,70
+"576","schuyler enck","800M Men",113,1.88333333333333,"USA","United States",1924,"B","Paris","M",3.07,117000000,24,178,73
+"577","james edwin meredith","800M Men",111.9,1.865,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,20,175,71
+"578","melvin sheppard","800M Men",112,1.86666666666667,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,28,177,67
+"579","ira davenport","800M Men",112,1.86666666666667,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,24,178,72
+"580","james lightbody","800M Men",116,1.93333333333333,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,22,173,61
+"581","tirunesh dibaba","10000M Women",1794.7,29.9116666666667,"ETH","Ethiopia",2008,"G","Beijing","W",10.3,83200000,23,166,50
+"582","derartu tulu","10000M Women",1817.5,30.2916666666667,"ETH","Ethiopia",2000,"G","Sydney","W",5.83,66500000,28,160,45
+"583","gete wami","10000M Women",1822.5,30.375,"ETH","Ethiopia",2000,"S","Sydney","W",5.83,66500000,25,152,42
+"584","fernanda ribeiro","10000M Women",1822.9,30.3816666666667,"POR","Portugal",2000,"B","Sydney","W",3.85,10400000,31,161,48
+"585","derartu tulu","10000M Women",1866,31.1,"ETH","Ethiopia",1992,"G","Barcelona","W",-8.78,51600000,20,160,45
+"586","lynn jennings","10000M Women",1879.9,31.3316666666667,"USA","United States",1992,"B","Barcelona","W",2.96,257000000,32,165,50
+"587","tirunesh dibaba","10000M Women",1820.8,30.3466666666667,"ETH","Ethiopia",2012,"G","London","W",8.26,92400000,27,166,50
+"588","sally jepkosgei kipyego","10000M Women",1826.4,30.44,"KEN","Kenya",2012,"S","London","W",4.56,43600000,26,157,40
+"589","vivian jepkemoi cheruiyot","10000M Women",1830.4,30.5066666666667,"KEN","Kenya",2012,"B","London","W",4.56,43600000,28,153,40
+"590","huina xing","10000M Women",1824.4,30.4066666666667,"CHN","China",2004,"G","Athens","W",10.2,1310000000,20,168,48
+"591","ejegayehu dibaba","10000M Women",1825,30.4166666666667,"ETH","Ethiopia",2004,"S","Athens","W",13.1,74600000,22,162,47
+"592","derartu tulu","10000M Women",1826.4,30.44,"ETH","Ethiopia",2004,"B","Athens","W",13.1,74600000,32,160,45
+"593","fernanda ribeiro","10000M Women",1861.6,31.0266666666667,"POR","Portugal",1996,"G","Atlanta","W",3.73,10200000,27,161,48
+"594","junxia wang","10000M Women",1862.6,31.0433333333333,"CHN","China",1996,"S","Atlanta","W",3.42,1250000000,33,162,50
+"595","gete wami","10000M Women",1866.6,31.11,"ETH","Ethiopia",1996,"B","Atlanta","W",12.3,59200000,21,152,42
+"596","dawn harper","100M Hurdles Women",12.54,0.209,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,24,168,61
+"597","sally pearson","100M Hurdles Women",12.64,0.210666666666667,"AUS","Australia",2008,"S","Beijing","W",2.6,21300000,21,167,60
+"598","priscilla lopes-schliep","100M Hurdles Women",12.64,0.210666666666667,"CAN","Canada",2008,"B","Beijing","W",0.996,33400000,25,163,67
+"599","olga shishigina","100M Hurdles Women",12.65,0.210833333333333,"KAZ","Kazakhstan",2000,"G","Sydney","W",9.27,15100000,31,165,57
+"600","melissa morrison","100M Hurdles Women",12.76,0.212666666666667,"USA","United States",2000,"B","Sydney","W",4.16,282000000,29,164,56
+"601","lavonna martin","100M Hurdles Women",12.69,0.2115,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,25,170,66
+"602","benita fitzgerald-brown","100M Hurdles Women",12.84,0.214,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,23,178,65
+"603","shirley strong","100M Hurdles Women",12.88,0.214666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","W",2.61,56400000,25,173,63
+"604","michã¨le chardonnet","100M Hurdles Women",13.06,0.217666666666667,"FRA","France",1984,"B","Los Angeles","W",1.59,55100000,27,170,60
+"605","kim turner","100M Hurdles Women",13.06,0.217666666666667,"USA","United States",1984,"B","Los Angeles","W",7.38,239000000,23,165,57
+"606","sally pearson","100M Hurdles Women",12.35,0.205833333333333,"AUS","Australia",2012,"G","London","W",3.19,22800000,25,167,60
+"607","dawn harper","100M Hurdles Women",12.37,0.206166666666667,"USA","United States",2012,"S","London","W",2.94,313000000,28,168,61
+"608","kellie wells","100M Hurdles Women",12.48,0.208,"USA","United States",2012,"B","London","W",2.94,313000000,30,163,57
+"609","joanna hayes","100M Hurdles Women",12.37,0.206166666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,27,167,58
+"610","olena krasovska","100M Hurdles Women",12.45,0.2075,"UKR","Ukraine",2004,"S","Athens","W",12.1,47200000,27,176,62
+"611","melissa morrison","100M Hurdles Women",12.56,0.209333333333333,"USA","United States",2004,"B","Athens","W",3.49,293000000,33,164,56
+"612","ludmila engquist","100M Hurdles Women",12.58,0.209666666666667,"SWE","Sweden",1996,"G","Atlanta","W",1.59,8860000,32,174,66
+"613","patricia girard","100M Hurdles Women",12.65,0.210833333333333,"FRA","France",1996,"B","Atlanta","W",0.998,58500000,28,164,51
+"614","lucyna langer","100M Hurdles Women",12.65,0.210833333333333,"POL","Poland",1980,"B","Moscow","W",-2.48,35500000,24,167,55
+"615","valeria bufanu","100M Hurdles Women",12.84,0.214,"ROU","Romania",1972,"S","Munich","W",6.48,21000000,25,170,60
+"616","shelly-ann fraser-pryce","100M Women",10.78,0.179666666666667,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,21,160,57
+"617","sherone simpson","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,23,163,59
+"618","sherone simpson","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,24,175,61
+"619","kerron stewart","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,23,163,59
+"620","kerron stewart","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,24,175,61
+"621","tanya lawrence","100M Women",11.18,0.186333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,24,163,61
+"622","merlene ottey","100M Women",11.19,0.1865,"JAM","Jamaica",2000,"B","Sydney","W",1,2660000,40,175,62
+"623","gail devers","100M Women",10.82,0.180333333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,25,160,55
+"624","juliet cuthbert","100M Women",10.83,0.1805,"JAM","Jamaica",1992,"S","Barcelona","W",2.4,2470000,28,160,54
+"625","evelyn ashford","100M Women",10.97,0.182833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,27,165,52
+"626","alice brown","100M Women",11.13,0.1855,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,23,159,59
+"627","merlene ottey","100M Women",11.16,0.186,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
+"628","wyomia tyus","100M Women",11,0.183333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,23,172,61
+"629","barbara ferrell","100M Women",11.1,0.185,"USA","United States",1968,"S","Mexico","W",4.71,206000000,21,159,47
+"630","irena kirszenstein","100M Women",11.1,0.185,"POL","Poland",1968,"B","Mexico","W",6.11,32100000,22,176,60
+"631","wilma rudolph","100M Women",11,0.183333333333333,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
+"632","dorothy hyman","100M Women",11.3,0.188333333333333,"GBR","United Kingdom",1960,"S","Rome","W",5.15,52400000,19,170,59
+"633","giuseppina leone","100M Women",11.3,0.188333333333333,"ITA","Italy",1960,"B","Rome","W",6.9,49700000,25,168,58
+"634","marjorie jackson","100M Women",11.5,0.191666666666667,"AUS","Australia",1952,"G","Helsinki","W",1.23,8620000,20,172,66
+"635","shirley strickland","100M Women",11.9,0.198333333333333,"AUS","Australia",1952,"B","Helsinki","W",1.23,8620000,26,172,57
+"636","helen stephens","100M Women",11.5,0.191666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,18,182,70
+"637","stanislawa walasiewicz","100M Women",11.7,0.195,"POL","Poland",1936,"S","Berlin","W",2.9,30400000,25,174,60
+"638","elizabeth robinson","100M Women",12.2,0.203333333333333,"USA","United States",1928,"G","Amsterdam","W",1.12,123000000,16,167,57
+"639","shelly-ann fraser-pryce","100M Women",10.75,0.179166666666667,"JAM","Jamaica",2012,"G","London","W",-0.631,2840000,25,160,57
+"640","carmelita jeter","100M Women",10.78,0.179666666666667,"USA","United States",2012,"S","London","W",2.94,313000000,32,163,59
+"641","veronica campbell-brown","100M Women",10.81,0.180166666666667,"JAM","Jamaica",2012,"B","London","W",-0.631,2840000,30,168,58
+"642","yuliya nestsiarenka","100M Women",10.93,0.182166666666667,"BLR","Belarus",2004,"G","Athens","W",11,9680000,25,176,62
+"643","lauryn williams","100M Women",10.96,0.182666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,20,160,67
+"644","veronica campbell-brown","100M Women",10.97,0.182833333333333,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,22,168,58
+"645","gail devers","100M Women",10.94,0.182333333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,29,160,55
+"646","merlene ottey","100M Women",10.94,0.182333333333333,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
+"647","gwen torrence","100M Women",10.96,0.182666666666667,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,31,170,57
+"648","raelene ann boyle","100M Women",11.23,0.187166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
+"649","silvia chivas baro","100M Women",11.24,0.187333333333333,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,17,157,58
+"650","wyomia tyus","100M Women",11.4,0.19,"USA","United States",1964,"G","Tokyo","W",5.68,197000000,19,172,61
+"651","edith mcguire","100M Women",11.6,0.193333333333333,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,20,173,59
+"652","ewa klobukowska","100M Women",11.6,0.193333333333333,"POL","Poland",1964,"B","Tokyo","W",4.86,31100000,18,170,60
+"653","betty cuthbert","100M Women",11.5,0.191666666666667,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
+"654","marlene mathews-willard","100M Women",11.7,0.195,"AUS","Australia",1956,"B","Melbourne / Stockholm","W",3.32,9420000,22,170,64
+"655","dorothy hall","100M Women",12.2,0.203333333333333,"GBR","United Kingdom",1948,"S","London","W",3.03,50000000,21,165,51
+"656","shirley strickland","100M Women",12.2,0.203333333333333,"AUS","Australia",1948,"B","London","W",6.44,7750000,23,172,57
+"657","stanislawa walasiewicz","100M Women",11.9,0.198333333333333,"POL","Poland",1932,"G","Los Angeles","W",-7.8,29000000,21,174,60
+"658","hilda strike","100M Women",11.9,0.198333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,21,159,48
+"659","wilhelmina von bremen","100M Women",12,0.2,"USA","United States",1932,"B","Los Angeles","W",-13.2,128000000,22,182,68
+"660","veronica campbell-brown","200M Women",21.74,0.362333333333333,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,26,168,58
+"661","allyson felix","200M Women",21.93,0.3655,"USA","United States",2008,"S","Beijing","W",-0.392,303000000,22,168,56
+"662","kerron stewart","200M Women",22,0.366666666666667,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,24,175,61
+"663","beverly mcdonald","200M Women",22.35,0.3725,"JAM","Jamaica",2000,"B","Sydney","W",1,2660000,30,169,59
+"664","gwen torrence","200M Women",21.81,0.3635,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,27,170,57
+"665","juliet cuthbert","200M Women",22.02,0.367,"JAM","Jamaica",1992,"S","Barcelona","W",2.4,2470000,28,160,54
+"666","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1992,"B","Barcelona","W",2.4,2470000,32,175,62
+"667","valerie brisco","200M Women",21.81,0.3635,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
+"668","florence griffith joyner","200M Women",22.04,0.367333333333333,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,24,170,57
+"669","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
+"670","irena kirszenstein","200M Women",22.5,0.375,"POL","Poland",1968,"G","Mexico","W",6.11,32100000,22,176,60
+"671","raelene ann boyle","200M Women",22.7,0.378333333333333,"AUS","Australia",1968,"S","Mexico","W",6.35,12300000,17,168,57
+"672","jennifer lamy","200M Women",22.8,0.38,"AUS","Australia",1968,"B","Mexico","W",6.35,12300000,19,173,60
+"673","wilma rudolph","200M Women",24,0.4,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
+"674","dorothy hyman","200M Women",24.7,0.411666666666667,"GBR","United Kingdom",1960,"B","Rome","W",5.15,52400000,19,170,59
+"675","marjorie jackson","200M Women",23.7,0.395,"AUS","Australia",1952,"G","Helsinki","W",1.23,8620000,20,172,66
+"676","allyson felix","200M Women",21.88,0.364666666666667,"USA","United States",2012,"G","London","W",2.94,313000000,26,168,56
+"677","shelly-ann fraser-pryce","200M Women",22.09,0.368166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,25,160,57
+"678","carmelita jeter","200M Women",22.14,0.369,"USA","United States",2012,"B","London","W",2.94,313000000,32,163,59
+"679","veronica campbell-brown","200M Women",22.05,0.3675,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,22,168,58
+"680","allyson felix","200M Women",22.18,0.369666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,18,168,56
+"681","marie-josã© pãrec","200M Women",22.12,0.368666666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
+"682","merlene ottey","200M Women",22.24,0.370666666666667,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
+"683","merlene ottey","200M Women",22.2,0.37,"JAM","Jamaica",1980,"B","Moscow","W",-5.2,2160000,20,175,62
+"684","raelene ann boyle","200M Women",22.45,0.374166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
+"685","irena kirszenstein","200M Women",22.74,0.379,"POL","Poland",1972,"B","Munich","W",7.35,33100000,26,176,60
+"686","edith mcguire","200M Women",23,0.383333333333333,"USA","United States",1964,"G","Tokyo","W",5.68,197000000,20,173,59
+"687","irena kirszenstein","200M Women",23.1,0.385,"POL","Poland",1964,"S","Tokyo","W",4.86,31100000,18,176,60
+"688","marilyn black","200M Women",23.1,0.385,"AUS","Australia",1964,"B","Tokyo","W",6.88,11100000,20,165,55
+"689","betty cuthbert","200M Women",23.4,0.39,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
+"690","marlene mathews-willard","200M Women",23.8,0.396666666666667,"AUS","Australia",1956,"B","Melbourne / Stockholm","W",3.32,9420000,22,170,64
+"691","audrey patterson","200M Women",25.2,0.42,"USA","United States",1948,"B","London","W",3.79,150000000,21,170,51
+"692","gulnara samitova","3000M Steeplechase Women",538.8,8.98,"RUS","Russia",2008,"G","Beijing","W",5.15,143000000,30,178,54
+"693","eunice jepkorir","3000M Steeplechase Women",547.4,9.12333333333333,"KEN","Kenya",2008,"S","Beijing","W",1.53,39100000,26,164,48
+"694","melaine walker","400M Hurdles Women",52.64,0.877333333333333,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,25,165,53
+"695","sheena tosta","400M Hurdles Women",53.7,0.895,"USA","United States",2008,"S","Beijing","W",-0.392,303000000,25,165,57
+"696","natasha danvers","400M Hurdles Women",53.84,0.897333333333333,"GBR","United Kingdom",2008,"B","Beijing","W",-1.16,62100000,30,173,64
+"697","irina privalova","400M Hurdles Women",53.02,0.883666666666667,"RUS","Russia",2000,"G","Sydney","W",10.1,146000000,31,174,64
+"698","deon marie hemmings","400M Hurdles Women",53.45,0.890833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,31,176,63
+"699","nezha bidouane","400M Hurdles Women",53.57,0.892833333333333,"MAR","Morocco",2000,"B","Sydney","W",0.455,28800000,30,174,65
+"700","sally gunnell","400M Hurdles Women",53.23,0.887166666666667,"GBR","United Kingdom",1992,"G","Barcelona","W",0.164,57500000,25,167,58
+"701","sandra farmer-patrick","400M Hurdles Women",53.69,0.894833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,29,173,63
+"702","janeene vickers","400M Hurdles Women",54.31,0.905166666666667,"USA","United States",1992,"B","Barcelona","W",2.96,257000000,23,170,62
+"703","nawal el moutawakel","400M Hurdles Women",54.61,0.910166666666667,"MAR","Morocco",1984,"G","Los Angeles","W",4.13,22000000,22,162,50
+"704","judi brown","400M Hurdles Women",55.2,0.92,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,23,180,67
+"705","cristina cojocaru","400M Hurdles Women",55.41,0.9235,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,22,172,62
+"706","natalya antyukh","400M Hurdles Women",52.7,0.878333333333333,"RUS","Russia",2012,"G","London","W",3.23,143000000,31,182,69
+"707","lashinda demus","400M Hurdles Women",52.77,0.8795,"USA","United States",2012,"S","London","W",2.94,313000000,29,170,60
+"708","zuzana hejnova","400M Hurdles Women",53.38,0.889666666666667,"CZE","Czech Republic",2012,"B","London","W",-0.903,10600000,25,173,63
+"709","ionela tirlea","400M Hurdles Women",53.38,0.889666666666667,"ROU","Romania",2004,"S","Athens","W",8.22,21600000,28,169,57
+"710","tetyana tereshchuk","400M Hurdles Women",53.44,0.890666666666667,"UKR","Ukraine",2004,"B","Athens","W",12.1,47200000,34,185,63
+"711","deon marie hemmings","400M Hurdles Women",52.82,0.880333333333333,"JAM","Jamaica",1996,"G","Atlanta","W",-1.85,2560000,27,176,63
+"712","kim batten","400M Hurdles Women",53.08,0.884666666666667,"USA","United States",1996,"S","Atlanta","W",3.72,269000000,27,170,57
+"713","tonja buford-bailey","400M Hurdles Women",53.22,0.887,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,25,176,62
+"714","christine ohuruogu","400M Women",49.62,0.827,"GBR","United Kingdom",2008,"G","Beijing","W",-1.16,62100000,24,172,70
+"715","shericka williams","400M Women",49.69,0.828166666666667,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,22,170,64
+"716","sanya richards-ross","400M Women",49.93,0.832166666666667,"USA","United States",2008,"B","Beijing","W",-0.392,303000000,23,173,62
+"717","cathy freeman","400M Women",49.11,0.8185,"AUS","Australia",2000,"G","Sydney","W",2.04,19100000,27,164,56
+"718","lorraine fenton","400M Women",49.58,0.826333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,27,174,59
+"719","katharine merry","400M Women",49.72,0.828666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,25,173,62
+"720","marie-josã© pãrec","400M Women",48.83,0.813833333333333,"FRA","France",1992,"G","Barcelona","W",1.59,57500000,24,180,60
+"721","ximena restrepo","400M Women",49.64,0.827333333333333,"COL","Colombia",1992,"B","Barcelona","W",4.27,35600000,23,175,58
+"722","valerie brisco","400M Women",48.83,0.813833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
+"723","chandra cheeseborough","400M Women",49.05,0.8175,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,25,165,58
+"724","kathryn smallwood-cook","400M Women",49.42,0.823666666666667,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,24,180,64
+"725","irena kirszenstein","400M Women",49.29,0.8215,"POL","Poland",1976,"G","Montreal","W",2.43,34300000,30,176,60
+"726","colette besson","400M Women",52,0.866666666666667,"FRA","France",1968,"G","Mexico","W",4.15,50100000,22,169,58
+"727","lillian board","400M Women",52.1,0.868333333333333,"GBR","United Kingdom",1968,"S","Mexico","W",4.21,55200000,19,168,60
+"728","sanya richards-ross","400M Women",49.55,0.825833333333333,"USA","United States",2012,"G","London","W",2.94,313000000,27,173,62
+"729","christine ohuruogu","400M Women",49.7,0.828333333333333,"GBR","United Kingdom",2012,"S","London","W",0.198,64300000,28,172,70
+"730","deedee trotter","400M Women",49.72,0.828666666666667,"USA","United States",2012,"B","London","W",2.94,313000000,29,178,64
+"731","ana guevara","400M Women",49.56,0.826,"MEX","Mexico",2004,"S","Athens","W",4.42,107000000,27,173,61
+"732","natalya antyukh","400M Women",49.89,0.8315,"RUS","Russia",2004,"B","Athens","W",7.37,144000000,23,182,69
+"733","marie-josã© pãrec","400M Women",48.25,0.804166666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
+"734","cathy freeman","400M Women",48.63,0.8105,"AUS","Australia",1996,"S","Atlanta","W",3.62,18300000,23,164,56
+"735","kathleen hammond","400M Women",51.64,0.860666666666667,"USA","United States",1972,"B","Munich","W",5.12,213000000,20,170,55
+"736","betty cuthbert","400M Women",52,0.866666666666667,"AUS","Australia",1964,"G","Tokyo","W",6.88,11100000,26,169,57
+"737","ann packer","400M Women",52.2,0.87,"GBR","United Kingdom",1964,"S","Tokyo","W",5.48,53900000,22,169,57
+"738","judith florence amoore-pollock","400M Women",53.4,0.89,"AUS","Australia",1964,"B","Tokyo","W",6.88,11100000,24,163,55
+"739","tirunesh dibaba","5000M Women",941.4,15.69,"ETH","Ethiopia",2008,"G","Beijing","W",10.3,83200000,23,166,50
+"740","elvan abeylegesse","5000M Women",942.7,15.7116666666667,"TUR","Turkey",2008,"S","Beijing","W",0.735,70400000,25,159,40
+"741","meseret defar","5000M Women",944.1,15.735,"ETH","Ethiopia",2008,"B","Beijing","W",10.3,83200000,24,159,42
+"742","gabriela szabo","5000M Women",880.8,14.68,"ROU","Romania",2000,"G","Sydney","W",1.81,22100000,24,158,42
+"743","sonia o'sullivan","5000M Women",881,14.6833333333333,"IRL","Ireland",2000,"S","Sydney","W",9.7,3850000,30,175,55
+"744","gete wami","5000M Women",882.2,14.7033333333333,"ETH","Ethiopia",2000,"B","Sydney","W",5.83,66500000,25,152,42
+"745","meseret defar","5000M Women",904.3,15.0716666666667,"ETH","Ethiopia",2012,"G","London","W",8.26,92400000,28,159,42
+"746","vivian jepkemoi cheruiyot","5000M Women",904.7,15.0783333333333,"KEN","Kenya",2012,"S","London","W",4.56,43600000,28,153,40
+"747","tirunesh dibaba","5000M Women",905.2,15.0866666666667,"ETH","Ethiopia",2012,"B","London","W",8.26,92400000,27,166,50
+"748","meseret defar","5000M Women",885.7,14.7616666666667,"ETH","Ethiopia",2004,"G","Athens","W",13.1,74600000,20,159,42
+"749","isabella ochichi","5000M Women",888.2,14.8033333333333,"KEN","Kenya",2004,"S","Athens","W",5.1,35100000,24,152,41
+"750","tirunesh dibaba","5000M Women",891.8,14.8633333333333,"ETH","Ethiopia",2004,"B","Athens","W",13.1,74600000,19,166,50
+"751","junxia wang","5000M Women",899.9,14.9983333333333,"CHN","China",1996,"G","Atlanta","W",3.42,1250000000,33,162,50
+"752","pauline konga","5000M Women",903.5,15.0583333333333,"KEN","Kenya",1996,"S","Atlanta","W",4.14,28100000,26,158,43
+"753","roberta brunet","5000M Women",907.5,15.125,"ITA","Italy",1996,"B","Atlanta","W",0.865,57200000,31,170,58
+"754","pamela jelimo","800M Women",114.9,1.915,"KEN","Kenya",2008,"G","Beijing","W",1.53,39100000,18,175,60
+"755","janeth jepkosgei busienei","800M Women",116.1,1.935,"KEN","Kenya",2008,"S","Beijing","W",1.53,39100000,24,167,47
+"756","hasna benhassi","800M Women",116.7,1.945,"MAR","Morocco",2008,"B","Beijing","W",5.49,31600000,30,166,47
+"757","maria mutola","800M Women",116.2,1.93666666666667,"MOZ","Mozambique",2000,"G","Sydney","W",2.06,18100000,27,165,63
+"758","stephanie graf","800M Women",116.6,1.94333333333333,"AUT","Austria",2000,"S","Sydney","W",3.38,8070000,27,170,60
+"759","kelly holmes","800M Women",116.8,1.94666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,30,163,55
+"760","ana fidelia quirot","800M Women",116.8,1.94666666666667,"CUB","Cuba",1992,"B","Barcelona","W",-13.9,10700000,29,165,59
+"761","doina melinte","800M Women",117.6,1.96,"ROU","Romania",1984,"G","Los Angeles","W",4.18,23000000,27,171,59
+"762","kim gallagher","800M Women",118.6,1.97666666666667,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,20,165,47
+"763","fita lovin","800M Women",118.8,1.98,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,33,166,57
+"764","madeline manning-jackson","800M Women",120.9,2.015,"USA","United States",1968,"G","Mexico","W",4.71,206000000,20,175,75
+"765","ileana silai","800M Women",122.5,2.04166666666667,"ROU","Romania",1968,"S","Mexico","W",1.21,20100000,26,167,49
+"766","brenda jones","800M Women",124.4,2.07333333333333,"AUS","Australia",1960,"S","Rome","W",4.04,10300000,23,173,55
+"767","mariya savinova","800M Women",116.2,1.93666666666667,"RUS","Russia",2012,"G","London","W",3.23,143000000,26,172,60
+"768","ekaterina poistogova","800M Women",117.5,1.95833333333333,"RUS","Russia",2012,"B","London","W",3.23,143000000,21,175,65
+"769","kelly holmes","800M Women",116.4,1.94,"GBR","United Kingdom",2004,"G","Athens","W",2.95,59900000,34,163,55
+"770","hasna benhassi","800M Women",116.4,1.94,"MAR","Morocco",2004,"S","Athens","W",4.59,30200000,26,166,47
+"771","svetlana masterkova","800M Women",117.7,1.96166666666667,"RUS","Russia",1996,"G","Atlanta","W",-3.64,148000000,28,168,50
+"772","ana fidelia quirot","800M Women",118.1,1.96833333333333,"CUB","Cuba",1996,"S","Atlanta","W",8.72,11000000,33,165,59
+"773","maria mutola","800M Women",118.7,1.97833333333333,"MOZ","Mozambique",1996,"B","Atlanta","W",6.95,16200000,23,165,63
+"774","ann packer","800M Women",121.1,2.01833333333333,"GBR","United Kingdom",1964,"G","Tokyo","W",5.48,53900000,22,169,57
+"775","maryvonne dupureur","800M Women",121.9,2.03166666666667,"FRA","France",1964,"S","Tokyo","W",6.72,48400000,27,167,58
+"776","ann marise chamberlain","800M Women",122.8,2.04666666666667,"NZL","New Zealand",1964,"B","Tokyo","W",4.89,2580000,28,169,55
