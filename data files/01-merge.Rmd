@@ -296,8 +296,8 @@ na_removed_data <- joined_data %>% filter(!is.na(gdp) & !is.na(age) & !is.na(hei
 
 
 ```{r}
-joined_data %>% write.csv("final_data.csv")
-na_removed_data %>% write.csv("final_data_noNA.csv")
+joined_data %>% write.csv("final_data2.csv")
+na_removed_data %>% write.csv("final_data_noNA2.csv")
 ```
 
 
