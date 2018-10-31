@@ -23,7 +23,7 @@
 "22","pyotr bolotnikov","10000M Men",1712.2,28.5366666666667,"URS",NA,1960,"G","Rome","M",NA,NA,30,173,64
 "23","hans grodotzki","10000M Men",1717,28.6166666666667,"EUA","Germany",1960,"S","Rome","M",8.21,73400000,NA,NA,NA
 "24","david power","10000M Men",1718.2,28.6366666666667,"AUS","Australia",1960,"B","Rome","M",4.04,10300000,32,170,63
-"25","emil z√£¬Åtopek","10000M Men",1757,29.2833333333333,"TCH",NA,1952,"G","Helsinki","M",NA,NA,29,182,72
+"25","emil z„É‚Åtopek","10000M Men",1757,29.2833333333333,"TCH",NA,1952,"G","Helsinki","M",NA,NA,29,182,72
 "26","alain mimoun","10000M Men",1772.8,29.5466666666667,"FRA","France",1952,"S","Helsinki","M",2.25,42400000,31,170,56
 "27","aleksandr anufriyev","10000M Men",1788.2,29.8033333333333,"URS",NA,1952,"B","Helsinki","M",NA,NA,26,167,63
 "28","ilmari salminen","10000M Men",1815.4,30.2566666666667,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,33,181,66
@@ -54,9 +54,9 @@
 "53","mohamed gammoudi","10000M Men",1704.8,28.4133333333333,"TUN","Tunisia",1964,"S","Tokyo","M",4.06,4460000,26,172,60
 "54","ron clarke","10000M Men",1705.8,28.43,"AUS","Australia",1964,"B","Tokyo","M",6.88,11100000,27,183,72
 "55","vladimir kuts","10000M Men",1725.6,28.76,"URS",NA,1956,"G","Melbourne / Stockholm","M",NA,NA,29,172,72
-"56","j√£¬≥zsef kov√£¬Åcs","10000M Men",1732.4,28.8733333333333,"HUN","Hungary",1956,"S","Melbourne / Stockholm","M",-4.92,9880000,30,163,50
+"56","j„É‚≥zsef kov„É‚Åcs","10000M Men",1732.4,28.8733333333333,"HUN","Hungary",1956,"S","Melbourne / Stockholm","M",-4.92,9880000,30,163,50
 "57","allan lawrence","10000M Men",1733.6,28.8933333333333,"AUS","Australia",1956,"B","Melbourne / Stockholm","M",3.32,9420000,26,171,61
-"58","emil z√£¬Åtopek","10000M Men",1799.6,29.9933333333333,"TCH",NA,1948,"G","London","M",NA,NA,25,182,72
+"58","emil z„É‚Åtopek","10000M Men",1799.6,29.9933333333333,"TCH",NA,1948,"G","London","M",NA,NA,25,182,72
 "59","alain mimoun","10000M Men",1847.4,30.79,"FRA","France",1948,"S","London","M",13.2,41200000,27,170,56
 "60","bertil albertsson","10000M Men",1853.6,30.8933333333333,"SWE","Sweden",1948,"B","London","M",2.27,6840000,26,177,67
 "61","janusz kusocinski","10000M Men",1811.4,30.19,"POL","Poland",1932,"G","Los Angeles","M",-7.8,29000000,25,167,72
@@ -164,7 +164,7 @@
 "163","greg foster","110M Hurdles Men",13.23,0.2205,"USA","United States",1984,"S","Los Angeles","M",7.38,239000000,25,190,84
 "164","arto bryggare","110M Hurdles Men",13.4,0.223333333333333,"FIN","Finland",1984,"B","Los Angeles","M",3.02,4890000,26,194,88
 "165","guy drut","110M Hurdles Men",13.3,0.221666666666667,"FRA","France",1976,"G","Montreal","M",4.26,53300000,25,188,74
-"166","alejandro casa√£¬ëas","110M Hurdles Men",13.33,0.222166666666667,"CUB","Cuba",1976,"S","Montreal","M",2.55,9540000,22,188,79
+"166","alejandro casa„É‚ëas","110M Hurdles Men",13.33,0.222166666666667,"CUB","Cuba",1976,"S","Montreal","M",2.55,9540000,22,188,79
 "167","willie davenport","110M Hurdles Men",13.38,0.223,"USA","United States",1976,"B","Montreal","M",5.22,221000000,33,186,84
 "168","willie davenport","110M Hurdles Men",13.3,0.221666666666667,"USA","United States",1968,"G","Mexico","M",4.71,206000000,25,186,84
 "169","ervin hall","110M Hurdles Men",13.4,0.223333333333333,"USA","United States",1968,"S","Mexico","M",4.71,206000000,21,183,75
@@ -199,7 +199,7 @@
 "198","mark crear","110M Hurdles Men",13.09,0.218166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,27,186,79
 "199","florian schwarthoff","110M Hurdles Men",13.17,0.2195,"GER",NA,1996,"B","Atlanta","M",NA,NA,28,201,83
 "200","thomas munkelt","110M Hurdles Men",13.39,0.223166666666667,"GDR",NA,1980,"G","Moscow","M",NA,NA,27,185,80
-"201","alejandro casa√£¬ëas","110M Hurdles Men",13.4,0.223333333333333,"CUB","Cuba",1980,"S","Moscow","M",-1.28,9840000,26,188,79
+"201","alejandro casa„É‚ëas","110M Hurdles Men",13.4,0.223333333333333,"CUB","Cuba",1980,"S","Moscow","M",-1.28,9840000,26,188,79
 "202","aleksandr puchkov","110M Hurdles Men",13.44,0.224,"URS",NA,1980,"B","Moscow","M",NA,NA,23,190,88
 "203","rod milburn","110M Hurdles Men",13.24,0.220666666666667,"USA","United States",1972,"G","Munich","M",5.12,213000000,22,183,79
 "204","guy drut","110M Hurdles Men",13.34,0.222333333333333,"FRA","France",1972,"S","Munich","M",4.24,51700000,21,188,74
@@ -241,16 +241,16 @@
 "240","mohamed ahmed sulaiman","1500M Men",220.7,3.67833333333333,"QAT","Qatar",1992,"B","Barcelona","M",8.27,496000,22,175,63
 "241","sebastian coe","1500M Men",212.5,3.54166666666667,"GBR","United Kingdom",1984,"G","Los Angeles","M",2.61,56400000,27,175,54
 "242","steve cram","1500M Men",213.4,3.55666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,23,186,69
-"243","jos√£¬© manuel abascal","1500M Men",214.3,3.57166666666667,"ESP","Spain",1984,"B","Los Angeles","M",1.41,38700000,26,182,67
+"243","jos„É‚© manuel abascal","1500M Men",214.3,3.57166666666667,"ESP","Spain",1984,"B","Los Angeles","M",1.41,38700000,26,182,67
 "244","john george walker","1500M Men",219.2,3.65333333333333,"NZL","New Zealand",1976,"G","Montreal","M",2.13,3110000,24,183,74
 "245","ivo van damme","1500M Men",219.3,3.655,"BEL","Belgium",1976,"S","Montreal","M",5.7,9790000,22,191,76
 "246","paul-heinz wellmann","1500M Men",219.3,3.655,"FRG",NA,1976,"B","Montreal","M",NA,NA,24,182,70
 "247","kip keino","1500M Men",214.9,3.58166666666667,"KEN","Kenya",1968,"G","Mexico","M",0.0532,10500000,28,173,66
 "248","jim ryun","1500M Men",217.8,3.63,"USA","United States",1968,"S","Mexico","M",4.71,206000000,21,188,76
-"249","bodo t√£¬úmmler","1500M Men",219,3.65,"FRG",NA,1968,"B","Mexico","M",NA,NA,24,188,72
+"249","bodo t„É‚úmmler","1500M Men",219,3.65,"FRG",NA,1968,"B","Mexico","M",NA,NA,24,188,72
 "250","herb elliott","1500M Men",215.6,3.59333333333333,"AUS","Australia",1960,"G","Rome","M",4.04,10300000,22,181,68
 "251","michel jazy","1500M Men",218.4,3.64,"FRA","France",1960,"S","Rome","M",7.75,45900000,24,175,65
-"252","istv√£¬°n r√£¬ìzsav√£¬ñlgyi","1500M Men",219.2,3.65333333333333,"HUN","Hungary",1960,"B","Rome","M",5,10000000,31,177,58
+"252","istv„É‚°n r„É‚ìzsav„É‚ñlgyi","1500M Men",219.2,3.65333333333333,"HUN","Hungary",1960,"B","Rome","M",5,10000000,31,177,58
 "253","joseph barthel","1500M Men",225.2,3.75333333333333,"LUX","Luxembourg",1952,"G","Helsinki","M",6.44,299000,25,173,68
 "254","robert mcmillen","1500M Men",225.2,3.75333333333333,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,24,180,68
 "255","werner lueg","1500M Men",225.4,3.75666666666667,"GER",NA,1952,"B","Helsinki","M",NA,NA,20,176,64
@@ -279,7 +279,7 @@
 "278","fermin cacho ruiz","1500M Men",216.4,3.60666666666667,"ESP","Spain",1996,"S","Atlanta","M",2.51,40000000,27,175,65
 "279","stephen kipkorir","1500M Men",216.7,3.61166666666667,"KEN","Kenya",1996,"B","Atlanta","M",4.14,28100000,25,185,73
 "280","sebastian coe","1500M Men",218.4,3.64,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,23,175,54
-"281","j√£¬ºrgen straub","1500M Men",218.8,3.64666666666667,"GDR",NA,1980,"S","Moscow","M",NA,NA,26,182,62
+"281","j„É‚ºrgen straub","1500M Men",218.8,3.64666666666667,"GDR",NA,1980,"S","Moscow","M",NA,NA,26,182,62
 "282","steve ovett","1500M Men",219,3.65,"GBR","United Kingdom",1980,"B","Moscow","M",-2.23,56300000,24,183,70
 "283","pekka vasala","1500M Men",216.3,3.605,"FIN","Finland",1972,"G","Munich","M",7.49,4650000,24,184,64
 "284","kip keino","1500M Men",216.8,3.61333333333333,"KEN","Kenya",1972,"S","Munich","M",5.03,12100000,32,173,66
@@ -296,7 +296,7 @@
 "295","luigi beccali","1500M Men",231.2,3.85333333333333,"ITA","Italy",1932,"G","Los Angeles","M",4.43,41400000,24,169,63
 "296","john cornes","1500M Men",232.6,3.87666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,22,182,70
 "297","paavo nurmi","1500M Men",233.6,3.89333333333333,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,26,174,65
-"298","willy sch√£¬Ñrer","1500M Men",235,3.91666666666667,"SUI",NA,1924,"S","Paris","M",NA,NA,20,182,69
+"298","willy sch„É‚Ñrer","1500M Men",235,3.91666666666667,"SUI",NA,1924,"S","Paris","M",NA,NA,20,182,69
 "299","henry stallard","1500M Men",235.6,3.92666666666667,"GBR","United Kingdom",1924,"B","Paris","M",4.72,44900000,23,186,75
 "300","arnold jackson","1500M Men",236.8,3.94666666666667,"GBR","United Kingdom",1912,"G","Stockholm","M",1.5,42400000,21,176,67
 "301","abel kiviat","1500M Men",236.9,3.94833333333333,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,19,172,66
@@ -338,7 +338,7 @@
 "337","martinus osendarp","200M Men",21.3,0.355,"NED",NA,1936,"B","Berlin","M",NA,NA,20,176,80
 "338","percy williams","200M Men",21.8,0.363333333333333,"CAN","Canada",1928,"G","Amsterdam","M",8.87,10100000,19,170,56
 "339","walter rangeley","200M Men",21.9,0.365,"GBR","United Kingdom",1928,"S","Amsterdam","M",0.893,45600000,24,174,65
-"340","helmut k√£¬ñrnig","200M Men",21.9,0.365,"GER",NA,1928,"B","Amsterdam","M",NA,NA,22,175,66
+"340","helmut k„É‚ñrnig","200M Men",21.9,0.365,"GER",NA,1928,"B","Amsterdam","M",NA,NA,22,175,66
 "341","allen woodring","200M Men",22,0.366666666666667,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,22,180,73
 "342","charles paddock","200M Men",22.1,0.368333333333333,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,19,172,75
 "343","harry edward","200M Men",22.2,0.37,"GBR","United Kingdom",1920,"B","Antwerp","M",-3.37,43800000,22,NA,NA
@@ -436,10 +436,10 @@
 "435","maurice herriott","3000M Steeplechase Men",512.4,8.54,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,25,178,67
 "436","ivan belyaev","3000M Steeplechase Men",513.8,8.56333333333333,"URS",NA,1964,"B","Tokyo","M",NA,NA,29,178,67
 "437","christopher william brasher","3000M Steeplechase Men",521.2,8.68666666666667,"GBR","United Kingdom",1956,"G","Melbourne / Stockholm","M",0.892,51300000,28,NA,NA
-"438","s√£¬É√¢¬°ndor rozsny√£¬É?i","3000M Steeplechase Men",523.6,8.72666666666667,"HUN","Hungary",1956,"S","Melbourne / Stockholm","M",-4.92,9880000,25,185,71
+"438","s„É‚É„Ç‚°ndor rozsny„É‚É?i","3000M Steeplechase Men",523.6,8.72666666666667,"HUN","Hungary",1956,"S","Melbourne / Stockholm","M",-4.92,9880000,25,185,71
 "439","ernst larsen","3000M Steeplechase Men",524,8.73333333333333,"NOR","Norway",1956,"B","Melbourne / Stockholm","M",5.5,3460000,30,183,65
-"440","tore sj√£¬ñstrand","3000M Steeplechase Men",544.6,9.07666666666667,"SWE","Sweden",1948,"G","London","M",2.27,6840000,26,180,68
-"441","fritz erik elms√£¬É?ter","3000M Steeplechase Men",548.2,9.13666666666667,"SWE","Sweden",1948,"S","London","M",2.27,6840000,28,NA,NA
+"440","tore sj„É‚ñstrand","3000M Steeplechase Men",544.6,9.07666666666667,"SWE","Sweden",1948,"G","London","M",2.27,6840000,26,180,68
+"441","fritz erik elms„É‚É?ter","3000M Steeplechase Men",548.2,9.13666666666667,"SWE","Sweden",1948,"S","London","M",2.27,6840000,28,NA,NA
 "442","gote ernst hagstrom","3000M Steeplechase Men",551.8,9.19666666666667,"SWE","Sweden",1948,"B","London","M",2.27,6840000,29,NA,NA
 "443","volmari iso-hollo","3000M Steeplechase Men",633.4,10.5566666666667,"FIN","Finland",1932,"G","Los Angeles","M",-0.427,3500000,25,176,64
 "444","thomas evenson","3000M Steeplechase Men",646,10.7666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,22,170,60
@@ -552,7 +552,7 @@
 "551","james ellis lu valle","400M Men",46.8,0.78,"USA","United States",1936,"B","Berlin","M",14.2,131000000,23,185,73
 "552","raymond james barbuti","400M Men",47.8,0.796666666666667,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,22,183,82
 "553","james ball","400M Men",48,0.8,"CAN","Canada",1928,"S","Amsterdam","M",8.87,10100000,25,180,69
-"554","joachim b√£¬úchner","400M Men",48.2,0.803333333333333,"GER",NA,1928,"B","Amsterdam","M",NA,NA,23,176,74
+"554","joachim b„É‚úchner","400M Men",48.2,0.803333333333333,"GER",NA,1928,"B","Amsterdam","M",NA,NA,23,176,74
 "555","bevil rudd","400M Men",49.6,0.826666666666667,"RSA",NA,1920,"G","Antwerp","M",NA,NA,24,180,77
 "556","guy butler","400M Men",49.9,0.831666666666667,"GBR","United Kingdom",1920,"S","Antwerp","M",-3.37,43800000,20,NA,NA
 "557","nils engdahl","400M Men",50,0.833333333333333,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,21,165,57
@@ -611,9 +611,9 @@
 "610","dieter baumann","5000M Men",792.5,13.2083333333333,"GER",NA,1992,"G","Barcelona","M",NA,NA,27,178,62
 "611","paul bitok","5000M Men",792.7,13.2116666666667,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,22,173,58
 "612","fita bayissa","5000M Men",793,13.2166666666667,"ETH","Ethiopia",1992,"B","Barcelona","M",-8.78,51600000,19,173,52
-"613","sa√£¬Ød aouita","5000M Men",785.6,13.0933333333333,"MAR","Morocco",1984,"G","Los Angeles","M",4.13,22000000,24,175,58
+"613","sa„É‚Ød aouita","5000M Men",785.6,13.0933333333333,"MAR","Morocco",1984,"G","Los Angeles","M",4.13,22000000,24,175,58
 "614","markus ryffel","5000M Men",787.5,13.125,"SUI",NA,1984,"S","Los Angeles","M",NA,NA,29,167,55
-"615","ant√£¬≥nio leit√£¬Éo","5000M Men",789.2,13.1533333333333,"POR","Portugal",1984,"B","Los Angeles","M",-1.83,9980000,24,176,68
+"615","ant„É‚≥nio leit„É‚Éo","5000M Men",789.2,13.1533333333333,"POR","Portugal",1984,"B","Los Angeles","M",-1.83,9980000,24,176,68
 "616","lasse viren","5000M Men",804.8,13.4133333333333,"FIN","Finland",1976,"G","Montreal","M",-0.4,4730000,26,180,60
 "617","dick theodorus quax","5000M Men",805.2,13.42,"NZL","New Zealand",1976,"S","Montreal","M",2.13,3110000,28,183,65
 "618","klaus-peter hildenbrand","5000M Men",805.4,13.4233333333333,"FRG",NA,1976,"B","Montreal","M",NA,NA,23,181,70
@@ -623,12 +623,12 @@
 "622","murray halberg","5000M Men",823.4,13.7233333333333,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,27,178,62
 "623","hans grodotzki","5000M Men",824.6,13.7433333333333,"EUA","Germany",1960,"S","Rome","M",8.21,73400000,NA,NA,NA
 "624","kazimierz zimny","5000M Men",824.8,13.7466666666667,"POL","Poland",1960,"B","Rome","M",5.16,29600000,25,172,60
-"625","emil z√£¬Åtopek","5000M Men",846.6,14.11,"TCH",NA,1952,"G","Helsinki","M",NA,NA,29,182,72
+"625","emil z„É‚Åtopek","5000M Men",846.6,14.11,"TCH",NA,1952,"G","Helsinki","M",NA,NA,29,182,72
 "626","alain mimoun","5000M Men",847.4,14.1233333333333,"FRA","France",1952,"S","Helsinki","M",2.25,42400000,31,170,56
 "627","herbert schade","5000M Men",848.6,14.1433333333333,"GER",NA,1952,"B","Helsinki","M",NA,NA,30,179,65
-"628","gunnar h√£¬ñckert","5000M Men",862.2,14.37,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,26,178,68
+"628","gunnar h„É‚ñckert","5000M Men",862.2,14.37,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,26,178,68
 "629","lauri lehtinen","5000M Men",865.8,14.43,"FIN","Finland",1936,"S","Berlin","M",6.76,3600000,27,174,64
-"630","henry jonsson-k√£¬Ñlarne","5000M Men",869,14.4833333333333,"SWE","Sweden",1936,"B","Berlin","M",3.62,6260000,24,181,70
+"630","henry jonsson-k„É‚Ñlarne","5000M Men",869,14.4833333333333,"SWE","Sweden",1936,"B","Berlin","M",3.62,6260000,24,181,70
 "631","ville ritola","5000M Men",878,14.6333333333333,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,32,175,66
 "632","paavo nurmi","5000M Men",880,14.6666666666667,"FIN","Finland",1928,"S","Amsterdam","M",6.75,3400000,30,174,65
 "633","edvin wide","5000M Men",881.2,14.6866666666667,"SWE","Sweden",1928,"B","Amsterdam","M",3.06,6120000,32,170,62
@@ -657,7 +657,7 @@
 "656","gordon pirie","5000M Men",830.6,13.8433333333333,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,25,188,65
 "657","derek ibbotson","5000M Men",834.4,13.9066666666667,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,24,175,68
 "658","gaston reiff","5000M Men",857.6,14.2933333333333,"BEL","Belgium",1948,"G","London","M",6.31,8540000,27,173,61
-"659","emil z√£¬Åtopek","5000M Men",857.8,14.2966666666667,"TCH",NA,1948,"S","London","M",NA,NA,25,182,72
+"659","emil z„É‚Åtopek","5000M Men",857.8,14.2966666666667,"TCH",NA,1948,"S","London","M",NA,NA,25,182,72
 "660","willem slijkhuis","5000M Men",866.8,14.4466666666667,"NED",NA,1948,"B","London","M",NA,NA,25,174,62
 "661","lauri lehtinen","5000M Men",870,14.5,"FIN","Finland",1932,"G","Los Angeles","M",-0.427,3500000,23,174,64
 "662","ralph hill","5000M Men",870,14.5,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,23,180,66
@@ -699,7 +699,7 @@
 "698","mario lanzi","800M Men",113.3,1.88833333333333,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,21,180,76
 "699","philip edwards","800M Men",113.6,1.89333333333333,"CAN","Canada",1936,"B","Berlin","M",5.4,11200000,28,176,64
 "700","douglas lowe","800M Men",111.8,1.86333333333333,"GBR","United Kingdom",1928,"G","Amsterdam","M",0.893,45600000,25,183,70
-"701","erik byl√£¬âhn","800M Men",112.8,1.88,"SWE","Sweden",1928,"S","Amsterdam","M",3.06,6120000,30,172,61
+"701","erik byl„É‚âhn","800M Men",112.8,1.88,"SWE","Sweden",1928,"S","Amsterdam","M",3.06,6120000,30,172,61
 "702","hermann engelhard","800M Men",113.2,1.88666666666667,"GER",NA,1928,"B","Amsterdam","M",NA,NA,24,176,65
 "703","albert hill","800M Men",113.4,1.89,"GBR","United Kingdom",1920,"G","Antwerp","M",-3.37,43800000,31,178,72
 "704","earl eby","800M Men",113.6,1.89333333333333,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,25,179,60
@@ -715,7 +715,7 @@
 "714","yuriy borzakovskiy","800M Men",104.5,1.74166666666667,"RUS","Russia",2004,"G","Athens","M",7.37,144000000,23,183,70
 "715","mbulaeni mulaudzi","800M Men",104.6,1.74333333333333,"RSA",NA,2004,"S","Athens","M",NA,NA,23,171,62
 "716","wilson kipketer","800M Men",104.7,1.745,"DEN",NA,2004,"B","Athens","M",NA,NA,31,182,63
-"717","vebj√£¬∏rn rodal","800M Men",102.6,1.71,"NOR","Norway",1996,"G","Atlanta","M",5.55,4390000,23,188,78
+"717","vebj„É‚∏rn rodal","800M Men",102.6,1.71,"NOR","Norway",1996,"G","Atlanta","M",5.55,4390000,23,188,78
 "718","hezekiel sepeng","800M Men",102.7,1.71166666666667,"RSA",NA,1996,"S","Atlanta","M",NA,NA,22,176,63
 "719","fred onyancha","800M Men",102.8,1.71333333333333,"KEN","Kenya",1996,"B","Atlanta","M",4.14,28100000,27,170,64
 "720","steve ovett","800M Men",105.4,1.75666666666667,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,24,183,70
@@ -745,7 +745,7 @@
 "744","howard valentine","800M Men",116.3,1.93833333333333,"USA","United States",1904,"S","St Louis","M",-1.26,83900000,22,NA,NA
 "745","emil breitkreutz","800M Men",116.4,1.94,"USA","United States",1904,"B","St Louis","M",-1.26,83900000,20,NA,NA
 "746","edwin flack","800M Men",131,2.18333333333333,"AUS","Australia",1896,"G","Athens","M",7.59,3520000,22,NA,NA
-"747","n√£¬°ndor d√£¬Åni","800M Men",131.8,2.19666666666667,"HUN","Hungary",1896,"S","Athens","M",2.09,6910000,24,NA,NA
+"747","n„É‚°ndor d„É‚Åni","800M Men",131.8,2.19666666666667,"HUN","Hungary",1896,"S","Athens","M",2.09,6910000,24,NA,NA
 "748","dimitrios golemis","800M Men",148,2.46666666666667,"GRE",NA,1896,"B","Athens","M",NA,NA,21,NA,NA
 "749","almaz ayana","10000M Women",1757.4,29.29,"ETH","Ethiopia",2016,"G","Rio","W",NA,102000000,24,166,47
 "750","vivian jepkemoi cheruiyot","10000M Women",1772.5,29.5416666666667,"KEN","Kenya",2016,"S","Rio","W",NA,48500000,32,153,40
@@ -782,7 +782,7 @@
 "781","yordanka donkova","100M Hurdles Women",12.7,0.211666666666667,"BUL",NA,1992,"B","Barcelona","W",NA,NA,30,175,67
 "782","benita fitzgerald-brown","100M Hurdles Women",12.84,0.214,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,23,178,65
 "783","shirley strong","100M Hurdles Women",12.88,0.214666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","W",2.61,56400000,25,173,63
-"784","mich√£¬®le chardonnet","100M Hurdles Women",13.06,0.217666666666667,"FRA","France",1984,"B","Los Angeles","W",1.59,55100000,27,170,60
+"784","mich„É‚®le chardonnet","100M Hurdles Women",13.06,0.217666666666667,"FRA","France",1984,"B","Los Angeles","W",1.59,55100000,27,170,60
 "785","kim turner","100M Hurdles Women",13.06,0.217666666666667,"USA","United States",1984,"B","Los Angeles","W",7.38,239000000,23,165,57
 "786","johanna schaller-klier","100M Hurdles Women",12.77,0.212833333333333,"GDR",NA,1976,"G","Montreal","W",NA,NA,23,176,70
 "787","tatiana anisimova","100M Hurdles Women",12.78,0.213,"URS",NA,1976,"S","Montreal","W",NA,NA,26,172,65
@@ -833,7 +833,7 @@
 "832","shirley strickland","100M Women",11.9,0.198333333333333,"AUS","Australia",1952,"B","Helsinki","W",1.23,8620000,26,172,57
 "833","helen stephens","100M Women",11.5,0.191666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,18,182,70
 "834","stanislawa walasiewicz","100M Women",11.7,0.195,"POL","Poland",1936,"S","Berlin","W",2.9,30400000,25,174,60
-"835","k√£¬§the krauss","100M Women",11.9,0.198333333333333,"GER",NA,1936,"B","Berlin","W",NA,NA,29,176,72
+"835","k„É‚§the krauss","100M Women",11.9,0.198333333333333,"GER",NA,1936,"B","Berlin","W",NA,NA,29,176,72
 "836","elizabeth robinson","100M Women",12.2,0.203333333333333,"USA","United States",1928,"G","Amsterdam","W",1.12,123000000,16,167,57
 "837","shelly-ann fraser-pryce","100M Women",10.75,0.179166666666667,"JAM","Jamaica",2012,"G","London","W",-0.631,2840000,25,160,57
 "838","carmelita jeter","100M Women",10.78,0.179666666666667,"USA","United States",2012,"S","London","W",2.94,313000000,32,163,59
@@ -845,7 +845,7 @@
 "844","merlene ottey","100M Women",10.94,0.182333333333333,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
 "845","gwen torrence","100M Women",10.96,0.182666666666667,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,31,170,57
 "846","lyudmila kondratyeva","100M Women",11.06,0.184333333333333,"URS",NA,1980,"G","Moscow","W",NA,NA,22,168,57
-"847","marlies oelsner-g√£¬ñhr","100M Women",11.07,0.1845,"GDR",NA,1980,"S","Moscow","W",NA,NA,22,165,55
+"847","marlies oelsner-g„É‚ñhr","100M Women",11.07,0.1845,"GDR",NA,1980,"S","Moscow","W",NA,NA,22,165,55
 "848","ingrid auerswald-lange","100M Women",11.14,0.185666666666667,"GDR",NA,1980,"B","Moscow","W",NA,NA,22,168,58
 "849","renate stecher","100M Women",11.07,0.1845,"GDR",NA,1972,"G","Munich","W",NA,NA,22,170,71
 "850","raelene ann boyle","100M Women",11.23,0.187166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
@@ -862,38 +862,38 @@
 "861","stanislawa walasiewicz","100M Women",11.9,0.198333333333333,"POL","Poland",1932,"G","Los Angeles","W",-7.8,29000000,21,174,60
 "862","hilda strike","100M Women",11.9,0.198333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,21,159,48
 "863","wilhelmina von bremen","100M Women",12,0.2,"USA","United States",1932,"B","Los Angeles","W",-13.2,128000000,22,182,68
-"864","faith chepngetich kipyegon","1500M Women",248.9,4.14833333333333,"KEN","Kenya",2016,"G","Rio","W",NA,48500000,NA,NA,NA
-"865","genzebe dibaba","1500M Women",250.3,4.17166666666667,"ETH","Ethiopia",2016,"S","Rio","W",NA,102000000,NA,NA,NA
-"866","jennifer simpson","1500M Women",250.5,4.175,"USA","United States",2016,"B","Rio","W",NA,322000000,NA,NA,NA
-"867","nancy jebet lagat","1500M Women",240.2,4.00333333333333,"KEN","Kenya",2008,"G","Beijing","W",1.53,39100000,NA,NA,NA
-"868","iryna lishchynska","1500M Women",241.6,4.02666666666667,"UKR","Ukraine",2008,"S","Beijing","W",2.26,46200000,NA,NA,NA
-"869","nataliya tobias","1500M Women",241.8,4.03,"UKR","Ukraine",2008,"B","Beijing","W",2.26,46200000,NA,NA,NA
-"870","nouria merah-benida","1500M Women",245.1,4.085,"ALG",NA,2000,"G","Sydney","W",NA,NA,NA,NA,NA
-"871","violeta szekely","1500M Women",245.2,4.08666666666667,"ROU","Romania",2000,"S","Sydney","W",1.81,22100000,NA,NA,NA
-"872","gabriela szabo","1500M Women",245.3,4.08833333333333,"ROU","Romania",2000,"B","Sydney","W",1.81,22100000,NA,NA,NA
-"873","hassiba boulmerka","1500M Women",235.3,3.92166666666667,"ALG",NA,1992,"G","Barcelona","W",NA,NA,NA,NA,NA
-"874","lyudmila rogachova","1500M Women",236.9,3.94833333333333,"EUN",NA,1992,"S","Barcelona","W",NA,NA,NA,NA,NA
-"875","yunxia qu","1500M Women",237.1,3.95166666666667,"CHN","China",1992,"B","Barcelona","W",8.75,1200000000,NA,NA,NA
-"876","gabriella dorio","1500M Women",243.2,4.05333333333333,"ITA","Italy",1984,"G","Los Angeles","W",5.03,56900000,NA,NA,NA
-"877","doina melinte","1500M Women",243.8,4.06333333333333,"ROU","Romania",1984,"S","Los Angeles","W",4.18,23000000,NA,NA,NA
-"878","maricica puica","1500M Women",244.1,4.06833333333333,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,NA,NA,NA
-"879","tatiana kazankina","1500M Women",245.5,4.09166666666667,"URS",NA,1976,"G","Montreal","W",NA,NA,NA,NA,NA
-"880","gunhild hoffmeister","1500M Women",246,4.1,"GDR",NA,1976,"S","Montreal","W",NA,NA,NA,NA,NA
-"881","ulrike klapezynski-bruns","1500M Women",246.1,4.10166666666667,"GDR",NA,1976,"B","Montreal","W",NA,NA,NA,NA,NA
-"882","gamze bulut","1500M Women",250.4,4.17333333333333,"TUR","Turkey",2012,"S","London","W",2.09,74600000,NA,NA,NA
-"883","maryam yusuf jamal","1500M Women",250.7,4.17833333333333,"BRN","Brunei",2012,"B","London","W",1.03,400000,NA,NA,NA
-"884","kelly holmes","1500M Women",237.9,3.965,"GBR","United Kingdom",2004,"G","Athens","W",2.95,59900000,NA,NA,NA
-"885","tatyana tomashova","1500M Women",238.1,3.96833333333333,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,NA,NA,NA
-"886","maria cioncan","1500M Women",238.4,3.97333333333333,"ROU","Romania",2004,"B","Athens","W",8.22,21600000,NA,NA,NA
-"887","svetlana masterkova","1500M Women",240.8,4.01333333333333,"RUS","Russia",1996,"G","Atlanta","W",-3.64,148000000,NA,NA,NA
-"888","gabriela szabo","1500M Women",241.5,4.025,"ROU","Romania",1996,"S","Atlanta","W",3.68,22800000,NA,NA,NA
-"889","theresia kiesl","1500M Women",243,4.05,"AUT","Austria",1996,"B","Atlanta","W",2.77,8020000,NA,NA,NA
-"890","tatiana kazankina","1500M Women",236.6,3.94333333333333,"URS",NA,1980,"G","Moscow","W",NA,NA,NA,NA,NA
-"891","christiane stoll-wartenberg","1500M Women",237.8,3.96333333333333,"GDR",NA,1980,"S","Moscow","W",NA,NA,NA,NA,NA
-"892","nadezhda olizarenko","1500M Women",239.6,3.99333333333333,"URS",NA,1980,"B","Moscow","W",NA,NA,NA,NA,NA
-"893","lyudmila bragina","1500M Women",241.4,4.02333333333333,"URS",NA,1972,"G","Munich","W",NA,NA,NA,NA,NA
-"894","gunhild hoffmeister","1500M Women",242.8,4.04666666666667,"GDR",NA,1972,"S","Munich","W",NA,NA,NA,NA,NA
-"895","paola pigni-cacchi","1500M Women",242.9,4.04833333333333,"ITA","Italy",1972,"B","Munich","W",3.48,54300000,NA,NA,NA
+"864","faith chepngetich kipyegon","1500M Women",248.9,4.14833333333333,"KEN","Kenya",2016,"G","Rio","W",NA,48500000,22,157,43
+"865","genzebe dibaba","1500M Women",250.3,4.17166666666667,"ETH","Ethiopia",2016,"S","Rio","W",NA,102000000,25,168,52
+"866","jennifer simpson","1500M Women",250.5,4.175,"USA","United States",2016,"B","Rio","W",NA,322000000,29,166,53
+"867","nancy jebet lagat","1500M Women",240.2,4.00333333333333,"KEN","Kenya",2008,"G","Beijing","W",1.53,39100000,26,153,49
+"868","iryna lishchynska","1500M Women",241.6,4.02666666666667,"UKR","Ukraine",2008,"S","Beijing","W",2.26,46200000,32,160,56
+"869","nataliya tobias","1500M Women",241.8,4.03,"UKR","Ukraine",2008,"B","Beijing","W",2.26,46200000,27,160,48
+"870","nouria merah-benida","1500M Women",245.1,4.085,"ALG",NA,2000,"G","Sydney","W",NA,NA,29,162,54
+"871","violeta szekely","1500M Women",245.2,4.08666666666667,"ROU","Romania",2000,"S","Sydney","W",1.81,22100000,35,169,52
+"872","gabriela szabo","1500M Women",245.3,4.08833333333333,"ROU","Romania",2000,"B","Sydney","W",1.81,22100000,24,158,42
+"873","hassiba boulmerka","1500M Women",235.3,3.92166666666667,"ALG",NA,1992,"G","Barcelona","W",NA,NA,24,158,49
+"874","lyudmila rogachova","1500M Women",236.9,3.94833333333333,"EUN",NA,1992,"S","Barcelona","W",NA,NA,25,166,46
+"875","yunxia qu","1500M Women",237.1,3.95166666666667,"CHN","China",1992,"B","Barcelona","W",8.75,1200000000,19,172,56
+"876","gabriella dorio","1500M Women",243.2,4.05333333333333,"ITA","Italy",1984,"G","Los Angeles","W",5.03,56900000,27,168,55
+"877","doina melinte","1500M Women",243.8,4.06333333333333,"ROU","Romania",1984,"S","Los Angeles","W",4.18,23000000,27,171,59
+"878","maricica puica","1500M Women",244.1,4.06833333333333,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,34,168,54
+"879","tatiana kazankina","1500M Women",245.5,4.09166666666667,"URS",NA,1976,"G","Montreal","W",NA,NA,24,162,47
+"880","gunhild hoffmeister","1500M Women",246,4.1,"GDR",NA,1976,"S","Montreal","W",NA,NA,32,172,56
+"881","ulrike klapezynski-bruns","1500M Women",246.1,4.10166666666667,"GDR",NA,1976,"B","Montreal","W",NA,NA,22,170,58
+"882","gamze bulut","1500M Women",250.4,4.17333333333333,"TUR","Turkey",2012,"S","London","W",2.09,74600000,19,166,48
+"883","maryam yusuf jamal","1500M Women",250.7,4.17833333333333,"BRN","Brunei",2012,"B","London","W",1.03,400000,27,170,61
+"884","kelly holmes","1500M Women",237.9,3.965,"GBR","United Kingdom",2004,"G","Athens","W",2.95,59900000,34,163,55
+"885","tatyana tomashova","1500M Women",238.1,3.96833333333333,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,29,164,50
+"886","maria cioncan","1500M Women",238.4,3.97333333333333,"ROU","Romania",2004,"B","Athens","W",8.22,21600000,27,172,57
+"887","svetlana masterkova","1500M Women",240.8,4.01333333333333,"RUS","Russia",1996,"G","Atlanta","W",-3.64,148000000,28,168,50
+"888","gabriela szabo","1500M Women",241.5,4.025,"ROU","Romania",1996,"S","Atlanta","W",3.68,22800000,20,158,42
+"889","theresia kiesl","1500M Women",243,4.05,"AUT","Austria",1996,"B","Atlanta","W",2.77,8020000,32,172,60
+"890","tatiana kazankina","1500M Women",236.6,3.94333333333333,"URS",NA,1980,"G","Moscow","W",NA,NA,28,162,47
+"891","christiane stoll-wartenberg","1500M Women",237.8,3.96333333333333,"GDR",NA,1980,"S","Moscow","W",NA,NA,23,169,53
+"892","nadezhda olizarenko","1500M Women",239.6,3.99333333333333,"URS",NA,1980,"B","Moscow","W",NA,NA,26,165,57
+"893","lyudmila bragina","1500M Women",241.4,4.02333333333333,"URS",NA,1972,"G","Munich","W",NA,NA,29,165,57
+"894","gunhild hoffmeister","1500M Women",242.8,4.04666666666667,"GDR",NA,1972,"S","Munich","W",NA,NA,28,172,56
+"895","paola pigni-cacchi","1500M Women",242.9,4.04833333333333,"ITA","Italy",1972,"B","Munich","W",3.48,54300000,26,168,55
 "896","elaine thompson","200M Women",21.78,0.363,"JAM","Jamaica",2016,"G","Rio","W",NA,2880000,24,167,57
 "897","dafne schippers","200M Women",21.88,0.364666666666667,"NED",NA,2016,"S","Rio","W",NA,NA,24,179,70
 "898","tori bowie","200M Women",22.15,0.369166666666667,"USA","United States",2016,"B","Rio","W",NA,322000000,25,175,58
@@ -909,7 +909,7 @@
 "908","valerie brisco","200M Women",21.81,0.3635,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
 "909","florence griffith joyner","200M Women",22.04,0.367333333333333,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,24,170,57
 "910","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
-"911","b√£¬§rbel eckert-w√£¬ñckel","200M Women",22.37,0.372833333333333,"GDR",NA,1976,"G","Montreal","W",NA,NA,21,174,62
+"911","b„É‚§rbel eckert-w„É‚ñckel","200M Women",22.37,0.372833333333333,"GDR",NA,1976,"G","Montreal","W",NA,NA,21,174,62
 "912","annegret richter-irrgang","200M Women",22.39,0.373166666666667,"FRG",NA,1976,"S","Montreal","W",NA,NA,25,167,53
 "913","renate stecher","200M Women",22.47,0.3745,"GDR",NA,1976,"B","Montreal","W",NA,NA,26,170,71
 "914","irena kirszenstein","200M Women",22.5,0.375,"POL","Poland",1968,"G","Mexico","W",6.11,32100000,22,176,60
@@ -927,10 +927,10 @@
 "926","veronica campbell-brown","200M Women",22.05,0.3675,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,22,168,58
 "927","allyson felix","200M Women",22.18,0.369666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,18,168,56
 "928","debbie ferguson-mckenzie","200M Women",22.3,0.371666666666667,"BAH",NA,2004,"B","Athens","W",NA,NA,28,168,63
-"929","marie-jos√£¬© p√£¬ârec","200M Women",22.12,0.368666666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
+"929","marie-jos„É‚© p„É‚ârec","200M Women",22.12,0.368666666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
 "930","merlene ottey","200M Women",22.24,0.370666666666667,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
 "931","mary onyali","200M Women",22.38,0.373,"NGR",NA,1996,"B","Atlanta","W",NA,NA,28,168,54
-"932","b√£¬§rbel eckert-w√£¬ñckel","200M Women",22.03,0.367166666666667,"GDR",NA,1980,"G","Moscow","W",NA,NA,25,174,62
+"932","b„É‚§rbel eckert-w„É‚ñckel","200M Women",22.03,0.367166666666667,"GDR",NA,1980,"G","Moscow","W",NA,NA,25,174,62
 "933","natalia bochina","200M Women",22.19,0.369833333333333,"URS",NA,1980,"S","Moscow","W",NA,NA,18,173,55
 "934","merlene ottey","200M Women",22.2,0.37,"JAM","Jamaica",1980,"B","Moscow","W",-5.2,2160000,20,175,62
 "935","renate stecher","200M Women",22.4,0.373333333333333,"GDR",NA,1972,"G","Munich","W",NA,NA,22,170,71
@@ -986,7 +986,7 @@
 "985","cathy freeman","400M Women",49.11,0.8185,"AUS","Australia",2000,"G","Sydney","W",2.04,19100000,27,164,56
 "986","lorraine fenton","400M Women",49.58,0.826333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,27,174,59
 "987","katharine merry","400M Women",49.72,0.828666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,25,173,62
-"988","marie-jos√£¬© p√£¬ârec","400M Women",48.83,0.813833333333333,"FRA","France",1992,"G","Barcelona","W",1.59,57500000,24,180,60
+"988","marie-jos„É‚© p„É‚ârec","400M Women",48.83,0.813833333333333,"FRA","France",1992,"G","Barcelona","W",1.59,57500000,24,180,60
 "989","olga bryzgina","400M Women",49.05,0.8175,"EUN",NA,1992,"S","Barcelona","W",NA,NA,29,171,63
 "990","ximena restrepo","400M Women",49.64,0.827333333333333,"COL","Colombia",1992,"B","Barcelona","W",4.27,35600000,23,175,58
 "991","valerie brisco","400M Women",48.83,0.813833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
@@ -1004,7 +1004,7 @@
 "1003","tonique williams-darling","400M Women",49.41,0.8235,"BAH",NA,2004,"G","Athens","W",NA,NA,28,168,59
 "1004","ana guevara","400M Women",49.56,0.826,"MEX","Mexico",2004,"S","Athens","W",4.42,107000000,27,173,61
 "1005","natalya antyukh","400M Women",49.89,0.8315,"RUS","Russia",2004,"B","Athens","W",7.37,144000000,23,182,69
-"1006","marie-jos√£¬© p√£¬ârec","400M Women",48.25,0.804166666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
+"1006","marie-jos„É‚© p„É‚ârec","400M Women",48.25,0.804166666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
 "1007","cathy freeman","400M Women",48.63,0.8105,"AUS","Australia",1996,"S","Atlanta","W",3.62,18300000,23,164,56
 "1008","falilat ogunkoya","400M Women",49.1,0.818333333333333,"NGR",NA,1996,"B","Atlanta","W",NA,NA,27,172,66
 "1009","marita koch","400M Women",48.88,0.814666666666667,"GDR",NA,1980,"G","Moscow","W",NA,NA,23,171,62

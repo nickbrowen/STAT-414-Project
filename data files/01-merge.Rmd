@@ -188,7 +188,7 @@ keep.events <- c("Athletics Men's 10,000 metres", "Athletics Men's 100 metres",
                  "Athletics Women's 200 metres", "Athletics Women's 3,000 metres Steeplechase", 
                  "Athletics Women's 400 metres Hurdles", "Athletics Women's 400 metres",
                  "Athletics Women's 4 x 100 metres Relay", "Athletics Women's 4 x 400 metres Relay", 
-                 "Athletics Women's 5,000 metres", "Athletics Women's 800 metres")
+                 "Athletics Women's 5,000 metres", "Athletics Women's 800 metres", "Athletics Women's 1,500 metres" )
 
 medalists <- medalists %>% filter(Event %in% keep.events)
 ```
@@ -224,7 +224,8 @@ medalists <- medalists %>% mutate(
                     event == "Athletics Women's 4 x 100 metres Relay" ~ "4X100M Relay Women", 
                     event == "Athletics Women's 4 x 400 metres Relay" ~ "4X400M Relay Women",  
                     event == "Athletics Women's 5,000 metres" ~ "5000M Women",     
-                    event == "Athletics Women's 800 metres" ~ "800M Women"))
+                    event == "Athletics Women's 800 metres" ~ "800M Women",
+                    event == "Athletics Women's 1,500 metres" ~ "1500M Women"))
 
 medalists$medal <- medalists$medal %>% as.factor()
 medalists$event <- medalists$event %>% as.factor()
