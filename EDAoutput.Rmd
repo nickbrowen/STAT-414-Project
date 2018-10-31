@@ -1,0 +1,144 @@
+---
+title: "EDA Output"
+output: html_notebook
+---
+
+Data
+```{r}
+track <- read.csv("C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/final_data_noNA.csv")
+track <- track[,-1]
+track$medal <- ordered(track$medal, levels = c("B", "S", "G"))
+```
+
+Level 1 = Athlete (finishing time)
+Level 2 = Country
+Level 3 = Event
+
+#Response
+```{r}
+track %>% select(timeSecs, timeMins) %>% summary
+```
+
+
+
+##Level 1 (Athlete)
+
+Numerical Summary for Athlete Level (L1) Quantitative Variables
+```{r}
+L1 <- c("name", "sex", "age", "height", "weight", "medal")
+L1_qvar <- c("age", "height", "weight")
+track %>% select(L1_qvar) %>% summary
+```
+```{r}
+ggplot(data = track, aes(age)) + geom_histogram(bins = 25)
+```
+```{r}
+ggplot(data = track, aes(height)) + geom_histogram(bins = 25)
+```
+```{r}
+ggplot(data = track, aes(weight)) + geom_histogram(bins = 30)
+```
+```{r}
+library(corrplot)
+L1corr_matrix <- track %>% select(L1_qvar, timeSecs) %>% cor()
+corrplot(L1corr_matrix, type = "upper")
+```
+
+```{r}
+ggplot(data = track, aes(x=height, y = timeSecs)) + geom_point() + stat_smooth(method = "lm") + scale_y_continuous(limits = c(0, 2000))
+```
+
+
+```{r}
+ggplot(data = track, aes(x=weight, y = timeSecs)) + geom_point() + stat_smooth(method = "lm") + scale_y_continuous(limits = c(0, 2000))
+```
+```{r}
+ggplot(data = track, aes(x=height, y = weight)) + geom_point()
+```
+
+```{r}
+ggplot(data = track, aes(sex, fill = sex)) + geom_bar(width = 0.5)
+```
+
+
+
+##Level 2 (Country)
+
+```{r}
+ggplot(data = track, aes(country, fill = medal)) + geom_bar() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+
+
+Numerical Summary for Country Level (L2) Quantitative Variables
+```{r}
+L2 <- c("country2", "gdp", "pop")
+L2_qvar <- c("gdp", "pop")
+track %>% select(L2_qvar) %>% summary
+```
+```{r}
+ggplot(data = track, aes(gdp)) + geom_histogram(bins = 30)
+```
+```{r}
+ggplot(data = track, aes(pop)) + geom_histogram(bins = 30)
+```
+```{r}
+track %>% filter(pop > 500000000) 
+```
+Will have to keep in mind that China is an extreme population outlier and they have 4 observations in the dataset.
+
+```{r}
+L2corr_matrix <- track %>% select(L2_qvar, timeSecs) %>% cor()
+corrplot(L2corr_matrix, type = "upper")
+```
+
+Distribution of Medals by Country
+```{r}
+t <- track %>% select(c("country2", "medal")) %>% table() 
+addmargins(t,margin = seq_along(dim(t)), FUN = sum)
+
+```
+
+
+##Level 3 (Event)
+
+```{r}
+L3 <- c("event", "year")
+```
+
+
+
+
+
+
+
+
+
+```{r}
+track %>% filter(pop < 500000000) %>% ggplot(aes(y=timeSecs, x=pop, color = event)) + geom_point() +   geom_smooth(method = "lm", se = F)
+```
+
+
+```{r}
+track %>% filter(pop < 500000000) %>% ggplot(aes(y=gdp, x=pop, color = medal)) + geom_point() + geom_smooth(method = "lm", se = F)
+```
+
+
+```{r}
+tapply(track$gdp, track$medal, mean)
+tapply(track$pop, track$medal, mean)       
+```
+
+
+```{r}
+library(corrplot)
+corr_matrix <- track %>% select(contin_var) %>% cor()
+corrplot(corr_matrix, type = "upper")
+```
+
+```{r}
+corr10000Mmen <- track %>% filter(event == "10000M Men") %>% select(contin_var) %>% cor()
+corrplot(corr10000Mmen, type = "upper")
+```
+
+

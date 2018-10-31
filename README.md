@@ -27,3 +27,6 @@ I made a couple of quick plots but I didnt have much time. Just wanted to look a
 
 ## To do next:
 Start the EDA
+
+##
+Okay, so I removed all the strictly non-running events (ie hurdles, steeple chase) and also changed the event to a numeric measure of distance. (dataset = track) This should allow us to have only 2 levels with athlete and country. I'm still working on getting all the output together. Also, can you see my updated files? I'm not sure if I'm doing it right
