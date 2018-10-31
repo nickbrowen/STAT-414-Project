@@ -1,0 +1,795 @@
+"","name","event","timeSecs","timeMins","country","country2","year","medal","city","sex","gdp","pop","age","height","weight"
+"1","kenenisa bekele","10000M Men",1621.2,27.02,"ETH","Ethiopia",2008,"G","Beijing","M",10.3,83200000,26,165,56
+"2","sileshi sihine","10000M Men",1622.8,27.0466666666667,"ETH","Ethiopia",2008,"S","Beijing","M",10.3,83200000,25,168,58
+"3","micah kogo","10000M Men",1624.1,27.0683333333333,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,22,170,60
+"4","haile gebrselassie","10000M Men",1638.2,27.3033333333333,"ETH","Ethiopia",2000,"G","Sydney","M",5.83,66500000,27,165,56
+"5","paul tergat","10000M Men",1638.3,27.305,"KEN","Kenya",2000,"S","Sydney","M",0.498,31500000,31,182,62
+"6","assefa mezgebu","10000M Men",1639.7,27.3283333333333,"ETH","Ethiopia",2000,"B","Sydney","M",5.83,66500000,22,175,55
+"7","khalid skah","10000M Men",1666.7,27.7783333333333,"MAR","Morocco",1992,"G","Barcelona","M",-4.42,25800000,25,170,60
+"8","richard chelimo","10000M Men",1667.7,27.795,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,19,163,54
+"9","addis abebe","10000M Men",1680.1,28.0016666666667,"ETH","Ethiopia",1992,"B","Barcelona","M",-8.78,51600000,21,160,50
+"10","alberto cova","10000M Men",1667.5,27.7916666666667,"ITA","Italy",1984,"G","Los Angeles","M",5.03,56900000,25,176,58
+"11","michael mcleod","10000M Men",1686.2,28.1033333333333,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,32,180,63
+"12","michael musyoki","10000M Men",1686.5,28.1083333333333,"KEN","Kenya",1984,"B","Los Angeles","M",1.77,18900000,28,168,54
+"13","lasse viren","10000M Men",1660.4,27.6733333333333,"FIN","Finland",1976,"G","Montreal","M",-0.4,4730000,26,180,60
+"14","carlos lopes","10000M Men",1665.2,27.7533333333333,"POR","Portugal",1976,"S","Montreal","M",6.04,9350000,29,167,55
+"15","brendan foster","10000M Men",1674.9,27.915,"GBR","United Kingdom",1976,"B","Montreal","M",2.73,56200000,28,178,68
+"16","naftali temu","10000M Men",1767.4,29.4566666666667,"KEN","Kenya",1968,"G","Mexico","M",0.0532,10500000,23,174,62
+"17","mamo wolde","10000M Men",1768,29.4666666666667,"ETH","Ethiopia",1968,"S","Mexico","M",5.5,26900000,36,170,54
+"18","mohamed gammoudi","10000M Men",1774.2,29.57,"TUN","Tunisia",1968,"B","Mexico","M",10.4,4840000,30,172,60
+"19","david power","10000M Men",1718.2,28.6366666666667,"AUS","Australia",1960,"B","Rome","M",4.04,10300000,32,170,63
+"20","alain mimoun","10000M Men",1772.8,29.5466666666667,"FRA","France",1952,"S","Helsinki","M",2.25,42400000,31,170,56
+"21","ilmari salminen","10000M Men",1815.4,30.2566666666667,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,33,181,66
+"22","arvo askola","10000M Men",1815.6,30.26,"FIN","Finland",1936,"S","Berlin","M",6.76,3600000,26,174,65
+"23","volmari iso-hollo","10000M Men",1820.2,30.3366666666667,"FIN","Finland",1936,"B","Berlin","M",6.76,3600000,29,176,64
+"24","paavo nurmi","10000M Men",1818.8,30.3133333333333,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,30,174,65
+"25","ville ritola","10000M Men",1819.4,30.3233333333333,"FIN","Finland",1928,"S","Amsterdam","M",6.75,3400000,32,175,66
+"26","edvin wide","10000M Men",1860.8,31.0133333333333,"SWE","Sweden",1928,"B","Amsterdam","M",3.06,6120000,32,170,62
+"27","paavo nurmi","10000M Men",1905.8,31.7633333333333,"FIN","Finland",1920,"G","Antwerp","M",11.9,3140000,22,174,65
+"28","joseph guillemot","10000M Men",1907.2,31.7866666666667,"FRA","France",1920,"S","Antwerp","M",7.49,39100000,20,160,55
+"29","james wilson","10000M Men",1910.8,31.8466666666667,"GBR","United Kingdom",1920,"B","Antwerp","M",-3.37,43800000,28,173,60
+"30","mohamed farah","10000M Men",1650.4,27.5066666666667,"GBR","United Kingdom",2012,"G","London","M",0.198,64300000,29,175,58
+"31","galen rupp","10000M Men",1650.9,27.515,"USA","United States",2012,"S","London","M",2.94,313000000,26,181,61
+"32","tariku bekele","10000M Men",1651.4,27.5233333333333,"ETH","Ethiopia",2012,"B","London","M",8.26,92400000,25,173,65
+"33","kenenisa bekele","10000M Men",1625.1,27.085,"ETH","Ethiopia",2004,"G","Athens","M",13.1,74600000,22,165,56
+"34","sileshi sihine","10000M Men",1629.4,27.1566666666667,"ETH","Ethiopia",2004,"S","Athens","M",13.1,74600000,21,168,58
+"35","zersenay tadese","10000M Men",1642.6,27.3766666666667,"ERI","Eritrea",2004,"B","Athens","M",1.36,3860000,22,160,54
+"36","haile gebrselassie","10000M Men",1627.3,27.1216666666667,"ETH","Ethiopia",1996,"G","Atlanta","M",12.3,59200000,23,165,56
+"37","paul tergat","10000M Men",1628.2,27.1366666666667,"KEN","Kenya",1996,"S","Atlanta","M",4.14,28100000,27,182,62
+"38","salah hissou","10000M Men",1644.7,27.4116666666667,"MAR","Morocco",1996,"B","Atlanta","M",11.6,27500000,24,176,62
+"39","miruts yifter","10000M Men",1662.7,27.7116666666667,"ETH","Ethiopia",1980,"G","Moscow","M",2.18,35300000,36,162,53
+"40","kaarlo maaninka","10000M Men",1664.3,27.7383333333333,"FIN","Finland",1980,"S","Moscow","M",5.38,4790000,26,178,61
+"41","mohammed kedir","10000M Men",1664.7,27.745,"ETH","Ethiopia",1980,"B","Moscow","M",2.18,35300000,26,166,45
+"42","lasse viren","10000M Men",1658.4,27.64,"FIN","Finland",1972,"G","Munich","M",7.49,4650000,23,180,60
+"43","emiel puttemans","10000M Men",1659.6,27.66,"BEL","Belgium",1972,"S","Munich","M",5.25,9690000,24,175,68
+"44","miruts yifter","10000M Men",1661,27.6833333333333,"ETH","Ethiopia",1972,"B","Munich","M",4.35,30100000,28,162,53
+"45","billy mills","10000M Men",1704.4,28.4066666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,26,180,68
+"46","mohamed gammoudi","10000M Men",1704.8,28.4133333333333,"TUN","Tunisia",1964,"S","Tokyo","M",4.06,4460000,26,172,60
+"47","ron clarke","10000M Men",1705.8,28.43,"AUS","Australia",1964,"B","Tokyo","M",6.88,11100000,27,183,72
+"48","j„É‚≥zsef kov„É‚Åcs","10000M Men",1732.4,28.8733333333333,"HUN","Hungary",1956,"S","Melbourne / Stockholm","M",-4.92,9880000,30,163,50
+"49","allan lawrence","10000M Men",1733.6,28.8933333333333,"AUS","Australia",1956,"B","Melbourne / Stockholm","M",3.32,9420000,26,171,61
+"50","alain mimoun","10000M Men",1847.4,30.79,"FRA","France",1948,"S","London","M",13.2,41200000,27,170,56
+"51","bertil albertsson","10000M Men",1853.6,30.8933333333333,"SWE","Sweden",1948,"B","London","M",2.27,6840000,26,177,67
+"52","janusz kusocinski","10000M Men",1811.4,30.19,"POL","Poland",1932,"G","Los Angeles","M",-7.8,29000000,25,167,72
+"53","volmari iso-hollo","10000M Men",1812.6,30.21,"FIN","Finland",1932,"S","Los Angeles","M",-0.427,3500000,25,176,64
+"54","lauri virtanen","10000M Men",1835,30.5833333333333,"FIN","Finland",1932,"B","Los Angeles","M",-0.427,3500000,27,172,68
+"55","ville ritola","10000M Men",1823.2,30.3866666666667,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,28,175,66
+"56","edvin wide","10000M Men",1855.2,30.92,"SWE","Sweden",1924,"S","Paris","M",7.47,6020000,28,170,62
+"57","eero berg","10000M Men",1903,31.7166666666667,"FIN","Finland",1924,"B","Paris","M",2.61,3270000,26,167,58
+"58","hannes kolehmainen","10000M Men",1880.8,31.3466666666667,"FIN","Finland",1912,"G","Stockholm","M",5.56,3000000,22,168,57.5
+"59","albin stenroos","10000M Men",1941.8,32.3633333333333,"FIN","Finland",1912,"B","Stockholm","M",5.56,3000000,23,173,64
+"60","usain bolt","100M Men",9.69,0.1615,"JAM","Jamaica",2008,"G","Beijing","M",-0.822,2790000,21,196,95
+"61","richard thompson","100M Men",9.89,0.164833333333333,"TTO","Trinidad and Tobago",2008,"S","Beijing","M",3.38,1320000,23,188,80
+"62","walter dix","100M Men",9.91,0.165166666666667,"USA","United States",2008,"B","Beijing","M",-0.392,303000000,22,175,80
+"63","maurice greene","100M Men",9.87,0.1645,"USA","United States",2000,"G","Sydney","M",4.16,282000000,26,176,80
+"64","ato boldon","100M Men",9.99,0.1665,"TTO","Trinidad and Tobago",2000,"S","Sydney","M",5.9,1270000,26,176,75
+"65","obadele thompson","100M Men",10.04,0.167333333333333,"BAR","Barbados",2000,"B","Sydney","M",2.13,270000,24,182,78
+"66","linford christie","100M Men",9.96,0.166,"GBR","United Kingdom",1992,"G","Barcelona","M",0.164,57500000,32,189,94
+"67","frank fredericks","100M Men",10.02,0.167,"NAM","Namibia",1992,"S","Barcelona","M",10.1,1510000,24,180,73
+"68","dennis mitchell","100M Men",10.04,0.167333333333333,"USA","United States",1992,"B","Barcelona","M",2.96,257000000,26,175,70
+"69","carl lewis","100M Men",9.99,0.1665,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,23,188,80
+"70","sam graddy","100M Men",10.19,0.169833333333333,"USA","United States",1984,"S","Los Angeles","M",7.38,239000000,20,178,70
+"71","ben johnson","100M Men",10.22,0.170333333333333,"CAN","Canada",1984,"B","Los Angeles","M",5.85,25600000,22,177,75
+"72","hasely crawford","100M Men",10.06,0.167666666666667,"TTO","Trinidad and Tobago",1976,"G","Montreal","M",9.16,1030000,25,187,90
+"73","donald quarrie","100M Men",10.08,0.168,"JAM","Jamaica",1976,"S","Montreal","M",-6.18,2060000,25,175,70
+"74","jim hines","100M Men",9.9,0.165,"USA","United States",1968,"G","Mexico","M",4.71,206000000,22,183,81
+"75","lennox miller","100M Men",10,0.166666666666667,"JAM","Jamaica",1968,"S","Mexico","M",4.47,1830000,22,183,79
+"76","charlie greene","100M Men",10,0.166666666666667,"USA","United States",1968,"B","Mexico","M",4.71,206000000,23,173,69
+"77","dave sime","100M Men",10.2,0.17,"USA","United States",1960,"S","Rome","M",2.5,187000000,24,189,81
+"78","peter radford","100M Men",10.3,0.171666666666667,"GBR","United Kingdom",1960,"B","Rome","M",5.15,52400000,20,180,61
+"79","lindy remigino","100M Men",10.4,0.173333333333333,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,21,173,67
+"80","herbert mckenley","100M Men",10.4,0.173333333333333,"JAM","Jamaica",1952,"S","Helsinki","M",8.83,1470000,30,185,72
+"81","emmanuel mcdonald bailey","100M Men",10.4,0.173333333333333,"GBR","United Kingdom",1952,"B","Helsinki","M",-0.118,50700000,31,180,65
+"82","jesse owens","100M Men",10.3,0.171666666666667,"USA","United States",1936,"G","Berlin","M",14.2,131000000,22,178,71
+"83","ralph metcalfe","100M Men",10.4,0.173333333333333,"USA","United States",1936,"S","Berlin","M",14.2,131000000,26,180,82
+"84","percy williams","100M Men",10.8,0.18,"CAN","Canada",1928,"G","Amsterdam","M",8.87,10100000,19,170,56
+"85","jack london","100M Men",10.9,0.181666666666667,"GBR","United Kingdom",1928,"S","Amsterdam","M",0.893,45600000,23,183,75
+"86","charles paddock","100M Men",10.8,0.18,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,19,172,75
+"87","morris kirksey","100M Men",10.8,0.18,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,24,178,77
+"88","frank jarvis","100M Men",11,0.183333333333333,"USA","United States",1900,"G","Paris","M",2.74,77800000,21,167,58
+"89","walter tewksbury","100M Men",11.1,0.185,"USA","United States",1900,"S","Paris","M",2.74,77800000,24,183,64
+"90","stanley rowley","100M Men",11.2,0.186666666666667,"AUS","Australia",1900,"B","Paris","M",5.94,3740000,23,178,71
+"91","usain bolt","100M Men",9.63,0.1605,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,25,196,95
+"92","yohan blake","100M Men",9.75,0.1625,"JAM","Jamaica",2012,"S","London","M",-0.631,2840000,22,180,80
+"93","justin gatlin","100M Men",9.79,0.163166666666667,"USA","United States",2012,"B","London","M",2.94,313000000,30,186,80
+"94","justin gatlin","100M Men",9.85,0.164166666666667,"USA","United States",2004,"G","Athens","M",3.49,293000000,22,186,80
+"95","francis obikwelu","100M Men",9.86,0.164333333333333,"POR","Portugal",2004,"S","Athens","M",1.48,10500000,25,195,79
+"96","maurice greene","100M Men",9.87,0.1645,"USA","United States",2004,"B","Athens","M",3.49,293000000,30,176,80
+"97","donovan bailey","100M Men",9.84,0.164,"CAN","Canada",1996,"G","Atlanta","M",1.34,29600000,28,183,82
+"98","frank fredericks","100M Men",9.89,0.164833333333333,"NAM","Namibia",1996,"S","Atlanta","M",3.37,1710000,28,180,73
+"99","ato boldon","100M Men",9.9,0.165,"TTO","Trinidad and Tobago",1996,"B","Atlanta","M",5.3,1260000,22,176,75
+"100","allan wells","100M Men",10.25,0.170833333333333,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,28,183,86
+"101","silvio leonard sarria","100M Men",10.25,0.170833333333333,"CUB","Cuba",1980,"S","Moscow","M",-1.28,9840000,24,173,64
+"102","robert taylor","100M Men",10.24,0.170666666666667,"USA","United States",1972,"S","Munich","M",5.12,213000000,23,183,80
+"103","lennox miller","100M Men",10.33,0.172166666666667,"JAM","Jamaica",1972,"B","Munich","M",2.99,1930000,25,183,79
+"104","bob hayes","100M Men",10,0.166666666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,21,183,86
+"105","enrique figuerola","100M Men",10.2,0.17,"CUB","Cuba",1964,"S","Tokyo","M",1.09,7790000,26,167,67
+"106","harry jerome","100M Men",10.2,0.17,"CAN","Canada",1964,"B","Tokyo","M",6.42,19400000,24,180,77
+"107","bobby morrow","100M Men",10.5,0.175,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,21,186,75
+"108","thane baker","100M Men",10.5,0.175,"USA","United States",1956,"S","Melbourne / Stockholm","M",1.95,175000000,25,183,72
+"109","hector hogan","100M Men",10.6,0.176666666666667,"AUS","Australia",1956,"B","Melbourne / Stockholm","M",3.32,9420000,25,170,65
+"110","harrison dillard","100M Men",10.3,0.171666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,25,178,69
+"111","barney ewell","100M Men",10.4,0.173333333333333,"USA","United States",1948,"S","London","M",3.79,150000000,30,180,71
+"112","lloyd labeach","100M Men",10.6,0.176666666666667,"PAN","Panama",1948,"B","London","M",-5.94,821000,26,185,73
+"113","eddie tolan","100M Men",10.3,0.171666666666667,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,23,170,65
+"114","ralph metcalfe","100M Men",10.3,0.171666666666667,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,22,180,82
+"115","harold abrahams","100M Men",10.6,0.176666666666667,"GBR","United Kingdom",1924,"G","Paris","M",4.72,44900000,24,183,75
+"116","jackson scholz","100M Men",10.7,0.178333333333333,"USA","United States",1924,"S","Paris","M",3.07,117000000,27,172,61
+"117","arthur porritt","100M Men",10.8,0.18,"NZL","New Zealand",1924,"B","Paris","M",1.78,1350000,23,171,64
+"118","ralph craig","100M Men",10.8,0.18,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,22,182,73
+"119","alvah meyer","100M Men",10.9,0.181666666666667,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,23,173,65
+"120","donald lippincott","100M Men",10.9,0.181666666666667,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,18,178,72
+"121","archie hahn","100M Men",11,0.183333333333333,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,23,167,64
+"122","nate cartmell","100M Men",11.2,0.186666666666667,"USA","United States",1904,"S","St Louis","M",-1.26,83900000,21,182,71
+"123","thomas burke","100M Men",12,0.2,"USA","United States",1896,"G","Athens","M",-2.04,72100000,21,183,66
+"124","francis lane","100M Men",12.6,0.21,"USA","United States",1896,"B","Athens","M",-2.04,72100000,21,170,69
+"125","dayron robles","110M Hurdles Men",12.93,0.2155,"CUB","Cuba",2008,"G","Beijing","M",4.12,11300000,21,191,80
+"126","david payne","110M Hurdles Men",13.17,0.2195,"USA","United States",2008,"S","Beijing","M",-0.392,303000000,26,183,79
+"127","david oliver","110M Hurdles Men",13.18,0.219666666666667,"USA","United States",2008,"B","Beijing","M",-0.392,303000000,26,191,93
+"128","anier garcia","110M Hurdles Men",13,0.216666666666667,"CUB","Cuba",2000,"G","Sydney","M",5.35,11200000,24,189,79
+"129","terrence trammell","110M Hurdles Men",13.16,0.219333333333333,"USA","United States",2000,"S","Sydney","M",4.16,282000000,21,188,84
+"130","mark crear","110M Hurdles Men",13.22,0.220333333333333,"USA","United States",2000,"B","Sydney","M",4.16,282000000,31,186,79
+"131","mark mckoy","110M Hurdles Men",13.12,0.218666666666667,"CAN","Canada",1992,"G","Barcelona","M",0.624,28400000,30,181,70
+"132","tony dees","110M Hurdles Men",13.24,0.220666666666667,"USA","United States",1992,"S","Barcelona","M",2.96,257000000,28,193,90
+"133","jack pierce","110M Hurdles Men",13.26,0.221,"USA","United States",1992,"B","Barcelona","M",2.96,257000000,29,185,84
+"134","roger kingdom","110M Hurdles Men",13.2,0.22,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,21,185,91
+"135","greg foster","110M Hurdles Men",13.23,0.2205,"USA","United States",1984,"S","Los Angeles","M",7.38,239000000,25,190,84
+"136","arto bryggare","110M Hurdles Men",13.4,0.223333333333333,"FIN","Finland",1984,"B","Los Angeles","M",3.02,4890000,26,194,88
+"137","guy drut","110M Hurdles Men",13.3,0.221666666666667,"FRA","France",1976,"G","Montreal","M",4.26,53300000,25,188,74
+"138","alejandro casa„É‚ëas","110M Hurdles Men",13.33,0.222166666666667,"CUB","Cuba",1976,"S","Montreal","M",2.55,9540000,22,188,79
+"139","willie davenport","110M Hurdles Men",13.38,0.223,"USA","United States",1976,"B","Montreal","M",5.22,221000000,33,186,84
+"140","willie davenport","110M Hurdles Men",13.3,0.221666666666667,"USA","United States",1968,"G","Mexico","M",4.71,206000000,25,186,84
+"141","ervin hall","110M Hurdles Men",13.4,0.223333333333333,"USA","United States",1968,"S","Mexico","M",4.71,206000000,21,183,75
+"142","eddy ottoz","110M Hurdles Men",13.4,0.223333333333333,"ITA","Italy",1968,"B","Mexico","M",7.46,52900000,24,179,67
+"143","lee calhoun","110M Hurdles Men",13.8,0.23,"USA","United States",1960,"G","Rome","M",2.5,187000000,27,185,75
+"144","willie may","110M Hurdles Men",13.8,0.23,"USA","United States",1960,"S","Rome","M",2.5,187000000,23,192,89
+"145","hayes jones","110M Hurdles Men",14,0.233333333333333,"USA","United States",1960,"B","Rome","M",2.5,187000000,22,180,76
+"146","harrison dillard","110M Hurdles Men",13.7,0.228333333333333,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,29,178,69
+"147","jack davis","110M Hurdles Men",13.7,0.228333333333333,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,21,190,70
+"148","arthur barnard","110M Hurdles Men",14.1,0.235,"USA","United States",1952,"B","Helsinki","M",3.57,163000000,23,180,77
+"149","forrest towns","110M Hurdles Men",14.2,0.236666666666667,"USA","United States",1936,"G","Berlin","M",14.2,131000000,22,188,75
+"150","donald finlay","110M Hurdles Men",14.4,0.24,"GBR","United Kingdom",1936,"S","Berlin","M",4.77,47200000,27,182,77
+"151","fritz pollard","110M Hurdles Men",14.4,0.24,"USA","United States",1936,"B","Berlin","M",14.2,131000000,21,185,77
+"152","steve anderson","110M Hurdles Men",14.8,0.246666666666667,"USA","United States",1928,"S","Amsterdam","M",1.12,123000000,22,190,77
+"153","john collier","110M Hurdles Men",14.9,0.248333333333333,"USA","United States",1928,"B","Amsterdam","M",1.12,123000000,20,185,75
+"154","earl thomson","110M Hurdles Men",14.8,0.246666666666667,"CAN","Canada",1920,"G","Antwerp","M",-1.12,8760000,25,188,86
+"155","harold barron","110M Hurdles Men",15.1,0.251666666666667,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,25,183,64
+"156","frederick murray","110M Hurdles Men",15.1,0.251666666666667,"USA","United States",1920,"B","Antwerp","M",-0.949,109000000,25,180,66
+"157","forrest smithson","110M Hurdles Men",15,0.25,"USA","United States",1908,"G","London","M",-8.18,90600000,23,183,81
+"158","john garrells","110M Hurdles Men",15.7,0.261666666666667,"USA","United States",1908,"S","London","M",-8.18,90600000,22,185,89
+"159","alvin kraenzlein","110M Hurdles Men",15.4,0.256666666666667,"USA","United States",1900,"G","Paris","M",2.74,77800000,23,183,75
+"160","aries merritt","110M Hurdles Men",12.92,0.215333333333333,"USA","United States",2012,"G","London","M",2.94,313000000,27,188,72
+"161","jason richardson","110M Hurdles Men",13.04,0.217333333333333,"USA","United States",2012,"S","London","M",2.94,313000000,26,188,77
+"162","hansle parchment","110M Hurdles Men",13.12,0.218666666666667,"JAM","Jamaica",2012,"B","London","M",-0.631,2840000,22,196,90
+"163","xiang liu","110M Hurdles Men",12.91,0.215166666666667,"CHN","China",2004,"G","Athens","M",10.2,1310000000,21,188,74
+"164","terrence trammell","110M Hurdles Men",13.18,0.219666666666667,"USA","United States",2004,"S","Athens","M",3.49,293000000,25,188,84
+"165","anier garcia","110M Hurdles Men",13.2,0.22,"CUB","Cuba",2004,"B","Athens","M",6.07,11300000,28,189,79
+"166","allen johnson","110M Hurdles Men",12.95,0.215833333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,25,178,70
+"167","mark crear","110M Hurdles Men",13.09,0.218166666666667,"USA","United States",1996,"S","Atlanta","M",3.72,269000000,27,186,79
+"168","alejandro casa„É‚ëas","110M Hurdles Men",13.4,0.223333333333333,"CUB","Cuba",1980,"S","Moscow","M",-1.28,9840000,26,188,79
+"169","rod milburn","110M Hurdles Men",13.24,0.220666666666667,"USA","United States",1972,"G","Munich","M",5.12,213000000,22,183,79
+"170","guy drut","110M Hurdles Men",13.34,0.222333333333333,"FRA","France",1972,"S","Munich","M",4.24,51700000,21,188,74
+"171","thomas hill","110M Hurdles Men",13.48,0.224666666666667,"USA","United States",1972,"B","Munich","M",5.12,213000000,22,186,75
+"172","hayes jones","110M Hurdles Men",13.6,0.226666666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,26,180,76
+"173","blaine lindgren","110M Hurdles Men",13.7,0.228333333333333,"USA","United States",1964,"S","Tokyo","M",5.68,197000000,25,190,92
+"174","lee calhoun","110M Hurdles Men",13.5,0.225,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,185,75
+"175","jack davis","110M Hurdles Men",13.5,0.225,"USA","United States",1956,"S","Melbourne / Stockholm","M",1.95,175000000,26,190,70
+"176","joel shankle","110M Hurdles Men",14.1,0.235,"USA","United States",1956,"B","Melbourne / Stockholm","M",1.95,175000000,23,193,79
+"177","bill porter","110M Hurdles Men",13.9,0.231666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,22,190,73
+"178","clyde scott","110M Hurdles Men",14.1,0.235,"USA","United States",1948,"S","London","M",3.79,150000000,23,183,77
+"179","craig dixon","110M Hurdles Men",14.1,0.235,"USA","United States",1948,"B","London","M",3.79,150000000,22,188,72
+"180","george saling","110M Hurdles Men",14.6,0.243333333333333,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,23,190,77
+"181","percy beard","110M Hurdles Men",14.7,0.245,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,24,193,84
+"182","donald finlay","110M Hurdles Men",14.8,0.246666666666667,"GBR","United Kingdom",1932,"B","Los Angeles","M",0.0681,46400000,23,182,77
+"183","daniel kinsey","110M Hurdles Men",15,0.25,"USA","United States",1924,"G","Paris","M",3.07,117000000,22,183,72
+"184","sten pettersson","110M Hurdles Men",15.4,0.256666666666667,"SWE","Sweden",1924,"B","Paris","M",7.47,6020000,21,190,79
+"185","frederick kelly","110M Hurdles Men",15.1,0.251666666666667,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,20,182,72
+"186","james wendell","110M Hurdles Men",15.2,0.253333333333333,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,21,183,79
+"187","martin hawkins","110M Hurdles Men",15.3,0.255,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,24,175,68
+"188","thomas curtis","110M Hurdles Men",17.6,0.293333333333333,"USA","United States",1896,"G","Athens","M",-2.04,72100000,23,176,66
+"189","asbel kipruto kiprop","1500M Men",213.1,3.55166666666667,"KEN","Kenya",2008,"G","Beijing","M",1.53,39100000,19,190,63
+"190","nicholas willis","1500M Men",214.2,3.57,"NZL","New Zealand",2008,"S","Beijing","M",-0.685,4280000,25,183,68
+"191","medhi baala","1500M Men",214.2,3.57,"FRA","France",2008,"B","Beijing","M",-0.06,62300000,29,183,65
+"192","noah kiprono ngenyi","1500M Men",212.1,3.535,"KEN","Kenya",2000,"G","Sydney","M",0.498,31500000,21,182,68
+"193","hicham el guerrouj","1500M Men",212.3,3.53833333333333,"MAR","Morocco",2000,"S","Sydney","M",0.455,28800000,25,176,58
+"194","bernard lagat","1500M Men",212.4,3.54,"KEN","Kenya",2000,"B","Sydney","M",0.498,31500000,25,173,58
+"195","fermin cacho ruiz","1500M Men",220.1,3.66833333333333,"ESP","Spain",1992,"G","Barcelona","M",0.981,39500000,23,175,65
+"196","rachid el basir","1500M Men",220.6,3.67666666666667,"MAR","Morocco",1992,"S","Barcelona","M",-4.42,25800000,23,180,61
+"197","mohamed ahmed sulaiman","1500M Men",220.7,3.67833333333333,"QAT","Qatar",1992,"B","Barcelona","M",8.27,496000,22,175,63
+"198","sebastian coe","1500M Men",212.5,3.54166666666667,"GBR","United Kingdom",1984,"G","Los Angeles","M",2.61,56400000,27,175,54
+"199","steve cram","1500M Men",213.4,3.55666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,23,186,69
+"200","jos„É‚© manuel abascal","1500M Men",214.3,3.57166666666667,"ESP","Spain",1984,"B","Los Angeles","M",1.41,38700000,26,182,67
+"201","john george walker","1500M Men",219.2,3.65333333333333,"NZL","New Zealand",1976,"G","Montreal","M",2.13,3110000,24,183,74
+"202","ivo van damme","1500M Men",219.3,3.655,"BEL","Belgium",1976,"S","Montreal","M",5.7,9790000,22,191,76
+"203","kip keino","1500M Men",214.9,3.58166666666667,"KEN","Kenya",1968,"G","Mexico","M",0.0532,10500000,28,173,66
+"204","jim ryun","1500M Men",217.8,3.63,"USA","United States",1968,"S","Mexico","M",4.71,206000000,21,188,76
+"205","herb elliott","1500M Men",215.6,3.59333333333333,"AUS","Australia",1960,"G","Rome","M",4.04,10300000,22,181,68
+"206","michel jazy","1500M Men",218.4,3.64,"FRA","France",1960,"S","Rome","M",7.75,45900000,24,175,65
+"207","istv„É‚°n r„É‚ìzsav„É‚ñlgyi","1500M Men",219.2,3.65333333333333,"HUN","Hungary",1960,"B","Rome","M",5,10000000,31,177,58
+"208","joseph barthel","1500M Men",225.2,3.75333333333333,"LUX","Luxembourg",1952,"G","Helsinki","M",6.44,299000,25,173,68
+"209","robert mcmillen","1500M Men",225.2,3.75333333333333,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,24,180,68
+"210","john lovelock","1500M Men",227.8,3.79666666666667,"NZL","New Zealand",1936,"G","Berlin","M",18.6,1570000,26,169,61
+"211","glenn cunningham","1500M Men",228.4,3.80666666666667,"USA","United States",1936,"S","Berlin","M",14.2,131000000,26,178,70
+"212","luigi beccali","1500M Men",229.2,3.82,"ITA","Italy",1936,"B","Berlin","M",3.01,42700000,28,169,63
+"213","harri larva","1500M Men",233.2,3.88666666666667,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,21,180,68
+"214","jules ladoumegue","1500M Men",233.8,3.89666666666667,"FRA","France",1928,"S","Amsterdam","M",5.97,41200000,21,171,59
+"215","eino purje","1500M Men",236.4,3.94,"FIN","Finland",1928,"B","Amsterdam","M",6.75,3400000,28,174,67
+"216","albert hill","1500M Men",241.8,4.03,"GBR","United Kingdom",1920,"G","Antwerp","M",-3.37,43800000,31,178,72
+"217","lawrence shields","1500M Men",243.1,4.05166666666667,"USA","United States",1920,"B","Antwerp","M",-0.949,109000000,25,170,64
+"218","melvin sheppard","1500M Men",243.4,4.05666666666667,"USA","United States",1908,"G","London","M",-8.18,90600000,24,177,67
+"219","harold wilson","1500M Men",243.6,4.06,"GBR","United Kingdom",1908,"S","London","M",-3.65,41100000,23,162,52
+"220","norman hallows","1500M Men",244,4.06666666666667,"GBR","United Kingdom",1908,"B","London","M",-3.65,41100000,21,175,60
+"221","leonel manzano","1500M Men",214.8,3.58,"USA","United States",2012,"S","London","M",2.94,313000000,27,165,57
+"222","abdalaati iguider","1500M Men",215.1,3.585,"MAR","Morocco",2012,"B","London","M",2.66,33300000,25,173,57
+"223","hicham el guerrouj","1500M Men",214.2,3.57,"MAR","Morocco",2004,"G","Athens","M",4.59,30200000,29,176,58
+"224","bernard lagat","1500M Men",214.3,3.57166666666667,"KEN","Kenya",2004,"S","Athens","M",5.1,35100000,29,173,58
+"225","rui silva","1500M Men",214.7,3.57833333333333,"POR","Portugal",2004,"B","Athens","M",1.48,10500000,27,175,65
+"226","fermin cacho ruiz","1500M Men",216.4,3.60666666666667,"ESP","Spain",1996,"S","Atlanta","M",2.51,40000000,27,175,65
+"227","stephen kipkorir","1500M Men",216.7,3.61166666666667,"KEN","Kenya",1996,"B","Atlanta","M",4.14,28100000,25,185,73
+"228","sebastian coe","1500M Men",218.4,3.64,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,23,175,54
+"229","steve ovett","1500M Men",219,3.65,"GBR","United Kingdom",1980,"B","Moscow","M",-2.23,56300000,24,183,70
+"230","pekka vasala","1500M Men",216.3,3.605,"FIN","Finland",1972,"G","Munich","M",7.49,4650000,24,184,64
+"231","kip keino","1500M Men",216.8,3.61333333333333,"KEN","Kenya",1972,"S","Munich","M",5.03,12100000,32,173,66
+"232","rodney dixon","1500M Men",217.5,3.625,"NZL","New Zealand",1972,"B","Munich","M",4.46,2930000,22,186,70
+"233","peter snell","1500M Men",218.1,3.635,"NZL","New Zealand",1964,"G","Tokyo","M",4.89,2580000,25,179,80
+"234","john davies","1500M Men",219.6,3.66,"NZL","New Zealand",1964,"B","Tokyo","M",4.89,2580000,26,185,68
+"235","ron delany","1500M Men",221.2,3.68666666666667,"IRL","Ireland",1956,"G","Melbourne / Stockholm","M",-1.15,2880000,21,184,75
+"236","john landy","1500M Men",222,3.7,"AUS","Australia",1956,"B","Melbourne / Stockholm","M",3.32,9420000,26,182,69
+"237","henry eriksson","1500M Men",229.8,3.83,"SWE","Sweden",1948,"G","London","M",2.27,6840000,28,184,73
+"238","lennart strand","1500M Men",230.4,3.84,"SWE","Sweden",1948,"S","London","M",2.27,6840000,27,173,61
+"239","luigi beccali","1500M Men",231.2,3.85333333333333,"ITA","Italy",1932,"G","Los Angeles","M",4.43,41400000,24,169,63
+"240","john cornes","1500M Men",232.6,3.87666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,22,182,70
+"241","paavo nurmi","1500M Men",233.6,3.89333333333333,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,26,174,65
+"242","henry stallard","1500M Men",235.6,3.92666666666667,"GBR","United Kingdom",1924,"B","Paris","M",4.72,44900000,23,186,75
+"243","arnold jackson","1500M Men",236.8,3.94666666666667,"GBR","United Kingdom",1912,"G","Stockholm","M",1.5,42400000,21,176,67
+"244","abel kiviat","1500M Men",236.9,3.94833333333333,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,19,172,66
+"245","norman taber","1500M Men",236.9,3.94833333333333,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,20,174,52
+"246","james lightbody","1500M Men",245.4,4.09,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,22,173,61
+"247","usain bolt","200M Men",19.3,0.321666666666667,"JAM","Jamaica",2008,"G","Beijing","M",-0.822,2790000,21,196,95
+"248","shawn crawford","200M Men",19.96,0.332666666666667,"USA","United States",2008,"S","Beijing","M",-0.392,303000000,30,181,86
+"249","walter dix","200M Men",19.98,0.333,"USA","United States",2008,"B","Beijing","M",-0.392,303000000,22,175,80
+"250","darren campbell","200M Men",20.14,0.335666666666667,"GBR","United Kingdom",2000,"S","Sydney","M",4.46,59000000,27,183,83
+"251","ato boldon","200M Men",20.2,0.336666666666667,"TTO","Trinidad and Tobago",2000,"B","Sydney","M",5.9,1270000,26,176,75
+"252","michael marsh","200M Men",20.01,0.3335,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,24,178,75
+"253","frank fredericks","200M Men",20.13,0.3355,"NAM","Namibia",1992,"S","Barcelona","M",10.1,1510000,24,180,73
+"254","michael bates","200M Men",20.38,0.339666666666667,"USA","United States",1992,"B","Barcelona","M",2.96,257000000,22,180,86
+"255","carl lewis","200M Men",19.8,0.33,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,23,188,80
+"256","kirk baptiste","200M Men",19.96,0.332666666666667,"USA","United States",1984,"S","Los Angeles","M",7.38,239000000,22,184,79
+"257","thomas jefferson","200M Men",20.26,0.337666666666667,"USA","United States",1984,"B","Los Angeles","M",7.38,239000000,22,183,75
+"258","donald quarrie","200M Men",20.23,0.337166666666667,"JAM","Jamaica",1976,"G","Montreal","M",-6.18,2060000,25,175,70
+"259","millard frank jr. hampton","200M Men",20.29,0.338166666666667,"USA","United States",1976,"S","Montreal","M",5.22,221000000,20,180,75
+"260","dwayne eugene evans","200M Men",20.43,0.3405,"USA","United States",1976,"B","Montreal","M",5.22,221000000,17,183,66
+"261","tommie smith","200M Men",19.8,0.33,"USA","United States",1968,"G","Mexico","M",4.71,206000000,24,191,84
+"262","peter norman","200M Men",20,0.333333333333333,"AUS","Australia",1968,"S","Mexico","M",6.35,12300000,26,178,73
+"263","john carlos","200M Men",20,0.333333333333333,"USA","United States",1968,"B","Mexico","M",4.71,206000000,23,193,85
+"264","livio berruti","200M Men",20.5,0.341666666666667,"ITA","Italy",1960,"G","Rome","M",6.9,49700000,21,180,66
+"265","lester nelson carney","200M Men",20.6,0.343333333333333,"USA","United States",1960,"S","Rome","M",2.5,187000000,26,178,75
+"266","abdoulaye seye","200M Men",20.7,0.345,"FRA","France",1960,"B","Rome","M",7.75,45900000,26,174,68
+"267","andy stanfield","200M Men",20.7,0.345,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,24,187,79
+"268","thane baker","200M Men",20.8,0.346666666666667,"USA","United States",1952,"S","Helsinki","M",3.57,163000000,20,183,72
+"269","james gathers","200M Men",20.8,0.346666666666667,"USA","United States",1952,"B","Helsinki","M",3.57,163000000,22,181,69
+"270","jesse owens","200M Men",20.7,0.345,"USA","United States",1936,"G","Berlin","M",14.2,131000000,22,178,71
+"271","matthew mackenzie robinson","200M Men",21.1,0.351666666666667,"USA","United States",1936,"S","Berlin","M",14.2,131000000,22,186,77
+"272","percy williams","200M Men",21.8,0.363333333333333,"CAN","Canada",1928,"G","Amsterdam","M",8.87,10100000,19,170,56
+"273","walter rangeley","200M Men",21.9,0.365,"GBR","United Kingdom",1928,"S","Amsterdam","M",0.893,45600000,24,174,65
+"274","allen woodring","200M Men",22,0.366666666666667,"USA","United States",1920,"G","Antwerp","M",-0.949,109000000,22,180,73
+"275","charles paddock","200M Men",22.1,0.368333333333333,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,19,172,75
+"276","robert kerr","200M Men",22.6,0.376666666666667,"CAN","Canada",1908,"G","London","M",-4.78,6750000,25,171,66
+"277","walter tewksbury","200M Men",22.2,0.37,"USA","United States",1900,"G","Paris","M",2.74,77800000,24,183,64
+"278","stanley rowley","200M Men",22.9,0.381666666666667,"AUS","Australia",1900,"B","Paris","M",5.94,3740000,23,178,71
+"279","usain bolt","200M Men",19.32,0.322,"JAM","Jamaica",2012,"G","London","M",-0.631,2840000,25,196,95
+"280","yohan blake","200M Men",19.44,0.324,"JAM","Jamaica",2012,"S","London","M",-0.631,2840000,22,180,80
+"281","warren weir","200M Men",19.84,0.330666666666667,"JAM","Jamaica",2012,"B","London","M",-0.631,2840000,22,178,75
+"282","shawn crawford","200M Men",19.79,0.329833333333333,"USA","United States",2004,"G","Athens","M",3.49,293000000,26,181,86
+"283","bernard williams iii","200M Men",20.01,0.3335,"USA","United States",2004,"S","Athens","M",3.49,293000000,26,183,81
+"284","justin gatlin","200M Men",20.03,0.333833333333333,"USA","United States",2004,"B","Athens","M",3.49,293000000,22,186,80
+"285","michael johnson","200M Men",19.32,0.322,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,28,183,77
+"286","frank fredericks","200M Men",19.68,0.328,"NAM","Namibia",1996,"S","Atlanta","M",3.37,1710000,28,180,73
+"287","ato boldon","200M Men",19.8,0.33,"TTO","Trinidad and Tobago",1996,"B","Atlanta","M",5.3,1260000,22,176,75
+"288","pietro mennea","200M Men",20.19,0.3365,"ITA","Italy",1980,"G","Moscow","M",3.44,56400000,28,180,73
+"289","allan wells","200M Men",20.21,0.336833333333333,"GBR","United Kingdom",1980,"S","Moscow","M",-2.23,56300000,28,183,86
+"290","donald quarrie","200M Men",20.29,0.338166666666667,"JAM","Jamaica",1980,"B","Moscow","M",-5.2,2160000,29,175,70
+"291","larry black","200M Men",20.19,0.3365,"USA","United States",1972,"S","Munich","M",5.12,213000000,21,186,80
+"292","pietro mennea","200M Men",20.3,0.338333333333333,"ITA","Italy",1972,"B","Munich","M",3.48,54300000,20,180,73
+"293","henry carr","200M Men",20.3,0.338333333333333,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,21,191,84
+"294","paul drayton","200M Men",20.5,0.341666666666667,"USA","United States",1964,"S","Tokyo","M",5.68,197000000,25,183,73
+"295","edwin roberts","200M Men",20.6,0.343333333333333,"TTO","Trinidad and Tobago",1964,"B","Tokyo","M",2.19,903000,23,173,68
+"296","bobby morrow","200M Men",20.6,0.343333333333333,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,21,186,75
+"297","andy stanfield","200M Men",20.7,0.345,"USA","United States",1956,"S","Melbourne / Stockholm","M",1.95,175000000,28,187,79
+"298","thane baker","200M Men",20.9,0.348333333333333,"USA","United States",1956,"B","Melbourne / Stockholm","M",1.95,175000000,25,183,72
+"299","mel patton","200M Men",21.1,0.351666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,23,185,72
+"300","barney ewell","200M Men",21.1,0.351666666666667,"USA","United States",1948,"S","London","M",3.79,150000000,30,180,71
+"301","lloyd labeach","200M Men",21.2,0.353333333333333,"PAN","Panama",1948,"B","London","M",-5.94,821000,26,185,73
+"302","eddie tolan","200M Men",21.2,0.353333333333333,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,23,170,65
+"303","george simpson","200M Men",21.4,0.356666666666667,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,23,180,75
+"304","ralph metcalfe","200M Men",21.5,0.358333333333333,"USA","United States",1932,"B","Los Angeles","M",-13.2,128000000,22,180,82
+"305","jackson scholz","200M Men",21.6,0.36,"USA","United States",1924,"G","Paris","M",3.07,117000000,27,172,61
+"306","charles paddock","200M Men",21.7,0.361666666666667,"USA","United States",1924,"S","Paris","M",3.07,117000000,23,172,75
+"307","eric liddell","200M Men",21.9,0.365,"GBR","United Kingdom",1924,"B","Paris","M",4.72,44900000,22,173,68
+"308","ralph craig","200M Men",21.7,0.361666666666667,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,22,182,73
+"309","donald lippincott","200M Men",21.8,0.363333333333333,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,18,178,72
+"310","william applegarth","200M Men",22,0.366666666666667,"GBR","United Kingdom",1912,"B","Stockholm","M",1.5,42400000,21,170,59
+"311","archie hahn","200M Men",21.6,0.36,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,23,167,64
+"312","nate cartmell","200M Men",21.9,0.365,"USA","United States",1904,"S","St Louis","M",-1.26,83900000,21,182,71
+"313","brimin kiprop kipruto","3000M Steeplechase Men",490.3,8.17166666666667,"KEN","Kenya",2008,"G","Beijing","M",1.53,39100000,23,175,55
+"314","mahiedine mekhissi-benabbad","3000M Steeplechase Men",490.5,8.175,"FRA","France",2008,"S","Beijing","M",-0.06,62300000,23,190,75
+"315","richard kipkemboi mateelong","3000M Steeplechase Men",491,8.18333333333333,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,24,179,65
+"316","reuben kosgei","3000M Steeplechase Men",501.4,8.35666666666667,"KEN","Kenya",2000,"G","Sydney","M",0.498,31500000,21,170,55
+"317","wilson boit kipketer","3000M Steeplechase Men",501.8,8.36333333333333,"KEN","Kenya",2000,"S","Sydney","M",0.498,31500000,26,167,52
+"318","ali ezzine","3000M Steeplechase Men",502.2,8.37,"MAR","Morocco",2000,"B","Sydney","M",0.455,28800000,22,175,57
+"319","matthew birir","3000M Steeplechase Men",488.8,8.14666666666667,"KEN","Kenya",1992,"G","Barcelona","M",-0.793,25000000,20,172,62
+"320","patrick sang","3000M Steeplechase Men",489.6,8.16,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,28,180,65
+"321","william mutwol","3000M Steeplechase Men",490.7,8.17833333333333,"KEN","Kenya",1992,"B","Barcelona","M",-0.793,25000000,24,160,55
+"322","julius korir","3000M Steeplechase Men",491.8,8.19666666666667,"KEN","Kenya",1984,"G","Los Angeles","M",1.77,18900000,24,172,64
+"323","joseph mahmoud","3000M Steeplechase Men",493.3,8.22166666666667,"FRA","France",1984,"S","Los Angeles","M",1.59,55100000,28,174,65
+"324","brian lee diemer","3000M Steeplechase Men",494.1,8.235,"USA","United States",1984,"B","Los Angeles","M",7.38,239000000,22,176,64
+"325","anders garderud","3000M Steeplechase Men",488,8.13333333333333,"SWE","Sweden",1976,"G","Montreal","M",0.388,8220000,29,186,70
+"326","bronislaw malinowski","3000M Steeplechase Men",489.1,8.15166666666667,"POL","Poland",1976,"S","Montreal","M",2.43,34300000,25,182,68
+"327","amos biwott","3000M Steeplechase Men",531,8.85,"KEN","Kenya",1968,"G","Mexico","M",0.0532,10500000,21,181,66
+"328","george young","3000M Steeplechase Men",531.8,8.86333333333333,"USA","United States",1968,"B","Mexico","M",4.71,206000000,31,175,67
+"329","zdzislaw krzyszkowiak","3000M Steeplechase Men",514.2,8.57,"POL","Poland",1960,"G","Rome","M",5.16,29600000,31,172,59
+"330","horace ashenfelter","3000M Steeplechase Men",525.4,8.75666666666667,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,29,178,66
+"331","john disley","3000M Steeplechase Men",531.8,8.86333333333333,"GBR","United Kingdom",1952,"B","Helsinki","M",-0.118,50700000,23,180,71
+"332","volmari iso-hollo","3000M Steeplechase Men",543.8,9.06333333333333,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,29,176,64
+"333","kaarlo jalmari tuominen","3000M Steeplechase Men",546.8,9.11333333333333,"FIN","Finland",1936,"S","Berlin","M",6.76,3600000,28,177,66
+"334","toivo loukola","3000M Steeplechase Men",561.8,9.36333333333333,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,25,173,60
+"335","paavo nurmi","3000M Steeplechase Men",571.2,9.52,"FIN","Finland",1928,"S","Amsterdam","M",6.75,3400000,30,174,65
+"336","ove andersen","3000M Steeplechase Men",575.6,9.59333333333333,"FIN","Finland",1928,"B","Amsterdam","M",6.75,3400000,28,178,70
+"337","ezekiel kemboi","3000M Steeplechase Men",498.6,8.31,"KEN","Kenya",2012,"G","London","M",4.56,43600000,30,167,52
+"338","mahiedine mekhissi-benabbad","3000M Steeplechase Men",499.1,8.31833333333333,"FRA","France",2012,"S","London","M",0.0508,63600000,27,190,75
+"339","abel kiprop mutai","3000M Steeplechase Men",499.7,8.32833333333333,"KEN","Kenya",2012,"B","London","M",4.56,43600000,23,187,73
+"340","ezekiel kemboi","3000M Steeplechase Men",485.8,8.09666666666667,"KEN","Kenya",2004,"G","Athens","M",5.1,35100000,22,167,52
+"341","brimin kiprop kipruto","3000M Steeplechase Men",486.1,8.10166666666667,"KEN","Kenya",2004,"S","Athens","M",5.1,35100000,19,175,55
+"342","paul kipsiele koech","3000M Steeplechase Men",486.6,8.11,"KEN","Kenya",2004,"B","Athens","M",5.1,35100000,22,170,60
+"343","joseph keter","3000M Steeplechase Men",487.1,8.11833333333333,"KEN","Kenya",1996,"G","Atlanta","M",4.14,28100000,27,178,64
+"344","moses kiptanui","3000M Steeplechase Men",488.3,8.13833333333333,"KEN","Kenya",1996,"S","Atlanta","M",4.14,28100000,24,175,60
+"345","alessandro lambruschini","3000M Steeplechase Men",491.3,8.18833333333333,"ITA","Italy",1996,"B","Atlanta","M",0.865,57200000,31,178,63
+"346","bronislaw malinowski","3000M Steeplechase Men",489.7,8.16166666666667,"POL","Poland",1980,"G","Moscow","M",-2.48,35500000,29,182,68
+"347","eshetu tura","3000M Steeplechase Men",493.6,8.22666666666667,"ETH","Ethiopia",1980,"B","Moscow","M",2.18,35300000,30,179,66
+"348","kip keino","3000M Steeplechase Men",503.6,8.39333333333333,"KEN","Kenya",1972,"G","Munich","M",5.03,12100000,32,173,66
+"349","ben jipcho","3000M Steeplechase Men",504.6,8.41,"KEN","Kenya",1972,"S","Munich","M",5.03,12100000,29,170,71
+"350","tapio kantanen","3000M Steeplechase Men",504.7,8.41166666666667,"FIN","Finland",1972,"B","Munich","M",7.49,4650000,23,184,73
+"351","gaston roelants","3000M Steeplechase Men",510.8,8.51333333333333,"BEL","Belgium",1964,"G","Tokyo","M",6.71,9390000,27,174,67
+"352","maurice herriott","3000M Steeplechase Men",512.4,8.54,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,25,178,67
+"353","s„É‚É„Ç‚°ndor rozsny„É‚É?i","3000M Steeplechase Men",523.6,8.72666666666667,"HUN","Hungary",1956,"S","Melbourne / Stockholm","M",-4.92,9880000,25,185,71
+"354","ernst larsen","3000M Steeplechase Men",524,8.73333333333333,"NOR","Norway",1956,"B","Melbourne / Stockholm","M",5.5,3460000,30,183,65
+"355","tore sj„É‚ñstrand","3000M Steeplechase Men",544.6,9.07666666666667,"SWE","Sweden",1948,"G","London","M",2.27,6840000,26,180,68
+"356","volmari iso-hollo","3000M Steeplechase Men",633.4,10.5566666666667,"FIN","Finland",1932,"G","Los Angeles","M",-0.427,3500000,25,176,64
+"357","thomas evenson","3000M Steeplechase Men",646,10.7666666666667,"GBR","United Kingdom",1932,"S","Los Angeles","M",0.0681,46400000,22,170,60
+"358","joseph mccluskey","3000M Steeplechase Men",646.2,10.77,"USA","United States",1932,"B","Los Angeles","M",-13.2,128000000,21,183,71
+"359","ville ritola","3000M Steeplechase Men",573.6,9.56,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,28,175,66
+"360","elias katz","3000M Steeplechase Men",584,9.73333333333333,"FIN","Finland",1924,"S","Paris","M",2.61,3270000,22,175,59
+"361","angelo taylor","400M Hurdles Men",47.25,0.7875,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,29,188,84
+"362","kerron clement","400M Hurdles Men",47.98,0.799666666666667,"USA","United States",2008,"S","Beijing","M",-0.392,303000000,22,188,86
+"363","bershawn jackson","400M Hurdles Men",48.06,0.801,"USA","United States",2008,"B","Beijing","M",-0.392,303000000,25,173,69
+"364","angelo taylor","400M Hurdles Men",47.5,0.791666666666667,"USA","United States",2000,"G","Sydney","M",4.16,282000000,21,188,84
+"365","kevin young","400M Hurdles Men",46.78,0.779666666666667,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,25,194,82
+"366","winthrop graham","400M Hurdles Men",47.66,0.794333333333333,"JAM","Jamaica",1992,"S","Barcelona","M",2.4,2470000,26,178,72
+"367","kriss akabusi","400M Hurdles Men",47.82,0.797,"GBR","United Kingdom",1992,"B","Barcelona","M",0.164,57500000,33,185,81
+"368","edwin moses","400M Hurdles Men",47.75,0.795833333333333,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,28,186,72
+"369","danny harris","400M Hurdles Men",48.13,0.802166666666667,"USA","United States",1984,"S","Los Angeles","M",7.38,239000000,18,183,77
+"370","edwin moses","400M Hurdles Men",47.64,0.794,"USA","United States",1976,"G","Montreal","M",5.22,221000000,20,186,72
+"371","michael lyle shine","400M Hurdles Men",48.69,0.8115,"USA","United States",1976,"S","Montreal","M",5.22,221000000,22,183,75
+"372","david hemery","400M Hurdles Men",48.1,0.801666666666667,"GBR","United Kingdom",1968,"G","Mexico","M",4.21,55200000,24,187,72
+"373","john sherwood","400M Hurdles Men",49,0.816666666666667,"GBR","United Kingdom",1968,"B","Mexico","M",4.21,55200000,23,187,83
+"374","glenn davis","400M Hurdles Men",49.3,0.821666666666667,"USA","United States",1960,"G","Rome","M",2.5,187000000,25,183,73
+"375","clifton emmett cushman","400M Hurdles Men",49.6,0.826666666666667,"USA","United States",1960,"S","Rome","M",2.5,187000000,22,188,72
+"376","richard howard","400M Hurdles Men",49.7,0.828333333333333,"USA","United States",1960,"B","Rome","M",2.5,187000000,25,185,78
+"377","charles hewes jr. moore","400M Hurdles Men",50.8,0.846666666666667,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,22,185,77
+"378","john macfarlane holland","400M Hurdles Men",52.2,0.87,"NZL","New Zealand",1952,"B","Helsinki","M",4.21,1990000,25,191,81
+"379","glenn hardin","400M Hurdles Men",52.4,0.873333333333333,"USA","United States",1936,"G","Berlin","M",14.2,131000000,26,188,75
+"380","john loaring","400M Hurdles Men",52.7,0.878333333333333,"CAN","Canada",1936,"S","Berlin","M",5.4,11200000,20,178,74
+"381","david george burghley","400M Hurdles Men",53.4,0.89,"GBR","United Kingdom",1928,"G","Amsterdam","M",0.893,45600000,23,180,70
+"382","frank cuhel","400M Hurdles Men",53.6,0.893333333333333,"USA","United States",1928,"S","Amsterdam","M",1.12,123000000,23,178,73
+"383","morgan taylor","400M Hurdles Men",53.6,0.893333333333333,"USA","United States",1928,"B","Amsterdam","M",1.12,123000000,25,185,75
+"384","john norton","400M Hurdles Men",54.6,0.91,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,27,183,93
+"385","august desch","400M Hurdles Men",54.7,0.911666666666667,"USA","United States",1920,"B","Antwerp","M",-0.949,109000000,21,170,61
+"386","harry hillman","400M Hurdles Men",53,0.883333333333333,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,22,180,66
+"387","frank waller","400M Hurdles Men",53.2,0.886666666666667,"USA","United States",1904,"S","St Louis","M",-1.26,83900000,20,176,71
+"388","felix sanchez","400M Hurdles Men",47.63,0.793833333333333,"DOM","Dominican Republic",2012,"G","London","M",3.35,10200000,34,178,64
+"389","michael tinsley","400M Hurdles Men",47.91,0.7985,"USA","United States",2012,"S","London","M",2.94,313000000,28,186,74
+"390","felix sanchez","400M Hurdles Men",47.63,0.793833333333333,"DOM","Dominican Republic",2004,"G","Athens","M",6.28,9100000,26,178,64
+"391","danny mcfarlane","400M Hurdles Men",48.11,0.801833333333333,"JAM","Jamaica",2004,"S","Athens","M",0.724,2730000,32,183,75
+"392","naman keita","400M Hurdles Men",48.26,0.804333333333333,"FRA","France",2004,"B","Athens","M",2.27,60900000,26,196,86
+"393","derrick adkins","400M Hurdles Men",47.54,0.792333333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,26,188,80
+"394","calvin davis","400M Hurdles Men",47.96,0.799333333333333,"USA","United States",1996,"B","Atlanta","M",3.72,269000000,24,183,79
+"395","gary oakes","400M Hurdles Men",49.11,0.8185,"GBR","United Kingdom",1980,"B","Moscow","M",-2.23,56300000,21,177,69
+"396","john akii-bua","400M Hurdles Men",47.82,0.797,"UGA","Uganda",1972,"G","Munich","M",1.47,9990000,22,188,77
+"397","ralph mann","400M Hurdles Men",48.51,0.8085,"USA","United States",1972,"S","Munich","M",5.12,213000000,23,193,86
+"398","david hemery","400M Hurdles Men",48.52,0.808666666666667,"GBR","United Kingdom",1972,"B","Munich","M",3.61,56000000,28,187,72
+"399","warren (rex) jay cawley","400M Hurdles Men",49.6,0.826666666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,24,183,75
+"400","john cooper","400M Hurdles Men",50.1,0.835,"GBR","United Kingdom",1964,"S","Tokyo","M",5.48,53900000,23,188,85
+"401","salvatore morale","400M Hurdles Men",50.1,0.835,"ITA","Italy",1964,"B","Tokyo","M",2.96,51300000,25,183,75
+"402","glenn davis","400M Hurdles Men",50.1,0.835,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,22,183,73
+"403","eddie southern","400M Hurdles Men",50.8,0.846666666666667,"USA","United States",1956,"S","Melbourne / Stockholm","M",1.95,175000000,18,185,81
+"404","josh culbreath","400M Hurdles Men",51.6,0.86,"USA","United States",1956,"B","Melbourne / Stockholm","M",1.95,175000000,24,170,62
+"405","roy braxton cochran","400M Hurdles Men",51.1,0.851666666666667,"USA","United States",1948,"G","London","M",3.79,150000000,29,178,70
+"406","rune larsson","400M Hurdles Men",52.2,0.87,"SWE","Sweden",1948,"B","London","M",2.27,6840000,24,178,70
+"407","robert morton newburgh tisdall","400M Hurdles Men",51.8,0.863333333333333,"IRL","Ireland",1932,"G","Los Angeles","M",-2.39,2920000,25,186,74
+"408","glenn hardin","400M Hurdles Men",51.9,0.865,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,22,188,75
+"409","morgan taylor","400M Hurdles Men",52,0.866666666666667,"USA","United States",1932,"B","Los Angeles","M",-13.2,128000000,29,185,75
+"410","morgan taylor","400M Hurdles Men",52.6,0.876666666666667,"USA","United States",1924,"G","Paris","M",3.07,117000000,21,185,75
+"411","erkka wilen","400M Hurdles Men",53.8,0.896666666666667,"FIN","Finland",1924,"S","Paris","M",2.61,3270000,25,180,73
+"412","ivan riley","400M Hurdles Men",54.2,0.903333333333333,"USA","United States",1924,"B","Paris","M",3.07,117000000,23,183,74
+"413","charles bacon","400M Hurdles Men",55,0.916666666666667,"USA","United States",1908,"G","London","M",-8.18,90600000,23,183,77
+"414","walter tewksbury","400M Hurdles Men",57.6,0.96,"USA","United States",1900,"G","Paris","M",2.74,77800000,24,183,64
+"415","henri tauzin","400M Hurdles Men",58.3,0.971666666666667,"FRA","France",1900,"S","Paris","M",1.6,40600000,21,169,68
+"416","lashawn merritt","400M Men",43.75,0.729166666666667,"USA","United States",2008,"G","Beijing","M",-0.392,303000000,22,191,86
+"417","jeremy wariner","400M Men",44.74,0.745666666666667,"USA","United States",2008,"S","Beijing","M",-0.392,303000000,24,188,71
+"418","david neville","400M Men",44.8,0.746666666666667,"USA","United States",2008,"B","Beijing","M",-0.392,303000000,24,193,77
+"419","michael johnson","400M Men",43.84,0.730666666666667,"USA","United States",2000,"G","Sydney","M",4.16,282000000,33,183,77
+"420","alvin harrison","400M Men",44.4,0.74,"USA","United States",2000,"S","Sydney","M",4.16,282000000,26,188,80
+"421","greg haughton","400M Men",44.7,0.745,"JAM","Jamaica",2000,"B","Sydney","M",1,2660000,26,185,79
+"422","quincy watts","400M Men",43.5,0.725,"USA","United States",1992,"G","Barcelona","M",2.96,257000000,22,190,88
+"423","steve lewis","400M Men",44.21,0.736833333333333,"USA","United States",1992,"S","Barcelona","M",2.96,257000000,23,188,84
+"424","samson kitur","400M Men",44.24,0.737333333333333,"KEN","Kenya",1992,"B","Barcelona","M",-0.793,25000000,26,186,77
+"425","alonzo babers","400M Men",44.27,0.737833333333333,"USA","United States",1984,"G","Los Angeles","M",7.38,239000000,22,188,70
+"426","gabriel tiacoh","400M Men",44.54,0.742333333333333,"CIV","Cote d'Ivoire",1984,"S","Los Angeles","M",-2.7,9830000,20,180,75
+"427","antonio mckay","400M Men",44.71,0.745166666666667,"USA","United States",1984,"B","Los Angeles","M",7.38,239000000,20,183,77
+"428","alberto juantorena","400M Men",44.26,0.737666666666667,"CUB","Cuba",1976,"G","Montreal","M",2.55,9540000,25,190,84
+"429","frederick vaughn newhouse","400M Men",44.4,0.74,"USA","United States",1976,"S","Montreal","M",5.22,221000000,27,175,68
+"430","herman ronald frazier","400M Men",44.95,0.749166666666667,"USA","United States",1976,"B","Montreal","M",5.22,221000000,21,184,73
+"431","lee evans","400M Men",43.8,0.73,"USA","United States",1968,"G","Mexico","M",4.71,206000000,21,180,78
+"432","larry james","400M Men",43.9,0.731666666666667,"USA","United States",1968,"S","Mexico","M",4.71,206000000,20,181,70
+"433","ron freeman","400M Men",44.4,0.74,"USA","United States",1968,"B","Mexico","M",4.71,206000000,21,183,82
+"434","otis davis","400M Men",44.9,0.748333333333333,"USA","United States",1960,"G","Rome","M",2.5,187000000,28,185,74
+"435","george rhoden","400M Men",45.9,0.765,"JAM","Jamaica",1952,"G","Helsinki","M",8.83,1470000,25,178,68
+"436","herbert mckenley","400M Men",45.9,0.765,"JAM","Jamaica",1952,"S","Helsinki","M",8.83,1470000,30,185,72
+"437","ollie matson","400M Men",46.8,0.78,"USA","United States",1952,"B","Helsinki","M",3.57,163000000,22,188,89
+"438","archibald franklin williams","400M Men",46.5,0.775,"USA","United States",1936,"G","Berlin","M",14.2,131000000,21,183,80
+"439","godfrey brown","400M Men",46.7,0.778333333333333,"GBR","United Kingdom",1936,"S","Berlin","M",4.77,47200000,21,183,70
+"440","james ellis lu valle","400M Men",46.8,0.78,"USA","United States",1936,"B","Berlin","M",14.2,131000000,23,185,73
+"441","raymond james barbuti","400M Men",47.8,0.796666666666667,"USA","United States",1928,"G","Amsterdam","M",1.12,123000000,22,183,82
+"442","james ball","400M Men",48,0.8,"CAN","Canada",1928,"S","Amsterdam","M",8.87,10100000,25,180,69
+"443","nils engdahl","400M Men",50,0.833333333333333,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,21,165,57
+"444","maxwell warburn long","400M Men",49.4,0.823333333333333,"USA","United States",1900,"G","Paris","M",2.74,77800000,21,182,75
+"445","luguelin santos","400M Men",44.46,0.741,"DOM","Dominican Republic",2012,"S","London","M",3.35,10200000,18,173,58
+"446","lalonde gordon","400M Men",44.52,0.742,"TTO","Trinidad and Tobago",2012,"B","London","M",1.26,1340000,23,179,83
+"447","jeremy wariner","400M Men",44,0.733333333333333,"USA","United States",2004,"G","Athens","M",3.49,293000000,20,188,71
+"448","otis harris","400M Men",44.16,0.736,"USA","United States",2004,"S","Athens","M",3.49,293000000,22,185,83
+"449","derrick brew","400M Men",44.42,0.740333333333333,"USA","United States",2004,"B","Athens","M",3.49,293000000,26,185,81
+"450","michael johnson","400M Men",43.49,0.724833333333333,"USA","United States",1996,"G","Atlanta","M",3.72,269000000,28,183,77
+"451","roger black","400M Men",44.41,0.740166666666667,"GBR","United Kingdom",1996,"S","Atlanta","M",2.92,58200000,30,190,79
+"452","davis kamoga","400M Men",44.53,0.742166666666667,"UGA","Uganda",1996,"B","Atlanta","M",9.07,21200000,28,180,73
+"453","rick mitchell","400M Men",44.84,0.747333333333333,"AUS","Australia",1980,"S","Moscow","M",1.84,14600000,25,183,71
+"454","vince matthews","400M Men",44.66,0.744333333333333,"USA","United States",1972,"G","Munich","M",5.12,213000000,24,187,81
+"455","wayne collett","400M Men",44.8,0.746666666666667,"USA","United States",1972,"S","Munich","M",5.12,213000000,22,188,84
+"456","julius sang","400M Men",44.92,0.748666666666667,"KEN","Kenya",1972,"B","Munich","M",5.03,12100000,26,175,69
+"457","mike larrabee","400M Men",45.1,0.751666666666667,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,30,186,77
+"458","wendell mottley","400M Men",45.2,0.753333333333333,"TTO","Trinidad and Tobago",1964,"S","Tokyo","M",2.19,903000,23,173,72
+"459","andrzej badenski","400M Men",45.6,0.76,"POL","Poland",1964,"B","Tokyo","M",4.86,31100000,21,173,68
+"460","charles jenkins","400M Men",46.7,0.778333333333333,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,22,186,74
+"461","voitto hellsten","400M Men",47,0.783333333333333,"FIN","Finland",1956,"B","Melbourne / Stockholm","M",2.95,4280000,24,160,72
+"462","arthur wint","400M Men",46.2,0.77,"JAM","Jamaica",1948,"G","London","M",-2.61,1350000,28,194,77
+"463","herbert mckenley","400M Men",46.4,0.773333333333333,"JAM","Jamaica",1948,"S","London","M",-2.61,1350000,26,185,72
+"464","mal whitfield","400M Men",46.9,0.781666666666667,"USA","United States",1948,"B","London","M",3.79,150000000,23,185,76
+"465","william arthur carr","400M Men",46.2,0.77,"USA","United States",1932,"G","Los Angeles","M",-13.2,128000000,22,172,66
+"466","benjamin bangs eastman","400M Men",46.4,0.773333333333333,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,21,185,70
+"467","alex wilson","400M Men",47.4,0.79,"CAN","Canada",1932,"B","Los Angeles","M",-7.12,10800000,24,178,66
+"468","eric liddell","400M Men",47.6,0.793333333333333,"GBR","United Kingdom",1924,"G","Paris","M",4.72,44900000,22,173,68
+"469","horatio fitch","400M Men",48.4,0.806666666666667,"USA","United States",1924,"S","Paris","M",3.07,117000000,23,175,68
+"470","charles reidpath","400M Men",48.2,0.803333333333333,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,22,181,76
+"471","edward lindberg","400M Men",48.4,0.806666666666667,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,25,177,76
+"472","harry hillman","400M Men",49.2,0.82,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,22,180,66
+"473","frank waller","400M Men",49.9,0.831666666666667,"USA","United States",1904,"S","St Louis","M",-1.26,83900000,20,176,71
+"474","thomas burke","400M Men",54.2,0.903333333333333,"USA","United States",1896,"G","Athens","M",-2.04,72100000,21,183,66
+"475","herbert jamison","400M Men",55.2,0.92,"USA","United States",1896,"S","Athens","M",-2.04,72100000,20,173,69
+"476","kenenisa bekele","5000M Men",777.8,12.9633333333333,"ETH","Ethiopia",2008,"G","Beijing","M",10.3,83200000,26,165,56
+"477","eliud kipchoge rotich","5000M Men",782.8,13.0466666666667,"KEN","Kenya",2008,"S","Beijing","M",1.53,39100000,23,167,57
+"478","edwin cheruiyot soi","5000M Men",786.2,13.1033333333333,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,22,168,53
+"479","millon wolde","5000M Men",815.5,13.5916666666667,"ETH","Ethiopia",2000,"G","Sydney","M",5.83,66500000,21,175,59
+"480","brahim lahlafi","5000M Men",816.5,13.6083333333333,"MAR","Morocco",2000,"B","Sydney","M",0.455,28800000,32,172,62
+"481","paul bitok","5000M Men",792.7,13.2116666666667,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,22,173,58
+"482","fita bayissa","5000M Men",793,13.2166666666667,"ETH","Ethiopia",1992,"B","Barcelona","M",-8.78,51600000,19,173,52
+"483","sa„É‚Ød aouita","5000M Men",785.6,13.0933333333333,"MAR","Morocco",1984,"G","Los Angeles","M",4.13,22000000,24,175,58
+"484","ant„É‚≥nio leit„É‚Éo","5000M Men",789.2,13.1533333333333,"POR","Portugal",1984,"B","Los Angeles","M",-1.83,9980000,24,176,68
+"485","lasse viren","5000M Men",804.8,13.4133333333333,"FIN","Finland",1976,"G","Montreal","M",-0.4,4730000,26,180,60
+"486","dick theodorus quax","5000M Men",805.2,13.42,"NZL","New Zealand",1976,"S","Montreal","M",2.13,3110000,28,183,65
+"487","mohamed gammoudi","5000M Men",845,14.0833333333333,"TUN","Tunisia",1968,"G","Mexico","M",10.4,4840000,30,172,60
+"488","kip keino","5000M Men",845.2,14.0866666666667,"KEN","Kenya",1968,"S","Mexico","M",0.0532,10500000,28,173,66
+"489","naftali temu","5000M Men",846.4,14.1066666666667,"KEN","Kenya",1968,"B","Mexico","M",0.0532,10500000,23,174,62
+"490","murray halberg","5000M Men",823.4,13.7233333333333,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,27,178,62
+"491","kazimierz zimny","5000M Men",824.8,13.7466666666667,"POL","Poland",1960,"B","Rome","M",5.16,29600000,25,172,60
+"492","alain mimoun","5000M Men",847.4,14.1233333333333,"FRA","France",1952,"S","Helsinki","M",2.25,42400000,31,170,56
+"493","gunnar h„É‚ñckert","5000M Men",862.2,14.37,"FIN","Finland",1936,"G","Berlin","M",6.76,3600000,26,178,68
+"494","lauri lehtinen","5000M Men",865.8,14.43,"FIN","Finland",1936,"S","Berlin","M",6.76,3600000,27,174,64
+"495","henry jonsson-k„É‚Ñlarne","5000M Men",869,14.4833333333333,"SWE","Sweden",1936,"B","Berlin","M",3.62,6260000,24,181,70
+"496","ville ritola","5000M Men",878,14.6333333333333,"FIN","Finland",1928,"G","Amsterdam","M",6.75,3400000,32,175,66
+"497","paavo nurmi","5000M Men",880,14.6666666666667,"FIN","Finland",1928,"S","Amsterdam","M",6.75,3400000,30,174,65
+"498","edvin wide","5000M Men",881.2,14.6866666666667,"SWE","Sweden",1928,"B","Amsterdam","M",3.06,6120000,32,170,62
+"499","joseph guillemot","5000M Men",895.6,14.9266666666667,"FRA","France",1920,"G","Antwerp","M",7.49,39100000,20,160,55
+"500","paavo nurmi","5000M Men",900,15,"FIN","Finland",1920,"S","Antwerp","M",11.9,3140000,22,174,65
+"501","eric backman","5000M Men",913,15.2166666666667,"SWE","Sweden",1920,"B","Antwerp","M",6.8,5870000,23,172,64
+"502","mohamed farah","5000M Men",821.7,13.695,"GBR","United Kingdom",2012,"G","London","M",0.198,64300000,29,175,58
+"503","dejen gebremeskel","5000M Men",822,13.7,"ETH","Ethiopia",2012,"S","London","M",8.26,92400000,22,180,58
+"504","thomas pkemei longosiwa","5000M Men",822.4,13.7066666666667,"KEN","Kenya",2012,"B","London","M",4.56,43600000,30,175,57
+"505","hicham el guerrouj","5000M Men",794.4,13.24,"MAR","Morocco",2004,"G","Athens","M",4.59,30200000,29,176,58
+"506","kenenisa bekele","5000M Men",794.6,13.2433333333333,"ETH","Ethiopia",2004,"S","Athens","M",13.1,74600000,22,165,56
+"507","eliud kipchoge rotich","5000M Men",795.1,13.2516666666667,"KEN","Kenya",2004,"B","Athens","M",5.1,35100000,19,167,57
+"508","venuste niyongabo","5000M Men",788,13.1333333333333,"BDI","Burundi",1996,"G","Atlanta","M",-7.94,6040000,22,176,60
+"509","paul bitok","5000M Men",788.2,13.1366666666667,"KEN","Kenya",1996,"S","Atlanta","M",4.14,28100000,26,173,58
+"510","khalid boulami","5000M Men",788.4,13.14,"MAR","Morocco",1996,"B","Atlanta","M",11.6,27500000,26,167,60
+"511","miruts yifter","5000M Men",801,13.35,"ETH","Ethiopia",1980,"G","Moscow","M",2.18,35300000,36,162,53
+"512","kaarlo maaninka","5000M Men",802,13.3666666666667,"FIN","Finland",1980,"B","Moscow","M",5.38,4790000,26,178,61
+"513","lasse viren","5000M Men",806.4,13.44,"FIN","Finland",1972,"G","Munich","M",7.49,4650000,23,180,60
+"514","mohamed gammoudi","5000M Men",807.3,13.455,"TUN","Tunisia",1972,"S","Munich","M",17.6,5290000,34,172,60
+"515","ian stewart","5000M Men",807.6,13.46,"GBR","United Kingdom",1972,"B","Munich","M",3.61,56000000,23,178,65
+"516","robert keyser schul","5000M Men",828.8,13.8133333333333,"USA","United States",1964,"G","Tokyo","M",5.68,197000000,27,184,66
+"517","bill dellinger","5000M Men",829.8,13.83,"USA","United States",1964,"B","Tokyo","M",5.68,197000000,30,175,62
+"518","gordon pirie","5000M Men",830.6,13.8433333333333,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,25,188,65
+"519","derek ibbotson","5000M Men",834.4,13.9066666666667,"GBR","United Kingdom",1956,"B","Melbourne / Stockholm","M",0.892,51300000,24,175,68
+"520","gaston reiff","5000M Men",857.6,14.2933333333333,"BEL","Belgium",1948,"G","London","M",6.31,8540000,27,173,61
+"521","lauri lehtinen","5000M Men",870,14.5,"FIN","Finland",1932,"G","Los Angeles","M",-0.427,3500000,23,174,64
+"522","ralph hill","5000M Men",870,14.5,"USA","United States",1932,"S","Los Angeles","M",-13.2,128000000,23,180,66
+"523","lauri virtanen","5000M Men",884,14.7333333333333,"FIN","Finland",1932,"B","Los Angeles","M",-0.427,3500000,27,172,68
+"524","paavo nurmi","5000M Men",871.2,14.52,"FIN","Finland",1924,"G","Paris","M",2.61,3270000,26,174,65
+"525","ville ritola","5000M Men",871.4,14.5233333333333,"FIN","Finland",1924,"S","Paris","M",2.61,3270000,28,175,66
+"526","edvin wide","5000M Men",901.8,15.03,"SWE","Sweden",1924,"B","Paris","M",7.47,6020000,28,170,62
+"527","hannes kolehmainen","5000M Men",876.6,14.61,"FIN","Finland",1912,"G","Stockholm","M",5.56,3000000,22,168,57.5
+"528","jean bouin","5000M Men",876.7,14.6116666666667,"FRA","France",1912,"S","Stockholm","M",8.25,41500000,23,172,70
+"529","wilfred bungei","800M Men",104.7,1.745,"KEN","Kenya",2008,"G","Beijing","M",1.53,39100000,28,172,60
+"530","alfred kirwa yego","800M Men",104.8,1.74666666666667,"KEN","Kenya",2008,"B","Beijing","M",1.53,39100000,21,175,56
+"531","william tanui","800M Men",103.7,1.72833333333333,"KEN","Kenya",1992,"G","Barcelona","M",-0.793,25000000,28,183,70
+"532","nixon kiprotich","800M Men",103.7,1.72833333333333,"KEN","Kenya",1992,"S","Barcelona","M",-0.793,25000000,29,185,68
+"533","johnny gray","800M Men",104,1.73333333333333,"USA","United States",1992,"B","Barcelona","M",2.96,257000000,32,191,75
+"534","joaquim cruz","800M Men",103,1.71666666666667,"BRA","Brazil",1984,"G","Los Angeles","M",5.58,133000000,21,187,74
+"535","sebastian coe","800M Men",103.6,1.72666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","M",2.61,56400000,27,175,54
+"536","earl jones","800M Men",103.8,1.73,"USA","United States",1984,"B","Los Angeles","M",7.38,239000000,20,180,73
+"537","alberto juantorena","800M Men",103.5,1.725,"CUB","Cuba",1976,"G","Montreal","M",2.55,9540000,25,190,84
+"538","ivo van damme","800M Men",103.9,1.73166666666667,"BEL","Belgium",1976,"S","Montreal","M",5.7,9790000,22,191,76
+"539","richard charles wohlhuter","800M Men",104.1,1.735,"USA","United States",1976,"B","Montreal","M",5.22,221000000,27,175,60
+"540","ralph doubell","800M Men",104.3,1.73833333333333,"AUS","Australia",1968,"G","Mexico","M",6.35,12300000,23,180,65
+"541","thomas francis farrell","800M Men",105.4,1.75666666666667,"USA","United States",1968,"B","Mexico","M",4.71,206000000,24,172,64
+"542","peter snell","800M Men",106.3,1.77166666666667,"NZL","New Zealand",1960,"G","Rome","M",0.375,2370000,21,179,80
+"543","roger moens","800M Men",106.5,1.775,"BEL","Belgium",1960,"S","Rome","M",4.82,9170000,30,175,70
+"544","mal whitfield","800M Men",109.2,1.82,"USA","United States",1952,"G","Helsinki","M",3.57,163000000,27,185,76
+"545","arthur wint","800M Men",109.4,1.82333333333333,"JAM","Jamaica",1952,"S","Helsinki","M",8.83,1470000,32,194,77
+"546","john woodruff","800M Men",112.9,1.88166666666667,"USA","United States",1936,"G","Berlin","M",14.2,131000000,21,189,75
+"547","mario lanzi","800M Men",113.3,1.88833333333333,"ITA","Italy",1936,"S","Berlin","M",3.01,42700000,21,180,76
+"548","philip edwards","800M Men",113.6,1.89333333333333,"CAN","Canada",1936,"B","Berlin","M",5.4,11200000,28,176,64
+"549","douglas lowe","800M Men",111.8,1.86333333333333,"GBR","United Kingdom",1928,"G","Amsterdam","M",0.893,45600000,25,183,70
+"550","erik byl„É‚âhn","800M Men",112.8,1.88,"SWE","Sweden",1928,"S","Amsterdam","M",3.06,6120000,30,172,61
+"551","albert hill","800M Men",113.4,1.89,"GBR","United Kingdom",1920,"G","Antwerp","M",-3.37,43800000,31,178,72
+"552","earl eby","800M Men",113.6,1.89333333333333,"USA","United States",1920,"S","Antwerp","M",-0.949,109000000,25,179,60
+"553","melvin sheppard","800M Men",112.8,1.88,"USA","United States",1908,"G","London","M",-8.18,90600000,24,177,67
+"554","emilio lunghi","800M Men",114.2,1.90333333333333,"ITA","Italy",1908,"S","London","M",2.23,35900000,21,179,70
+"555","alfred tysoe","800M Men",121.2,2.02,"GBR","United Kingdom",1900,"G","Paris","M",-0.184,38000000,26,175,70
+"556","david lekuta rudisha","800M Men",100.9,1.68166666666667,"KEN","Kenya",2012,"G","London","M",4.56,43600000,23,190,76
+"557","timothy kitum","800M Men",102.5,1.70833333333333,"KEN","Kenya",2012,"B","London","M",4.56,43600000,17,172,60
+"558","yuriy borzakovskiy","800M Men",104.5,1.74166666666667,"RUS","Russia",2004,"G","Athens","M",7.37,144000000,23,183,70
+"559","vebj„É‚∏rn rodal","800M Men",102.6,1.71,"NOR","Norway",1996,"G","Atlanta","M",5.55,4390000,23,188,78
+"560","fred onyancha","800M Men",102.8,1.71333333333333,"KEN","Kenya",1996,"B","Atlanta","M",4.14,28100000,27,170,64
+"561","steve ovett","800M Men",105.4,1.75666666666667,"GBR","United Kingdom",1980,"G","Moscow","M",-2.23,56300000,24,183,70
+"562","sebastian coe","800M Men",105.9,1.765,"GBR","United Kingdom",1980,"S","Moscow","M",-2.23,56300000,23,175,54
+"563","david james wottle","800M Men",105.9,1.765,"USA","United States",1972,"G","Munich","M",5.12,213000000,22,183,66
+"564","mike boit","800M Men",106,1.76666666666667,"KEN","Kenya",1972,"B","Munich","M",5.03,12100000,23,180,68
+"565","peter snell","800M Men",105.1,1.75166666666667,"NZL","New Zealand",1964,"G","Tokyo","M",4.89,2580000,25,179,80
+"566","william crothers","800M Men",105.6,1.76,"CAN","Canada",1964,"S","Tokyo","M",6.42,19400000,23,183,71
+"567","thomas courtney","800M Men",107.7,1.795,"USA","United States",1956,"G","Melbourne / Stockholm","M",1.95,175000000,23,188,81
+"568","derek johnson","800M Men",107.8,1.79666666666667,"GBR","United Kingdom",1956,"S","Melbourne / Stockholm","M",0.892,51300000,23,176,66
+"569","audun boysen","800M Men",108.1,1.80166666666667,"NOR","Norway",1956,"B","Melbourne / Stockholm","M",5.5,3460000,27,181,66
+"570","mal whitfield","800M Men",109.2,1.82,"USA","United States",1948,"G","London","M",3.79,150000000,23,185,76
+"571","arthur wint","800M Men",109.5,1.825,"JAM","Jamaica",1948,"S","London","M",-2.61,1350000,28,194,77
+"572","marcel hansenne","800M Men",109.8,1.83,"FRA","France",1948,"B","London","M",13.2,41200000,31,184,72
+"573","thomas hampson","800M Men",109.8,1.83,"GBR","United Kingdom",1932,"G","Los Angeles","M",0.0681,46400000,24,184,69
+"574","alex wilson","800M Men",109.9,1.83166666666667,"CAN","Canada",1932,"S","Los Angeles","M",-7.12,10800000,24,178,66
+"575","douglas lowe","800M Men",112.4,1.87333333333333,"GBR","United Kingdom",1924,"G","Paris","M",4.72,44900000,21,183,70
+"576","schuyler enck","800M Men",113,1.88333333333333,"USA","United States",1924,"B","Paris","M",3.07,117000000,24,178,73
+"577","james edwin meredith","800M Men",111.9,1.865,"USA","United States",1912,"G","Stockholm","M",4.68,97500000,20,175,71
+"578","melvin sheppard","800M Men",112,1.86666666666667,"USA","United States",1912,"S","Stockholm","M",4.68,97500000,28,177,67
+"579","ira davenport","800M Men",112,1.86666666666667,"USA","United States",1912,"B","Stockholm","M",4.68,97500000,24,178,72
+"580","james lightbody","800M Men",116,1.93333333333333,"USA","United States",1904,"G","St Louis","M",-1.26,83900000,22,173,61
+"581","tirunesh dibaba","10000M Women",1794.7,29.9116666666667,"ETH","Ethiopia",2008,"G","Beijing","W",10.3,83200000,23,166,50
+"582","derartu tulu","10000M Women",1817.5,30.2916666666667,"ETH","Ethiopia",2000,"G","Sydney","W",5.83,66500000,28,160,45
+"583","gete wami","10000M Women",1822.5,30.375,"ETH","Ethiopia",2000,"S","Sydney","W",5.83,66500000,25,152,42
+"584","fernanda ribeiro","10000M Women",1822.9,30.3816666666667,"POR","Portugal",2000,"B","Sydney","W",3.85,10400000,31,161,48
+"585","derartu tulu","10000M Women",1866,31.1,"ETH","Ethiopia",1992,"G","Barcelona","W",-8.78,51600000,20,160,45
+"586","lynn jennings","10000M Women",1879.9,31.3316666666667,"USA","United States",1992,"B","Barcelona","W",2.96,257000000,32,165,50
+"587","tirunesh dibaba","10000M Women",1820.8,30.3466666666667,"ETH","Ethiopia",2012,"G","London","W",8.26,92400000,27,166,50
+"588","sally jepkosgei kipyego","10000M Women",1826.4,30.44,"KEN","Kenya",2012,"S","London","W",4.56,43600000,26,157,40
+"589","vivian jepkemoi cheruiyot","10000M Women",1830.4,30.5066666666667,"KEN","Kenya",2012,"B","London","W",4.56,43600000,28,153,40
+"590","huina xing","10000M Women",1824.4,30.4066666666667,"CHN","China",2004,"G","Athens","W",10.2,1310000000,20,168,48
+"591","ejegayehu dibaba","10000M Women",1825,30.4166666666667,"ETH","Ethiopia",2004,"S","Athens","W",13.1,74600000,22,162,47
+"592","derartu tulu","10000M Women",1826.4,30.44,"ETH","Ethiopia",2004,"B","Athens","W",13.1,74600000,32,160,45
+"593","fernanda ribeiro","10000M Women",1861.6,31.0266666666667,"POR","Portugal",1996,"G","Atlanta","W",3.73,10200000,27,161,48
+"594","junxia wang","10000M Women",1862.6,31.0433333333333,"CHN","China",1996,"S","Atlanta","W",3.42,1250000000,33,162,50
+"595","gete wami","10000M Women",1866.6,31.11,"ETH","Ethiopia",1996,"B","Atlanta","W",12.3,59200000,21,152,42
+"596","dawn harper","100M Hurdles Women",12.54,0.209,"USA","United States",2008,"G","Beijing","W",-0.392,303000000,24,168,61
+"597","sally pearson","100M Hurdles Women",12.64,0.210666666666667,"AUS","Australia",2008,"S","Beijing","W",2.6,21300000,21,167,60
+"598","priscilla lopes-schliep","100M Hurdles Women",12.64,0.210666666666667,"CAN","Canada",2008,"B","Beijing","W",0.996,33400000,25,163,67
+"599","olga shishigina","100M Hurdles Women",12.65,0.210833333333333,"KAZ","Kazakhstan",2000,"G","Sydney","W",9.27,15100000,31,165,57
+"600","melissa morrison","100M Hurdles Women",12.76,0.212666666666667,"USA","United States",2000,"B","Sydney","W",4.16,282000000,29,164,56
+"601","lavonna martin","100M Hurdles Women",12.69,0.2115,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,25,170,66
+"602","benita fitzgerald-brown","100M Hurdles Women",12.84,0.214,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,23,178,65
+"603","shirley strong","100M Hurdles Women",12.88,0.214666666666667,"GBR","United Kingdom",1984,"S","Los Angeles","W",2.61,56400000,25,173,63
+"604","mich„É‚®le chardonnet","100M Hurdles Women",13.06,0.217666666666667,"FRA","France",1984,"B","Los Angeles","W",1.59,55100000,27,170,60
+"605","kim turner","100M Hurdles Women",13.06,0.217666666666667,"USA","United States",1984,"B","Los Angeles","W",7.38,239000000,23,165,57
+"606","sally pearson","100M Hurdles Women",12.35,0.205833333333333,"AUS","Australia",2012,"G","London","W",3.19,22800000,25,167,60
+"607","dawn harper","100M Hurdles Women",12.37,0.206166666666667,"USA","United States",2012,"S","London","W",2.94,313000000,28,168,61
+"608","kellie wells","100M Hurdles Women",12.48,0.208,"USA","United States",2012,"B","London","W",2.94,313000000,30,163,57
+"609","joanna hayes","100M Hurdles Women",12.37,0.206166666666667,"USA","United States",2004,"G","Athens","W",3.49,293000000,27,167,58
+"610","olena krasovska","100M Hurdles Women",12.45,0.2075,"UKR","Ukraine",2004,"S","Athens","W",12.1,47200000,27,176,62
+"611","melissa morrison","100M Hurdles Women",12.56,0.209333333333333,"USA","United States",2004,"B","Athens","W",3.49,293000000,33,164,56
+"612","ludmila engquist","100M Hurdles Women",12.58,0.209666666666667,"SWE","Sweden",1996,"G","Atlanta","W",1.59,8860000,32,174,66
+"613","patricia girard","100M Hurdles Women",12.65,0.210833333333333,"FRA","France",1996,"B","Atlanta","W",0.998,58500000,28,164,51
+"614","lucyna langer","100M Hurdles Women",12.65,0.210833333333333,"POL","Poland",1980,"B","Moscow","W",-2.48,35500000,24,167,55
+"615","valeria bufanu","100M Hurdles Women",12.84,0.214,"ROU","Romania",1972,"S","Munich","W",6.48,21000000,25,170,60
+"616","shelly-ann fraser-pryce","100M Women",10.78,0.179666666666667,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,21,160,57
+"617","sherone simpson","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,23,163,59
+"618","sherone simpson","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,24,175,61
+"619","kerron stewart","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,23,163,59
+"620","kerron stewart","100M Women",10.98,0.183,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,24,175,61
+"621","tanya lawrence","100M Women",11.18,0.186333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,24,163,61
+"622","merlene ottey","100M Women",11.19,0.1865,"JAM","Jamaica",2000,"B","Sydney","W",1,2660000,40,175,62
+"623","gail devers","100M Women",10.82,0.180333333333333,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,25,160,55
+"624","juliet cuthbert","100M Women",10.83,0.1805,"JAM","Jamaica",1992,"S","Barcelona","W",2.4,2470000,28,160,54
+"625","evelyn ashford","100M Women",10.97,0.182833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,27,165,52
+"626","alice brown","100M Women",11.13,0.1855,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,23,159,59
+"627","merlene ottey","100M Women",11.16,0.186,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
+"628","wyomia tyus","100M Women",11,0.183333333333333,"USA","United States",1968,"G","Mexico","W",4.71,206000000,23,172,61
+"629","barbara ferrell","100M Women",11.1,0.185,"USA","United States",1968,"S","Mexico","W",4.71,206000000,21,159,47
+"630","irena kirszenstein","100M Women",11.1,0.185,"POL","Poland",1968,"B","Mexico","W",6.11,32100000,22,176,60
+"631","wilma rudolph","100M Women",11,0.183333333333333,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
+"632","dorothy hyman","100M Women",11.3,0.188333333333333,"GBR","United Kingdom",1960,"S","Rome","W",5.15,52400000,19,170,59
+"633","giuseppina leone","100M Women",11.3,0.188333333333333,"ITA","Italy",1960,"B","Rome","W",6.9,49700000,25,168,58
+"634","marjorie jackson","100M Women",11.5,0.191666666666667,"AUS","Australia",1952,"G","Helsinki","W",1.23,8620000,20,172,66
+"635","shirley strickland","100M Women",11.9,0.198333333333333,"AUS","Australia",1952,"B","Helsinki","W",1.23,8620000,26,172,57
+"636","helen stephens","100M Women",11.5,0.191666666666667,"USA","United States",1936,"G","Berlin","W",14.2,131000000,18,182,70
+"637","stanislawa walasiewicz","100M Women",11.7,0.195,"POL","Poland",1936,"S","Berlin","W",2.9,30400000,25,174,60
+"638","elizabeth robinson","100M Women",12.2,0.203333333333333,"USA","United States",1928,"G","Amsterdam","W",1.12,123000000,16,167,57
+"639","shelly-ann fraser-pryce","100M Women",10.75,0.179166666666667,"JAM","Jamaica",2012,"G","London","W",-0.631,2840000,25,160,57
+"640","carmelita jeter","100M Women",10.78,0.179666666666667,"USA","United States",2012,"S","London","W",2.94,313000000,32,163,59
+"641","veronica campbell-brown","100M Women",10.81,0.180166666666667,"JAM","Jamaica",2012,"B","London","W",-0.631,2840000,30,168,58
+"642","yuliya nestsiarenka","100M Women",10.93,0.182166666666667,"BLR","Belarus",2004,"G","Athens","W",11,9680000,25,176,62
+"643","lauryn williams","100M Women",10.96,0.182666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,20,160,67
+"644","veronica campbell-brown","100M Women",10.97,0.182833333333333,"JAM","Jamaica",2004,"B","Athens","W",0.724,2730000,22,168,58
+"645","gail devers","100M Women",10.94,0.182333333333333,"USA","United States",1996,"G","Atlanta","W",3.72,269000000,29,160,55
+"646","merlene ottey","100M Women",10.94,0.182333333333333,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
+"647","gwen torrence","100M Women",10.96,0.182666666666667,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,31,170,57
+"648","raelene ann boyle","100M Women",11.23,0.187166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
+"649","silvia chivas baro","100M Women",11.24,0.187333333333333,"CUB","Cuba",1972,"B","Munich","W",4.7,9030000,17,157,58
+"650","wyomia tyus","100M Women",11.4,0.19,"USA","United States",1964,"G","Tokyo","W",5.68,197000000,19,172,61
+"651","edith mcguire","100M Women",11.6,0.193333333333333,"USA","United States",1964,"S","Tokyo","W",5.68,197000000,20,173,59
+"652","ewa klobukowska","100M Women",11.6,0.193333333333333,"POL","Poland",1964,"B","Tokyo","W",4.86,31100000,18,170,60
+"653","betty cuthbert","100M Women",11.5,0.191666666666667,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
+"654","marlene mathews-willard","100M Women",11.7,0.195,"AUS","Australia",1956,"B","Melbourne / Stockholm","W",3.32,9420000,22,170,64
+"655","dorothy hall","100M Women",12.2,0.203333333333333,"GBR","United Kingdom",1948,"S","London","W",3.03,50000000,21,165,51
+"656","shirley strickland","100M Women",12.2,0.203333333333333,"AUS","Australia",1948,"B","London","W",6.44,7750000,23,172,57
+"657","stanislawa walasiewicz","100M Women",11.9,0.198333333333333,"POL","Poland",1932,"G","Los Angeles","W",-7.8,29000000,21,174,60
+"658","hilda strike","100M Women",11.9,0.198333333333333,"CAN","Canada",1932,"S","Los Angeles","W",-7.12,10800000,21,159,48
+"659","wilhelmina von bremen","100M Women",12,0.2,"USA","United States",1932,"B","Los Angeles","W",-13.2,128000000,22,182,68
+"660","nancy jebet lagat","1500M Women",240.2,4.00333333333333,"KEN","Kenya",2008,"G","Beijing","W",1.53,39100000,26,153,49
+"661","iryna lishchynska","1500M Women",241.6,4.02666666666667,"UKR","Ukraine",2008,"S","Beijing","W",2.26,46200000,32,160,56
+"662","nataliya tobias","1500M Women",241.8,4.03,"UKR","Ukraine",2008,"B","Beijing","W",2.26,46200000,27,160,48
+"663","violeta szekely","1500M Women",245.2,4.08666666666667,"ROU","Romania",2000,"S","Sydney","W",1.81,22100000,35,169,52
+"664","gabriela szabo","1500M Women",245.3,4.08833333333333,"ROU","Romania",2000,"B","Sydney","W",1.81,22100000,24,158,42
+"665","yunxia qu","1500M Women",237.1,3.95166666666667,"CHN","China",1992,"B","Barcelona","W",8.75,1200000000,19,172,56
+"666","gabriella dorio","1500M Women",243.2,4.05333333333333,"ITA","Italy",1984,"G","Los Angeles","W",5.03,56900000,27,168,55
+"667","doina melinte","1500M Women",243.8,4.06333333333333,"ROU","Romania",1984,"S","Los Angeles","W",4.18,23000000,27,171,59
+"668","maricica puica","1500M Women",244.1,4.06833333333333,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,34,168,54
+"669","gamze bulut","1500M Women",250.4,4.17333333333333,"TUR","Turkey",2012,"S","London","W",2.09,74600000,19,166,48
+"670","maryam yusuf jamal","1500M Women",250.7,4.17833333333333,"BRN","Brunei",2012,"B","London","W",1.03,400000,27,170,61
+"671","kelly holmes","1500M Women",237.9,3.965,"GBR","United Kingdom",2004,"G","Athens","W",2.95,59900000,34,163,55
+"672","tatyana tomashova","1500M Women",238.1,3.96833333333333,"RUS","Russia",2004,"S","Athens","W",7.37,144000000,29,164,50
+"673","maria cioncan","1500M Women",238.4,3.97333333333333,"ROU","Romania",2004,"B","Athens","W",8.22,21600000,27,172,57
+"674","svetlana masterkova","1500M Women",240.8,4.01333333333333,"RUS","Russia",1996,"G","Atlanta","W",-3.64,148000000,28,168,50
+"675","gabriela szabo","1500M Women",241.5,4.025,"ROU","Romania",1996,"S","Atlanta","W",3.68,22800000,20,158,42
+"676","theresia kiesl","1500M Women",243,4.05,"AUT","Austria",1996,"B","Atlanta","W",2.77,8020000,32,172,60
+"677","paola pigni-cacchi","1500M Women",242.9,4.04833333333333,"ITA","Italy",1972,"B","Munich","W",3.48,54300000,26,168,55
+"678","veronica campbell-brown","200M Women",21.74,0.362333333333333,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,26,168,58
+"679","allyson felix","200M Women",21.93,0.3655,"USA","United States",2008,"S","Beijing","W",-0.392,303000000,22,168,56
+"680","kerron stewart","200M Women",22,0.366666666666667,"JAM","Jamaica",2008,"B","Beijing","W",-0.822,2790000,24,175,61
+"681","beverly mcdonald","200M Women",22.35,0.3725,"JAM","Jamaica",2000,"B","Sydney","W",1,2660000,30,169,59
+"682","gwen torrence","200M Women",21.81,0.3635,"USA","United States",1992,"G","Barcelona","W",2.96,257000000,27,170,57
+"683","juliet cuthbert","200M Women",22.02,0.367,"JAM","Jamaica",1992,"S","Barcelona","W",2.4,2470000,28,160,54
+"684","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1992,"B","Barcelona","W",2.4,2470000,32,175,62
+"685","valerie brisco","200M Women",21.81,0.3635,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
+"686","florence griffith joyner","200M Women",22.04,0.367333333333333,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,24,170,57
+"687","merlene ottey","200M Women",22.09,0.368166666666667,"JAM","Jamaica",1984,"B","Los Angeles","W",0.339,2310000,24,175,62
+"688","irena kirszenstein","200M Women",22.5,0.375,"POL","Poland",1968,"G","Mexico","W",6.11,32100000,22,176,60
+"689","raelene ann boyle","200M Women",22.7,0.378333333333333,"AUS","Australia",1968,"S","Mexico","W",6.35,12300000,17,168,57
+"690","jennifer lamy","200M Women",22.8,0.38,"AUS","Australia",1968,"B","Mexico","W",6.35,12300000,19,173,60
+"691","wilma rudolph","200M Women",24,0.4,"USA","United States",1960,"G","Rome","W",2.5,187000000,20,180,59
+"692","dorothy hyman","200M Women",24.7,0.411666666666667,"GBR","United Kingdom",1960,"B","Rome","W",5.15,52400000,19,170,59
+"693","marjorie jackson","200M Women",23.7,0.395,"AUS","Australia",1952,"G","Helsinki","W",1.23,8620000,20,172,66
+"694","allyson felix","200M Women",21.88,0.364666666666667,"USA","United States",2012,"G","London","W",2.94,313000000,26,168,56
+"695","shelly-ann fraser-pryce","200M Women",22.09,0.368166666666667,"JAM","Jamaica",2012,"S","London","W",-0.631,2840000,25,160,57
+"696","carmelita jeter","200M Women",22.14,0.369,"USA","United States",2012,"B","London","W",2.94,313000000,32,163,59
+"697","veronica campbell-brown","200M Women",22.05,0.3675,"JAM","Jamaica",2004,"G","Athens","W",0.724,2730000,22,168,58
+"698","allyson felix","200M Women",22.18,0.369666666666667,"USA","United States",2004,"S","Athens","W",3.49,293000000,18,168,56
+"699","marie-jos„É‚© p„É‚ârec","200M Women",22.12,0.368666666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
+"700","merlene ottey","200M Women",22.24,0.370666666666667,"JAM","Jamaica",1996,"S","Atlanta","W",-1.85,2560000,36,175,62
+"701","merlene ottey","200M Women",22.2,0.37,"JAM","Jamaica",1980,"B","Moscow","W",-5.2,2160000,20,175,62
+"702","raelene ann boyle","200M Women",22.45,0.374166666666667,"AUS","Australia",1972,"S","Munich","W",2.87,13300000,21,168,57
+"703","irena kirszenstein","200M Women",22.74,0.379,"POL","Poland",1972,"B","Munich","W",7.35,33100000,26,176,60
+"704","edith mcguire","200M Women",23,0.383333333333333,"USA","United States",1964,"G","Tokyo","W",5.68,197000000,20,173,59
+"705","irena kirszenstein","200M Women",23.1,0.385,"POL","Poland",1964,"S","Tokyo","W",4.86,31100000,18,176,60
+"706","marilyn black","200M Women",23.1,0.385,"AUS","Australia",1964,"B","Tokyo","W",6.88,11100000,20,165,55
+"707","betty cuthbert","200M Women",23.4,0.39,"AUS","Australia",1956,"G","Melbourne / Stockholm","W",3.32,9420000,18,169,57
+"708","marlene mathews-willard","200M Women",23.8,0.396666666666667,"AUS","Australia",1956,"B","Melbourne / Stockholm","W",3.32,9420000,22,170,64
+"709","audrey patterson","200M Women",25.2,0.42,"USA","United States",1948,"B","London","W",3.79,150000000,21,170,51
+"710","gulnara samitova","3000M Steeplechase Women",538.8,8.98,"RUS","Russia",2008,"G","Beijing","W",5.15,143000000,30,178,54
+"711","eunice jepkorir","3000M Steeplechase Women",547.4,9.12333333333333,"KEN","Kenya",2008,"S","Beijing","W",1.53,39100000,26,164,48
+"712","melaine walker","400M Hurdles Women",52.64,0.877333333333333,"JAM","Jamaica",2008,"G","Beijing","W",-0.822,2790000,25,165,53
+"713","sheena tosta","400M Hurdles Women",53.7,0.895,"USA","United States",2008,"S","Beijing","W",-0.392,303000000,25,165,57
+"714","natasha danvers","400M Hurdles Women",53.84,0.897333333333333,"GBR","United Kingdom",2008,"B","Beijing","W",-1.16,62100000,30,173,64
+"715","irina privalova","400M Hurdles Women",53.02,0.883666666666667,"RUS","Russia",2000,"G","Sydney","W",10.1,146000000,31,174,64
+"716","deon marie hemmings","400M Hurdles Women",53.45,0.890833333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,31,176,63
+"717","nezha bidouane","400M Hurdles Women",53.57,0.892833333333333,"MAR","Morocco",2000,"B","Sydney","W",0.455,28800000,30,174,65
+"718","sally gunnell","400M Hurdles Women",53.23,0.887166666666667,"GBR","United Kingdom",1992,"G","Barcelona","W",0.164,57500000,25,167,58
+"719","sandra farmer-patrick","400M Hurdles Women",53.69,0.894833333333333,"USA","United States",1992,"S","Barcelona","W",2.96,257000000,29,173,63
+"720","janeene vickers","400M Hurdles Women",54.31,0.905166666666667,"USA","United States",1992,"B","Barcelona","W",2.96,257000000,23,170,62
+"721","nawal el moutawakel","400M Hurdles Women",54.61,0.910166666666667,"MAR","Morocco",1984,"G","Los Angeles","W",4.13,22000000,22,162,50
+"722","judi brown","400M Hurdles Women",55.2,0.92,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,23,180,67
+"723","cristina cojocaru","400M Hurdles Women",55.41,0.9235,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,22,172,62
+"724","natalya antyukh","400M Hurdles Women",52.7,0.878333333333333,"RUS","Russia",2012,"G","London","W",3.23,143000000,31,182,69
+"725","lashinda demus","400M Hurdles Women",52.77,0.8795,"USA","United States",2012,"S","London","W",2.94,313000000,29,170,60
+"726","zuzana hejnova","400M Hurdles Women",53.38,0.889666666666667,"CZE","Czech Republic",2012,"B","London","W",-0.903,10600000,25,173,63
+"727","ionela tirlea","400M Hurdles Women",53.38,0.889666666666667,"ROU","Romania",2004,"S","Athens","W",8.22,21600000,28,169,57
+"728","tetyana tereshchuk","400M Hurdles Women",53.44,0.890666666666667,"UKR","Ukraine",2004,"B","Athens","W",12.1,47200000,34,185,63
+"729","deon marie hemmings","400M Hurdles Women",52.82,0.880333333333333,"JAM","Jamaica",1996,"G","Atlanta","W",-1.85,2560000,27,176,63
+"730","kim batten","400M Hurdles Women",53.08,0.884666666666667,"USA","United States",1996,"S","Atlanta","W",3.72,269000000,27,170,57
+"731","tonja buford-bailey","400M Hurdles Women",53.22,0.887,"USA","United States",1996,"B","Atlanta","W",3.72,269000000,25,176,62
+"732","christine ohuruogu","400M Women",49.62,0.827,"GBR","United Kingdom",2008,"G","Beijing","W",-1.16,62100000,24,172,70
+"733","shericka williams","400M Women",49.69,0.828166666666667,"JAM","Jamaica",2008,"S","Beijing","W",-0.822,2790000,22,170,64
+"734","sanya richards-ross","400M Women",49.93,0.832166666666667,"USA","United States",2008,"B","Beijing","W",-0.392,303000000,23,173,62
+"735","cathy freeman","400M Women",49.11,0.8185,"AUS","Australia",2000,"G","Sydney","W",2.04,19100000,27,164,56
+"736","lorraine fenton","400M Women",49.58,0.826333333333333,"JAM","Jamaica",2000,"S","Sydney","W",1,2660000,27,174,59
+"737","katharine merry","400M Women",49.72,0.828666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,25,173,62
+"738","marie-jos„É‚© p„É‚ârec","400M Women",48.83,0.813833333333333,"FRA","France",1992,"G","Barcelona","W",1.59,57500000,24,180,60
+"739","ximena restrepo","400M Women",49.64,0.827333333333333,"COL","Colombia",1992,"B","Barcelona","W",4.27,35600000,23,175,58
+"740","valerie brisco","400M Women",48.83,0.813833333333333,"USA","United States",1984,"G","Los Angeles","W",7.38,239000000,24,170,62
+"741","chandra cheeseborough","400M Women",49.05,0.8175,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,25,165,58
+"742","kathryn smallwood-cook","400M Women",49.42,0.823666666666667,"GBR","United Kingdom",1984,"B","Los Angeles","W",2.61,56400000,24,180,64
+"743","irena kirszenstein","400M Women",49.29,0.8215,"POL","Poland",1976,"G","Montreal","W",2.43,34300000,30,176,60
+"744","colette besson","400M Women",52,0.866666666666667,"FRA","France",1968,"G","Mexico","W",4.15,50100000,22,169,58
+"745","lillian board","400M Women",52.1,0.868333333333333,"GBR","United Kingdom",1968,"S","Mexico","W",4.21,55200000,19,168,60
+"746","sanya richards-ross","400M Women",49.55,0.825833333333333,"USA","United States",2012,"G","London","W",2.94,313000000,27,173,62
+"747","christine ohuruogu","400M Women",49.7,0.828333333333333,"GBR","United Kingdom",2012,"S","London","W",0.198,64300000,28,172,70
+"748","deedee trotter","400M Women",49.72,0.828666666666667,"USA","United States",2012,"B","London","W",2.94,313000000,29,178,64
+"749","ana guevara","400M Women",49.56,0.826,"MEX","Mexico",2004,"S","Athens","W",4.42,107000000,27,173,61
+"750","natalya antyukh","400M Women",49.89,0.8315,"RUS","Russia",2004,"B","Athens","W",7.37,144000000,23,182,69
+"751","marie-jos„É‚© p„É‚ârec","400M Women",48.25,0.804166666666667,"FRA","France",1996,"G","Atlanta","W",0.998,58500000,28,180,60
+"752","cathy freeman","400M Women",48.63,0.8105,"AUS","Australia",1996,"S","Atlanta","W",3.62,18300000,23,164,56
+"753","kathleen hammond","400M Women",51.64,0.860666666666667,"USA","United States",1972,"B","Munich","W",5.12,213000000,20,170,55
+"754","betty cuthbert","400M Women",52,0.866666666666667,"AUS","Australia",1964,"G","Tokyo","W",6.88,11100000,26,169,57
+"755","ann packer","400M Women",52.2,0.87,"GBR","United Kingdom",1964,"S","Tokyo","W",5.48,53900000,22,169,57
+"756","judith florence amoore-pollock","400M Women",53.4,0.89,"AUS","Australia",1964,"B","Tokyo","W",6.88,11100000,24,163,55
+"757","tirunesh dibaba","5000M Women",941.4,15.69,"ETH","Ethiopia",2008,"G","Beijing","W",10.3,83200000,23,166,50
+"758","elvan abeylegesse","5000M Women",942.7,15.7116666666667,"TUR","Turkey",2008,"S","Beijing","W",0.735,70400000,25,159,40
+"759","meseret defar","5000M Women",944.1,15.735,"ETH","Ethiopia",2008,"B","Beijing","W",10.3,83200000,24,159,42
+"760","gabriela szabo","5000M Women",880.8,14.68,"ROU","Romania",2000,"G","Sydney","W",1.81,22100000,24,158,42
+"761","sonia o'sullivan","5000M Women",881,14.6833333333333,"IRL","Ireland",2000,"S","Sydney","W",9.7,3850000,30,175,55
+"762","gete wami","5000M Women",882.2,14.7033333333333,"ETH","Ethiopia",2000,"B","Sydney","W",5.83,66500000,25,152,42
+"763","meseret defar","5000M Women",904.3,15.0716666666667,"ETH","Ethiopia",2012,"G","London","W",8.26,92400000,28,159,42
+"764","vivian jepkemoi cheruiyot","5000M Women",904.7,15.0783333333333,"KEN","Kenya",2012,"S","London","W",4.56,43600000,28,153,40
+"765","tirunesh dibaba","5000M Women",905.2,15.0866666666667,"ETH","Ethiopia",2012,"B","London","W",8.26,92400000,27,166,50
+"766","meseret defar","5000M Women",885.7,14.7616666666667,"ETH","Ethiopia",2004,"G","Athens","W",13.1,74600000,20,159,42
+"767","isabella ochichi","5000M Women",888.2,14.8033333333333,"KEN","Kenya",2004,"S","Athens","W",5.1,35100000,24,152,41
+"768","tirunesh dibaba","5000M Women",891.8,14.8633333333333,"ETH","Ethiopia",2004,"B","Athens","W",13.1,74600000,19,166,50
+"769","junxia wang","5000M Women",899.9,14.9983333333333,"CHN","China",1996,"G","Atlanta","W",3.42,1250000000,33,162,50
+"770","pauline konga","5000M Women",903.5,15.0583333333333,"KEN","Kenya",1996,"S","Atlanta","W",4.14,28100000,26,158,43
+"771","roberta brunet","5000M Women",907.5,15.125,"ITA","Italy",1996,"B","Atlanta","W",0.865,57200000,31,170,58
+"772","pamela jelimo","800M Women",114.9,1.915,"KEN","Kenya",2008,"G","Beijing","W",1.53,39100000,18,175,60
+"773","janeth jepkosgei busienei","800M Women",116.1,1.935,"KEN","Kenya",2008,"S","Beijing","W",1.53,39100000,24,167,47
+"774","hasna benhassi","800M Women",116.7,1.945,"MAR","Morocco",2008,"B","Beijing","W",5.49,31600000,30,166,47
+"775","maria mutola","800M Women",116.2,1.93666666666667,"MOZ","Mozambique",2000,"G","Sydney","W",2.06,18100000,27,165,63
+"776","stephanie graf","800M Women",116.6,1.94333333333333,"AUT","Austria",2000,"S","Sydney","W",3.38,8070000,27,170,60
+"777","kelly holmes","800M Women",116.8,1.94666666666667,"GBR","United Kingdom",2000,"B","Sydney","W",4.46,59000000,30,163,55
+"778","ana fidelia quirot","800M Women",116.8,1.94666666666667,"CUB","Cuba",1992,"B","Barcelona","W",-13.9,10700000,29,165,59
+"779","doina melinte","800M Women",117.6,1.96,"ROU","Romania",1984,"G","Los Angeles","W",4.18,23000000,27,171,59
+"780","kim gallagher","800M Women",118.6,1.97666666666667,"USA","United States",1984,"S","Los Angeles","W",7.38,239000000,20,165,47
+"781","fita lovin","800M Women",118.8,1.98,"ROU","Romania",1984,"B","Los Angeles","W",4.18,23000000,33,166,57
+"782","madeline manning-jackson","800M Women",120.9,2.015,"USA","United States",1968,"G","Mexico","W",4.71,206000000,20,175,75
+"783","ileana silai","800M Women",122.5,2.04166666666667,"ROU","Romania",1968,"S","Mexico","W",1.21,20100000,26,167,49
+"784","brenda jones","800M Women",124.4,2.07333333333333,"AUS","Australia",1960,"S","Rome","W",4.04,10300000,23,173,55
+"785","mariya savinova","800M Women",116.2,1.93666666666667,"RUS","Russia",2012,"G","London","W",3.23,143000000,26,172,60
+"786","ekaterina poistogova","800M Women",117.5,1.95833333333333,"RUS","Russia",2012,"B","London","W",3.23,143000000,21,175,65
+"787","kelly holmes","800M Women",116.4,1.94,"GBR","United Kingdom",2004,"G","Athens","W",2.95,59900000,34,163,55
+"788","hasna benhassi","800M Women",116.4,1.94,"MAR","Morocco",2004,"S","Athens","W",4.59,30200000,26,166,47
+"789","svetlana masterkova","800M Women",117.7,1.96166666666667,"RUS","Russia",1996,"G","Atlanta","W",-3.64,148000000,28,168,50
+"790","ana fidelia quirot","800M Women",118.1,1.96833333333333,"CUB","Cuba",1996,"S","Atlanta","W",8.72,11000000,33,165,59
+"791","maria mutola","800M Women",118.7,1.97833333333333,"MOZ","Mozambique",1996,"B","Atlanta","W",6.95,16200000,23,165,63
+"792","ann packer","800M Women",121.1,2.01833333333333,"GBR","United Kingdom",1964,"G","Tokyo","W",5.48,53900000,22,169,57
+"793","maryvonne dupureur","800M Women",121.9,2.03166666666667,"FRA","France",1964,"S","Tokyo","W",6.72,48400000,27,167,58
+"794","ann marise chamberlain","800M Women",122.8,2.04666666666667,"NZL","New Zealand",1964,"B","Tokyo","W",4.89,2580000,28,169,55
