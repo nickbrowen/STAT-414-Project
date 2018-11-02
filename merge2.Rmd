@@ -1,0 +1,323 @@
+---
+title: "Merge2"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(reshape2)
+library(lubridate)
+```
+
+
+```{r}
+olympics <- read.csv(file = "C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/Track-Results.csv")
+pop <- read.csv(file = "C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/population.csv")
+gdp <- read.csv(file = "C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/total_gdp_ppp_inflation_adjusted.csv")
+codes <- read.csv(file = "C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/country-codes.csv")
+```
+
+```{r}
+head(olympics)
+head(pop)
+head(gdp)
+head(codes)
+```
+
+```{r}
+codes
+```
+
+
+
+
+
+goal: long data format
+Geo   Year    GDP
+---------------------
+Afg   1800    3280000
+Afg   1801    3280000
+...
+
+```{r}
+# Convert gdp and pop data into long format
+pop_long <- pop %>% 
+  melt() %>% 
+  mutate(year = variable %>% substr(2,5) %>% as.numeric()) %>%
+  select(geo, year, value)
+
+colnames(pop_long) <- c("country", "year", "population")
+
+gdp_long <- gdp %>% 
+  melt() %>%
+  mutate(year = variable %>% substr(2,5) %>% as.numeric()) %>%
+  select(geo, value, year)
+
+colnames(gdp_long) <- c("country", "gdp", "year")
+
+# Join the two data sets
+country_data <- full_join(gdp_long, pop_long, by=c("country", "year")) %>%
+  select(year, country, gdp, population)
+```
+
+
+```{r}
+colnames(codes) <- c("x", "country", "code")
+codes <- codes %>% select(code, country)
+codes$code <- codes$code %>% as.character()
+codes$country <- codes$country %>% as.character()
+```
+
+
+USA
+GBR
+```{r}
+codes
+```
+
+
+do a join on x=country data, y=codes to get the country codes and keep all observations in x
+
+```{r}
+country_codes <- full_join(country_data, codes, by="country")
+
+country_codes %>% filter(year == 1801) %>% filter(is.na(code)) %>% select(year, country)
+
+codes %>% filter(country == "Bolivia")
+```
+
+
+
+
+
+
+
+
+Now merge country_codes with olympics.
+
+goal: keep each row in olympics, include that athlete's country, gdp, population
+
+gender  event location  year  medal name  nationality result  gdp, population
+
+```{r}
+olympics
+colnames(olympics) <- c("gender", "event", "hostCity", "year", 
+                        "medal", "name", "code", "result", "X")
+olympics <- olympics %>% select(name, code, year, event, medal, result, hostCity, gender)
+```
+
+```{r}
+data <- full_join(olympics, country_codes, by=c("year", "code"))
+```
+Events to filter out:
+
+Heptathlon Women
+Decathlon Men
+Discus Throw Men
+Hammer Throw Men
+High Jump Men
+Javelin Throw Men
+Long Jump Men
+Pole Vault Men
+Shot Put Men
+Triple Jump Men
+Discus Throw Women
+Hammer Throw Women
+High Jump Women
+Javelin Throw Women
+Long Jump Women
+ Pole Vault Women
+ Shot Put Women
+ Triple Jump Women
+```{r}
+data
+```
+
+
+```{r}
+drop_events <- c("Heptathlon Women", "Decathlon Men", "Discus Throw Men", "Hammer Throw Men", "High Jump Men", "Javelin Throw Men", 
+                 "Long Jump Men", "Pole Vault Men", "Shot Put Men", "Triple Jump Men", "Discus Throw Women", "Hammer Throw Women", 
+                 "High Jump Women", "Javelin Throw Women", "Long Jump Women", "Pole Vault Women", "Shot Put Women", "Triple Jump Women",
+                 "Decathlon Men", "Discus Throw Men", "Discus Throw Women", "Hammer Throw Men", "Hammer Throw Women", "Heptathlon Women", 
+                 "High Jump Men", "High Jump Women", "Javelin Throw Men", "Javelin Throw Women", "Long Jump Men", "Long Jump Women",
+                 "Pole Vault Men", "Pole Vault Women", "Shot Put Men", "Shot Put Women", "Triple Jump Men", "Triple Jump Women",
+                 "20Km Race Walk Men", "50Km Race Walk Men", "Marathon Men", "20Km Race Walk Women", "Marathon Women")
+
+'%!in%' <- function(x,y)!('%in%'(x,y))
+
+track_data <- data %>% filter(event %!in% drop_events) %>%
+  filter(!is.na(event))
+
+```
+
+```{r}
+track_data$event %>% unique()
+```
+
+
+```{r}
+track_data$name <- track_data$name %>% tolower()
+track_data$event %>% unique()
+```
+
+
+```{r}
+medalists <- read.csv(file = "C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/track_medalists.csv")
+medalists$Name <- medalists$Name %>% tolower()
+```
+
+```{r}
+medalists <- medalists %>% mutate(
+  Medal = case_when(Medal == "Gold" ~ "G",
+            Medal == "Silver" ~ "S",
+            Medal == "Bronze" ~ "B")) %>%
+  select(-one_of("X"))
+```
+
+
+```{r}
+#Pare this down to the 29 events in track data
+keep.events <- c("Athletics Men's 10,000 metres", "Athletics Men's 100 metres", 
+                 "Athletics Men's 110 metres Hurdles", "Athletics Men's 1,500 metres", 
+                 "Athletics Men's 200 metres", "Athletics Men's 3,000 metres Steeplechase", 
+                 "Athletics Men's 400 metres Hurdles", "Athletics Men's 400 metres", 
+                 "Athletics Men's 4 x 100 metres Relay", "Athletics Men's 4 x 400 metres Relay", 
+                 "Athletics Men's 5,000 metres", "Athletics Men's 800 metres",
+                 "Athletics Women's 10,000 metres", "Athletics Women's 100 metres Hurdles", 
+                 "Athletics Women's 100 metres", "Athletics Women's 10,000 metres", 
+                 "Athletics Women's 200 metres", "Athletics Women's 3,000 metres Steeplechase", 
+                 "Athletics Women's 400 metres Hurdles", "Athletics Women's 400 metres",
+                 "Athletics Women's 4 x 100 metres Relay", "Athletics Women's 4 x 400 metres Relay", 
+                 "Athletics Women's 5,000 metres", "Athletics Women's 800 metres", "Athletics Women's 1,500 metres" )
+
+medalists <- medalists %>% filter(Event %in% keep.events)
+```
+
+```{r}
+colnames(medalists) <- c("name", "year", "sex", "age", "height", "weight", "country", "code",
+                         "event", "medal")
+medalists <- medalists %>% select(name, event, year, medal, code, country, sex, age, height, weight, country)
+```
+
+```{r}
+medalists <- medalists %>% mutate(
+  event = case_when(event == "Athletics Men's 10,000 metres" ~ "10000M Men",
+                    event == "Athletics Men's 100 metres" ~ "100M Men",
+                    event == "Athletics Men's 110 metres Hurdles" ~ "110M Hurdles Men",
+                    event == "Athletics Men's 1,500 metres" ~ "1500M Men",
+                    event == "Athletics Men's 200 metres" ~ "200M Men",                 
+                    event == "Athletics Men's 3,000 metres Steeplechase" ~ "3000M Steeplechase Men",  
+                    event == "Athletics Men's 400 metres Hurdles" ~ "400M Hurdles Men",       
+                    event == "Athletics Men's 400 metres" ~ "400M Men",                 
+                    event == "Athletics Men's 4 x 100 metres Relay" ~ "4X100M Relay Men",     
+                    event == "Athletics Men's 4 x 400 metres Relay" ~ "4X400M Relay Men",       
+                    event == "Athletics Men's 5,000 metres" ~ "5000M Men",               
+                    event == "Athletics Men's 800 metres" ~ "800M Men",                
+                    event == "Athletics Women's 10,000 metres" ~ "10000M Women",
+                    event == "Athletics Women's 100 metres Hurdles" ~ "100M Hurdles Women",
+                    event == "Athletics Women's 100 metres" ~ "100M Women", 
+                    event == "Athletics Women's 10,000 metres" ~ "10000M Women",
+                    event == "Athletics Women's 200 metres" ~ "200M Women",
+                    event == "Athletics Women's 3,000 metres Steeplechase" ~ "3000M Steeplechase Women",
+                    event == "Athletics Women's 400 metres Hurdles" ~ "400M Hurdles Women",   
+                    event == "Athletics Women's 400 metres" ~ "400M Women",
+                    event == "Athletics Women's 4 x 100 metres Relay" ~ "4X100M Relay Women", 
+                    event == "Athletics Women's 4 x 400 metres Relay" ~ "4X400M Relay Women",  
+                    event == "Athletics Women's 5,000 metres" ~ "5000M Women",     
+                    event == "Athletics Women's 800 metres" ~ "800M Women",
+                    event == "Athletics Women's 1,500 metres" ~ "1500M Women"))
+
+medalists$medal <- medalists$medal %>% as.factor()
+medalists$event <- medalists$event %>% as.factor()
+track_data$code <- track_data$code %>% as.factor()
+```
+
+
+year, event, medal, code
+```{r}
+track_data$event %>% unique()
+medalists$event %>% unique()
+```
+
+```{r}
+joined_data <- full_join(track_data, medalists, by = c("code", "event", "medal", "year")) %>% 
+  select(name.x, event, result, code, country.x, year, medal, hostCity, gender, 
+        gdp, population, age, height, weight) %>% 
+  filter(!is.na(gender))
+
+colnames(joined_data) <- c("name", "event", "time", "country", "country2", "year", "medal", "city", "sex", "gdp",
+                           "pop", "age", "height", "weight")
+```
+
+
+
+
+
+```{r}
+timeToDecimal <- function(t){
+  # t is Time in seconds
+  t <- gsub("[^\\d]+", ".", t, perl=TRUE)
+    #as.duration()
+  lent <- nchar(t)
+
+  if(lent == 1){
+    t = NA
+  }else if(lent == 2){
+    # put in else at end
+    t = t
+  }else if(lent == 3){
+    # else at end
+    t = t
+  }else if(lent == 4){
+    # else at end
+    t = t
+  }else if(lent == 5){
+    t = t
+  } else if(lent == 7){
+    min <- substr(t, 1, 2) %>% as.numeric() %>% prod(60)
+    sec <- substr(t, 4, 7) %>% as.numeric() %>% sum(min)
+    t = sec %>% as.character()
+  }
+
+  return(t)
+}
+
+joined_data$timeSecs <- joined_data$time %>% sapply(timeToDecimal) %>% as.numeric()
+joined_data$timeMins <- joined_data$timeSecs / 60
+
+joined_data <- joined_data %>% filter(!is.na(timeMins))
+
+joined_data <- joined_data %>% select(name, event, timeSecs, timeMins, country, country2, year, medal, 
+                                      city, sex, gdp, pop, age, height, weight) %>% 
+  filter(event %!in% c("4X400M Relay Men", "4X100M Relay Men", "4X100M Relay Women", "4X400M Relay Women"))
+
+na_removed_data <- joined_data %>% filter(!is.na(gdp) & !is.na(age) & !is.na(height) & !is.na(weight))
+```
+
+
+```{r}
+joined_data %>% write.csv("final_data3.csv")
+na_removed_data %>% write.csv("final_data_noNA3.csv")
+```
+
+
+
+# Final Datasets
+### 1. Joined Data
+is the full data set, including missing values
+
+```{r}
+joined_data
+```
+
+### 2. na_removed_data
+Removed the na values for EV's from `joined_data`
+```{r}
+na_removed_data
+```
+
+
+
+
+
+
