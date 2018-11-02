@@ -11,7 +11,7 @@ library(tidyverse)
 
 
 ```{r}
-data <- read.csv("final_data_noNA.csv") %>% select(-one_of("X"))
+data <- read.csv("final_data_noNA2.csv") %>% select(-one_of("X"))
 data
 ```
 # Preliminary plots
