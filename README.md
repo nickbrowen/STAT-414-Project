@@ -1,6 +1,6 @@
 # STAT-414-Project
 
-## Important Dates
+## Important Dates (Tentative)
 Part I: Proposal and Data Assembly -- Monday, Oct 15  
 Part II: Exploratory Data Analysis -- Monday, Oct 29  
 Part III: Initial Modeling Results -- Monday, Nov 12  
