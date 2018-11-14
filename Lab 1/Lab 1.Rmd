@@ -1,0 +1,320 @@
+---
+title: "Stat 414 Lab 1"
+author: "Eric Ortiz, Nick Browen"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(RColorBrewer)
+library(nlme)
+library(lme4)
+```
+
+
+Large scale alteration (e.g., destruction) of native prairie communities has been associated with numerous problems (e.g., soil erosion, lack of biodiversity of plants, increase in atmospheric CO2). This has led to an increase in prairie reconstruction projects, but there has been a lot of variability in the success of these projects, even those using the same seed combinations and dispersal techniques in different years. 
+
+A 3x2x2 factorial design was conducted to investigate the impact of soil type (remnant, cultivated, restored), sterilization (yes or no), and species (leadplant and cornflower) on the height on germinating plants.  Each of the 12 treatments was replicated in 6 pots, for a total of 72 pots. Six seeds were planted in each pot.  (OK, a few pots had more than six plants, probably because two of the microscopically small seeds stuck together when planted.) Measurements on each plant in each pot were taken at 13, 18, 23, and 28 days after planting. Plants that did not germinate are removed from the analysis (so we will restrict our study conclusions to plants that germinate!). Not all plants survived to the end of the 28th day.
+
+
+
+```{r echo=FALSE}
+plant.data <- readxl::read_xlsx("lab1plants.xlsx")
+```
+
+### Part 0
+**Remove the 154 plants that did not germinate by Day 28, but keep plants that had some growth but did not survive for the whole study. Make sure the remaining missing values are coded in a way R/JMP can understand.**
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Filters out observations that do not germinate or do not have a measurement on day 13.
+# converts height measurements to numeric ("NA" becomes NA)
+plant.data <- plant.data %>% 
+  filter((germin == "Y") | (hgt13 != "NA")) %>% 
+  mutate(
+    hgt13 = hgt13 %>% as.numeric(),
+    hgt18 = hgt18 %>% as.numeric(),
+    hgt23 = hgt23 %>% as.numeric(),
+    hgt28 = hgt28 %>% as.numeric(),
+    species = case_when(species == "L" ~ "Leadplant",
+                        species == "C" ~ "Coneflower")
+)
+```
+
+
+### Part A 
+**Identify the three-levels in this data set.**
+
+Level 1: plant measurements (height after some number of days)
+
+Level 2: plant
+
+Level 3: pot
+
+
+### Part B 
+**Calculate the mean height for each plant for the existing measurements for that plant. (Document how you do so.) Examine boxplots of these plant heights across the soil type, separately for the coneflowers and the leadplants.  Examine boxplots of the plant heights across sterilization, separately for the coneflowers and the leadplants.  Summarize what you learn, including any differences in associations between species.**
+
+```{r echo=TRUE}
+plant.data$hgtMean = rowMeans(plant.data %>% select(hgt13, hgt18, hgt23, hgt28), na.rm = T)
+```
+
+```{r echo=FALSE}
+ggplot(plant.data) + geom_boxplot(aes(x=soil, y=hgtMean, fill = species)) +
+  labs(title = "Mean Height of Plants",
+       subtitle = "Across soil types for different species",
+       x="Soil Type",
+       y="Mean Height",
+       fill = "Species") +
+  scale_fill_brewer(palette = "Dark2")
+```
+
+From this plot, we can see that the mean height of plants of species Coneflower is slightly higher for remnant soil than for cultivated and restored soils. However, the means are all similar and I suspect that there is not a significant difference betwen the three.
+
+We can also see that for plants of species Leadplant, the mean height of plants grown in cultivated soil is slightly higher than for plants grown in remnant and restored soils.
+
+When comparing the two species, Leadplants tend to do better in cultivated soil, Coneflowers tend to do better in remnant soil, and there doesn't seem to be a large difference for restored soil.
+
+
+```{r echo=FALSE}
+ggplot(plant.data) + geom_boxplot(aes(x=sterile, y=hgtMean, fill = species)) +
+  labs(title = "Mean Height of Plants",
+       subtitle = "Across sterilization for different species",
+       x="Sterilization",
+       y="Mean Height",
+       fill = "Species") +
+  scale_fill_brewer(palette = "Dark2")
+```
+
+From this plot, we can see that both Leadplants and Coneflowers have a larger mean height when sterilized, but this difference is larger for Coneflowers.
+
+
+**Convert the data to long format (document how you do so)**
+
+
+```{r echo=TRUE}
+plant.long <- gather(plant.data, day, height, hgt13:hgt28, factor_key = T)
+```
+
+```{r echo=FALSE}
+plant.long <- plant.long %>%
+  mutate(dayNum = case_when(day == "hgt13" ~ 13,
+                            day == "hgt18" ~ 18,
+                            day == "hgt23" ~ 23,
+                            day == "hgt28" ~ 28))
+
+plant.long$plant <- plant.long$plant %>% as.factor()
+plant.long$pot <- plant.long$pot %>% as.factor()
+```
+
+
+### Part C
+**Examine spaghetti plots of the plant heights across the measurements for each of the species.  Is it reasonable to assume linear growth between Day 13 and Day 28?  Does the initial height and/or rate of growth seem to differ between the species?  Is there more variability in one species than the other?**
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data=plant.long) + 
+  geom_point(aes(x=dayNum, y=height, color = species), size = 0.5, alpha = 0.4) + 
+  geom_smooth(aes(x=dayNum, y=height, color = species), size = 1, method = "lm", alpha = 0.4) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(title = "Height of Plants vs Number of Days",
+       subtitle = "Comparing Species",
+       y="Height",
+       x="Number of Days",
+       color="Species")
+```
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(plant.long) +
+  geom_boxplot(aes(x=dayNum %>% as.factor(), y=height, fill = species)) +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(title = "Boxplot of Plant Height vs Number of Days",
+       subtitle = "Looking at Variability between Species",
+       x="Number of Days",
+       y="Height",
+       fill = "Species")
+```
+
+Looking at the scatter plot, I think it is reasonable to assume linear growth of plants over time. Of course, this isn't perfectly linear nor can a plant grow linearly for an infinite amount of time. But for our 28 day experiment we can assume the growth is linear. The growth rate does not seem to differ much between species (slope) nor does the initial height seem do differ between species (intercept).  
+  
+Looking at variability in the boxplot, we can see that there is more variability in the growth rates of Cornflowers than in Leadplants as seen in the whiskers of the plot for each time point where measurements were taken.
+
+
+### Part D
+**Examine spaghetti plots of the plant heights over time separately for the three types of soil, separately for each species. What do you learn?**
+
+```{r echo=FALSE, fig.asp=0.8, message=FALSE, warning=FALSE}
+ggplot(data=plant.long) + 
+  geom_point(aes(x=dayNum, y=height, color = soil), size = 0.5, alpha = 0.4) + 
+  geom_smooth(aes(x=dayNum, y=height, color = soil), size = 0.6, method = "lm", alpha = 0.4) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(title = "Height of Plants vs Number of Days",
+       subtitle = "Comparing Soil Types and Plant Species",
+       y="Height",
+       x="Number of Days",
+       color="Soil Type") + 
+  facet_wrap(aes(species), nrow=2)
+```
+
+We can see that for both species, there is a noticeably different rate of growth for plants grown in restored soil compared to remnant soil. However, when looking at plants grown in cultivated soil, Cornflowers and leadplants differ; Cornflowers have a lower rate of growth in soil than Leadplants.
+
+
+**Split the data into two datasets, one with leadplants and one with coneflowers.**
+```{r}
+lead <- plant.long %>% filter(species == "Leadplant")
+cone <- plant.long %>% filter(species == "Coneflower")
+lead
+```
+
+
+
+
+## Focusing on just the leadplants
+
+### Part F
+**“Center” the time variable by subtracting 13. Fit an “unconditional means”  or random intercepts null model with no predictors but the three-level hierarchy.  How many parameters are estimated? Provide an interpretation of each, including the variance components.**
+
+```{r}
+lead <- lead %>% mutate(
+  dayNum_centered = dayNum - 13
+)
+```
+
+
+```{r}
+mod.f <- lmer(data = lead, formula = height ~ 1 + (1 | pot / plant))
+summary(mod.f)
+```
+
+There are 4 parameters estimated.  
+1. Grand Mean: The average height of Leadplants in the average pot for the average plant is 2.38808.  
+2. Residual: The within-plant variance of measurements is 0.72782.  
+3. Pot: The between-pot variance is 0.04873.  
+4. Plant:Pot: The beteen-plant (within same pot) variance is 0.27817.  
+
+
+### Part G
+**Include the centered time variable in the model, assuming linear growth, with random intercepts and slopes (at both levels).  How much of the within-plant variability is explained by the linear changes over time?  Interpret the fixed effects. Are either of the fixed effects statistically significant? How many variance/covariance parameters are there?**
+
+```{r}
+mod.g <- lmer(data = lead, formula = height ~ dayNum_centered + (dayNum_centered | pot / plant))
+summary(mod.g)
+```
+
+The within-plant variance is 0.0822 in this model. We can compute a pseudo-$R^2$ using the variance components of this model and the model in part f. Including the linear changes over time decreased the within-plant variability by 88.7%.
+
+$\text{pseudo} \ R^2 =  \frac{0.72782 - 0.0822}{0.72782} = 0.887$
+
+1. Intercept: The average height of Leadplants at day 13 in the average pot for the average plant is 1.5376. 
+2. dayNum_centered: For the average plant in the average pot, each increase of one day (after day 13) is associated with a 0.112 unit increase in the average height of a plant.  
+
+Yes, the intercept (t-value = 21.87) and slope for dayNum_centered (t-value = 14.15) are highly statistically significant.  
+
+There are 5 variance parameters and 1 covariance parameter being estimated.  
+
+
+
+
+
+### Part H
+**Now add the sterilization and soil type variables. You will want to include interactions with the time variable. Is this model a significant improvement from the model in part G?**
+
+```{r}
+mod.h <- lmer(data = lead, formula = height ~ dayNum_centered + sterile + soil + sterile*dayNum_centered + soil*dayNum_centered + (dayNum_centered | pot / plant))
+summary(mod.h)
+```
+
+```{r}
+anova(mod.g, mod.h)
+```
+
+Using a Chi-Square test between the two models, we can conclude that the model including `sterile` and `soil` is a significant improvement over the model that doesn't ($\chi^2 = 32.202$ and p-value = 0.000015).
+
+### Part I
+**You are probably running into some boundary conditions with this model. One option is to simplify the model, e.g., removing some variance components.  Modify the previous model so that the Level 3 intercepts are random but the Level 3 slopes are fixed.  What is the practical interpretation of this modelling choice?  Does this change the estimates of the fixed effects? How many parameters have you removed from the model? [This model should be more stable, and if you check shouldn’t be significantly worse.]**
+
+```{r}
+mod.i <- lmer(data = lead, formula = height ~ dayNum_centered + sterile + soil + (dayNum_centered | pot / plant))
+summary(mod.i)
+```
+
+We are acknowledging that the "effect" of sterile and soil can differ by pot on day 13, but that the increase in heights day by day associated with soil and sterile are the same for all pots.  
+
+Yes, several fixed effect estimates changed. Notably, sterileY went from negative in the old model to positive in this model, soilREM changed sign from positive to negative.  
+
+We removed 3 parameters from the model.  
+
+
+
+
+### Part J
+**Now add the Level 3 interaction between sterilization and soil types (including the interaction with time!).  Compare this to the model that does not allow sterilization or soil type (or their interaction) to influence Day 13 measurements.  Why do I make this suggestion? Is there a significant difference between these two models?**
+
+
+
+```{r}
+mod.j1 <- lmer(data = lead, formula = height ~ dayNum_centered + sterile*soil*dayNum_centered + (dayNum_centered | pot / plant))
+summary(mod.j1)
+```
+
+```{r}
+mod.j2 <- lmer(data = lead, formula = height ~ dayNum_centered + sterile:soil:dayNum_centered + (dayNum_centered | pot / plant))
+summary(mod.j2)
+```
+
+```{r}
+anova(mod.j1, mod.j2)
+```
+
+No, the model that allows sterile, soil, or the interaction to influence Day 13 measurements is not significantly better than the model that does not ($\chi^2 = 1.8365$ and p-value = 0.8713).
+
+We think you might have suggested this because none of the main effects for soil and sterilization and the interactions with soil and sterilization and the interaction with soil, sterilization, and time were not statistically significant (except for time*soil). This was using a lot of df and removing these terms simplified the model.
+
+
+### Part K
+**This is your final model. Interpret it! (A brief summary of the important features, especially as the agree/disagree with your exploratory data analysis. What seems to maximize growth!)**
+
+To maximize growth, we would want to maximize the slope of height's association with time. Looking at the coefficients for the fixed effects, the interaction of sterile yes and soil STP would increase the slope of time by the most. The combination of STP soil and sterile plants maximizes the growth per day to 0.165928 + 0.35918 = 0.525 units/day.  
+  
+This seems to agree with our EDA as the plot in part D shows the soil type STP having the largest growth rate for Leadplants and the plot in part B shows sterile plants having a larger height than non-sterile plants.  
+  
+
+### Part L
+**Reconsider adding the Level 3 interaction in part J, but for the model in part I that still had random slopes at Level 3.  Run this model; how many parameters are in this model?**
+
+```{r}
+mod.l <- lmer(data = lead, formula = height ~ dayNum_centered + sterile + soil + sterile*soil  + (dayNum_centered | pot / plant))
+summary(mod.l)
+```
+
+There are 14 parameters being estimated.
+
+## Repeat for coneflowers
+(k) Repeat the initial model in (j) for the coneflowers.  Does the model also suggest that sterilization and soil type (or their interaction) don’t impact Day 13 measurements for this species?  What other differences do you see in comparing the models for leadplants and coneflowers?
+
+
+### Center the dayNum variable for Coneflowers
+```{r}
+cone <- cone %>% mutate(
+  dayNum_centered = dayNum - 13
+)
+```
+
+
+```{r}
+coneMod.j <- lmer(data = cone, formula = height ~ dayNum_centered + sterile*soil*dayNum_centered + (dayNum_centered | pot / plant))
+summary(coneMod.j)
+```
+
+
+Looking at the fixed effects, sterileY (t-value = 2.525), soilREM (t-value = 4.318), sterileY*soilREM (t-value = -4.097) all statistically significantly impact Day 13 height measurements.  
+
+The within plant measurement variance for Coneflowers ($\sigma^2 = 0.146$) is much bigger than the within plant measurement variance for Leadplants ($\sigma^2 = 0.082$). This also lines up with our EDA plots because the Coneflowers had more visible variablility than the Leadplants.  
+
+Another difference is that the combination of soil and sterilization maximize growth over time for Coneflower heights is the soil type CULT and sterile plants (with Leadplants the soil was STP).  
+
+
