@@ -5,14 +5,36 @@ output: html_notebook
 
 Data
 ```{r}
-track <- read.csv("C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/final_data_noNA.csv")
-track <- track[,-1]
-track$medal <- ordered(track$medal, levels = c("B", "S", "G"))
+track0 <- read.csv("C:/Users/nickbrowen/Documents/GitHub/STAT-414-Project/data files/final_data_noNA3.csv")
+track0 <- track0[,-1]
+track0$medal <- ordered(track0$medal, levels = c("B", "S", "G"))
 ```
 
 Level 1 = Athlete (finishing time)
 Level 2 = Country
 Level 3 = Event
+
+
+```{r}
+track <- track0 %>% filter(event != "110M Hurdles Men"& event != "3000M Steeplechase Men" & event != "400M Hurdles Men" & event != "100M Hurdles Women" & event != "3000M Steeplechase Women" & event !="400M Hurdles Women")
+track$dist <- as.numeric(gsub("[^0-9]", "",track$event))
+
+write.csv(track, file = "track_dist.csv")
+```
+
+```{r}
+track$country <- factor(track$country)
+track$country2 <- factor(track$country2)
+```
+
+
+Level 1 = Athlete (finishing time)
+  vars: name, event, timeSecs, timeMins, year (?), medal, sex, height, weight, age, dist 
+Level 2 = Country
+  vars: country, country2, gdp, pop
+  
+(?) - should year be its own level? i.e. athlete in year in country
+better to be athlete in country but I'm not sure if what to do with year
 
 #Response
 ```{r}
@@ -29,6 +51,13 @@ L1 <- c("name", "sex", "age", "height", "weight", "medal")
 L1_qvar <- c("age", "height", "weight")
 track %>% select(L1_qvar) %>% summary
 ```
+
+```{r}
+tapply(track$timeSecs, track$dist, mean)
+```
+
+
+
 ```{r}
 ggplot(data = track, aes(age)) + geom_histogram(bins = 25)
 ```
@@ -40,9 +69,14 @@ ggplot(data = track, aes(weight)) + geom_histogram(bins = 30)
 ```
 ```{r}
 library(corrplot)
-L1corr_matrix <- track %>% select(L1_qvar, timeSecs) %>% cor()
+L1corr_matrix <- track %>% select(L1_qvar, timeSecs, year, dist) %>% cor()
 corrplot(L1corr_matrix, type = "upper")
 ```
+```{r}
+L1corr_matrix
+```
+
+
 
 ```{r}
 ggplot(data = track, aes(x=height, y = timeSecs)) + geom_point() + stat_smooth(method = "lm") + scale_y_continuous(limits = c(0, 2000))
@@ -55,14 +89,86 @@ ggplot(data = track, aes(x=weight, y = timeSecs)) + geom_point() + stat_smooth(m
 ```{r}
 ggplot(data = track, aes(x=height, y = weight)) + geom_point()
 ```
+```{r}
+ggplot(data = track, aes(x=year, y=age)) + geom_point() + stat_smooth(method="lm")
+```
+
+
+```{r}
+ggplot(data = track, aes(x=dist, y=timeMins)) + geom_point() + stat_smooth(method="lm")
+```
+```{r}
+ggplot(data=track %>% filter(timeMins < .5)) + geom_point(aes(x = year, y=timeMins, color = event)) +   geom_line(aes(x=year, y=timeMins, color=event))
+```
+
+```{r}
+ggplot(data=track %>% filter(timeMins > .5 & timeMins<10)) + geom_point(aes(x = year, y=timeMins, color = event)) +   geom_line(aes(x=year, y=timeMins, color=event))
+```
+
+
+```{r}
+ggplot(data = track, aes(as.factor(dist), fill =sex)) + geom_bar() + xlab("Distance") 
+```
+
+```{r}
+ggplot(data = track, aes(group=as.factor(sex), y=timeMins)) + geom_boxplot() + facet_wrap(aes(dist), scales = "free") + xlab("Sex")
+```
+
 
 ```{r}
 ggplot(data = track, aes(sex, fill = sex)) + geom_bar(width = 0.5)
 ```
 
+Possible Level 1 Interactions
+
+```{r}
+ggplot(data = track, aes(x=height, y=timeSecs)) + geom_point() + facet_wrap(aes(dist), scales = "free") + stat_smooth(method ="lm")
+```
+slopes all seem similiar, no interaction with distance and height
+
+
+```{r}
+ggplot(data = track, aes(x=weight, y=timeSecs)) + geom_point() + facet_wrap(aes(dist), scales = "free") + stat_smooth(method ="lm")
+```
+also no visual evidence of interaction with weight and distance
+
+```{r}
+ggplot(data = track, aes(x=age, y=timeSecs)) + geom_point() + facet_wrap(aes(dist), scales = "free") + stat_smooth(method ="lm")
+```
+differences in directions of slope, visual evidence for interaction with distanc and age
+
+```{r}
+ggplot(data = track, aes(x=year, y=timeSecs)) + geom_point() + facet_wrap(aes(dist), scales = "free") + stat_smooth(method ="lm")
+summary(lm(track$timeSecs ~ track$year + track$dist))
+```
+
+
+
+```{r}
+scale_dist <- tapply(track$timeMins, track$dist, scale)
+scale_country <- tapply(track$timeMins, track$country2, scale)
+
+boxplot(scale_dist, main = "Comparing Spread of Time (Group Scaled) by Distance")
+```
+
+```{r}
+tapply(track$timeMins, track$dist, sd)
+```
+```{r}
+ggplot(data = track, aes(y=timeSecs)) + geom_boxplot() + facet_wrap(aes(dist), scales="free") 
+```
+
+
+
 
 
 ##Level 2 (Country)
+
+```{r}
+sort(table(track$country), desc = T)
+```
+
+
 
 ```{r}
 ggplot(data = track, aes(country, fill = medal)) + geom_bar() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
@@ -91,6 +197,31 @@ Will have to keep in mind that China is an extreme population outlier and they h
 L2corr_matrix <- track %>% select(L2_qvar, timeSecs) %>% cor()
 corrplot(L2corr_matrix, type = "upper")
 ```
+```{r}
+L2corr_matrix
+```
+
+
+```{r}
+ggplot(data = track %>% subset(pop<1000000000), aes(x=pop, y=timeMins)) + geom_point() + stat_smooth(method = "lm") + facet_wrap(aes(dist), scales = "free") + ggtitle("Time vs Pop by Dist excluding China")
+```
+
+```{r}
+track$logpop <- log(track$pop)
+ggplot(data = track, aes(x=logpop, y=timeMins)) + geom_point() + stat_smooth(method = "lm") + facet_wrap(aes(dist), scales = "free") + ggtitle("Time vs Log(Pop) by Dist including China")
+```
+
+
+
+```{r}
+ggplot(data = track, aes(x=gdp, y=timeMins)) + geom_point() + stat_smooth(method = "lm") + facet_wrap(aes(dist), scales = "free")
+```
+
+```{r}
+ggplot(data = track, aes(x=logpop, y=gdp)) + geom_point()+ stat_smooth(method = "lm")
+```
+
+
 
 Distribution of Medals by Country
 ```{r}
@@ -100,17 +231,18 @@ addmargins(t,margin = seq_along(dim(t)), FUN = sum)
 ```
 
 
-##Level 3 (Event)
+
 
 ```{r}
-L3 <- c("event", "year")
+countrysd <- tapply(track$timeMins, track$country, var, simplify = T)
+countrysd_noNA <- countrysd[!is.na(countrysd) & !is.null(countrysd)]
+
 ```
 
-
-
-
-
-
+```{r}
+rownames(countrysd_noNA) <- NULL
+barplot(countrysd_noNA, xlab = "Countrys", ylab = "Standard Deviation (TimeMins)")
+```
 
 
 
@@ -132,13 +264,13 @@ tapply(track$pop, track$medal, mean)
 
 ```{r}
 library(corrplot)
-corr_matrix <- track %>% select(contin_var) %>% cor()
+corr_matrix <- track %>% select(contin_var, dist, logpop) %>% cor()
 corrplot(corr_matrix, type = "upper")
 ```
-
 ```{r}
-corr10000Mmen <- track %>% filter(event == "10000M Men") %>% select(contin_var) %>% cor()
-corrplot(corr10000Mmen, type = "upper")
+corr_matrix
 ```
+
+
 
 
