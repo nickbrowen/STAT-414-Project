@@ -1,0 +1,33 @@
+---
+title: "Initial Modeling"
+output: html_notebook
+---
+
+```{r}
+library(nlme)
+library(lme4)
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+track <- read.csv("track_dist.csv")
+```
+
+Random Intercepts Model
+```{r}
+mod1 <- lme(data = track, fixed = timeMins ~ 1, random = ~1|country2)
+mod1
+```
+
+```{r}
+print(VarCorr(mod1), comp=c("Variance", "Std.Dev."), digits = 2)
+```
+
+ICC = 40.88261/(48.82788+40.88261) = 0.456
+45.6% of the variation in finishing times is due to country-to-country variation. If we randomly selected two athletes from the same country, their finishing times would be 45.6% correlated.
+
+Intercept: The average finishing time of an athlete from the average country is 7.052 minutes.
+
+
