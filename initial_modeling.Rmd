@@ -31,3 +31,27 @@ ICC = 40.88261/(48.82788+40.88261) = 0.456
 Intercept: The average finishing time of an athlete from the average country is 7.052 minutes.
 
 
+```{r}
+ggplot(ranef(mod1),aes(sample = ranef(mod1)[,1]) ) + stat_qq() + stat_qq_line()
+```
+Might have some caution with random effects not being approximately normal, but probably okay.
+
+
+
+
+Random Intercepts + fixed effect distance 
+```{r}
+mod2 <- lme(data = track, fixed = timeMins ~ dist, random = ~1|country2)
+mod2
+```
+
+```{r}
+print(VarCorr(mod2), comp=c("Variance", "Std.Dev."), digits = 2)
+```
+Both variances went down extremely. The within country variation went from $\sigma^2 = 48.828$ to $\sigma^2 = 0.371$, decreasing it by 99.2%. After adjusting for the distance of the race, our ICC went down to 16.8%.  
+
+
+```{r}
+ggplot(data = track, aes(y = timeMins, x = dist, col = country2)) + geom_point(show.legend = F) + geom_smooth(method="lm", show.legend = F, se = F, size = .7) + ggtitle("Finishing Time (Mins) vs. Distance of Race by Country")
+```
+
