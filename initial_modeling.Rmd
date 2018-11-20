@@ -15,9 +15,9 @@ library(ggplot2)
 track <- read.csv("track_dist.csv")
 ```
 
-Random Intercepts Model
+Model 1 = Random Intercepts
 ```{r}
-mod1 <- lme(data = track, fixed = timeMins ~ 1, random = ~1|country2)
+mod1 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
 mod1
 ```
 
@@ -25,7 +25,7 @@ mod1
 print(VarCorr(mod1), comp=c("Variance", "Std.Dev."), digits = 2)
 ```
 
-ICC = 40.88261/(48.82788+40.88261) = 0.456
+ICC = 147177.4/(147177.4+175780.4) = 0.456
 45.6% of the variation in finishing times is due to country-to-country variation. If we randomly selected two athletes from the same country, their finishing times would be 45.6% correlated.
 
 Intercept: The average finishing time of an athlete from the average country is 7.052 minutes.
@@ -38,20 +38,82 @@ Might have some caution with random effects not being approximately normal, but 
 
 
 
-
-Random Intercepts + fixed effect distance 
+Mode1 2 = Random Intercepts + fixed effect distance 
 ```{r}
-mod2 <- lme(data = track, fixed = timeMins ~ dist, random = ~1|country2)
+mod2 <- lme(data = track, fixed = timeSecs ~ dist, random = ~1|country2)
 mod2
 ```
 
 ```{r}
 print(VarCorr(mod2), comp=c("Variance", "Std.Dev."), digits = 2)
 ```
-Both variances went down extremely. The within country variation went from $\sigma^2 = 48.828$ to $\sigma^2 = 0.371$, decreasing it by 99.2%. After adjusting for the distance of the race, our ICC went down to 16.8%.  
+Both variances went down extremely. The within country variation went from $\sigma^2 = 175780.4$ to $\sigma^2 = 1335.9$, decreasing it by 99.2%. After adjusting for the distance of the race, our ICC went down to 16.8%.  
 
 
 ```{r}
-ggplot(data = track, aes(y = timeMins, x = dist, col = country2)) + geom_point(show.legend = F) + geom_smooth(method="lm", show.legend = F, se = F, size = .7) + ggtitle("Finishing Time (Mins) vs. Distance of Race by Country")
+ggplot(data = track, aes(y = timeSecs, x = dist, col = country2)) + geom_point(show.legend = F) + geom_smooth(method="lm", show.legend = F, se = F, size = .7) + ggtitle("Finishing Time (Secs) vs. Distance of Race by Country")
 ```
+
+
+Model 3 = Random Intercepts, Random Slopes for distance
+```{r}
+mod3 <- lme(data = track, fixed = timeSecs ~ dist, random = ~ dist|country2)
+mod3
+```
+
+```{r}
+print(VarCorr(mod3), comp=c("Variance", "Std.Dev."), digits = 2)
+```
+
+(1335.8604-1105.968)/1335.8604 = 17.2% decrease in $\sigma^2$, within country variation, by allowing random slopes for distance by country.
+
+```{r}
+anova(mod2,mod3)
+```
+Random slopes for distance makes the model significantly better.
+
+
+Model building steps: First, we fit a random intercepts model treating country as random. Next, we added distance as a fixed effect because there will obviously be a lot of variation in finishing times due to distance. Then we reassessed our more accurate ICC. Then, we allowed the slopes for distance to be random across country. This was helpful in explaining within country variation. Now we will fit a model with all the fixed effects our EDA indicated would be useful in explaining finishing times. After looking at that, we will assess and systematically remove the largest non-signficant terms one by one.
+
+Fixed effects to add from EDA:
+- distance,height, weight, height x distance, weight x distance, year, age, age x year, age x dist, sex, sex x dist, GDP, logPOP
+-keep in mind height and weigt are very correlated (could try BMI = weight/(height^2)) and gdp and logPOP are very correlated (could try GDP/capita = GDP/POP) and gdp and year are correlated
+
+```{r}
+track$year1896 <- track$year - 1896
+track$dist100 <- track$dist - 100
+track$c_age <- track$age - mean(track$age)
+track$c_height <- track$height - mean(track$height)
+track$c_weight <- track$weight - mean(track$weight)
+track$c_gdp <- track$gdp - mean(track$gdp)
+track$c_logpop <- track$logpop - mean(track$logpop)
+
+track$BMI <- track$weight / ((track$height/100)^2)
+track$c_BMI <- track$BMI - mean(track$BMI)
+
+track$gdp_pop <- track$gdp/track$pop
+track$c_gdp_pop <- track$gdp_pop - mean(track$gdp_pop)
+```
+
+
+
+```{r}
+mod4 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_height + c_weight + c_height*dist100 + c_weight*dist100 +
+                               year1896 + c_age + c_age*year1896 + c_age*dist100 + sex + sex*dist100                                + c_logpop + c_gdp,
+            random = ~ dist100|country2)
+summary(mod4)
+```
+
+Suprisingly height is not statistically significant with a huge p-value of 0.9903. GDP is signficant with a t-value of 4.35 but a very low coefficient and a std error of 0, which is weird. Less surprsing, logpop is not significant. We are going to refit almost the same model, but with BMI in place of height and weight (multicollinear, height becomes significant when weight is dropped) and GDP/pop in place of GDP and logPOP.
+
+```{r}
+mod5 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
+                               year1896 + c_age + c_age*year1896 + c_age*dist100 + sex + 
+                               sex*dist100 + c_gdp_pop,
+            random = ~ dist100|country2)
+summary(mod5)
+```
+Looks like all the terms with age are statistically insignificant (age, year x age, distance x age)
 
