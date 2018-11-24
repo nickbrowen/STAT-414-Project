@@ -80,19 +80,24 @@ Fixed effects to add from EDA:
 -keep in mind height and weigt are very correlated (could try BMI = weight/(height^2)) and gdp and logPOP are very correlated (could try GDP/capita = GDP/POP) and gdp and year are correlated
 
 ```{r}
-track$year1896 <- track$year - 1896
-track$dist100 <- track$dist - 100
-track$c_age <- track$age - mean(track$age)
-track$c_height <- track$height - mean(track$height)
-track$c_weight <- track$weight - mean(track$weight)
-track$c_gdp <- track$gdp - mean(track$gdp)
-track$c_logpop <- track$logpop - mean(track$logpop)
-
-track$BMI <- track$weight / ((track$height/100)^2)
-track$c_BMI <- track$BMI - mean(track$BMI)
-
-track$gdp_pop <- track$gdp/track$pop
-track$c_gdp_pop <- track$gdp_pop - mean(track$gdp_pop)
+track <- track %>% select(timeSecs, timeMins, name, event, country2, country, medal, city, sex,                               medal, year, dist, age, height, weight, gdp, pop) %>% 
+                   mutate(
+                      year1896 = year - 1896,
+                      dist100 = dist - 100,
+                      logpop = log(pop),
+                      c_age = scale(age)[,1],
+                      c_height = scale(height)[,1],
+                      c_weight = scale(weight)[,1],
+                      c_gdp = scale(gdp)[,1],
+                      c_pop = scale(pop)[,1],
+                      c_logpop = scale(logpop)[,1],
+                      gdpbillion = gdp/1000000000,
+                      c_gdpbillion = scale(gdpbillion)[,1],
+                      BMI = weight / (height/100)^2,
+                      c_BMI = scale(BMI)[,1],
+                      gdp_pop = gdp/pop,
+                      c_gdp_pop = scale(gdp_pop)[,1]
+               )
 ```
 
 
@@ -115,5 +120,108 @@ mod5 <- lme(data = track,
             random = ~ dist100|country2)
 summary(mod5)
 ```
-Looks like all the terms with age are statistically insignificant (age, year x age, distance x age)
+Looks like all the terms with age are statistically insignificant (age, year x age, distance x age) So, next we will remove them
+
+
+```{r}
+mod6 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
+                               year1896 + sex + 
+                               sex*dist100 + c_gdp_pop,
+            random = ~ dist100|country2)
+summary(mod6)
+```
+GDP/pop is insignificant (p-value = 0.0542). From the EDA and model 4, we saw that GDP had a relationship with finishing time. And model 4 showed that populatio (logpop) doesn't have a significant relationship with finishing time. So we are going to replace GDP/pop with GDP.
+
+```{r}
+mod7 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
+                               year1896 + sex + 
+                               sex*dist100 + c_gdp,
+            random = ~ dist100|country2)
+summary(mod7)
+```
+Yes, gdp is significant, but it has a coefficient oof 0 and std error of 0. Looking closer and using lmer output, the coefficient is actually 1.882x10^-12.  We will to use GDP in billions of dollars, to make this a more usefull variable.
+
+```{r}
+mod8 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
+                               year1896 + sex + 
+                               sex*dist100 + c_gdpbillion,
+            random = ~ dist100|country2)
+summary(mod8)
+```
+
+```{r}
+lmer(data = track, timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + (dist100|country2))
+```
+lmer is throwing up a lot of errors.
+
+Also its odd that gdp's coefficient is positive. The graph of time vs. gdp shows a negative relationship (as expected).
+```{r}
+ ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + geom_point() + stat_smooth(method = "lm")
+```
+
+```{r}
+ ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + geom_point() + stat_smooth(method = "lm") + facet_wrap(aes(dist100), scales = "free")
+```
+Events from the 100m t the 1500m have a negative relationship with time and gdp, BUT the distances with higher times have slightly positive or almost 0 slopes, which could be making the whole gdp coefficient positive. Try interaction of dist*gdp
+
+
+```{r}
+mod9 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
+                               year1896 + sex + 
+                               sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
+            random = ~ dist100|country2)
+summary(mod9)
+```
+The interaction is significant. But the gdp coefficient would still have a positive slope for all races except the 10000m, which is not what we want. 
+
+I think the variable distance is causing some of the errors mentioned above. Particulary lmers:     "Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio" Because dist's values are 100,200,400,800,1500,5000,10000. Which is a huge range.Taking the log of distance would bring these all much much closer together. log(dist) = 4.61, 5.30, 5.99, 6.68, 7.31, 8.52, 9.21
+
+
+
+
+Playing with log dist and log time
+
+```{r}
+track$logdist <- log(track$dist)
+track$logdist100 <- track$logdist - log(100)
+
+track$logtimeSecs <- log(track$timeSecs)
+```
+
+Running mod9 with logdist with lmer
+```{r}
+lmer(data = track, timeSecs ~ logdist + c_BMI + c_BMI*logdist + year1896 + sex + sex*logdist + c_gdpbillion + c_gdpbillion*logdist+ (logdist|country2))
+```
+lmer now gives no errors! The sign for the GDP coefficient is now negative, which makes more sense. Weird things now: intercept is negative.
+
+```{r}
+mod10 <- lme(data = track, 
+            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 +
+                               year1896 + sex + 
+                               sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod10)
+```
+For the 100m (logdist100 = 0), the predicted time for athlete of average of everything is -615.45s. That's not good.
+
+Also,
+```{r}
+AIC(mod8);AIC(mod10)
+```
+The AIC is much worse for the log(dist) model
+
+But with log(time) as the response
+```{r}
+mod11 <- lme(data = track, 
+            fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 +
+                               year1896 + sex + 
+                               sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod11)
+```
+The predicted time for a male athlete's 100m (and average of everything else) is e^2.462 = 11.72s which is good. But now, BMI, dist x BMI, dist x sex are not statistically significant
 
