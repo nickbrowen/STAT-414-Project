@@ -34,8 +34,7 @@ Intercept: The average finishing time of an athlete from the average country is 
 ```{r}
 ggplot(ranef(mod1),aes(sample = ranef(mod1)[,1]) ) + stat_qq() + stat_qq_line()
 ```
-Might have some caution with random effects not being approximately normal, but probably okay.
-
+We might have some caution with the model since the random effects are not approximately normal, but we will procede with this in mind. 
 
 
 Mode1 2 = Random Intercepts + fixed effect distance 
@@ -47,7 +46,7 @@ mod2
 ```{r}
 print(VarCorr(mod2), comp=c("Variance", "Std.Dev."), digits = 2)
 ```
-Both variances went down extremely. The within country variation went from $\sigma^2 = 175780.4$ to $\sigma^2 = 1335.9$, decreasing it by 99.2%. After adjusting for the distance of the race, our ICC went down to 16.8%.  
+Both variances went down extremely. The within country variation went from $\sigma^2 = 175780.4$ to $\sigma^2 = 1335.9$, decreasing it by 99.2%. After adjusting for the distance of the race, our ICC went down to 16.8%.   If we randomly selected two athletes from the same country, their finishing times would be 16.8% correlated, after adjusting for the distance of their race.
 
 
 ```{r}
@@ -65,15 +64,20 @@ mod3
 print(VarCorr(mod3), comp=c("Variance", "Std.Dev."), digits = 2)
 ```
 
-(1335.8604-1105.968)/1335.8604 = 17.2% decrease in $\sigma^2$, within country variation, by allowing random slopes for distance by country.
+There was a $\frac{1335.8604-1105.968}{1335.8604} *100 = 17.2\%$ decrease in $\sigma^2$, within country variation, by allowing random slopes for distance by country.
 
 ```{r}
 anova(mod2,mod3)
 ```
-Random slopes for distance makes the model significantly better.
+Random slopes for distance makes the model significantly better. The relationship between time and distance is different country to country (every 1 meter increase corresponds to a different increase in finishing time depending on the country).
+
+```{r}
+ggplot(data = track, aes(x=dist, y = timeSecs, color = country2)) + geom_point(show.legend = F) + geom_jitter(height = .5, show.legend = F) + geom_smooth(method = "lm", se = F, show.legend = F)
+```
 
 
-Model building steps: First, we fit a random intercepts model treating country as random. Next, we added distance as a fixed effect because there will obviously be a lot of variation in finishing times due to distance. Then we reassessed our more accurate ICC. Then, we allowed the slopes for distance to be random across country. This was helpful in explaining within country variation. Now we will fit a model with all the fixed effects our EDA indicated would be useful in explaining finishing times. After looking at that, we will assess and systematically remove the largest non-signficant terms one by one.
+Model building steps:
+First, we fit a random intercepts model treating country as random level 2 units. Next, we added distance as a fixed effect because there will obviously be a lot of variation in finishing times due to distance. Then we reassessed our more accurate ICC. Then, we allowed the slopes for distance to be random across country. This was helpful in explaining within country variation. Now we will fit a model with all the fixed effects our EDA indicated would be useful in explaining finishing times. After looking at that, we will assess and systematically remove the largest non-signficant terms one by one.
 
 Fixed effects to add from EDA:
 - distance,height, weight, height x distance, weight x distance, year, age, age x year, age x dist, sex, sex x dist, GDP, logPOP
@@ -110,7 +114,7 @@ mod4 <- lme(data = track,
 summary(mod4)
 ```
 
-Suprisingly height is not statistically significant with a huge p-value of 0.9903. GDP is signficant with a t-value of 4.35 but a very low coefficient and a std error of 0, which is weird. Less surprsing, logpop is not significant. We are going to refit almost the same model, but with BMI in place of height and weight (multicollinear, height becomes significant when weight is dropped) and GDP/pop in place of GDP and logPOP.
+Suprisingly height is not statistically significant with a huge p-value of 0.9903. GDP is signficant with a t-value of 4.35 but a very low coefficient and a std error of 0, which is weird (later discovered this is because GDP is in the billions so the coefficient was very very small). Less surprising, logpop is not significant. We are going to refit almost the same model, but with BMI in place of height and weight (multicollinear, height becomes significant when weight is dropped) and GDP/pop in place of GDP and logPOP.
 
 ```{r}
 mod5 <- lme(data = track, 
@@ -120,7 +124,7 @@ mod5 <- lme(data = track,
             random = ~ dist100|country2)
 summary(mod5)
 ```
-Looks like all the terms with age are statistically insignificant (age, year x age, distance x age) So, next we will remove them
+Looks like all the terms with age are statistically insignificant (age, year x age, distance x age) So, next we will remove them and refit the model.
 
 
 ```{r}
@@ -131,7 +135,7 @@ mod6 <- lme(data = track,
             random = ~ dist100|country2)
 summary(mod6)
 ```
-GDP/pop is insignificant (p-value = 0.0542). From the EDA and model 4, we saw that GDP had a relationship with finishing time. And model 4 showed that populatio (logpop) doesn't have a significant relationship with finishing time. So we are going to replace GDP/pop with GDP.
+GDP/pop is slightly insignificant (p-value = 0.0542). From the EDA and model 4, we saw that GDP had a relationship with finishing time. And model 4 showed that populatio (logpop) doesn't have a significant relationship with finishing time. So we are going to replace GDP/pop with GDP.
 
 ```{r}
 mod7 <- lme(data = track, 
@@ -141,7 +145,7 @@ mod7 <- lme(data = track,
             random = ~ dist100|country2)
 summary(mod7)
 ```
-Yes, gdp is significant, but it has a coefficient oof 0 and std error of 0. Looking closer and using lmer output, the coefficient is actually 1.882x10^-12.  We will to use GDP in billions of dollars, to make this a more usefull variable.
+Yes, gdp is significant, but it has a coefficient oof 0 and std error of 0. Looking closer and using lmer output, the coefficient is actually $1.882*10^{-12}$.  We will to use GDP in billions of dollars, to make this a more usefull variable.
 
 ```{r}
 mod8 <- lme(data = track, 
@@ -151,13 +155,10 @@ mod8 <- lme(data = track,
             random = ~ dist100|country2)
 summary(mod8)
 ```
+We have a model here with all fixed effects being statistically significant.
 
-```{r}
-lmer(data = track, timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + (dist100|country2))
-```
-lmer is throwing up a lot of errors.
+Although its odd that gdp's coefficient is positive. The graph of time vs. gdp shows a negative relationship (as expected).
 
-Also its odd that gdp's coefficient is positive. The graph of time vs. gdp shows a negative relationship (as expected).
 ```{r}
  ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + geom_point() + stat_smooth(method = "lm")
 ```
@@ -165,7 +166,7 @@ Also its odd that gdp's coefficient is positive. The graph of time vs. gdp shows
 ```{r}
  ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + geom_point() + stat_smooth(method = "lm") + facet_wrap(aes(dist100), scales = "free")
 ```
-Events from the 100m t the 1500m have a negative relationship with time and gdp, BUT the distances with higher times have slightly positive or almost 0 slopes, which could be making the whole gdp coefficient positive. Try interaction of dist*gdp
+Events from the 100m to the 1500m have a negative relationship with time and gdp, BUT the distances with higher times have slightly positive or almost 0 slopes, which could be making the whole gdp coefficient positive. We will try including the interaction of dist x gdp.
 
 
 ```{r}
@@ -178,26 +179,39 @@ summary(mod9)
 ```
 The interaction is significant. But the gdp coefficient would still have a positive slope for all races except the 10000m, which is not what we want. 
 
+
+Running mod9 with lme4 instead of nlme
+```{r}
+lmer(data = track, timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + dist100*c_gdpbillion + (dist100|country2))
+```
+We can see lmer is throwing up a lot of errors.
+
+
 I think the variable distance is causing some of the errors mentioned above. Particulary lmers:     "Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio" Because dist's values are 100,200,400,800,1500,5000,10000. Which is a huge range.Taking the log of distance would bring these all much much closer together. log(dist) = 4.61, 5.30, 5.99, 6.68, 7.31, 8.52, 9.21
 
 
-
-
 Playing with log dist and log time
-
 ```{r}
-track$logdist <- log(track$dist)
-track$logdist100 <- track$logdist - log(100)
+track <-  track %>% mutate(
+                  logdist = log(dist),
+                  logdist100 = logdist - log(100),
+                  logtimeSecs = log(timeSecs),
+                  logtimeMins = log(timeMins),
+                  logBMI = log(BMI),
+                  c_logBMI = scale(logBMI)[,1],
+                  loggdpbillion = log(gdpbillion),
+                  c_loggdpbillion = scale(loggdpbillion)[,1]
+                  ) 
 
-track$logtimeSecs <- log(track$timeSecs)
 ```
 
-Running mod9 with logdist with lmer
+Running mod9 with logdist (with lmer)
 ```{r}
-lmer(data = track, timeSecs ~ logdist + c_BMI + c_BMI*logdist + year1896 + sex + sex*logdist + c_gdpbillion + c_gdpbillion*logdist+ (logdist|country2))
+lmer(data = track, timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100+ (logdist100|country2))
 ```
-lmer now gives no errors! The sign for the GDP coefficient is now negative, which makes more sense. Weird things now: intercept is negative.
+lmer now gives no errors! The sign for the GDP coefficient is now negative, which makes more sense. The unusual issue now is that intercept is negative.
 
+Same as previous lmer model but using lme and saving it as mod10
 ```{r}
 mod10 <- lme(data = track, 
             fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 +
@@ -206,15 +220,15 @@ mod10 <- lme(data = track,
             random = ~ logdist100|country2)
 summary(mod10)
 ```
-For the 100m (logdist100 = 0), the predicted time for athlete of average of everything is -615.45s. That's not good.
+For the 100m (logdist100 = 0), the predicted time for male athlete of average of everything is -615.45s. That's not good.
 
-Also,
+Comparing models with dist and logdist
 ```{r}
-AIC(mod8);AIC(mod10)
+AIC(mod9); AIC(mod10)
 ```
-The AIC is much worse for the log(dist) model
+The AIC is much worse for the log(dist) model.
 
-But with log(time) as the response
+Trying log(time) as the response
 ```{r}
 mod11 <- lme(data = track, 
             fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 +
@@ -223,5 +237,17 @@ mod11 <- lme(data = track,
             random = ~ logdist100|country2)
 summary(mod11)
 ```
-The predicted time for a male athlete's 100m (and average of everything else) is e^2.462 = 11.72s which is good. But now, BMI, dist x BMI, dist x sex are not statistically significant
+The predicted time for a male athlete's 100m (and average of everything else) is e^(2.462) = 11.72s which is good. But now, BMI, dist x BMI, dist x sex are not statistically significant.
 
+Comparing mod9 and mod11 (mod11 = mod9 but with logTime and logdist)
+```{r}
+AIC(mod9); AIC(mod11)
+```
+
+
+Questions:
+- Explain why we did logdist (lmer errors, very different scales)
+- How can we test/compare models once we do log transformations for both explanatory and responses    variables?
+- Once we do logTime, AIC becomes negative. What do we do with that?
+- Once we do logTime, 3 variables become insignificant (1 main, 2 interactions) and we know at least   the BMI variable should be significant. Does everything have to be log transformed?
+- Just general tips for dealing with transformations
