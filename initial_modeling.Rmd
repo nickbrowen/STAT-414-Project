@@ -209,7 +209,6 @@ Running mod9 with logdist (with lmer)
 ```{r}
 lmer(data = track, timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100+ (logdist100|country2))
 ```
-lmer now gives no errors! The sign for the GDP coefficient is now negative, which makes more sense. The unusual issue now is that intercept is negative.
 
 Same as previous lmer model but using lme and saving it as mod10
 ```{r}
@@ -220,7 +219,10 @@ mod10 <- lme(data = track,
             random = ~ logdist100|country2)
 summary(mod10)
 ```
+lmer now gives no errors! The sign for the GDP coefficient is now negative, which makes more sense. The unusual issue now is that intercept is negative.
+
 For the 100m (logdist100 = 0), the predicted time for male athlete of average of everything is -615.45s. That's not good.
+
 
 Comparing models with dist and logdist
 ```{r}
@@ -239,15 +241,63 @@ summary(mod11)
 ```
 The predicted time for a male athlete's 100m (and average of everything else) is e^(2.462) = 11.72s which is good. But now, BMI, dist x BMI, dist x sex are not statistically significant.
 
-Comparing mod9 and mod11 (mod11 = mod9 but with logTime and logdist)
+Comparing Residual plots from mod9 to mod11
+mod9 = time ~ dist + ...
+mod11 = logtime ~ logdist + ...
+
+Mod9 Residual Plots
 ```{r}
-AIC(mod9); AIC(mod11)
+plot(residuals(mod9) ~ fitted.values(mod9)) 
+abline(0,0)
 ```
+
+```{r}
+qqnorm(residuals(mod9))
+```
+
+```{r}
+ranef_mod9 <- ranef(mod9)
+ggplot(data=ranef_mod9, aes(ranef_mod9[,1])) + geom_histogram(bins = 15) + ggtitle("Random Intercepts for mod9")
+```
+
+```{r}
+ggplot(data=ranef_mod9, aes(ranef_mod9[,2])) + geom_histogram(bins = 15) + ggtitle("Random Slopes for mod9")
+```
+
+
+Mod10 Residual Plots
+
+```{r}
+plot(residuals(mod10) ~ fitted.values(mod10)) 
+abline(0,0)
+```
+
+
+Mod11 Residual Plots
+```{r}
+plot(residuals(mod11) ~ fitted.values(mod11)) 
+abline(0,0)
+```
+
+```{r}
+qqnorm(residuals(mod11))
+```
+
+```{r}
+ranef_mod11 <- ranef(mod11)
+ggplot(data=ranef_mod11, aes(ranef_mod11[,1])) + geom_histogram(bins = 15) + ggtitle("Random Intercepts for mod11")
+```
+
+```{r}
+ggplot(data=ranef_mod11, aes(ranef_mod11[,2])) + geom_histogram(bins = 15) + ggtitle("Random Slopes for mod11")
+```
+
 
 
 Questions:
 - Explain why we did logdist (lmer errors, very different scales)
-- How can we test/compare models once we do log transformations for both explanatory and responses    variables?
-- Once we do logTime, AIC becomes negative. What do we do with that?
+- How can we test/compare models once we do log transformations for both explanatory and responses    variables? cant compare AIC with different responses, resid plots
+- Once we do logTime, AIC becomes negative. What do we do with that? more negative is better
 - Once we do logTime, 3 variables become insignificant (1 main, 2 interactions) and we know at least   the BMI variable should be significant. Does everything have to be log transformed?
 - Just general tips for dealing with transformations
+- Is it okay to have year in as a level 1 explanatory 
