@@ -4,3 +4,4 @@ output: html_notebook
 ---
 
 
+Compare models 9, 10, and 11 here
