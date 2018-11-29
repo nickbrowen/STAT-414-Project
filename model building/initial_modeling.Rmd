@@ -1,9 +1,12 @@
 ---
 title: "Initial Modeling"
-output: html_notebook
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
 ---
 
-```{r}
+```{r include=FALSE}
 library(nlme)
 library(lme4)
 library(tidyverse)
@@ -15,7 +18,30 @@ library(ggplot2)
 track <- read.csv("track_dist.csv")
 ```
 
-Model 1 = Random Intercepts
+### Notes on this document
+We made 11 separate models in this document to see how the data could be modeled. Depending on a few questions we have, our final model will be either Model 9, Model 10, or Model 11.  
+  
+  **Model 9**  
+Here, we use centered variables on original scales. As predictors, we include distance (quantitative, 100m Dash = 0), centered BMI, sex, year (0 = 1896), centered GDP (in $Billions), and interactions between distance*BMI, 
+distance*sex, and
+distance*GDP. We are treating level 1 as the individual athletes and level 2 as the countries they represent.  
+  
+We ran into a few issues with the scaling of factors, namely distance and time in seconds (response). Each event is on a drastically different scale, since athletes compete in events of distances 100m, 200m, 400m, 800m, 5k. In later models we used a log transformation on these variables.
+
+  **Model 10**  
+Here, we used the same model as Model 9, except that distance has now undergone a log transformation. However, when we plug in values for a male running the 100m dash, the expected completion time is -615 seconds, which doesn't make sense.  
+  
+  **Model 11**  
+Here, we used the same model as model 10, but now our response, time in seconds, has undergone a log transformation as well. This resulted in centered BMI, logdist100:c_BMI, and logdist100:sexW no longer being significant. However, this did a better job at predicting an average male's 100m dash time at 2.46 log(seconds) = $e^2.46$ = 11.72 seconds. This makes a lot more sense now.
+  
+  
+  **Next Steps:**  
+Since AIC/BIC are not effective in comparing these models, we will be looking at residual plots to decide which of these to use. 
+  
+
+
+
+### Model 1 = Random Intercepts
 ```{r}
 mod1 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
 mod1
@@ -37,7 +63,7 @@ ggplot(ranef(mod1),aes(sample = ranef(mod1)[,1]) ) + stat_qq() + stat_qq_line()
 We might have some caution with the model since the random effects are not approximately normal, but we will procede with this in mind. 
 
 
-Mode1 2 = Random Intercepts + fixed effect distance 
+### Mode1 2 = Random Intercepts + fixed effect distance 
 ```{r}
 mod2 <- lme(data = track, fixed = timeSecs ~ dist, random = ~1|country2)
 mod2
@@ -54,7 +80,7 @@ ggplot(data = track, aes(y = timeSecs, x = dist, col = country2)) + geom_point(s
 ```
 
 
-Model 3 = Random Intercepts, Random Slopes for distance
+### Model 3 = Random Intercepts, Random Slopes for distance
 ```{r}
 mod3 <- lme(data = track, fixed = timeSecs ~ dist, random = ~ dist|country2)
 mod3
@@ -105,7 +131,7 @@ track <- track %>% select(timeSecs, timeMins, name, event, country2, country, me
 ```
 
 
-
+### Model 4
 ```{r}
 mod4 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_height + c_weight + c_height*dist100 + c_weight*dist100 +
@@ -116,6 +142,7 @@ summary(mod4)
 
 Suprisingly height is not statistically significant with a huge p-value of 0.9903. GDP is signficant with a t-value of 4.35 but a very low coefficient and a std error of 0, which is weird (later discovered this is because GDP is in the billions so the coefficient was very very small). Less surprising, logpop is not significant. We are going to refit almost the same model, but with BMI in place of height and weight (multicollinear, height becomes significant when weight is dropped) and GDP/pop in place of GDP and logPOP.
 
+### Model 5
 ```{r}
 mod5 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
@@ -126,7 +153,7 @@ summary(mod5)
 ```
 Looks like all the terms with age are statistically insignificant (age, year x age, distance x age) So, next we will remove them and refit the model.
 
-
+### Model 6
 ```{r}
 mod6 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
@@ -137,6 +164,8 @@ summary(mod6)
 ```
 GDP/pop is slightly insignificant (p-value = 0.0542). From the EDA and model 4, we saw that GDP had a relationship with finishing time. And model 4 showed that populatio (logpop) doesn't have a significant relationship with finishing time. So we are going to replace GDP/pop with GDP.
 
+
+### Model 7
 ```{r}
 mod7 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
@@ -147,6 +176,8 @@ summary(mod7)
 ```
 Yes, gdp is significant, but it has a coefficient oof 0 and std error of 0. Looking closer and using lmer output, the coefficient is actually $1.882*10^{-12}$.  We will to use GDP in billions of dollars, to make this a more usefull variable.
 
+
+### Model 8
 ```{r}
 mod8 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
@@ -168,7 +199,7 @@ Although its odd that gdp's coefficient is positive. The graph of time vs. gdp s
 ```
 Events from the 100m to the 1500m have a negative relationship with time and gdp, BUT the distances with higher times have slightly positive or almost 0 slopes, which could be making the whole gdp coefficient positive. We will try including the interaction of dist x gdp.
 
-
+### Model 9
 ```{r}
 mod9 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
@@ -210,6 +241,8 @@ Running mod9 with logdist (with lmer)
 lmer(data = track, timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100+ (logdist100|country2))
 ```
 
+
+### Model 10
 Same as previous lmer model but using lme and saving it as mod10
 ```{r}
 mod10 <- lme(data = track, 
@@ -230,6 +263,8 @@ AIC(mod9); AIC(mod10)
 ```
 The AIC is much worse for the log(dist) model.
 
+
+### Model 11
 Trying log(time) as the response
 ```{r}
 mod11 <- lme(data = track, 
