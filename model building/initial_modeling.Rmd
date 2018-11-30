@@ -1,9 +1,10 @@
 ---
 title: "Initial Modeling"
+author: "Nick Browen, Eric Ortiz"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ```{r include=FALSE}
@@ -14,12 +15,14 @@ library(ggplot2)
 ```
 
 
-```{r}
+```{r echo=FALSE}
 track <- read.csv("track_dist.csv")
 ```
 
 ### Notes on this document
 We made 11 separate models in this document to see how the data could be modeled. Depending on a few questions we have, our final model will be either Model 9, Model 10, or Model 11.  
+  
+  Residual plots for these models are included at the bottom of the document.
   
   **Model 9**  
 Here, we use centered variables on original scales. As predictors, we include distance (quantitative, 100m Dash = 0), centered BMI, sex, year (0 = 1896), centered GDP (in $Billions), and interactions between distance*BMI, 
@@ -57,9 +60,11 @@ ICC = 147177.4/(147177.4+175780.4) = 0.456
 Intercept: The average finishing time of an athlete from the average country is 7.052 minutes.
 
 
-```{r}
+```{r echo=FALSE}
 ggplot(ranef(mod1),aes(sample = ranef(mod1)[,1]) ) + stat_qq() + stat_qq_line()
 ```
+
+
 We might have some caution with the model since the random effects are not approximately normal, but we will procede with this in mind. 
 
 
@@ -75,7 +80,7 @@ print(VarCorr(mod2), comp=c("Variance", "Std.Dev."), digits = 2)
 Both variances went down extremely. The within country variation went from $\sigma^2 = 175780.4$ to $\sigma^2 = 1335.9$, decreasing it by 99.2%. After adjusting for the distance of the race, our ICC went down to 16.8%.   If we randomly selected two athletes from the same country, their finishing times would be 16.8% correlated, after adjusting for the distance of their race.
 
 
-```{r}
+```{r echo=FALSE}
 ggplot(data = track, aes(y = timeSecs, x = dist, col = country2)) + geom_point(show.legend = F) + geom_smooth(method="lm", show.legend = F, se = F, size = .7) + ggtitle("Finishing Time (Secs) vs. Distance of Race by Country")
 ```
 
@@ -97,8 +102,11 @@ anova(mod2,mod3)
 ```
 Random slopes for distance makes the model significantly better. The relationship between time and distance is different country to country (every 1 meter increase corresponds to a different increase in finishing time depending on the country).
 
-```{r}
-ggplot(data = track, aes(x=dist, y = timeSecs, color = country2)) + geom_point(show.legend = F) + geom_jitter(height = .5, show.legend = F) + geom_smooth(method = "lm", se = F, show.legend = F)
+```{r echo=FALSE}
+ggplot(data = track, aes(x=dist, y = timeSecs, color = country2)) + 
+  geom_point(show.legend = F) + 
+  geom_jitter(height = .5, show.legend = F, size = 0.5) + 
+  geom_smooth(method = "lm", se = F, show.legend = F, size = 0.5)
 ```
 
 
@@ -106,36 +114,39 @@ Model building steps:
 First, we fit a random intercepts model treating country as random level 2 units. Next, we added distance as a fixed effect because there will obviously be a lot of variation in finishing times due to distance. Then we reassessed our more accurate ICC. Then, we allowed the slopes for distance to be random across country. This was helpful in explaining within country variation. Now we will fit a model with all the fixed effects our EDA indicated would be useful in explaining finishing times. After looking at that, we will assess and systematically remove the largest non-signficant terms one by one.
 
 Fixed effects to add from EDA:
-- distance,height, weight, height x distance, weight x distance, year, age, age x year, age x dist, sex, sex x dist, GDP, logPOP
--keep in mind height and weigt are very correlated (could try BMI = weight/(height^2)) and gdp and logPOP are very correlated (could try GDP/capita = GDP/POP) and gdp and year are correlated
 
-```{r}
-track <- track %>% select(timeSecs, timeMins, name, event, country2, country, medal, city, sex,                               medal, year, dist, age, height, weight, gdp, pop) %>% 
-                   mutate(
-                      year1896 = year - 1896,
-                      dist100 = dist - 100,
-                      logpop = log(pop),
-                      c_age = scale(age)[,1],
-                      c_height = scale(height)[,1],
-                      c_weight = scale(weight)[,1],
-                      c_gdp = scale(gdp)[,1],
-                      c_pop = scale(pop)[,1],
-                      c_logpop = scale(logpop)[,1],
-                      gdpbillion = gdp/1000000000,
-                      c_gdpbillion = scale(gdpbillion)[,1],
-                      BMI = weight / (height/100)^2,
-                      c_BMI = scale(BMI)[,1],
-                      gdp_pop = gdp/pop,
-                      c_gdp_pop = scale(gdp_pop)[,1]
-               )
+- distance,height, weight, height x distance, weight x distance, year, age, age x year, age x dist, sex, sex x dist, GDP, logPOP
+
+- keep in mind height and weight are very correlated (could try BMI = weight/(height^2)) and that gdp and logPOP are very correlated (could try GDP/capita = GDP/POP) and gdp and year are correlated
+
+```{r echo=F}
+# Centering and log transforming Variables
+track <- track %>% 
+  select(timeSecs, timeMins, name, event, country2, country, medal, 
+         city, sex, medal, year, dist, age, height, weight, gdp, pop) %>% 
+  mutate(year1896 = year - 1896,
+         dist100 = dist - 100,
+         logpop = log(pop),
+         c_age = scale(age)[,1],
+         c_height = scale(height)[,1],
+         c_weight = scale(weight)[,1],
+         c_gdp = scale(gdp)[,1],
+         c_pop = scale(pop)[,1],
+         c_logpop = scale(logpop)[,1],
+         gdpbillion = gdp/1000000000,
+         c_gdpbillion = scale(gdpbillion)[,1],
+         BMI = weight / (height/100)^2,
+         c_BMI = scale(BMI)[,1],
+         gdp_pop = gdp/pop,
+         c_gdp_pop = scale(gdp_pop)[,1])
 ```
 
 
 ### Model 4
 ```{r}
 mod4 <- lme(data = track, 
-            fixed = timeSecs ~ dist100 + c_height + c_weight + c_height*dist100 + c_weight*dist100 +
-                               year1896 + c_age + c_age*year1896 + c_age*dist100 + sex + sex*dist100                                + c_logpop + c_gdp,
+            fixed = timeSecs ~ dist100 + c_height + c_weight + c_height*dist100 + c_weight*dist100 + 
+              year1896 + c_age + c_age*year1896 + c_age*dist100 + sex + sex*dist100 + c_logpop + c_gdp,
             random = ~ dist100|country2)
 summary(mod4)
 ```
@@ -145,9 +156,8 @@ Suprisingly height is not statistically significant with a huge p-value of 0.990
 ### Model 5
 ```{r}
 mod5 <- lme(data = track, 
-            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
-                               year1896 + c_age + c_age*year1896 + c_age*dist100 + sex + 
-                               sex*dist100 + c_gdp_pop,
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + c_age + 
+              c_age*year1896 + c_age*dist100 + sex + sex*dist100 + c_gdp_pop,
             random = ~ dist100|country2)
 summary(mod5)
 ```
@@ -156,55 +166,53 @@ Looks like all the terms with age are statistically insignificant (age, year x a
 ### Model 6
 ```{r}
 mod6 <- lme(data = track, 
-            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
-                               year1896 + sex + 
-                               sex*dist100 + c_gdp_pop,
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdp_pop,
             random = ~ dist100|country2)
 summary(mod6)
 ```
-GDP/pop is slightly insignificant (p-value = 0.0542). From the EDA and model 4, we saw that GDP had a relationship with finishing time. And model 4 showed that populatio (logpop) doesn't have a significant relationship with finishing time. So we are going to replace GDP/pop with GDP.
+GDP/pop is slightly insignificant (p-value = 0.0542). From the EDA and model 4, we saw that GDP had a relationship with finishing time. And model 4 showed that population (logpop) doesn't have a significant relationship with finishing time. So we are going to replace GDP/pop with GDP.
 
 
 ### Model 7
 ```{r}
 mod7 <- lme(data = track, 
-            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
-                               year1896 + sex + 
-                               sex*dist100 + c_gdp,
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdp,
             random = ~ dist100|country2)
 summary(mod7)
 ```
-Yes, gdp is significant, but it has a coefficient oof 0 and std error of 0. Looking closer and using lmer output, the coefficient is actually $1.882*10^{-12}$.  We will to use GDP in billions of dollars, to make this a more usefull variable.
+Yes, gdp is significant, but it has a coefficient oof 0 and std error of 0. Looking closer and using lmer output, the coefficient is actually $1.882 \times 10^{-12}$.  We will to use GDP in billions of dollars, to make this a more usefull variable.
 
 
 ### Model 8
 ```{r}
 mod8 <- lme(data = track, 
-            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
-                               year1896 + sex + 
-                               sex*dist100 + c_gdpbillion,
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion,
             random = ~ dist100|country2)
 summary(mod8)
 ```
+
 We have a model here with all fixed effects being statistically significant.
 
 Although its odd that gdp's coefficient is positive. The graph of time vs. gdp shows a negative relationship (as expected).
 
-```{r}
- ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + geom_point() + stat_smooth(method = "lm")
+```{r echo=F}
+ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + 
+  geom_point() + 
+  stat_smooth(method = "lm")
 ```
 
-```{r}
- ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + geom_point() + stat_smooth(method = "lm") + facet_wrap(aes(dist100), scales = "free")
+```{r echo=F}
+ ggplot(data = track, aes(x=c_gdpbillion, y=timeSecs)) + 
+  geom_point() + stat_smooth(method = "lm") + 
+  facet_wrap(aes(dist100), scales = "free")
 ```
+
 Events from the 100m to the 1500m have a negative relationship with time and gdp, BUT the distances with higher times have slightly positive or almost 0 slopes, which could be making the whole gdp coefficient positive. We will try including the interaction of dist x gdp.
 
 ### Model 9
 ```{r}
 mod9 <- lme(data = track, 
-            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 +
-                               year1896 + sex + 
-                               sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
             random = ~ dist100|country2)
 summary(mod9)
 ```
@@ -221,8 +229,9 @@ We can see lmer is throwing up a lot of errors.
 I think the variable distance is causing some of the errors mentioned above. Particulary lmers:     "Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio" Because dist's values are 100,200,400,800,1500,5000,10000. Which is a huge range.Taking the log of distance would bring these all much much closer together. log(dist) = 4.61, 5.30, 5.99, 6.68, 7.31, 8.52, 9.21
 
 
-Playing with log dist and log time
-```{r}
+
+```{r echo = F}
+# Playing with log dist and log time
 track <-  track %>% mutate(
                   logdist = log(dist),
                   logdist100 = logdist - log(100),
@@ -246,9 +255,8 @@ lmer(data = track, timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 +
 Same as previous lmer model but using lme and saving it as mod10
 ```{r}
 mod10 <- lme(data = track, 
-            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 +
-                               year1896 + sex + 
-                               sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
+              c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
 summary(mod10)
 ```
@@ -268,9 +276,8 @@ The AIC is much worse for the log(dist) model.
 Trying log(time) as the response
 ```{r}
 mod11 <- lme(data = track, 
-            fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 +
-                               year1896 + sex + 
-                               sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
+              sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
 summary(mod11)
 ```
@@ -280,59 +287,157 @@ Comparing Residual plots from mod9 to mod11
 mod9 = time ~ dist + ...
 mod11 = logtime ~ logdist + ...
 
-Mod9 Residual Plots
-```{r}
-plot(residuals(mod9) ~ fitted.values(mod9)) 
-abline(0,0)
-```
-
-```{r}
-qqnorm(residuals(mod9))
-```
-
-```{r}
-ranef_mod9 <- ranef(mod9)
-ggplot(data=ranef_mod9, aes(ranef_mod9[,1])) + geom_histogram(bins = 15) + ggtitle("Random Intercepts for mod9")
-```
-
-```{r}
-ggplot(data=ranef_mod9, aes(ranef_mod9[,2])) + geom_histogram(bins = 15) + ggtitle("Random Slopes for mod9")
+### Model 9 Residual Plots
+```{r echo=FALSE}
+mod9_diagnosics <- data.frame(fittedValues = fitted.values(mod9), residuals = residuals(mod9))
+ggplot(mod9_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 9")
 ```
 
 
-Mod10 Residual Plots
-
-```{r}
-plot(residuals(mod10) ~ fitted.values(mod10)) 
-abline(0,0)
-```
-
-
-Mod11 Residual Plots
-```{r}
-plot(residuals(mod11) ~ fitted.values(mod11)) 
-abline(0,0)
-```
-
-```{r}
-qqnorm(residuals(mod11))
-```
-
-```{r}
-ranef_mod11 <- ranef(mod11)
-ggplot(data=ranef_mod11, aes(ranef_mod11[,1])) + geom_histogram(bins = 15) + ggtitle("Random Intercepts for mod11")
-```
-
-```{r}
-ggplot(data=ranef_mod11, aes(ranef_mod11[,2])) + geom_histogram(bins = 15) + ggtitle("Random Slopes for mod11")
+```{r echo=FALSE}
+ggplot(mod9_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 9",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
 ```
 
 
 
-Questions:
+```{r echo=FALSE}
+ranef_mod9 <- ranef(mod9) %>% as.data.frame()
+colnames(ranef_mod9) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod9, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 9",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod9, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 9",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+### Model 10 Residual Plots
+```{r echo=FALSE}
+mod10_diagnosics <- data.frame(fittedValues = fitted.values(mod10), residuals = residuals(mod10))
+ggplot(mod10_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 10")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod10_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 10",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod10 <- ranef(mod10) %>% as.data.frame()
+colnames(ranef_mod10) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod10, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 10",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod10, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 10",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+
+### Model 11 Residual Plots
+
+```{r echo=FALSE}
+mod11_diagnosics <- data.frame(fittedValues = fitted.values(mod11), residuals = residuals(mod11))
+ggplot(mod11_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 11")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod11_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 11",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod11 <- ranef(mod11) %>% as.data.frame()
+colnames(ranef_mod11) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod11, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 11",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod11, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 11",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+
+
+
+
+
+### Questions:
+*Asked in class 11/29*
+
 - Explain why we did logdist (lmer errors, very different scales)
 - How can we test/compare models once we do log transformations for both explanatory and responses    variables? cant compare AIC with different responses, resid plots
 - Once we do logTime, AIC becomes negative. What do we do with that? more negative is better
-- Once we do logTime, 3 variables become insignificant (1 main, 2 interactions) and we know at least   the BMI variable should be significant. Does everything have to be log transformed?
+- Once we do logTime, 3 variables become insignificant (1 main, 2 interactions) and we know at least the BMI variable should be significant. Does everything have to be log transformed?
 - Just general tips for dealing with transformations
 - Is it okay to have year in as a level 1 explanatory 
