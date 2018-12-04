@@ -1,0 +1,127 @@
+---
+title: "Report Title"
+author: "Nick Browen, Eric Ortiz"
+output: html_notebook
+---
+
+```{r echo=F}
+pacman::p_load(tidyverse, nlme, lme4)
+track <- read.csv("track_dist.csv")
+```
+
+=============================================================
+  
+  Project Description:
+  
+  http://statweb.calpoly.edu/bchance/stat414/Stat414Project.pdf
+
+=============================================================
+
+### Introduction 
+
+```
+Still to do: 
+  1. Incorporate supporting references into text
+```
+
+
+##### Research Question
+How can we best predict an Olympic track athlete’s finishing time (events measured in time i.e. excluding field events)? What is the relationship between an athlete’s finishing time at the Olympics and (at the athlete-level) their sex, age, weight, height, (at the event level) year of competition, and (at the country-level) the athlete’s nationality, their country GDP, and population?
+  
+  
+  Every four years, the Olympics Events garner worldwide attention much attention. We wanted to know what athlete characteristics contribute to their success and how the country they are from affects this. There is so much data readily available about the Olympics, even going back to 1896. We also were excited to be able to combine datasets and information from multiple resources from Olympic data to population and GDP of the countries of the world over time.  
+  
+  We chose to include athlete-level characteristics because the ideal physique for a distance runner is much different than a 100m sprinter and we think this will be useful in explaining differences in finishing time and are curious what other nuances will be revealed. At the country-level, we chose to include explanatory variables because athletes are sent as a team by their country and so the athlete pool, training resources and even quality of life might reveal some trends in predicting finishing times.  
+  
+  **Chance's Notes**: 
+  *I really like how you have athlete level variables and country level variables.  But I do wonder if you need to “standardize” the response variable a bit?  Nesting within event is good but still difficult to compare the times to each other?  Would it be better to pick one event and look at multiple athletes from the same country over time?*
+
+
+
+
+
+### Materials and Methods 
+```
+Three to five paragraphs (or fewer) that…
+  1. Briefly describe your data, where it came from (source), definitions of important variables, 
+     and how it was collected
+  2. Indicate any modifications made to the data, recoding, or decisions about missing data
+  3. Briefly but thoroughly describe the statistical inference methods used to quantify the 
+     association between your outcome and predictor variables in a multilevel analysis. 
+     What summary statistics were calculated? 
+     What statistical tests were performed?
+  4. Specify strategies employed when building your models
+  5. Do not report results in the Materials and Methods section! 
+```
+
+
+
+### Results
+```
+The meat of your report, which should include…
+  1. A general description of your data (completed via your exploratory data analysis)
+  2. A description of the results from your analyses, including interpretations of parameter estimates, 
+     tests, and confidence intervals in context.
+  3. Tables that summarize results and figures that illustrate results. These tables and figures should 
+     be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each report 
+     should have a minimum of two plots; rarely are residual plots part of the main body of the report 
+     unless they are an integral part of the story.
+  4. You should interpret tests, confidence intervals, and coefficients in this section, but you should 
+     not editorialize here! Save that for the Discussion. 
+```
+
+
+
+
+### Discussion
+```
+A few paragraphs that:
+  1. Begin with an accurate summary statement; describe how the results help answer your research questions 
+     and what was most interesting from your analysis. In fact, the first paragraph of the Discussion is 
+     very important – in professional journals, it is often the first and sometimes the only paragraph that 
+     is read in a paper. After the first sentence highlights primary results, the remainder of the first 
+     paragraph might compare your results to others in the literature or include interesting secondary 
+     results.
+  2. Discuss possible implications of the results in the context of the research question.
+  3. Make a statement regarding potential confounding variables in your study.
+  4. Make a statement about the generalizability of your results. Don’t give generic statements of possible 
+     causation and generalizability, but thoughtfully discuss relevant issues – confounding variables, 
+     representativeness of the sample, etc.
+  5. Identify any limitations of your study. Discuss the potential impact of such limitations on the 
+     conclusions.
+  6. Identify strengths and weaknesses of your analysis.
+  7. Make suggestions for future research. Identify important next steps that a researcher could take to 
+     build on your work.
+  8. Do not include test statistics or p-values in this section. 
+```
+
+
+### Annotated Appendix
+```
+  1. Tables and figures that are informative but were not referenced specifically in the main report. 
+     Include a short annotation – one or two sentences on what they show.
+  2. Annotated output so that I can trace how you constructed your final data set, what models you ran to 
+     produce the results quoted in your report, and what intermediate models you also considered.
+  3. Description of statistical modeling steps that were not included in the main body of your report. 
+     Possible entries here include:
+      - How you handled missing data
+      - Evaluation of assumptions.
+      - Outlier analysis and how you decided to deal with any outliers along with rationale for your decision.
+      - Describe hypotheses testing you performed during model building and how you decided on the explanatory 
+        variables you ultimately included in your final model. 
+      - Assessment of the final model.
+  4. How you went from the model output in JMP/R to interpretations in your report 
+     (e.g. exponentiate coefficients, and then take inverse)
+  5. Anticipate questions someone might have after reading your report, and make sure those questions can be 
+     answered with information in the appendix.
+  6. A citation for each reference article you included in your proposal. Also include a link, if appropriate. 
+     Remember that you must have the entire paper and not just an abstract, and at least two must be from peer-
+     reviewed journals. 
+```
+
+##### Citations
+1. Radicchi F (2012) Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games.
+  https://doi.org/10.1371/journal.pone.0040335 
+   
+2. Bian, X. 2005. Predicting Olympic Medal Counts: The Effects of Economic Development on Olympic Performance.
+  https://pdfs.semanticscholar.org/7293/1ab692bcab9e724b0e5ed4adb53b7ff8097f.pdf
