@@ -1,7 +1,8 @@
 ---
-title: "Report Title"
+title: "Predicting Success for Olympic Track Athletes with a Multi-Level Model"
 author: "Nick Browen, Eric Ortiz"
 output: html_notebook
+indent: true
 ---
 
 ```{r echo=F}
@@ -23,20 +24,21 @@ track <- read.csv("track_dist.csv")
 Still to do: 
   1. Incorporate supporting references into text
 ```
-
-
-##### Research Question
-How can we best predict an Olympic track athlete’s finishing time (events measured in time i.e. excluding field events)? What is the relationship between an athlete’s finishing time at the Olympics and (at the athlete-level) their sex, age, weight, height, (at the event level) year of competition, and (at the country-level) the athlete’s nationality, their country GDP, and population?
-  
-  
   Every four years, the Olympics Events garner worldwide attention much attention. We wanted to know what athlete characteristics contribute to their success and how the country they are from affects this. There is so much data readily available about the Olympics, even going back to 1896. We also were excited to be able to combine datasets and information from multiple resources from Olympic data to population and GDP of the countries of the world over time.  
   
   We chose to include athlete-level characteristics because the ideal physique for a distance runner is much different than a 100m sprinter and we think this will be useful in explaining differences in finishing time and are curious what other nuances will be revealed. At the country-level, we chose to include explanatory variables because athletes are sent as a team by their country and so the athlete pool, training resources and even quality of life might reveal some trends in predicting finishing times.  
   
+  When looking through some literature on the subject, we came to realize that more is involved with success in the Olympics than just the variables at the athlete level such as height, weight, gender, and age. We were struck by Xun Bian's paper titled "Predicting Olympic Medal Counts: the Effects of Economic Development on Olympic Performance" in which Olympic medal counts for a country were predicted from variables at the country level such as population, GDP, who the hosting country is, and whether the country is Socialist or not. Further, when we looked at the paper by Filippo Radicchi titled "Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games", we could see that there is variablility at the athlete level since many athletes compete in more than one Olympics in their lifetime.
+  
+  We chose to consider factors at both the athlete level and country level in a Hierarchical Model to predict the finishing time of track athletes.
+  
+  
+##### Research Question
+How can we best predict an Olympic track athlete’s finishing time? What is the relationship between an athlete’s finishing time and factors at the athlete level such as sex, age, weight, and height as well as factors at the country level such as the athlete’s nationality, their country's GDP, and population?
+  
+  
   **Chance's Notes**: 
   *I really like how you have athlete level variables and country level variables.  But I do wonder if you need to “standardize” the response variable a bit?  Nesting within event is good but still difficult to compare the times to each other?  Would it be better to pick one event and look at multiple athletes from the same country over time?*
-
-
 
 
 
@@ -53,7 +55,7 @@ Three to five paragraphs (or fewer) that…
   4. Specify strategies employed when building your models
   5. Do not report results in the Materials and Methods section! 
 ```
-
+Our data consist of merged datasets from Kaggle.com. First we found a comprehensive dataset of all Olympic medalists, but we subsetted this to include just track athletes (specifically the 10k race and all events shorter than 10k). This file contains info on the athlete level such as height, weight, and age, but it did not include the finishing times. So we then merged this with another dataset from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our dataset as well.
 
 
 ### Results
@@ -125,3 +127,12 @@ A few paragraphs that:
    
 2. Bian, X. 2005. Predicting Olympic Medal Counts: The Effects of Economic Development on Olympic Performance.
   https://pdfs.semanticscholar.org/7293/1ab692bcab9e724b0e5ed4adb53b7ff8097f.pdf
+  
+3. Country Level Data such as GDP and Population.
+  https://www.gapminder.org/data/
+  
+4. Athlete Level Data for Finishing Time.
+  https://www.kaggle.com/jayrav13/olympic-track-field-results
+  
+5. Athlete Level Data for Height, Age, Sex, and Country.
+  https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results
