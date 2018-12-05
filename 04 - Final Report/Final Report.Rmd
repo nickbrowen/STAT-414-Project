@@ -7,7 +7,11 @@ indent: true
 
 ```{r echo=F}
 pacman::p_load(tidyverse, nlme, lme4)
-track <- read.csv("track_dist.csv")
+track <- read.csv("trackFinal.csv")
+```
+
+```{r}
+track
 ```
 
 =============================================================
@@ -72,6 +76,12 @@ The meat of your report, which should include…
      not editorialize here! Save that for the Discussion. 
 ```
 
+```{r}
+mod13 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100,
+            random = ~ dist100|country2)
+summary(mod13)
+```
 
 
 
@@ -119,6 +129,50 @@ A few paragraphs that:
   6. A citation for each reference article you included in your proposal. Also include a link, if appropriate. 
      Remember that you must have the entire paper and not just an abstract, and at least two must be from peer-
      reviewed journals. 
+```
+
+```{r echo=FALSE}
+mod13_diagnosics <- data.frame(fittedValues = fitted.values(mod13), residuals = residuals(mod13))
+ggplot(mod13_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 13")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod13_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 13",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod13 <- ranef(mod13) %>% as.data.frame()
+colnames(ranef_mod13) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod13, aes(intercept)) + 
+  geom_histogram(bins = 20) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 13",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod13, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod13") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 13",
+       x = "Slopes",
+       y = "Count")
 ```
 
 ##### Citations

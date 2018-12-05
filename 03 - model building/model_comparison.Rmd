@@ -3,5 +3,322 @@ title: "Model Comparison"
 output: html_notebook
 ---
 
+```{r include=FALSE}
+library(nlme)
+library(lme4)
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r echo=FALSE}
+#track <- read.csv("track_dist.csv")
+```
 
 Compare models 9, 10, and 11 here
+
+```{r}
+mod9 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
+            random = ~ dist100|country2)
+summary(mod9)
+```
+
+
+```{r}
+mod10 <- lme(data = track, 
+            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
+              c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod10)
+```
+
+
+```{r}
+mod11 <- lme(data = track, 
+            fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
+              sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod11)
+```
+
+### Model 9 Residual Plots
+```{r echo=FALSE}
+mod9_diagnosics <- data.frame(fittedValues = fitted.values(mod9), residuals = residuals(mod9))
+ggplot(mod9_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 9")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod9_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 9",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod9 <- ranef(mod9) %>% as.data.frame()
+colnames(ranef_mod9) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod9, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 9",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod9, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 9",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+### Model 10 Residual Plots
+```{r echo=FALSE}
+mod10_diagnosics <- data.frame(fittedValues = fitted.values(mod10), residuals = residuals(mod10))
+ggplot(mod10_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 10")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod10_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 10",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod10 <- ranef(mod10) %>% as.data.frame()
+colnames(ranef_mod10) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod10, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 10",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod10, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 10",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+
+### Model 11 Residual Plots
+
+```{r echo=FALSE}
+mod11_diagnosics <- data.frame(fittedValues = fitted.values(mod11), residuals = residuals(mod11))
+ggplot(mod11_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 11")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod11_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 11",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod11 <- ranef(mod11) %>% as.data.frame()
+colnames(ranef_mod11) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod11, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 11",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod11, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 11",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+
+## Factoring GDP and Population
+```{r}
+track
+```
+
+
+```{r}
+track <- track %>% 
+  mutate(
+    gdp_ = case_when(gdp < 4.64e+10 ~ "small",
+                    gdp > 1.29e+12 ~ "large",
+                    TRUE ~ "medium"),
+    pop_ = case_when(pop < 9.42e+06 ~ "small",
+                     pop > 1.23e+08 ~ "large",
+                     TRUE ~ "medium"),
+    gdpPerCap = gdp / pop,
+    gdpPerCap_ = case_when(gdp/pop > 10000 ~ "high",
+                           TRUE ~ "low")
+)
+```
+
+
+```{r paged.print=FALSE}
+mod12 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
+            random = ~ dist100|country2)
+summary(mod12)
+```
+
+### Model 12 Residual Plots
+
+```{r echo=FALSE}
+mod12_diagnosics <- data.frame(fittedValues = fitted.values(mod12), residuals = residuals(mod12))
+ggplot(mod12_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 12")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod12_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 12",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod12 <- ranef(mod12) %>% as.data.frame()
+colnames(ranef_mod12) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod12, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 12",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod12, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod12") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 12",
+       x = "Slopes",
+       y = "Count")
+```
+
+## Model 13
+```{r}
+mod13 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100,
+            random = ~ dist100|country2)
+summary(mod13)
+```
+
+### Model 13 Residual Plots
+
+```{r echo=FALSE}
+mod13_diagnosics <- data.frame(fittedValues = fitted.values(mod13), residuals = residuals(mod13))
+ggplot(mod13_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(title = "Residuals vs Fitted",
+       subtitle = "Model 13")
+```
+
+
+```{r echo=FALSE}
+ggplot(mod13_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(title = "QQ-Plot",
+       subtitle = "Model 13",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles")
+```
+
+
+
+```{r echo=FALSE}
+ranef_mod13 <- ranef(mod13) %>% as.data.frame()
+colnames(ranef_mod13) <- c("intercept", "dist100")
+
+ggplot(data=ranef_mod13, aes(intercept)) + 
+  geom_histogram(bins = 20) +
+  labs(title = "Histogram of Random Intercepts",
+       subtitle = "Model 13",
+       y = "Count",
+       x = "Intercepts")
+```
+
+```{r echo=FALSE}
+ggplot(data=ranef_mod13, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod13") +
+  labs(title = "Histogram of Random Slopes",
+       subtitle = "Model 13",
+       x = "Slopes",
+       y = "Count")
+```
+
+
+```{r}
+anova(mod13)
+```
+
+```{r}
+anova(mod12)
+```
+
+

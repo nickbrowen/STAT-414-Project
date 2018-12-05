@@ -240,7 +240,16 @@ track <-  track %>% mutate(
                   logBMI = log(BMI),
                   c_logBMI = scale(logBMI)[,1],
                   loggdpbillion = log(gdpbillion),
-                  c_loggdpbillion = scale(loggdpbillion)[,1]
+                  c_loggdpbillion = scale(loggdpbillion)[,1],
+                      gdp_ = case_when(gdp < 4.64e+10 ~ "small",
+                    gdp > 1.29e+12 ~ "large",
+                    TRUE ~ "medium"),
+    pop_ = case_when(pop < 9.42e+06 ~ "small",
+                     pop > 1.23e+08 ~ "large",
+                     TRUE ~ "medium"),
+    gdpPerCap = gdp / pop,
+    gdpPerCap_ = case_when(gdp/pop > 10000 ~ "high",
+                           TRUE ~ "low")
                   ) 
 
 ```
@@ -428,6 +437,9 @@ ggplot(data=ranef_mod11, aes(dist100)) +
 
 
 
+```{r}
+track %>% write.csv("trackFinal.csv")
+```
 
 
 
