@@ -10,9 +10,6 @@ pacman::p_load(tidyverse, nlme, lme4)
 track <- read.csv("trackFinal.csv")
 ```
 
-```{r}
-track
-```
 
 =============================================================
   
@@ -59,21 +56,19 @@ Three to five paragraphs (or fewer) that…
   4. Specify strategies employed when building your models
   5. Do not report results in the Materials and Methods section! 
 ```
-Our data consist of merged datasets from Kaggle.com. First we found a comprehensive dataset of all Olympic medalists, but we subsetted this to include just track athletes (specifically the 10k race and all events shorter than 10k). This file contains info on the athlete level such as height, weight, and age, but it did not include the finishing times. So we then merged this with another dataset from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our dataset as well.
+Our data consist of merged datasets from Kaggle.com. First we found a comprehensive dataset of all Olympic medalists, but we subsetted this to include just track athletes that performed in running events (specifically the 10k race and all events shorter than 10k, not including events such as hurdles or steeple chase). This file contains info on athlete level characteristics such as height, weight, and age, but it did not include the finishing times. So we then merged this with another dataset from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our dataset as well.
 
+Having synthesized all these datasets together, we converted the event variable that would read like "100 M Men" into a quantitative variable that indicated the distance of the race. Finally, we rescaled the distance variable in order that the intercept would be about the 100m race. Similiarly, the year of the event was rescaled to be number of years since 1896.  Height and weight were converted to BMI. Several variations of GDP and population of countries were tried out during the model building process. We first rescaled GDP as GDP in billions of dollars and, as indicated from our Exploratory Data Analysis, population was put on a log scale. GDP per capita (GDP/population) was also calculated. Later, GDP and population were categorized into "small", "medium", "large", and GDP per capita was categorized into "low" and "high". Throughout the model building process, log transformations of the distance of races and finishing times were calculated. All continous explanatory variables were centered, with the exclusion of distance and year.
+
+[Something about missing data - did we deal with that? not all countries represented every year but I'm pretty sure HLM are fine with that]
 
 ### Results
 ```
 The meat of your report, which should include…
   1. A general description of your data (completed via your exploratory data analysis)
-  2. A description of the results from your analyses, including interpretations of parameter estimates, 
-     tests, and confidence intervals in context.
-  3. Tables that summarize results and figures that illustrate results. These tables and figures should 
-     be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each report 
-     should have a minimum of two plots; rarely are residual plots part of the main body of the report 
-     unless they are an integral part of the story.
-  4. You should interpret tests, confidence intervals, and coefficients in this section, but you should 
-     not editorialize here! Save that for the Discussion. 
+  2. A description of the results from your analyses, including interpretations of parameter             estimates, tests, and confidence intervals in context.
+  3. Tables that summarize results and figures that illustrate results. These tables and figures         should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
+  4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
 ```
 
 ```{r}
@@ -88,47 +83,35 @@ summary(mod13)
 ### Discussion
 ```
 A few paragraphs that:
-  1. Begin with an accurate summary statement; describe how the results help answer your research questions 
-     and what was most interesting from your analysis. In fact, the first paragraph of the Discussion is 
-     very important – in professional journals, it is often the first and sometimes the only paragraph that 
-     is read in a paper. After the first sentence highlights primary results, the remainder of the first 
-     paragraph might compare your results to others in the literature or include interesting secondary 
-     results.
+  1. Begin with an accurate summary statement; describe how the results help answer your research        questions and what was most interesting from your analysis. In fact, the first paragraph of the      Discussion is very important – in professional journals, it is often the first and sometimes        the only paragraph that is read in a paper. After the first sentence highlights primary             results, the remainder of the first paragraph might compare your results to others in the           literature or include interesting secondary results.
   2. Discuss possible implications of the results in the context of the research question.
   3. Make a statement regarding potential confounding variables in your study.
-  4. Make a statement about the generalizability of your results. Don’t give generic statements of possible 
-     causation and generalizability, but thoughtfully discuss relevant issues – confounding variables, 
-     representativeness of the sample, etc.
-  5. Identify any limitations of your study. Discuss the potential impact of such limitations on the 
+  4. Make a statement about the generalizability of your results. Don’t give generic statements of       possible causation and generalizability, but thoughtfully discuss relevant issues – confounding      variables, representativeness of the sample, etc.
+  5. Identify any limitations of your study. Discuss the potential impact of such limitations on the
      conclusions.
   6. Identify strengths and weaknesses of your analysis.
-  7. Make suggestions for future research. Identify important next steps that a researcher could take to 
-     build on your work.
+  7. Make suggestions for future research. Identify important next steps that a researcher could         take to build on your work.
   8. Do not include test statistics or p-values in this section. 
 ```
 
 
 ### Annotated Appendix
 ```
-  1. Tables and figures that are informative but were not referenced specifically in the main report. 
+  1. Tables and figures that are informative but were not referenced specifically in the main            report. 
      Include a short annotation – one or two sentences on what they show.
-  2. Annotated output so that I can trace how you constructed your final data set, what models you ran to 
-     produce the results quoted in your report, and what intermediate models you also considered.
-  3. Description of statistical modeling steps that were not included in the main body of your report. 
+  2. Annotated output so that I can trace how you constructed your final data set, what models you       ran to produce the results quoted in your report, and what intermediate models you also             considered.
+  3. Description of statistical modeling steps that were not included in the main body of your     
+     report. 
      Possible entries here include:
       - How you handled missing data
       - Evaluation of assumptions.
-      - Outlier analysis and how you decided to deal with any outliers along with rationale for your decision.
-      - Describe hypotheses testing you performed during model building and how you decided on the explanatory 
-        variables you ultimately included in your final model. 
+      - Outlier analysis and how you decided to deal with any outliers along with rationale for your         decision.
+      - Describe hypotheses testing you performed during model building and how you decided on the          explanatory variables you ultimately included in your final model. 
       - Assessment of the final model.
   4. How you went from the model output in JMP/R to interpretations in your report 
      (e.g. exponentiate coefficients, and then take inverse)
-  5. Anticipate questions someone might have after reading your report, and make sure those questions can be 
-     answered with information in the appendix.
-  6. A citation for each reference article you included in your proposal. Also include a link, if appropriate. 
-     Remember that you must have the entire paper and not just an abstract, and at least two must be from peer-
-     reviewed journals. 
+  5. Anticipate questions someone might have after reading your report, and make sure those              questions can be answered with information in the appendix.
+  6. A citation for each reference article you included in your proposal. Also include a link, if        appropriate. Remember that you must have the entire paper and not just an abstract, and at          least two must be from peer-reviewed journals. 
 ```
 
 ```{r echo=FALSE}
