@@ -16,7 +16,7 @@ track <- read.csv("trackFinal.csv")
   Project Description:
   
   http://statweb.calpoly.edu/bchance/stat414/Stat414Project.pdf
-
+  
 =============================================================
 
 ### Introduction 
@@ -24,12 +24,13 @@ track <- read.csv("trackFinal.csv")
 ```
 Still to do: 
   1. Incorporate supporting references into text
+  2. Tables of counts and summaries
 ```
   Every four years, the Olympics Events garner worldwide attention much attention. We wanted to know what athlete characteristics contribute to their success and how the country they are from affects this. There is so much data readily available about the Olympics, even going back to 1896. We also were excited to be able to combine datasets and information from multiple resources from Olympic data to population and GDP of the countries of the world over time.  
   
   We chose to include athlete-level characteristics because the ideal physique for a distance runner is much different than a 100m sprinter and we think this will be useful in explaining differences in finishing time and are curious what other nuances will be revealed. At the country-level, we chose to include explanatory variables because athletes are sent as a team by their country and so the athlete pool, training resources and even quality of life might reveal some trends in predicting finishing times.  
   
-  When looking through some literature on the subject, we came to realize that more is involved with success in the Olympics than just the variables at the athlete level such as height, weight, gender, and age. We were struck by Xun Bian's paper titled "Predicting Olympic Medal Counts: the Effects of Economic Development on Olympic Performance" in which Olympic medal counts for a country were predicted from variables at the country level such as population, GDP, who the hosting country is, and whether the country is Socialist or not. Further, when we looked at the paper by Filippo Radicchi titled "Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games", we could see that there is variablility at the athlete level since many athletes compete in more than one Olympics in their lifetime.
+  When looking through some literature on the subject, we came to realize that more is involved with success in the Olympics than just the variables at the athlete level such as height, weight, gender, and age. We were struck by Xun Bian's paper titled "Predicting Olympic Medal Counts: the Effects of Economic Development on Olympic Performance" in which Olympic medal counts for a country were predicted from variables at the country level such as population, GDP, who the hosting country is, and whether the country is Socialist or not. Further, when we looked at the paper by Filippo Radicchi titled "Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games", we could see that there is variability at the athlete level since many athletes compete in more than one Olympics in their lifetime.
   
   We chose to consider factors at both the athlete level and country level in a Hierarchical Model to predict the finishing time of track athletes.
   
@@ -56,18 +57,55 @@ Three to five paragraphs (or fewer) that…
   4. Specify strategies employed when building your models
   5. Do not report results in the Materials and Methods section! 
 ```
-Our data consist of merged datasets from Kaggle.com. First we found a comprehensive dataset of all Olympic medalists, but we subsetted this to include just track athletes that performed in running events (specifically the 10k race and all events shorter than 10k, not including events such as hurdles or steeple chase). This file contains info on athlete level characteristics such as height, weight, and age, but it did not include the finishing times. So we then merged this with another dataset from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our dataset as well.
+Our data consist of merged data sets from Kaggle.com. First we found a comprehensive data set of all Olympic medalists, but we subsetted this to include just track athletes that performed in running events (specifically the 10k race and all events shorter than 10k, not including events such as hurdles or steeple chase). This file contains info on athlete level characteristics such as height, weight, and age, but it did not include the finishing times. So we then merged this with another data set from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our data set as well.
 
-Having synthesized all these datasets together, we converted the event variable that would read like "100 M Men" into a quantitative variable that indicated the distance of the race. Finally, we rescaled the distance variable in order that the intercept would be about the 100m race. Similiarly, the year of the event was rescaled to be number of years since 1896.  Height and weight were converted to BMI. Several variations of GDP and population of countries were tried out during the model building process. We first rescaled GDP as GDP in billions of dollars and, as indicated from our Exploratory Data Analysis, population was put on a log scale. GDP per capita (GDP/population) was also calculated. Later, GDP and population were categorized into "small", "medium", "large", and GDP per capita was categorized into "low" and "high". Throughout the model building process, log transformations of the distance of races and finishing times were calculated. All continous explanatory variables were centered, with the exclusion of distance and year.
+Having synthesized all these data sets together, we converted the event variable that would read like "100 M Men" into a quantitative variable that indicated the distance of the race. Finally, we rescaled the distance variable in order that the intercept would be about the 100m race. Similarly, the year of the event was rescaled to be number of years since 1896.  Height and weight were converted to BMI. Several variations of GDP and population of countries were tried out during the model building process. We first rescaled GDP as GDP in billions of dollars and, as indicated from our Exploratory Data Analysis, population was put on a log scale. GDP per capita (GDP/population) was also calculated. Later, GDP and population were categorized into "small", "medium", "large", and GDP per capita was categorized into "low" and "high". Throughout the model building process, log transformations of the distance of races and finishing times were calculated. All continuous explanatory variables were centered, with the exclusion of distance and year.  
+  
+### COPY AND PASTE ###
+  When merging these data sets together we also ran into missing values, namely for countries that were not included in Gapminder's country GDP and Population data or countries that changed their name at some point (for example Soviet Union to Russia). Where possible, we were able to search out the countries that changed name and correct for that error. However, we chose to omit countries that we had no country-level data on.  
+  
+  In our final data set, we ended up with: 
+  
+- 585 total observations (completed track events by a medaling athlete)
+- 410 total athletes
+    - 177 from the USA
+    - 54 from the UK
+    - 45 from Jamaica
+- 45 total countries 
+  
+  The following variables are used in our final model to predict `timeSecs`:
+  
+- `dist100`: Distance of the event, subtracting 100 to make our intercept (the 100m Dash) meaningful
+    - 109 observations from 100m Dash
+    - 90 observations from 200m
+    - 85 observations from 400m
+    - 75 observations from 800m
+    - 76 observations from 1500m
+    - 68 observations from 5000m
+    - 74 observations from 10000m
+- `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$
+- `year1896`: Year of the event, centered at 1896 to make the intercept meaningful
+- `sex`: Sex of the athlete
+    - 413 male athletes
+    - 172 female athletes
+- `gdpPerCap_`: GDP per Capita of the country represented, where a GDP per Capita of greater than $10,000 is considered "high" 
+and a GDP per Capita of less than $10,000 is considered "low"
+    - 312 athletes from a low GDP per capita country
+    - 273 athletes from a high GDP per capita country
 
-[Something about missing data - did we deal with that? not all countries represented every year but I'm pretty sure HLM are fine with that]
+### END Copy and paste ###
+
+```{r}
+track %>% group_by(gdpPerCap_) %>% summarise(n = n()) %>% arrange(desc(n))
+```
+
 
 ### Results
 ```
 The meat of your report, which should include…
   1. A general description of your data (completed via your exploratory data analysis)
-  2. A description of the results from your analyses, including interpretations of parameter             estimates, tests, and confidence intervals in context.
-  3. Tables that summarize results and figures that illustrate results. These tables and figures         should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
+  2. A description of the results from your analyses, including interpretations of parameter estimates, tests, and confidence intervals in context.
+  3. Tables that summarize results and figures that illustrate results. These tables and figures should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
   4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
 ```
 
@@ -76,6 +114,25 @@ mod13 <- lme(data = track,
             fixed = timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100,
             random = ~ dist100|country2)
 summary(mod13)
+```
+
+## COPY and Paste ##
+
+```{r out.width="100%"}
+ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
+  geom_point(size = 0.5, position = "Jitter", show.legend = F) +
+  geom_smooth(show.legend=F, se=F, size = 0.3, method = "lm") +
+  labs(title = "Time in Seconds vs. Distance of Event",
+       subtitle = "Grouped by Country of Athlete",
+       y = "Time (Seconds)",
+       x = "Distance of Event (Meters)")
+```
+
+```{r}
+ggplot(track, aes(y=timeSecs, x=c_BMI, color = country2)) +
+  geom_point(show.legend = F) +
+  geom_smooth(show.legend = F, se=F, method = "lm")+
+  facet_wrap(~sex, ncol=1)
 ```
 
 
