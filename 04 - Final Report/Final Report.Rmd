@@ -1,8 +1,10 @@
 ---
 title: "Predicting Success for Olympic Track Athletes with a Multi-Level Model"
 author: "Nick Browen, Eric Ortiz"
-output: html_notebook
-indent: true
+output:
+  html_document:
+    df_print: paged
+indent: yes
 ---
 
 ```{r echo=F}
@@ -66,6 +68,16 @@ Initially, a two level random intercepts model was fit predicting finishing time
 
   When merging these data sets together we also ran into missing values, namely for countries that were not included in Gapminder's country GDP and Population data or countries that changed their name at some point (for example Soviet Union to Russia). Where possible, we were able to search out the countries that changed name and correct for that error. However, we chose to omit countries that we had no country-level data on.  
   
+
+### Results
+```
+The meat of your report, which should include…
+  1. A general description of your data (completed via your exploratory data analysis)
+  2. A description of the results from your analyses, including interpretations of parameter             estimates, tests, and confidence intervals in context.
+  3. Tables that summarize results and figures that illustrate results. These tables and figures         should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
+  4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
+```
+
   In our final data set, we ended up with: 
   
 - 585 total observations (completed track events by a medaling athlete)
@@ -81,11 +93,11 @@ Initially, a two level random intercepts model was fit predicting finishing time
     - 109 observations from 100m Dash
     - 90 observations from 200m
     - 85 observations from 400m
-    - 75 observations from 800m
+    - 75 observations from 800m  
     - 76 observations from 1500m
-    - 68 observations from 5000m
-    - 74 observations from 10000m
-- `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$
+    - 68 observations from 5000m 
+    - 74 observations from 10000m 
+- `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$  
 - `year1896`: Year of the event, centered at 1896 to make the intercept meaningful
 - `sex`: Sex of the athlete
     - 413 male athletes
@@ -94,22 +106,53 @@ Initially, a two level random intercepts model was fit predicting finishing time
 and a GDP per Capita of less than $10,000 is considered "low"
     - 312 athletes from a low GDP per capita country
     - 273 athletes from a high GDP per capita country
+    
 
-### Results
-```
-The meat of your report, which should include…
-  1. A general description of your data (completed via your exploratory data analysis)
-  2. A description of the results from your analyses, including interpretations of parameter             estimates, tests, and confidence intervals in context.
-  3. Tables that summarize results and figures that illustrate results. These tables and figures         should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
-  4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
-```
+Parameter Estimates
 
-```{r}
+Intercept: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 18.02s. 
+
+`dist100`: After adjusting for the year of the race and the BMI of the athlete, each 100-meter increase in the distance of a race is associated with a 16.26s increase in a male athlete’s finishing time for athletes competing for a country with a high GDP per capita.
+
+`c_BMI`: For an athlete competing for an average country, each 1 kg/m^2 increase in an athlete’s BMI is associated with a 4.90s slower finishing time after adjusting for the distance of the race, the year of the race, sex of the athlete, and GDP per capita of the country the athlete is competing for. 
+
+`year1896`: After adjusting for the distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, every 4 years (every Summer Olympic Games) is associated with a 1.13s decrease in the finishing times of races.
+
+`sexW`: After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the country the athlete is competing for, a female athlete is predicted to have a 13.2s slower finishing time than a male athlete for the 100-meter race.
+
+`gdpPerCap_low`:  After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 14.86s slower finishing time than an athlete competing for a country with a high GDP per capita for the 100-meter race.
+
+`dist100:sexW`: After adjusting for the year of the race and the BMI of the athlete female athletes’ associated rate of increase in their finishing times per 100m increase of the race is 1.76s higher than male athletes. \
+ •	After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the     country the athlete is competing for, a female athlete is predicted to have a (13.2 +     
+0.02*dist100)s slower finishing time than a male athlete.
+    
+`dist100:gdpPerCap_low`: After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 1.41s higher rate of increase in their finishing times per 100m than an athlete competing for a country with a high GDP per capita. \
+  •	After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing 
+for a country with a low GDP per capita is predicted to have a (14.86 + 0.01*dist100)s 
+faster/slower finishing time compared to an athlete competing for a country with a high GDP per 
+capita.
+
+$\hat{\sigma}_{u0}^2=151.01$: After adjusting for the BMI of an athlete, the standard deviation of countries’ predicted finishing time for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita is 12.29 seconds.
+
+$\hat{\sigma}_{u1}^2 =0.0009$:  After adjusting for the year of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of countries’ rate of increase in finishing time per 100m is 0.92 seconds.
+
+$\hat{\sigma}^{2}=293.94$: After adjusting for the year and distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of athletes’ finishing time within a country is 17.14 seconds.
+
+$cov(\hat{\sigma}_{u0}^2,\hat{\sigma}_{u1}^2)=\hat{\tau}_{01}^{2}=-0.88*12.289*17.145=-185.41$: (interpreting the negative sign on the covariance term): After adjusting for the BMI of an athlete, countries that have higher predicted finishing times for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita tend to have a lower rate of increase in finishing time per 100m increase of the race. \
+	• Countries with high intercepts don’t tend to slow down as much as the distance of the race 
+	  increases compared to countries with lower intercepts.
+
+
+
+```{r paged.print=TRUE}
 mod13 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100,
             random = ~ dist100|country2)
 summary(mod13)
 ```
+
+
+
 
 ```{r out.width="100%"}
 ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
@@ -120,6 +163,8 @@ ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
        y = "Time (Seconds)",
        x = "Distance of Event (Meters)")
 ```
+
+
 
 ### Discussion
 ```
