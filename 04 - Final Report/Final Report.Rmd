@@ -2,13 +2,14 @@
 title: "Predicting Success for Olympic Track Athletes with a Multi-Level Model"
 author: "Nick Browen, Eric Ortiz"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 indent: yes
 ---
 
 ```{r echo=F}
-pacman::p_load(tidyverse, nlme, lme4, gridExtra)
+pacman::p_load(tidyverse, nlme, lme4, gridExtra, kableExtra)
 track <- read.csv("trackFinal.csv")
 ```
 
@@ -71,6 +72,7 @@ The meat of your report, which should include…
   4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
 ```
 
+
   In our final data set, we ended up with: 
   
 - 585 total observations (completed track events by a medaling athlete)
@@ -78,6 +80,7 @@ The meat of your report, which should include…
     - 177 from the USA
     - 54 from the UK
     - 45 from Jamaica
+    - 134 from other countries
 - 45 total countries 
   
   The following variables are used in our final model to predict `timeSecs`:
@@ -416,7 +419,7 @@ mod11 <- lme(data = track,
             fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
               sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
-summary(mod11)
+mod11 %>% summary()
 ```
 
 ```{r echo=FALSE}
