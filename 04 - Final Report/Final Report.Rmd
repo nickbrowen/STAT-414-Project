@@ -8,7 +8,7 @@ indent: yes
 ---
 
 ```{r echo=F}
-pacman::p_load(tidyverse, nlme, lme4)
+pacman::p_load(tidyverse, nlme, lme4, gridExtra)
 track <- read.csv("trackFinal.csv")
 ```
 
@@ -23,10 +23,6 @@ track <- read.csv("trackFinal.csv")
 
 ### Introduction 
 
-```
-Still to do: 
-  1. Incorporate supporting references into text
-```
   Every four years, the Olympics Events garner worldwide attention much attention. We wanted to know what athlete characteristics contribute to their success and how the country they are from affects this. There is so much data readily available about the Olympics, even going back to 1896. We also were excited to be able to combine datasets and information from multiple resources from Olympic data to population and GDP of the countries of the world over time.  
   
   We chose to include athlete-level characteristics because the ideal physique for a distance runner is much different than a 100m sprinter and we think this will be useful in explaining differences in finishing time and are curious what other nuances will be revealed. At the country-level, we chose to include explanatory variables because athletes are sent as a team by their country and so the athlete pool, training resources and even quality of life might reveal some trends in predicting finishing times.  
@@ -36,12 +32,9 @@ Still to do:
   We chose to consider factors at both the athlete level and country level in a Hierarchical Model to predict the finishing time of track athletes.
   
   
-##### Research Question
+#### Research Question
 How can we best predict an Olympic track athlete’s finishing time? What is the relationship between an athlete’s finishing time and factors at the athlete level such as sex, age, weight, and height as well as factors at the country level such as the athlete’s nationality, their country's GDP, and population?
   
-  
-  **Chance's Notes**: 
-  *I really like how you have athlete level variables and country level variables.  But I do wonder if you need to “standardize” the response variable a bit?  Nesting within event is good but still difficult to compare the times to each other?  Would it be better to pick one event and look at multiple athletes from the same country over time?*
 
 
 
@@ -182,69 +175,366 @@ A few paragraphs that:
 
 
 ### Annotated Appendix
-```
-  1. Tables and figures that are informative but were not referenced specifically in the main            report. 
-     Include a short annotation – one or two sentences on what they show.
-  2. Annotated output so that I can trace how you constructed your final data set, what models you       ran to produce the results quoted in your report, and what intermediate models you also             considered.
-  3. Description of statistical modeling steps that were not included in the main body of your     
-     report. 
-     Possible entries here include:
-      - How you handled missing data
-      - Evaluation of assumptions.
-      - Outlier analysis and how you decided to deal with any outliers along with rationale for your         decision.
-      - Describe hypotheses testing you performed during model building and how you decided on the          explanatory variables you ultimately included in your final model. 
-      - Assessment of the final model.
-  4. How you went from the model output in JMP/R to interpretations in your report 
-     (e.g. exponentiate coefficients, and then take inverse)
-  5. Anticipate questions someone might have after reading your report, and make sure those              questions can be answered with information in the appendix.
-  6. A citation for each reference article you included in your proposal. Also include a link, if        appropriate. Remember that you must have the entire paper and not just an abstract, and at          least two must be from peer-reviewed journals. 
-```
 
+#### Handling Missing Data
+
+Since we did our own merging in order to compile data at both the athlete level and country level, we did run in to quite a few missing values. In particular, our missing values were almost all pertaining to either incomplete data from Gapminder on country's GDP and population, especially in earlier years. We generally chose to omit these cases since we would not have any country level information on these athletes.  
+  
+  Another case where we had lots of missing values was for countries that have changed names at some point (Russia vs. Soviet Union). In these cases we tried to compile all these observations under the same country name. For instance, we would change all Soviet Union athletes to represent Russia instead.
+
+#### Handling Outliers
+
+Because this data consisted of only the athletes that earned medals, all their track times were fairly similar and we did not come into any many outliers with respect to Time. The one place that did have outliers was GDP and Population, particularly when looking at China and India. We also noticed that these two variables were highly multicollinear. To take care of these two problems, we included a variable in our model, GDP per Capita. We chose to treat this as categorical and recoded the values to be either `low` or `high`, depending on whether the GDP per capita was above or below $10,000.
+
+#### Residual Plots for Final Model
 ```{r echo=FALSE}
 mod13_diagnosics <- data.frame(fittedValues = fitted.values(mod13), residuals = residuals(mod13))
-ggplot(mod13_diagnosics, aes(x=fittedValues, y=residuals)) + 
+m13.1 <- ggplot(mod13_diagnosics, aes(x=fittedValues, y=residuals)) + 
   geom_point(size = 0.5) +
   geom_hline(yintercept = 0, color = "red") + 
-  labs(title = "Residuals vs Fitted",
-       subtitle = "Model 13")
-```
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
 
-
-```{r echo=FALSE}
-ggplot(mod13_diagnosics) + 
+m13.2 <- ggplot(mod13_diagnosics) + 
   geom_qq_line(aes(sample=residuals), color = "red") +
   geom_qq(aes(sample=residuals), size = 0.5) +
-  labs(title = "QQ-Plot",
-       subtitle = "Model 13",
-       x = "Theoretical Quantiles",
-       y = "Sample Quantiles")
-```
+  labs(subtitle = "QQ Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
 
-
-
-```{r echo=FALSE}
 ranef_mod13 <- ranef(mod13) %>% as.data.frame()
 colnames(ranef_mod13) <- c("intercept", "dist100")
 
-ggplot(data=ranef_mod13, aes(intercept)) + 
+m13.3 <- ggplot(data=ranef_mod13, aes(intercept)) + 
   geom_histogram(bins = 20) +
-  labs(title = "Histogram of Random Intercepts",
-       subtitle = "Model 13",
-       y = "Count",
-       x = "Intercepts")
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m13.4 <- ggplot(data=ranef_mod13, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m13.1, m13.2, m13.3, m13.4, ncol=2)
+```
+
+Looking at the Residuals vs Fitted plot, we can see that we can see that there is a fan shape, which indicates there is not equal variance of residuals. This is intuitive because longer events take more time and will have more spread in the results than shorter events. However, the residuals do appear to follow a roughly linear trend. Looking at the QQ Plot, we can see that the points follow the diagonal closely, so we can assume the data come from a Normal distribution. Looking at the histogram for Random Slopes and Random Intercepts, we can see that both appear to come from an approximate Normal distribution and it is fair to treat both intercepts and slopes as random.
+
+
+#### Intermediate Models
+
+##### Null Model
+
+Looking at the residual plots for the null model below, we can see that the residuals do not follow a linear trend about the zero line and they are not normally distributed. However, we can see that random intercepts is a reasonable assumption to make. This model can be treated as a baseline to compare more complex models to. Note that for this model, the AIC is 8796, BIC is 8809, and logLik is -4395.
+
+```{r}
+mod0 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
+summary(mod0)
 ```
 
 ```{r echo=FALSE}
-ggplot(data=ranef_mod13, aes(dist100)) + 
-  geom_histogram(bins = 15) + 
-  ggtitle("Random Slopes for mod13") +
-  labs(title = "Histogram of Random Slopes",
-       subtitle = "Model 13",
-       x = "Slopes",
-       y = "Count")
+mod0_diagnosics <- data.frame(fittedValues = fitted.values(mod0), residuals = residuals(mod0))
+m0.1 <- ggplot(mod0_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m0.2 <- ggplot(mod0_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod0 <- ranef(mod0) %>% as.data.frame()
+colnames(ranef_mod0) <- c("intercept")
+
+m0.3 <- ggplot(data=ranef_mod0, aes(intercept)) + 
+  geom_histogram(bins = 20) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+
+grid.arrange(m0.1, m0.2, m0.3, ncol = 2)
 ```
 
-##### Citations
+
+##### Intermediate Model 1
+
+This model includes the variables distance, BMI (centered), year (centered), sex, GDP (centered, in billions), and interactions between BMI and distance, sex and distance, and GDP and distance.  
+  
+The AIC for this model is 5345, BIC is 5402, and logLik is -2660, which is a vast improvement over the null model. Also, our residual plots show that the assumptions are closer to being met with this model than the null model. The residual plots closely resemble those of the final model, although the histograms for random slopes and random intercepts are slightly more skewed.
+ 
+```{r echo = F}
+mod9 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
+            random = ~ dist100|country2)
+summary(mod9)
+```
+
+```{r echo=FALSE}
+mod9_diagnosics <- data.frame(fittedValues = fitted.values(mod9), residuals = residuals(mod9))
+m9.1 <- ggplot(mod9_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m9.2 <- ggplot(mod9_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod9 <- ranef(mod9) %>% as.data.frame()
+colnames(ranef_mod9) <- c("intercept", "dist100")
+
+m9.3 <- ggplot(data=ranef_mod9, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m9.4 <- ggplot(data=ranef_mod9, aes(dist100)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m9.1, m9.2, m9.3, m9.4, ncol = 2)
+```
+
+#### Intermediate Model 2 
+
+In an attempt to improve Intermediate Model 1, we did a log transformation on distance because the distance of events does not change in a linear fashion, but roughly exponentially (100m, 200m, 400m, 800m, 1500m, 5000m, etc). However, upon looking at the residual plots, we could see that this transformation introduced many violations of assumptions, namely linearity which we were trying to address. This also changed the distribution of random slopes and random intercepts so that they no longer resemble a normal distribution, but became heavily skewed. It is easily observable from the scatterplot of Time vs Distance below that the association between the two is not linear.   
+  
+  We can't use AIC, BIC, or logLik to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
+
+
+
+```{r echo = F}
+mod10 <- lme(data = track, 
+            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
+              c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod10)
+```
+
+```{r echo=FALSE}
+mod10_diagnosics <- data.frame(fittedValues = fitted.values(mod10), residuals = residuals(mod10))
+m10.1 <- ggplot(mod10_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m10.2 <- ggplot(mod10_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+ranef_mod10 <- ranef(mod10) %>% as.data.frame()
+colnames(ranef_mod10) <- c("intercept", "dist100")
+
+m10.3 <- ggplot(data=ranef_mod10, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m10.4 <- ggplot(data=ranef_mod10, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m10.1, m10.2, m10.3, m10.4, ncol = 2)
+```
+
+```{r echo=F}
+ggplot(track, aes(y=logtimeSecs, x = dist)) + 
+  geom_point(size = 0.5, position = "Jitter") +
+  labs(title = "Scatterplot of Log(Time) vs Distance",
+       x = "Distance of Event",
+       y = "Log of Time")
+```
+
+
+#### Intermediate Model 3
+
+With this model, we attempted to improve upon Intermediate Model 1 by including both a log transformation on Time and a log transformation on distance.  
+  
+  Looking at the scatterplot of Log(Time) vs Log(Distance), it seems as though the association between these two variables is linear with this new transformation. However, when looking at the residual plots, we can see that linearity is in fact violated now.  
+  
+  We can't use AIC, BIC, or logLik to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
+
+
+
+```{r echo = F}
+mod11 <- lme(data = track, 
+            fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
+              sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod11)
+```
+
+```{r echo=FALSE}
+mod11_diagnosics <- data.frame(fittedValues = fitted.values(mod11), residuals = residuals(mod11))
+m11.1 <- ggplot(mod11_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m11.2 <- ggplot(mod11_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod11 <- ranef(mod11) %>% as.data.frame()
+colnames(ranef_mod11) <- c("intercept", "dist100")
+
+m11.3 <- ggplot(data=ranef_mod11, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m11.4 <- ggplot(data=ranef_mod11, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m11.1, m11.2, m11.3, m11.4, ncol =2)
+```
+
+
+```{r echo = F}
+ggplot(track, aes(y=logtimeSecs, x = logdist100)) + 
+  geom_point(size = 0.5, position = "Jitter") +
+  labs(title = "Scatterplot of Log(Time) vs Log(Distance)",
+       x = "Log of Distance",
+       y = "Log of Time")
+```
+
+#### Intermediate Model 4
+
+In this model, we attempted to improve on Intermediate Model 1 by factoring GDP into countries that have either `small`, `medium`, or `large` GDP with cutoffs at the 25th and 75th percentile of GDP. There are no transformations of variables in this model, so it is reasonable to compare this to Intermediate Model 1 with AIC, BIC, and logLik. For this model, the AIC is 5257, BIC is 5322, and logLik is -2614. Compared to Intermediate Model 1, this is an improvement!  
+  
+  Looking now at the residual plots, it seems as if the assumptions of linearity and equal variance are in a similar as in Intermediate Model 1. The histograms for random slopes and random intercepts both appear to be good, so we can move forward with this model now.  
+  
+
+```{r}
+mod12 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
+            random = ~ dist100|country2)
+summary(mod12)
+```
+
+```{r echo=FALSE}
+mod12_diagnosics <- data.frame(fittedValues = fitted.values(mod12), residuals = residuals(mod12))
+m12.1 <- ggplot(mod12_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m12.2 <- ggplot(mod12_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod12 <- ranef(mod12) %>% as.data.frame()
+colnames(ranef_mod12) <- c("intercept", "dist100")
+
+m12.3 <- ggplot(data=ranef_mod12, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m12.4 <- ggplot(data=ranef_mod12, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod12") +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m12.1, m12.2, m12.3, m12.4, ncol = 2)
+```
+
+#### Getting to the Final Model
+
+The difference between Intermediate Model 4 and our final model was that we chose to use a measure of GDP per Capita rather than just straight GDP as one of the predictor variables. This fixed our earlier issue with the multicollinearity between GDP and Population, as well as contributed more information to our model. Changing this variable decreased the AIC to 5142, BIC to 5194, and logLik increased to -2559. The residual plots did not change too much between models, so we decided to make this our final model as seen in the body of the report.
+
+
+
+#### Citations
 1. Radicchi F (2012) Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games.  
   https://doi.org/10.1371/journal.pone.0040335 
    
