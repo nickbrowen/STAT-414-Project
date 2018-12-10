@@ -2,6 +2,7 @@
 title: "Predicting Success for Olympic Track Athletes with a Multi-Level Model"
 author: "Nick Browen, Eric Ortiz"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
   word_document: default
@@ -11,6 +12,7 @@ indent: yes
 ```{r echo=F}
 pacman::p_load(tidyverse, nlme, lme4, gridExtra, jtools, huxtable)
 track <- read.csv("trackFinal.csv")
+set_summ_defaults(digits = 3)
 ```
 
 
@@ -160,9 +162,12 @@ lmer_mod13 <- lmer(data = track, timeSecs ~ dist100 + c_BMI + year1896 + sex + s
 ```
 
 ```{r results = 'asis'}
-export_summs(summ(lmer_mod13), error_format = "[{conf.low}, {conf.high}]", scale = T)
+export_summs(summ(lmer_mod13, r.squared = F), error_format = "[{conf.low}, {conf.high}]", scale = T)
 ```
 
+```{r results="asis"}
+summ(lmer_mod13, r.squared = F)
+```
 
 
 ```{r out.width="100%"}
@@ -194,6 +199,10 @@ A few paragraphs that:
   7. Make suggestions for future research. Identify important next steps that a researcher could         take to build on your work.
   8. Do not include test statistics or p-values in this section. 
 ```
+
+In our attempt to predict an Olympic track athlete's finishing time, we found that when grouping the athletes by their country there are a number of significant predictors at both the athlete level and country level. As one would expect, at the athlete level we found that distance, BMI, year, and sex are all highly significant. Surprisingly, age was not a significant predictor of finishing time in the presence of the other explanatory variables. This could due to the constraints of our data as we only have information on the top three finishers for any particular event. Then, at the country level we found that GDP per capita was a significant predictor of finishing time in the presence of the other explanatory variables, however the nature of its effect is not what we expected. We fount that
+
+
 
 
 ### Annotated Appendix
@@ -265,6 +274,16 @@ mod0 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
 summary(mod0)
 ```
 
+
+
+```{r results='asis'}
+lmer_mod0 <- lmer(data = track, timeSecs ~ 1 + (1|country2))
+
+fit0 <- summ(lmer_mod0)
+fit0
+#fit0 %>% export_summs(error_format = "[{conf.low}, {conf.high}]", scale = T)
+```
+
 ```{r echo=FALSE}
 mod0_diagnosics <- data.frame(fittedValues = fitted.values(mod0), residuals = residuals(mod0))
 m0.1 <- ggplot(mod0_diagnosics, aes(x=fittedValues, y=residuals)) + 
@@ -306,12 +325,20 @@ grid.arrange(m0.1, m0.2, m0.3, ncol = 2)
 This model includes the variables distance, BMI (centered), year (centered), sex, GDP (centered, in billions), and interactions between BMI and distance, sex and distance, and GDP and distance.  
   
 The AIC for this model is 5345, BIC is 5402, and logLik is -2660, which is a vast improvement over the null model. Also, our residual plots show that the assumptions are closer to being met with this model than the null model. The residual plots closely resemble those of the final model, although the histograms for random slopes and random intercepts are slightly more skewed.
- 
-```{r echo = F}
+
+```{r echo=F}
 mod9 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
             random = ~ dist100|country2)
-summary(mod9)
+```
+
+
+```{r message=FALSE, warning=FALSE, results='asis', echo=F}
+lmer_mod9 <- lmer(data = track, 
+                  timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100 + (dist100|country2))
+
+fit9 <- summ(lmer_mod9)
+export_summs(fit9, scale = T)
 ```
 
 ```{r echo=FALSE}
@@ -371,6 +398,15 @@ mod10 <- lme(data = track,
             random = ~ logdist100|country2)
 summary(mod10)
 ```
+
+```{r message=FALSE, warning=FALSE, results='asis', echo=F}
+lmer_mod10 <- lmer(data = track, 
+                  timeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
+
+fit10 <- summ(lmer_mod10, r.squared = F)
+export_summs(fit10, scale = T)
+```
+
 
 ```{r echo=FALSE}
 mod10_diagnosics <- data.frame(fittedValues = fitted.values(mod10), residuals = residuals(mod10))

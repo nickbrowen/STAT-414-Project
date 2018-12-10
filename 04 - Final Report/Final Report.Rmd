@@ -385,6 +385,8 @@ class(tbl) = "matrix"
 xtable(tbl)
 ```
 
+
+
 ```{r echo=FALSE}
 mod10_diagnosics <- data.frame(fittedValues = fitted.values(mod10), residuals = residuals(mod10))
 m10.1 <- ggplot(mod10_diagnosics, aes(x=fittedValues, y=residuals)) + 
@@ -523,6 +525,7 @@ In this model, we attempted to improve on Intermediate Model 1 by factoring GDP 
 mod12 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
             random = ~ dist100|country2)
+
 stargazer(mod12, header=FALSE, type='latex',
           title = "Intermediate Model 4",
           digits = 2)
@@ -565,7 +568,6 @@ m12.3 <- ggplot(data=ranef_mod12, aes(intercept)) +
 
 m12.4 <- ggplot(data=ranef_mod12, aes(dist100)) + 
   geom_histogram(bins = 15) + 
-  ggtitle("Random Slopes for mod12") +
   labs(subtitle = "Histogram of Random Slopes",
        x = element_blank(),
        y = element_blank()) +
