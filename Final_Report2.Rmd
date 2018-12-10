@@ -97,17 +97,17 @@ table2 %>% t() %>% kable() %>%kable_styling()
 
 #### Final Model
 
-Level 1: $FinishingTime_{ij}=\beta_{0j} + \beta_{1j}(dist100_{ij})+\beta_{1}(cBMI_{ij}) +\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij}) + \epsilon_{ij}$
+Level 1 Equation: $FinishingTime_{ij}=\beta_{0j} + \beta_{1j}(dist100_{ij})+\beta_{1}(cBMI_{ij}) +\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij}) + \epsilon_{ij}$ \
 
-Level 2: $\beta_{0j}=\beta_{00}+\beta_{01}(gdpPerCap_{ij})+u_{0j}$
-$\beta_{1j}=\beta_{10}+\beta_{11}(gdpPerCap_{ij})+u_{1j}$
+Level 2 Equation: $\beta_{0j}=\beta_{00}+\beta_{01}(gdpPerCap_{ij})+u_{0j}$
+$\beta_{1j}=\beta_{10}+\beta_{11}(gdpPerCap_{ij})+u_{1j}$ \
 
-$\epsilon \sim N(0,\sigma^{2})$
+$\epsilon \sim N(0,\sigma^{2})$ 
 $u_{0j} \sim N(0,\sigma_{u0}^{2})$
 $u_{1j} \sim N(0,\sigma_{u1}^{2})$
-$cov(u_{0j},u_{1j}) = \tau_{01}$
+$cov(u_{0j},u_{1j}) = \tau_{01}$ \
 
-Composite: $FinishingTime_{ij}= \beta_{00}+\beta_{10}(dist100_{ij})+\beta_{01}(gdpPerCap_{ij})+\beta{11}(gdpPerCap_{j}*dist100_{ij}) +\beta_{1}(cBMI_{ij}) +\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij})+u_{0j}+u_{1j}(dist100_{ij})+ \epsilon_{ij}$
+Composite Equation: $FinishingTime_{ij}= \beta_{00}+\beta_{10}(dist100_{ij})+\beta_{01}(gdpPerCap_{ij})+\beta{11}(gdpPerCap_{j}*dist100_{ij}) +\beta_{1}(cBMI_{ij}) +\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij})+u_{0j}+u_{1j}(dist100_{ij})+ \epsilon_{ij}$
 
 ##### Parameter Estimates
 
@@ -159,7 +159,7 @@ $cov(u_{0j},u_{1j})=\hat{\tau}_{01}=-0.95*21.47*0.01276=-0.26$: (interpreting th
 	• Countries with high intercepts don’t tend to slow down as much as the distance of the race 
 	  increases compared to countries with lower intercepts.
 
-Although the estimate for the variance for the random slopes of distance (${\sigma}_{u1}^2$) is very small ($\hat{\sigma}_{u1}^2 =0.0002$), performing a log-likelihood ratio test to compare our final model to the same model without the random slopes produces $\chi^{2}=376.96$ with $df =2 $, resulting in an extremely small p-value.
+Although the estimate for the variance for the random slopes of distance (${\sigma}_{u1}^2$) is very small ($\hat{\sigma}_{u1}^2 =0.0002$), performing a log-likelihood ratio test to compare our final model to the same model without the random slopes produces $\chi^{2}=376.96$ with $df =2$, resulting in an extremely small p-value. In fact, including random slopes for distance reduces the within country variance by  53.44% ($\frac{284.69-611.51}{611.51}*100$).
 
 Notably, all the parameter estimates discussed above are highly statistially significant, with the intercept having the smallest t-value equal to 3.77 (df = 102) corresponding to a p-value of 0.0001. The parameter estimate with the largest t-value belongs to `dist100` with a t-value of 67.49 (df = 36) interestingly followed by the interaction between `dist100` and `sex` with a smaller p-value and t-value equal to 28.45 (df = 542) and then the interaction between `dist100` and `gdpPerCap_` with a t-value equal t0 17.25 (df = 550), note that `lmer` package reports p-values using using Kenward-Roger standard errors and d.f. throught the `pbkrtest` package. 
 
@@ -197,7 +197,7 @@ A few paragraphs that:
 
   In our attempt to predict an Olympic track athlete's finishing time, we found that when grouping the athletes by their country there are a number of significant predictors at both the athlete level and country level. As one would expect, at the athlete level we found that distance, BMI, year, and sex are all highly significant. Surprisingly, age was not a significant predictor of finishing time in the presence of the other explanatory variables. This could due to the constraints of our data as we only have information on the top three finishers for any particular event and year. Then, at the country level we found that GDP per capita was a significant predictor of finishing time in the presence of the other explanatory variables although the effect is different from what we expected. This is not what we expected because we thought the resources of a wealthier country and larger population would result in a deeper athlete pool and more specialized training which could be associated with faster times for all races. However, due to the significant interaction between distance and GDP per capita, we found that for the short distance events of 100m to 800m, athletes representing a low GDP per capita country tend to have faster finishing times on average compared to athletes representing a high GDP per capita country. For events longer than 800m, athletes representing high GDP per Capita countries tend to have faster finishing times on average. It seems that a country's GDP per capita in a given year is associated with whether that country tends to perform better in short distance events or long distance events overall for that year. In a paper that addresses a similar topic, Xun Bian concludes that high GDP per capita countries tend to specialize less on particular events but do well over a broad range of events. Although this is in answer to a different research question (a country's number of medals earned), it is interesting to compare the effect of GDP per capita on finishing time across different track events with their findings. A key difference between our studies is that Xun Bian analyzed all Olympic events whereas we studied just track events. 
   Also mentioned in Xun Bian's study, the economic structure of the country (capitalist or communist) played a significant role in a country's medal count. As we did not distinguish countries by their economic structure, this could be a confounding variable in the effect of GDP per capita and the variation between countries. Furthermore, the number of athletes a country sends to the Olympics as a part of their Olympic team varies greatly between countries and could affect their performance overall. As touched on earlier, the data we used only includes the top three athletes from each event. The results of this study can only be generalized to Olympic medaling athletes in (non-hurdle, non-relay) running track events. 
-  The multilevel model that we employed to address our reseach question allowed us to investigate both athlete level and country level characteristics and study the variability in finishing times at each of these levels. We observed that there is a large amount of country to country variability and many of the suggested extensions of this study involve attempting to account for that variability. It would be beneficial to use data that include every athlete's finishing time, not only the medaling athletes. This would provide much more information about each country, as many countries in our current dataset only have less than athletes representing them. Moreover, an addition of country level variables would be useful in accounting for more country-level variation such as metrics of quality of life. Another extension would be including an autoregressive error structure to account for the use of years as an explanatory variable.
+  The multilevel model that we employed to address our reseach question allowed us to investigate both athlete level and country level characteristics and study the variability in finishing times at each of these levels. We found after adjusting for our explanatory variables, 61.81% of the variation in athlete's finishing times was due to variation between countries. Many of the suggested extensions of this study involve attempting to account for that variability. It would be beneficial to use data that include every athlete's finishing time, not only the medaling athletes. This would provide much more information about each country, as many countries in our current dataset only have less than athletes representing them. Moreover, an addition of country level variables would be useful in accounting for more country-level variation such as metrics of quality of life. Another extension would be including an autoregressive error structure to account for the use of years as an explanatory variable.
   
   
   
