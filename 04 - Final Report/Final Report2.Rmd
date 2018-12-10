@@ -1,0 +1,573 @@
+---
+title: "Predicting Success for Olympic Track Athletes with a Multi-Level Model"
+author: "Nick Browen, Eric Ortiz"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+indent: yes
+---
+
+```{r echo=F}
+pacman::p_load(tidyverse, nlme, lme4, gridExtra, jtools, huxtable)
+track <- read.csv("trackFinal.csv")
+```
+
+
+=============================================================
+  
+  Project Description:
+  
+  http://statweb.calpoly.edu/bchance/stat414/Stat414Project.pdf
+
+=============================================================
+
+### Introduction 
+
+  Every four years, the Olympics Events garner worldwide attention much attention. We wanted to know what athlete characteristics contribute to their success and how the country they are from affects this. There is so much data readily available about the Olympics, even going back to 1896. We also were excited to be able to combine datasets and information from multiple resources from Olympic data to population and GDP of the countries of the world over time.  
+  
+  We chose to include athlete-level characteristics because the ideal physique for a distance runner is much different than a 100m sprinter and we think this will be useful in explaining differences in finishing time and are curious what other nuances will be revealed. At the country-level, we chose to include explanatory variables because athletes are sent as a team by their country and so the athlete pool, training resources and even quality of life might reveal some trends in predicting finishing times.  
+  
+  When looking through some literature on the subject, we came to realize that more is involved with success in the Olympics than just the variables at the athlete level such as height, weight, gender, and age. We were struck by Xun Bian's paper titled "Predicting Olympic Medal Counts: the Effects of Economic Development on Olympic Performance" in which Olympic medal counts for a country were predicted from variables at the country level such as population, GDP, who the hosting country is, and whether the country is Socialist or not. Further, when we looked at the paper by Filippo Radicchi titled "Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games", we could see that there is variablility at the athlete level since many athletes compete in more than one Olympics in their lifetime.
+  
+  We chose to consider factors at both the athlete level and country level in a Hierarchical Model to predict the finishing time of track athletes.
+  
+  
+#### Research Question
+How can we best predict an Olympic track athlete’s finishing time? What is the relationship between an athlete’s finishing time and factors at the athlete level such as sex, age, weight, and height as well as factors at the country level such as the athlete’s nationality, their country's GDP, and population?
+  
+
+
+
+### Materials and Methods 
+```
+Three to five paragraphs (or fewer) that…
+  1. Briefly describe your data, where it came from (source), definitions of important variables, 
+     and how it was collected
+  2. Indicate any modifications made to the data, recoding, or decisions about missing data
+  3. Briefly but thoroughly describe the statistical inference methods used to quantify the 
+     association between your outcome and predictor variables in a multilevel analysis. 
+     What summary statistics were calculated? 
+     What statistical tests were performed?
+  4. Specify strategies employed when building your models
+  5. Do not report results in the Materials and Methods section! 
+```
+Our data consist of merged datasets from Kaggle.com. First we found a comprehensive dataset of all Olympic medalists, but we subsetted this to include just track athletes that performed in running events (specifically the 10k race and all events shorter than 10k, not including events such as hurdles or steeple chase). This file contains info on athlete level characteristics such as height, weight, and age, but it did not include the finishing times. So we then merged this with another dataset from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our dataset as well.
+
+Having synthesized all these datasets together, we converted the event variable that would read like "100 M Men" into a quantitative variable that indicated the distance of the race. Finally, we rescaled the distance variable in order that the intercept would be about the 100m race. Similiarly, the year of the event was rescaled to be number of years since 1896.  Height and weight were converted to BMI. Several variations of GDP and population of countries were tried out during the model building process. We first rescaled GDP as GDP in billions of dollars and, as indicated from our Exploratory Data Analysis, population was put on a log scale. GDP per capita (GDP/population) was also calculated. Later, GDP and population were categorized into "small", "medium", "large", and GDP per capita was categorized into "low" and "high". Throughout the model building process, log transformations of the distance of races and finishing times were calculated. All continous explanatory variables were centered, with the exclusion of distance and year.
+
+To quantify the association between the finishing time of races and our predictor variables, we investigated these relationships at the athlete level and then at the country level. Correlation plots and correlation matrices were produced to identify predictor variables that were important to finishing time. To investigate interactions, plots of the finishing time versus a predictor variable were split into panels by another predictor variable were analyzed to determine if any relationships differs across another variable.
+
+Initially, a two level random intercepts model was fit predicting finishing time (seconds) allowing the country the athlete is from to be the random. Quickly, we included the distance of the race as a predictor variable to account for the obvious variation in finishing times. Then, random slopes were included for distance. After verifying this was helpful, we added all predictor variables and interactions that our Exploratory Data Analysis indicated would be useful in predicting the finishing time. Then using t-tests, we systematically removed insignificant terms and refitted the model. Throughout this process is when several variables were converted into more useful variables such as height and weight into BMI, GDP into GDP into billions of dollars, and GDP per capita converted to a categorical variable. AIC and log-likelihood ratio tests were used to compare models. We briefly attempted log transformations on distance and finishing time, in an effort to remedy the effects of using distance (a somewhat categorical variable with large spacing between values) as a quantitative variable. 
+
+  When merging these data sets together we also ran into missing values, namely for countries that were not included in Gapminder's country GDP and Population data or countries that changed their name at some point (for example Soviet Union to Russia). Where possible, we were able to search out the countries that changed name and correct for that error. However, we chose to omit countries that we had no country-level data on.  
+  
+
+### Results
+```
+The meat of your report, which should include…
+  1. A general description of your data (completed via your exploratory data analysis)
+  2. A description of the results from your analyses, including interpretations of parameter             estimates, tests, and confidence intervals in context.
+  3. Tables that summarize results and figures that illustrate results. These tables and figures         should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
+  4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
+```
+
+  In our final data set, we ended up with: 
+  
+- 585 total observations (completed track events by a medaling athlete)
+- 410 total athletes
+    - 177 from the USA
+    - 54 from the UK
+    - 45 from Jamaica
+- 45 total countries 
+  
+  The following variables are used in our final model to predict `timeSecs`:
+  
+- `dist100`: Distance of the event, subtracting 100 to make our intercept (the 100m Dash) meaningful
+    - 109 observations from 100m Dash
+    - 90 observations from 200m
+    - 85 observations from 400m
+    - 75 observations from 800m  
+    - 76 observations from 1500m
+    - 68 observations from 5000m 
+    - 74 observations from 10000m 
+- `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$  
+- `year1896`: Year of the event, centered at 1896 to make the intercept meaningful
+- `sex`: Sex of the athlete
+    - 413 male athletes
+    - 172 female athletes
+- `gdpPerCap_`: GDP per Capita of the country represented, where a GDP per Capita of greater than $10,000 is considered "high" 
+and a GDP per Capita of less than $10,000 is considered "low"
+    - 312 athletes from a low GDP per capita country
+    - 273 athletes from a high GDP per capita country
+    
+
+**Parameter Estimates**
+
+Intercept: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 18.02s. 
+
+`dist100`: After adjusting for the year of the race and the BMI of the athlete, each 100-meter increase in the distance of a race is associated with a 16.26s increase in a male athlete’s finishing time for athletes competing for a country with a high GDP per capita.
+
+`c_BMI`: For an athlete competing for an average country, each 1 kg/m^2 increase in an athlete’s BMI is associated with a 4.90s slower finishing time after adjusting for the distance of the race, the year of the race, sex of the athlete, and GDP per capita of the country the athlete is competing for. 
+
+`year1896`: After adjusting for the distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, every 4 years (every Summer Olympic Games) is associated with a 1.13s decrease in the finishing times of races.
+
+`sexW`: After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the country the athlete is competing for, a female athlete is predicted to have a 13.2s slower finishing time than a male athlete for the 100-meter race.
+
+`gdpPerCap_low`:  After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 14.86s slower finishing time than an athlete competing for a country with a high GDP per capita for the 100-meter race.
+
+`dist100:sexW`: After adjusting for the year of the race and the BMI of the athlete female athletes’ associated rate of increase in their finishing times per 100m increase of the race is 1.76s higher than male athletes. \
+ •	After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the     country the athlete is competing for, a female athlete is predicted to have a (13.2 +     
+0.02*dist100)s slower finishing time than a male athlete.
+
+`dist100:gdpPerCap_low`: After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 1.41s higher rate of increase in their finishing times per 100m than an athlete competing for a country with a high GDP per capita. \
+  •	After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing 
+for a country with a low GDP per capita is predicted to have a (14.86 + 0.01*dist100)s 
+faster/slower finishing time compared to an athlete competing for a country with a high GDP per 
+capita.
+
+$\hat{\sigma}_{u0}^2=151.01$: After adjusting for the BMI of an athlete, the standard deviation of countries’ predicted finishing time for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita is 12.29 seconds.
+
+$\hat{\sigma}_{u1}^2 =0.0009$:  After adjusting for the year of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of countries’ rate of increase in finishing time per 100m is 0.92 seconds.
+
+$\hat{\sigma}^{2}=293.94$: After adjusting for the year and distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of athletes’ finishing time within a country is 17.14 seconds.
+
+$cov(\hat{\sigma}_{u0}^2,\hat{\sigma}_{u1}^2)=\hat{\tau}_{01}^{2}=-0.88*12.289*17.145=-185.41$: (interpreting the negative sign on the covariance term): After adjusting for the BMI of an athlete, countries that have higher predicted finishing times for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita tend to have a lower rate of increase in finishing time per 100m increase of the race. \
+	• Countries with high intercepts don’t tend to slow down as much as the distance of the race 
+	  increases compared to countries with lower intercepts.
+
+Notably, all the parameter estimates discussed above are highly statistially significant, with the intercept having the smallest t-value equal to 3.92 (df = 533) corresponding to a p-value of 0.0001. The parameter estimate with the largest t-value belongs to `dist100` with a t-value of 85.45 (df = 533) interestingly followed by the interaction between `dist100` and `sex` with a t-value equal to 28.23 (df = 533) and then the interaction between `dist100` and `gdpPerCap_` with a t-value equal t0 16.96 (df = 533).
+
+```
+Left to do:
+- Most important: plots and figures!
+- tables
+- more big picture (but without editorilzing)
+- figure out how to format all that interpretation into report format (maybe plots will help integrate all that)
+```
+
+
+```{r paged.print=TRUE}
+mod13 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100,
+            random = ~ dist100|country2)
+summary(mod13)
+```
+
+
+```{r message=FALSE, warning=FALSE}
+lmer_mod13 <- lmer(data = track, timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100+(dist100|country2))
+```
+
+```{r results = 'asis'}
+export_summs(summ(lmer_mod13), error_format = "[{conf.low}, {conf.high}]", scale = T)
+```
+
+
+
+```{r out.width="100%"}
+ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
+  geom_point(size = 0.5, position = "Jitter", show.legend = F) +
+  geom_smooth(show.legend=F, se=F, size = 0.3, method = "lm") +
+  labs(title = "Time in Seconds vs. Distance of Event",
+       subtitle = "Grouped by Country of Athlete",
+       y = "Time (Seconds)",
+       x = "Distance of Event (Meters)")
+```
+
+```{r}
+ggplot(data = track, aes(x=dist100, y=timeSecs)) + geom_abline(intercept = mod13$coefficients$random$country2[,1], slope = mod13$coefficients$random$country2[,2]) + scale_x_continuous(limits = c(0, 9900)) + scale_y_continuous(limits = c(-500, 500)) + ggtitle("Random Intercepts of Countries and Random Slopes for Distance by Country")
+```
+
+
+
+### Discussion
+```
+A few paragraphs that:
+  1. Begin with an accurate summary statement; describe how the results help answer your research        questions and what was most interesting from your analysis. In fact, the first paragraph of the      Discussion is very important – in professional journals, it is often the first and sometimes        the only paragraph that is read in a paper. After the first sentence highlights primary             results, the remainder of the first paragraph might compare your results to others in the           literature or include interesting secondary results.
+  2. Discuss possible implications of the results in the context of the research question.
+  3. Make a statement regarding potential confounding variables in your study.
+  4. Make a statement about the generalizability of your results. Don’t give generic statements of       possible causation and generalizability, but thoughtfully discuss relevant issues – confounding      variables, representativeness of the sample, etc.
+  5. Identify any limitations of your study. Discuss the potential impact of such limitations on the
+     conclusions.
+  6. Identify strengths and weaknesses of your analysis.
+  7. Make suggestions for future research. Identify important next steps that a researcher could         take to build on your work.
+  8. Do not include test statistics or p-values in this section. 
+```
+
+
+### Annotated Appendix
+
+#### Handling Missing Data
+
+Since we did our own merging in order to compile data at both the athlete level and country level, we did run in to quite a few missing values. In particular, our missing values were almost all pertaining to either incomplete data from Gapminder on country's GDP and population, especially in earlier years. We generally chose to omit these cases since we would not have any country level information on these athletes.  
+  
+  Another case where we had lots of missing values was for countries that have changed names at some point (Russia vs. Soviet Union). In these cases we tried to compile all these observations under the same country name. For instance, we would change all Soviet Union athletes to represent Russia instead.
+
+#### Handling Outliers
+
+Because this data consisted of only the athletes that earned medals, all their track times were fairly similar and we did not come into any many outliers with respect to Time. The one place that did have outliers was GDP and Population, particularly when looking at China and India. We also noticed that these two variables were highly multicollinear. To take care of these two problems, we included a variable in our model, GDP per Capita. We chose to treat this as categorical and recoded the values to be either `low` or `high`, depending on whether the GDP per capita was above or below $10,000.
+
+#### Residual Plots for Final Model
+```{r echo=FALSE}
+mod13_diagnosics <- data.frame(fittedValues = fitted.values(mod13), residuals = residuals(mod13))
+m13.1 <- ggplot(mod13_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m13.2 <- ggplot(mod13_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod13 <- ranef(mod13) %>% as.data.frame()
+colnames(ranef_mod13) <- c("intercept", "dist100")
+
+m13.3 <- ggplot(data=ranef_mod13, aes(intercept)) + 
+  geom_histogram(bins = 20) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m13.4 <- ggplot(data=ranef_mod13, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m13.1, m13.2, m13.3, m13.4, ncol=2)
+```
+
+Looking at the Residuals vs Fitted plot, we can see that we can see that there is a fan shape, which indicates there is not equal variance of residuals. This is intuitive because longer events take more time and will have more spread in the results than shorter events. However, the residuals do appear to follow a roughly linear trend. Looking at the QQ Plot, we can see that the points follow the diagonal closely, so we can assume the data come from a Normal distribution. Looking at the histogram for Random Slopes and Random Intercepts, we can see that both appear to come from an approximate Normal distribution and it is fair to treat both intercepts and slopes as random.
+
+
+#### Intermediate Models
+
+##### Null Model
+
+Looking at the residual plots for the null model below, we can see that the residuals do not follow a linear trend about the zero line and they are not normally distributed. However, we can see that random intercepts is a reasonable assumption to make. This model can be treated as a baseline to compare more complex models to. Note that for this model, the AIC is 8796, BIC is 8809, and logLik is -4395.
+
+```{r}
+mod0 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
+summary(mod0)
+```
+
+```{r echo=FALSE}
+mod0_diagnosics <- data.frame(fittedValues = fitted.values(mod0), residuals = residuals(mod0))
+m0.1 <- ggplot(mod0_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m0.2 <- ggplot(mod0_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod0 <- ranef(mod0) %>% as.data.frame()
+colnames(ranef_mod0) <- c("intercept")
+
+m0.3 <- ggplot(data=ranef_mod0, aes(intercept)) + 
+  geom_histogram(bins = 20) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+
+grid.arrange(m0.1, m0.2, m0.3, ncol = 2)
+```
+
+
+##### Intermediate Model 1
+
+This model includes the variables distance, BMI (centered), year (centered), sex, GDP (centered, in billions), and interactions between BMI and distance, sex and distance, and GDP and distance.  
+  
+The AIC for this model is 5345, BIC is 5402, and logLik is -2660, which is a vast improvement over the null model. Also, our residual plots show that the assumptions are closer to being met with this model than the null model. The residual plots closely resemble those of the final model, although the histograms for random slopes and random intercepts are slightly more skewed.
+ 
+```{r echo = F}
+mod9 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
+            random = ~ dist100|country2)
+summary(mod9)
+```
+
+```{r echo=FALSE}
+mod9_diagnosics <- data.frame(fittedValues = fitted.values(mod9), residuals = residuals(mod9))
+m9.1 <- ggplot(mod9_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m9.2 <- ggplot(mod9_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod9 <- ranef(mod9) %>% as.data.frame()
+colnames(ranef_mod9) <- c("intercept", "dist100")
+
+m9.3 <- ggplot(data=ranef_mod9, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m9.4 <- ggplot(data=ranef_mod9, aes(dist100)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m9.1, m9.2, m9.3, m9.4, ncol = 2)
+```
+
+#### Intermediate Model 2 
+
+In an attempt to improve Intermediate Model 1, we did a log transformation on distance because the distance of events does not change in a linear fashion, but roughly exponentially (100m, 200m, 400m, 800m, 1500m, 5000m, etc). However, upon looking at the residual plots, we could see that this transformation introduced many violations of assumptions, namely linearity which we were trying to address. This also changed the distribution of random slopes and random intercepts so that they no longer resemble a normal distribution, but became heavily skewed. It is easily observable from the scatterplot of Time vs Distance below that the association between the two is not linear.   
+  
+  We can't use AIC, BIC, or logLik to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
+
+
+
+```{r echo = F}
+mod10 <- lme(data = track, 
+            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
+              c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod10)
+```
+
+```{r echo=FALSE}
+mod10_diagnosics <- data.frame(fittedValues = fitted.values(mod10), residuals = residuals(mod10))
+m10.1 <- ggplot(mod10_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m10.2 <- ggplot(mod10_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+ranef_mod10 <- ranef(mod10) %>% as.data.frame()
+colnames(ranef_mod10) <- c("intercept", "dist100")
+
+m10.3 <- ggplot(data=ranef_mod10, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m10.4 <- ggplot(data=ranef_mod10, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m10.1, m10.2, m10.3, m10.4, ncol = 2)
+```
+
+```{r echo=F}
+ggplot(track, aes(y=logtimeSecs, x = dist)) + 
+  geom_point(size = 0.5, position = "Jitter") +
+  labs(title = "Scatterplot of Log(Time) vs Distance",
+       x = "Distance of Event",
+       y = "Log of Time")
+```
+
+
+#### Intermediate Model 3
+
+With this model, we attempted to improve upon Intermediate Model 1 by including both a log transformation on Time and a log transformation on distance.  
+  
+  Looking at the scatterplot of Log(Time) vs Log(Distance), it seems as though the association between these two variables is linear with this new transformation. However, when looking at the residual plots, we can see that linearity is in fact violated now.  
+  
+  We can't use AIC, BIC, or logLik to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
+
+
+
+```{r echo = F}
+mod11 <- lme(data = track, 
+            fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
+              sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+summary(mod11)
+```
+
+```{r echo=FALSE}
+mod11_diagnosics <- data.frame(fittedValues = fitted.values(mod11), residuals = residuals(mod11))
+m11.1 <- ggplot(mod11_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m11.2 <- ggplot(mod11_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod11 <- ranef(mod11) %>% as.data.frame()
+colnames(ranef_mod11) <- c("intercept", "dist100")
+
+m11.3 <- ggplot(data=ranef_mod11, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m11.4 <- ggplot(data=ranef_mod11, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod9") +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m11.1, m11.2, m11.3, m11.4, ncol =2)
+```
+
+
+```{r echo = F}
+ggplot(track, aes(y=logtimeSecs, x = logdist100)) + 
+  geom_point(size = 0.5, position = "Jitter") +
+  labs(title = "Scatterplot of Log(Time) vs Log(Distance)",
+       x = "Log of Distance",
+       y = "Log of Time")
+```
+
+#### Intermediate Model 4
+
+In this model, we attempted to improve on Intermediate Model 1 by factoring GDP into countries that have either `small`, `medium`, or `large` GDP with cutoffs at the 25th and 75th percentile of GDP. There are no transformations of variables in this model, so it is reasonable to compare this to Intermediate Model 1 with AIC, BIC, and logLik. For this model, the AIC is 5257, BIC is 5322, and logLik is -2614. Compared to Intermediate Model 1, this is an improvement!  
+  
+  Looking now at the residual plots, it seems as if the assumptions of linearity and equal variance are in a similar as in Intermediate Model 1. The histograms for random slopes and random intercepts both appear to be good, so we can move forward with this model now.  
+  
+
+```{r}
+mod12 <- lme(data = track, 
+            fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
+            random = ~ dist100|country2)
+summary(mod12)
+```
+
+```{r echo=FALSE}
+mod12_diagnosics <- data.frame(fittedValues = fitted.values(mod12), residuals = residuals(mod12))
+m12.1 <- ggplot(mod12_diagnosics, aes(x=fittedValues, y=residuals)) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0, color = "red") + 
+  labs(subtitle = "Residuals vs Fitted",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m12.2 <- ggplot(mod12_diagnosics) + 
+  geom_qq_line(aes(sample=residuals), color = "red") +
+  geom_qq(aes(sample=residuals), size = 0.5) +
+  labs(subtitle = "QQ-Plot",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+ranef_mod12 <- ranef(mod12) %>% as.data.frame()
+colnames(ranef_mod12) <- c("intercept", "dist100")
+
+m12.3 <- ggplot(data=ranef_mod12, aes(intercept)) + 
+  geom_histogram(bins = 15) +
+  labs(subtitle = "Histogram of Random Intercepts",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+m12.4 <- ggplot(data=ranef_mod12, aes(dist100)) + 
+  geom_histogram(bins = 15) + 
+  ggtitle("Random Slopes for mod12") +
+  labs(subtitle = "Histogram of Random Slopes",
+       x = element_blank(),
+       y = element_blank()) +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+
+grid.arrange(m12.1, m12.2, m12.3, m12.4, ncol = 2)
+```
+
+#### Getting to the Final Model
+
+The difference between Intermediate Model 4 and our final model was that we chose to use a measure of GDP per Capita rather than just straight GDP as one of the predictor variables. This fixed our earlier issue with the multicollinearity between GDP and Population, as well as contributed more information to our model. Changing this variable decreased the AIC to 5142, BIC to 5194, and logLik increased to -2559. The residual plots did not change too much between models, so we decided to make this our final model as seen in the body of the report.
+
+
+7
+#### Citations
+1. Radicchi F (2012) Universality, Limits and Predictability of Gold-Medal Performances at the Olympic Games.  
+  https://doi.org/10.1371/journal.pone.0040335 
+   
+2. Bian, X. 2005. Predicting Olympic Medal Counts: The Effects of Economic Development on Olympic Performance.  
+  https://pdfs.semanticscholar.org/7293/1ab692bcab9e724b0e5ed4adb53b7ff8097f.pdf
+  
+3. Country Level Data such as GDP and Population.  
+  https://www.gapminder.org/data/
+  
+4. Athlete Level Data for Finishing Time.  
+  https://www.kaggle.com/jayrav13/olympic-track-field-results
+  
+5. Athlete Level Data for Height, Age, Sex, and Country.  
+  https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results
