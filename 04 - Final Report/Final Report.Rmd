@@ -9,7 +9,7 @@ indent: yes
 ---
 
 ```{r echo=F}
-pacman::p_load(tidyverse, nlme, lme4, gridExtra, kableExtra)
+pacman::p_load(tidyverse, nlme, lme4, gridExtra, kableExtra, stargazer, xtable)
 track <- read.csv("trackFinal.csv")
 ```
 
@@ -241,10 +241,25 @@ Looking at the Residuals vs Fitted plot, we can see that we can see that there i
 
 Looking at the residual plots for the null model below, we can see that the residuals do not follow a linear trend about the zero line and they are not normally distributed. However, we can see that random intercepts is a reasonable assumption to make. This model can be treated as a baseline to compare more complex models to. Note that for this model, the AIC is 8796, BIC is 8809, and logLik is -4395.
 
-```{r}
+```{r, results='asis', echo=F}
 mod0 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
+
+stargazer(mod0, header=FALSE, type='latex',
+          title = "Null Model")
+
+# Removes annoying comment
+options(xtable.comment = FALSE)
+
+tbl = VarCorr(mod0)
+class(tbl) = "matrix"
+xtable(tbl)
+```
+
+```{r}
 summary(mod0)
 ```
+
+
 
 ```{r echo=FALSE}
 mod0_diagnosics <- data.frame(fittedValues = fitted.values(mod0), residuals = residuals(mod0))
@@ -288,12 +303,24 @@ This model includes the variables distance, BMI (centered), year (centered), sex
   
 The AIC for this model is 5345, BIC is 5402, and logLik is -2660, which is a vast improvement over the null model. Also, our residual plots show that the assumptions are closer to being met with this model than the null model. The residual plots closely resemble those of the final model, although the histograms for random slopes and random intercepts are slightly more skewed.
  
-```{r echo = F}
+```{r, results='asis', echo=F}
 mod9 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
             random = ~ dist100|country2)
+stargazer(mod9, header=FALSE, type='latex',
+          title = "Intermediate Model 1",
+          keep.stat = c("sigma2"))
+
+tbl = VarCorr(mod9)
+class(tbl) = "matrix"
+xtable(tbl)
+```
+
+
+```{r}
 summary(mod9)
 ```
+
 
 ```{r echo=FALSE}
 mod9_diagnosics <- data.frame(fittedValues = fitted.values(mod9), residuals = residuals(mod9))
@@ -345,12 +372,17 @@ In an attempt to improve Intermediate Model 1, we did a log transformation on di
 
 
 
-```{r echo = F}
+```{r, results='asis', echo=F}
 mod10 <- lme(data = track, 
             fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
               c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
-summary(mod10)
+stargazer(mod10, header=FALSE, type='latex',
+          title = "Intermediate Model 2")
+
+tbl = VarCorr(mod10)
+class(tbl) = "matrix"
+xtable(tbl)
 ```
 
 ```{r echo=FALSE}
@@ -414,12 +446,18 @@ With this model, we attempted to improve upon Intermediate Model 1 by including 
 
 
 
-```{r echo = F}
+```{r, results='asis', echo=F}
 mod11 <- lme(data = track, 
             fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
               sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
-mod11 %>% summary()
+
+stargazer(mod11, header=FALSE, type='latex',
+          title = "Intermediate Model 3")
+
+tbl = VarCorr(mod11)
+class(tbl) = "matrix"
+xtable(tbl)
 ```
 
 ```{r echo=FALSE}
@@ -481,11 +519,17 @@ In this model, we attempted to improve on Intermediate Model 1 by factoring GDP 
   Looking now at the residual plots, it seems as if the assumptions of linearity and equal variance are in a similar as in Intermediate Model 1. The histograms for random slopes and random intercepts both appear to be good, so we can move forward with this model now.  
   
 
-```{r}
+```{r, results='asis', echo=F}
 mod12 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
             random = ~ dist100|country2)
-summary(mod12)
+stargazer(mod12, header=FALSE, type='latex',
+          title = "Intermediate Model 4",
+          digits = 2)
+
+tbl = VarCorr(mod12)
+class(tbl) = "matrix"
+xtable(tbl)
 ```
 
 ```{r echo=FALSE}
