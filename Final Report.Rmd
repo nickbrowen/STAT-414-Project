@@ -12,19 +12,10 @@ indent: yes
 ```{r echo=F}
 pacman::p_load(tidyverse, nlme, lme4, gridExtra, jtools, huxtable)
 track <- read.csv("trackFinal.csv")
-set_summ_defaults(digits = 3)
+set_summ_defaults(digits = 2)
 ```
 
-
-=============================================================
-  
-  Project Description:
-  
-  http://statweb.calpoly.edu/bchance/stat414/Stat414Project.pdf
-
-=============================================================
-
-### Introduction 
+## Introduction 
 
   Every four years, the Olympics Events garner worldwide attention much attention. We wanted to know what athlete characteristics contribute to their success and how the country they are from affects this. There is so much data readily available about the Olympics, even going back to 1896. We also were excited to be able to combine datasets and information from multiple resources from Olympic data to population and GDP of the countries of the world over time.  
   
@@ -41,19 +32,8 @@ How can we best predict an Olympic track athlete’s finishing time? What is the
 
 
 
-### Materials and Methods 
-```
-Three to five paragraphs (or fewer) that…
-  1. Briefly describe your data, where it came from (source), definitions of important variables, 
-     and how it was collected
-  2. Indicate any modifications made to the data, recoding, or decisions about missing data
-  3. Briefly but thoroughly describe the statistical inference methods used to quantify the 
-     association between your outcome and predictor variables in a multilevel analysis. 
-     What summary statistics were calculated? 
-     What statistical tests were performed?
-  4. Specify strategies employed when building your models
-  5. Do not report results in the Materials and Methods section! 
-```
+## Materials and Methods 
+
 Our data consist of merged datasets from Kaggle.com. First we found a comprehensive dataset of all Olympic medalists, but we subsetted this to include just track athletes that performed in running events (specifically the 10k race and all events shorter than 10k, not including events such as hurdles or steeple chase). This file contains info on athlete level characteristics such as height, weight, and age, but it did not include the finishing times. So we then merged this with another dataset from Kaggle that included finishing time. Then, from Gapminder.com we obtained country level information such as GDP and population and merged this into our dataset as well.
 
 Having synthesized all these datasets together, we converted the event variable that would read like "100 M Men" into a quantitative variable that indicated the distance of the race. Finally, we rescaled the distance variable in order that the intercept would be about the 100m race. Similiarly, the year of the event was rescaled to be number of years since 1896.  Height and weight were converted to BMI. Several variations of GDP and population of countries were tried out during the model building process. We first rescaled GDP as GDP in billions of dollars and, as indicated from our Exploratory Data Analysis, population was put on a log scale. GDP per capita (GDP/population) was also calculated. Later, GDP and population were categorized into "small", "medium", "large", and GDP per capita was categorized into "low" and "high". Throughout the model building process, log transformations of the distance of races and finishing times were calculated. All continous explanatory variables were centered, with the exclusion of distance and year.
@@ -65,14 +45,8 @@ Initially, a two level random intercepts model was fit predicting finishing time
   When merging these data sets together we also ran into missing values, namely for countries that were not included in Gapminder's country GDP and Population data or countries that changed their name at some point (for example Soviet Union to Russia). Where possible, we were able to search out the countries that changed name and correct for that error. However, we chose to omit countries that we had no country-level data on.  
   
 
-### Results
-```
-The meat of your report, which should include…
-  1. A general description of your data (completed via your exploratory data analysis)
-  2. A description of the results from your analyses, including interpretations of parameter             estimates, tests, and confidence intervals in context.
-  3. Tables that summarize results and figures that illustrate results. These tables and figures         should be well-labeled, numbered (e.g., Figure 1), and have a good, descriptive caption. Each       report should have a minimum of two plots; rarely are residual plots part of the main body of       the report unless they are an integral part of the story.
-  4. You should interpret tests, confidence intervals, and coefficients in this section, but you         should not editorialize here! Save that for the Discussion. 
-```
+## Results
+
 
   In our final data set, we ended up with: 
   
@@ -104,20 +78,20 @@ and a GDP per Capita of less than $10,000 is considered "low"
     - 273 athletes from a high GDP per capita country
     
 
-**Parameter Estimates**
+#### Parameter Estimates
 
-Intercept: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 18.02s. 
-
+*Intercept*: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 18.02s. 
+  
 `dist100`: After adjusting for the year of the race and the BMI of the athlete, each 100-meter increase in the distance of a race is associated with a 16.26s increase in a male athlete’s finishing time for athletes competing for a country with a high GDP per capita.
-
+  
 `c_BMI`: For an athlete competing for an average country, each 1 kg/m^2 increase in an athlete’s BMI is associated with a 4.90s slower finishing time after adjusting for the distance of the race, the year of the race, sex of the athlete, and GDP per capita of the country the athlete is competing for. 
-
+  
 `year1896`: After adjusting for the distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, every 4 years (every Summer Olympic Games) is associated with a 1.13s decrease in the finishing times of races.
-
+  
 `sexW`: After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the country the athlete is competing for, a female athlete is predicted to have a 13.2s slower finishing time than a male athlete for the 100-meter race.
-
+  
 `gdpPerCap_low`:  After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 14.86s slower finishing time than an athlete competing for a country with a high GDP per capita for the 100-meter race.
-
+  
 `dist100:sexW`: After adjusting for the year of the race and the BMI of the athlete female athletes’ associated rate of increase in their finishing times per 100m increase of the race is 1.76s higher than male athletes. \
  •	After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the     country the athlete is competing for, a female athlete is predicted to have a (13.2 +     
 0.02*dist100)s slower finishing time than a male athlete.
@@ -140,37 +114,25 @@ $cov(\hat{\sigma}_{u0}^2,\hat{\sigma}_{u1}^2)=\hat{\tau}_{01}^{2}=-0.88*12.289*1
 
 Notably, all the parameter estimates discussed above are highly statistially significant, with the intercept having the smallest t-value equal to 3.92 (df = 533) corresponding to a p-value of 0.0001. The parameter estimate with the largest t-value belongs to `dist100` with a t-value of 85.45 (df = 533) interestingly followed by the interaction between `dist100` and `sex` with a t-value equal to 28.23 (df = 533) and then the interaction between `dist100` and `gdpPerCap_` with a t-value equal t0 16.96 (df = 533).
 
-```
-Left to do:
-- Most important: plots and figures!
-- tables
-- more big picture (but without editorilzing)
-- figure out how to format all that interpretation into report format (maybe plots will help integrate all that)
-```
 
-
-```{r paged.print=TRUE}
+```{r paged.print=TRUE, echo=F}
 mod13 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100,
             random = ~ dist100|country2)
-summary(mod13)
 ```
 
 
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, echo=F}
 lmer_mod13 <- lmer(data = track, timeSecs ~ dist100 + c_BMI + year1896 + sex + sex*dist100 + gdpPerCap_ + gdpPerCap_*dist100+(dist100|country2))
 ```
 
-```{r results = 'asis'}
-export_summs(summ(lmer_mod13, r.squared = F), error_format = "[{conf.low}, {conf.high}]", scale = T)
-```
 
-```{r results="asis"}
-summ(lmer_mod13, r.squared = F)
+```{r results="asis", echo=F}
+summ(lmer_mod13, r.squared = F, re.variance = "var")
 ```
 
 
-```{r out.width="100%"}
+```{r out.width="100%", echo=F}
 ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
   geom_point(size = 0.5, position = "Jitter", show.legend = F) +
   geom_smooth(show.legend=F, se=F, size = 0.3, method = "lm") +
@@ -180,13 +142,13 @@ ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
        x = "Distance of Event (Meters)")
 ```
 
-```{r}
+```{r echo=F}
 ggplot(data = track, aes(x=dist100, y=timeSecs)) + geom_abline(intercept = mod13$coefficients$random$country2[,1], slope = mod13$coefficients$random$country2[,2]) + scale_x_continuous(limits = c(0, 9900)) + scale_y_continuous(limits = c(-500, 500)) + ggtitle("Random Intercepts of Countries and Random Slopes for Distance by Country")
 ```
 
 
 
-### Discussion
+## Discussion
 ```
 A few paragraphs that:
   1. Begin with an accurate summary statement; describe how the results help answer your research        questions and what was most interesting from your analysis. In fact, the first paragraph of the      Discussion is very important – in professional journals, it is often the first and sometimes        the only paragraph that is read in a paper. After the first sentence highlights primary             results, the remainder of the first paragraph might compare your results to others in the           literature or include interesting secondary results.
@@ -200,12 +162,20 @@ A few paragraphs that:
   8. Do not include test statistics or p-values in this section. 
 ```
 
-In our attempt to predict an Olympic track athlete's finishing time, we found that when grouping the athletes by their country there are a number of significant predictors at both the athlete level and country level. As one would expect, at the athlete level we found that distance, BMI, year, and sex are all highly significant. Surprisingly, age was not a significant predictor of finishing time in the presence of the other explanatory variables. This could due to the constraints of our data as we only have information on the top three finishers for any particular event. Then, at the country level we found that GDP per capita was a significant predictor of finishing time in the presence of the other explanatory variables, however the nature of its effect is not what we expected. We fount that
+  In our attempt to predict an Olympic track athlete's finishing time, we found that when grouping the athletes by their country there are a number of significant predictors at both the athlete level and country level. As one would expect, at the athlete level we found that distance, BMI, year, and sex are all highly significant. Surprisingly, age was not a significant predictor of finishing time in the presence of the other explanatory variables. This could due to the constraints of our data as we only have information on the top three finishers for any particular event and year. Then, at the country level we found that GDP per capita was a significant predictor of finishing time in the presence of the other explanatory variables although the effect is different from what we expected. This is not what we expected because we thought the resources of a wealthier country and larger population would result in a deeper athlete pool and more specialized training which could be associated with faster times for all races. However, due to the significant interaction between distance and GDP per capita, we found that for the short distance events of 100m to 800m, athletes representing a low GDP per Capita country tends to result in a faster finishing time on average. For events longer than 800m athletes representing low GDP per Capita countries tend to have slower finishing times on average. It seems that a country's GDP per capita in a given year is associated with whether that country tends to perform better in short distance events or long distance events overall for that year. In a paper that addresses a similar topic, Xun Bian concludes that high GDP per capita countries tend to specialize less on particular events but do well over a broad range of events. Although this is in answer to a different research question (number of medals earned), it is interesting to compare the effect of GDP per capita on finishing time with their findings. A key difference between our studies is that Xun Bian analyzed all Olympic events whereas we studied just track events. 
+  
+** BRAINSTORMING **  
+  Confounding: Not every country competed every year, political events such as the cold war highlighting particular countries or events. Location of the event, economic structure of the country, 
+  
+  strengths: multilevel
+  
+  weaknesses: We only have medalists, it would be interesting to do this again with all athletes. 
+  
+  Suggestions: get all athletes, more quality of life metrics for countries, more country level variables, account for autocorrelation, events like marathon
 
 
 
-
-### Annotated Appendix
+## Annotated Appendix
 
 #### Handling Missing Data
 
@@ -269,19 +239,17 @@ Looking at the Residuals vs Fitted plot, we can see that we can see that there i
 
 Looking at the residual plots for the null model below, we can see that the residuals do not follow a linear trend about the zero line and they are not normally distributed. However, we can see that random intercepts is a reasonable assumption to make. This model can be treated as a baseline to compare more complex models to. Note that for this model, the AIC is 8796, BIC is 8809, and logLik is -4395.
 
-```{r}
+```{r echo = F}
 mod0 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
-summary(mod0)
 ```
 
 
 
-```{r results='asis'}
+```{r results='asis', echo=F}
 lmer_mod0 <- lmer(data = track, timeSecs ~ 1 + (1|country2))
 
-fit0 <- summ(lmer_mod0)
+fit0 <- summ(lmer_mod0, r.squared = F, re.variance = "var")
 fit0
-#fit0 %>% export_summs(error_format = "[{conf.low}, {conf.high}]", scale = T)
 ```
 
 ```{r echo=FALSE}
@@ -320,7 +288,7 @@ grid.arrange(m0.1, m0.2, m0.3, ncol = 2)
 ```
 
 
-##### Intermediate Model 1
+#### Intermediate Model 1
 
 This model includes the variables distance, BMI (centered), year (centered), sex, GDP (centered, in billions), and interactions between BMI and distance, sex and distance, and GDP and distance.  
   
@@ -337,8 +305,7 @@ mod9 <- lme(data = track,
 lmer_mod9 <- lmer(data = track, 
                   timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100 + (dist100|country2))
 
-fit9 <- summ(lmer_mod9)
-export_summs(fit9, scale = T)
+summ(lmer_mod9, r.squared = F, re.variance = "var")
 ```
 
 ```{r echo=FALSE}
@@ -396,15 +363,13 @@ mod10 <- lme(data = track,
             fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
               c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
-summary(mod10)
 ```
 
 ```{r message=FALSE, warning=FALSE, results='asis', echo=F}
 lmer_mod10 <- lmer(data = track, 
                   timeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
 
-fit10 <- summ(lmer_mod10, r.squared = F)
-export_summs(fit10, scale = T)
+summ(lmer_mod10, r.squared = F, re.variance = "var")
 ```
 
 
@@ -474,8 +439,15 @@ mod11 <- lme(data = track,
             fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
               sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
-summary(mod11)
 ```
+
+```{r message=FALSE, warning=FALSE, results='asis', echo=F}
+lmer_mod11 <- lmer(data = track, 
+                  logtimeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
+
+summ(lmer_mod11, r.squared = F, re.variance = "var")
+```
+
 
 ```{r echo=FALSE}
 mod11_diagnosics <- data.frame(fittedValues = fitted.values(mod11), residuals = residuals(mod11))
@@ -536,11 +508,17 @@ In this model, we attempted to improve on Intermediate Model 1 by factoring GDP 
   Looking now at the residual plots, it seems as if the assumptions of linearity and equal variance are in a similar as in Intermediate Model 1. The histograms for random slopes and random intercepts both appear to be good, so we can move forward with this model now.  
   
 
-```{r}
+```{r echo=F}
 mod12 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
             random = ~ dist100|country2)
-summary(mod12)
+```
+
+```{r message=FALSE, warning=FALSE, results='asis', echo=F}
+lmer_mod12 <- lmer(data = track, 
+                  timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100 + (dist100|country2))
+
+summ(lmer_mod12, r.squared = F, re.variance = "var")
 ```
 
 ```{r echo=FALSE}
