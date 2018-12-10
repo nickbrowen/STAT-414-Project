@@ -10,7 +10,7 @@ indent: yes
 ---
 
 ```{r echo=F}
-pacman::p_load(tidyverse, nlme, lme4, gridExtra, jtools, huxtable, pbkrtest)
+pacman::p_load(tidyverse, nlme, lme4, gridExtra, jtools, huxtable, pbkrtest, kableExtra)
 track <- read.csv("trackFinal.csv")
 set_summ_defaults(digits = 2)
 ```
@@ -52,31 +52,48 @@ Initially, a two level random intercepts model was fit predicting finishing time
   
 - 585 total observations (completed track events by a medaling athlete)
 - 410 total athletes
-    - 177 from the USA
-    - 54 from the UK
-    - 45 from Jamaica
-- 45 total countries 
+- 45 total countries
+
+```{r echo=F}
+table1 <- track %>% group_by(country2) %>% summarise(n = n()) %>% arrange(desc(n)) %>% filter(n > 15)
+colnames(table1) <- c("Country", "Number of Athletes")
+
+table1 %>% t() %>% kable() %>% kable_styling()
+```
+
   
   The following variables are used in our final model to predict `timeSecs`:
   
 - `dist100`: Distance of the event, subtracting 100 to make our intercept (the 100m Dash) meaningful
-    - 109 observations from 100m Dash
-    - 90 observations from 200m
-    - 85 observations from 400m
-    - 75 observations from 800m  
-    - 76 observations from 1500m
-    - 68 observations from 5000m 
-    - 74 observations from 10000m 
 - `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$  
 - `year1896`: Year of the event, centered at 1896 to make the intercept meaningful
 - `sex`: Sex of the athlete
-    - 413 male athletes
-    - 172 female athletes
 - `gdpPerCap_`: GDP per Capita of the country represented, where a GDP per Capita of greater than $10,000 is considered "high" 
 and a GDP per Capita of less than $10,000 is considered "low"
-    - 312 athletes from a low GDP per capita country
-    - 273 athletes from a high GDP per capita country
+
     
+
+
+```{r echo=F}
+table2 <- track %>% group_by(dist) %>% summarise(n=n()) 
+colnames(table2) <- c("Distance of Event", "Number of Observations")
+
+table2 %>% t() %>% kable() %>% kable_styling()
+```
+
+```{r echo=F}
+table3 <- track %>% group_by(gdpPerCap_) %>% summarise(n=n()) 
+colnames(table3) <- c("GDP/Capita of Country", "Number of Observations")
+
+table3 %>% t() %>% kable() %>% kable_styling()
+```
+
+```{r echo=F}
+table2 <- track %>% group_by(sex) %>% summarise(n=n()) 
+colnames(table2) <- c("Sex of Athlete", "Number of Observations")
+
+table2 %>% t() %>% kable() %>%kable_styling()
+```
 
 #### Final Model
 
@@ -258,19 +275,13 @@ Looking at the Residuals vs Fitted plot, we can see that we can see that there i
 
 ##### Null Model
 
-Looking at the residual plots for the null model below, we can see that the residuals do not follow a linear trend about the zero line and they are not normally distributed. However, we can see that random intercepts is a reasonable assumption to make. This model can be treated as a baseline to compare more complex models to. Note that for this model, the AIC is 8796, BIC is 8809, and logLik is -4395.
+Looking at the residual plots for the null model below, we can see that the residuals do not follow a linear trend about the zero line and they are not normally distributed. However, we can see that random intercepts is a reasonable assumption to make. This model can be treated as a baseline to compare more complex models to. Note that for this model, the AIC is 8796 and BIC is 8809.
 
-```{r echo = F}
+```{r results='asis', echo = F}
 mod0 <- lme(data = track, fixed = timeSecs ~ 1, random = ~1|country2)
-```
-
-
-
-```{r results='asis', echo=F}
 lmer_mod0 <- lmer(data = track, timeSecs ~ 1 + (1|country2))
 
-fit0 <- summ(lmer_mod0, r.squared = F, re.variance = "var")
-fit0
+summ(lmer_mod0, r.squared = F, re.variance = "var")
 ```
 
 ```{r echo=FALSE}
@@ -313,16 +324,13 @@ grid.arrange(m0.1, m0.2, m0.3, ncol = 2)
 
 This model includes the variables distance, BMI (centered), year (centered), sex, GDP (centered, in billions), and interactions between BMI and distance, sex and distance, and GDP and distance.  
   
-The AIC for this model is 5345, BIC is 5402, and logLik is -2660, which is a vast improvement over the null model. Also, our residual plots show that the assumptions are closer to being met with this model than the null model. The residual plots closely resemble those of the final model, although the histograms for random slopes and random intercepts are slightly more skewed.
+The AIC for this model is 5372 and BIC is 5429, which is a vast improvement over the null model. Also, our residual plots show that the assumptions are closer to being met with this model than the null model. The residual plots closely resemble those of the final model, although the histograms for random slopes and random intercepts are slightly more skewed.
 
-```{r echo=F}
+```{r echo=F, message=FALSE, warning=FALSE, results='asis'}
 mod9 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100,
             random = ~ dist100|country2)
-```
 
-
-```{r message=FALSE, warning=FALSE, results='asis', echo=F}
 lmer_mod9 <- lmer(data = track, 
                   timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*dist100 + (dist100|country2))
 
@@ -375,20 +383,19 @@ grid.arrange(m9.1, m9.2, m9.3, m9.4, ncol = 2)
 
 In an attempt to improve Intermediate Model 1, we did a log transformation on distance because the distance of events does not change in a linear fashion, but roughly exponentially (100m, 200m, 400m, 800m, 1500m, 5000m, etc). However, upon looking at the residual plots, we could see that this transformation introduced many violations of assumptions, namely linearity which we were trying to address. This also changed the distribution of random slopes and random intercepts so that they no longer resemble a normal distribution, but became heavily skewed. It is easily observable from the scatterplot of Time vs Distance below that the association between the two is not linear.   
   
-  We can't use AIC, BIC, or logLik to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
+  We can't use AIC or BIC to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
 
 
-
-```{r echo = F}
-mod10 <- lme(data = track, 
-            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + sex*logdist100 + 
-              c_gdpbillion + c_gdpbillion*logdist100,
-            random = ~ logdist100|country2)
-```
 
 ```{r message=FALSE, warning=FALSE, results='asis', echo=F}
+mod10 <- lme(data = track, 
+            fixed = timeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + sex + 
+              sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
+            random = ~ logdist100|country2)
+
 lmer_mod10 <- lmer(data = track, 
-                  timeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
+                  timeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + sex + 
+                    sex*dist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
 
 summ(lmer_mod10, r.squared = F, re.variance = "var")
 ```
@@ -426,7 +433,6 @@ m10.3 <- ggplot(data=ranef_mod10, aes(intercept)) +
 
 m10.4 <- ggplot(data=ranef_mod10, aes(dist100)) + 
   geom_histogram(bins = 15) + 
-  ggtitle("Random Slopes for mod9") +
   labs(subtitle = "Histogram of Random Slopes",
        x = element_blank(),
        y = element_blank()) +
@@ -451,20 +457,19 @@ With this model, we attempted to improve upon Intermediate Model 1 by including 
   
   Looking at the scatterplot of Log(Time) vs Log(Distance), it seems as though the association between these two variables is linear with this new transformation. However, when looking at the residual plots, we can see that linearity is in fact violated now.  
   
-  We can't use AIC, BIC, or logLik to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
+  We can't use AIC or BIC to assess the fit of this model relative to the previous models because of the log transformation, but judging from the residual plots this is not an improvement over Intermediate Model 1.
 
 
 
-```{r echo = F}
+```{r message=FALSE, warning=FALSE, results='asis', echo=F}
 mod11 <- lme(data = track, 
             fixed = logtimeSecs ~ logdist100 + c_BMI + c_BMI*logdist100 + year1896 + 
               sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100,
             random = ~ logdist100|country2)
-```
 
-```{r message=FALSE, warning=FALSE, results='asis', echo=F}
 lmer_mod11 <- lmer(data = track, 
-                  logtimeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
+                  logtimeSecs ~ logdist100 + c_BMI + c_BMI*dist100 + year1896 + 
+                    sex + sex*logdist100 + c_gdpbillion + c_gdpbillion*logdist100 + (logdist100|country2))
 
 summ(lmer_mod11, r.squared = F, re.variance = "var")
 ```
@@ -503,7 +508,6 @@ m11.3 <- ggplot(data=ranef_mod11, aes(intercept)) +
 
 m11.4 <- ggplot(data=ranef_mod11, aes(dist100)) + 
   geom_histogram(bins = 15) + 
-  ggtitle("Random Slopes for mod9") +
   labs(subtitle = "Histogram of Random Slopes",
        x = element_blank(),
        y = element_blank()) +
@@ -524,18 +528,16 @@ ggplot(track, aes(y=logtimeSecs, x = logdist100)) +
 
 #### Intermediate Model 4
 
-In this model, we attempted to improve on Intermediate Model 1 by factoring GDP into countries that have either `small`, `medium`, or `large` GDP with cutoffs at the 25th and 75th percentile of GDP. There are no transformations of variables in this model, so it is reasonable to compare this to Intermediate Model 1 with AIC, BIC, and logLik. For this model, the AIC is 5257, BIC is 5322, and logLik is -2614. Compared to Intermediate Model 1, this is an improvement!  
+In this model, we attempted to improve on Intermediate Model 1 by factoring GDP into countries that have either `small`, `medium`, or `large` GDP with cutoffs at the 25th and 75th percentile of GDP. There are no transformations of variables in this model, so it is reasonable to compare this to Intermediate Model 1 with AIC, BIC, and logLik. For this model, the AIC is 5260, BIC is 5322, and logLik is -2614. Compared to Intermediate Model 1, this is an improvement!  
   
   Looking now at the residual plots, it seems as if the assumptions of linearity and equal variance are in a similar as in Intermediate Model 1. The histograms for random slopes and random intercepts both appear to be good, so we can move forward with this model now.  
   
 
-```{r echo=F}
+```{r message=FALSE, warning=FALSE, results='asis', echo=F}
 mod12 <- lme(data = track, 
             fixed = timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100,
             random = ~ dist100|country2)
-```
 
-```{r message=FALSE, warning=FALSE, results='asis', echo=F}
 lmer_mod12 <- lmer(data = track, 
                   timeSecs ~ dist100 + c_BMI + c_BMI*dist100 + year1896 + sex + sex*dist100 + gdp_ + gdp_*dist100 + (dist100|country2))
 
@@ -575,7 +577,6 @@ m12.3 <- ggplot(data=ranef_mod12, aes(intercept)) +
 
 m12.4 <- ggplot(data=ranef_mod12, aes(dist100)) + 
   geom_histogram(bins = 15) + 
-  ggtitle("Random Slopes for mod12") +
   labs(subtitle = "Histogram of Random Slopes",
        x = element_blank(),
        y = element_blank()) +
@@ -587,7 +588,7 @@ grid.arrange(m12.1, m12.2, m12.3, m12.4, ncol = 2)
 
 #### Getting to the Final Model
 
-The difference between Intermediate Model 4 and our final model was that we chose to use a measure of GDP per Capita rather than just straight GDP as one of the predictor variables. This fixed our earlier issue with the multicollinearity between GDP and Population, as well as contributed more information to our model. Changing this variable decreased the AIC to 5142, BIC to 5194, and logLik increased to -2559. The residual plots did not change too much between models, so we decided to make this our final model as seen in the body of the report.
+The difference between Intermediate Model 4 and our final model was that we chose to use a measure of GDP per Capita rather than just straight GDP as one of the predictor variables. This fixed our earlier issue with the multicollinearity between GDP and Population, as well as contributed more information to our model. Changing this variable decreased the AIC to 5151 and the BIC to 5203. The residual plots did not change too much between models, so we decided to make this our final model as seen in the body of the report.
 
 
 
