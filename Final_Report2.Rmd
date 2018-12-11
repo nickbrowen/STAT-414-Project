@@ -1,5 +1,5 @@
 ---
-title: "Predicting Success for Olympic Track Athletes with a Multi-Level Model"
+title: "Predicting Success for Olympic Track Athletes with a Multilevel Model"
 author: "Nick Browen, Eric Ortiz"
 output:
   pdf_document: default
@@ -66,7 +66,7 @@ table1 %>% t() %>% kable() %>% kable_styling(position = "left")
   The following variables are used in our final model to predict `timeSecs`:
   
 - `dist100`: Distance of the event, subtracting 100 to make our intercept (the 100m Dash) meaningful
-- `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$  
+- `c_BMI`: Centered BMI of the athlete in $\text{meters}/\text{cm}^2$
 - `year1896`: Year of the event, centered at 1896 to make the intercept meaningful
 - `sex`: Sex of the athlete
 - `gdpPerCap_`: GDP per Capita of the country represented, where a GDP per Capita of greater than $10,000 is considered "high" 
@@ -133,107 +133,131 @@ lmer_mod13 <- lmer(data = track, timeSecs ~ dist100 + c_BMI + year1896 + sex + s
 summ(lmer_mod13, r.squared = F, re.variance = "var", digits =2, pvals =T)
 ```
 
-*Intercept*: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 21.68 seconds. 
+\pagebreak
   
-`dist100`: After adjusting for the year of the race and the BMI of the athlete, each 100-meter increase in the distance of a race is associated with a 16.26 second increase in a male athlete’s finishing time for athletes competing for a country with a high GDP per capita.
+- *Intercept*: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 21.68 seconds. 
   
-`c_BMI`: For an athlete competing for an average country, each $1 \frac{kg}{m^2}$ increase in an athlete’s BMI is associated with a 4.97 second slower finishing time after adjusting for the distance of the race, the year of the race, sex of the athlete, and GDP per capita of the country the athlete is competing for. 
-  
-`year1896`: After adjusting for the distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, every 4 years (every Summer Olympic Games) is associated with a 1.26 second decrease in the finishing times of races.
-  
-`sexW`: After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the country the athlete is competing for, a female athlete is predicted to have a 13.54 second slower finishing time than a male athlete for the 100-meter race.
-  
-`gdpPerCap_low`:  After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 17.11 second faster finishing time than an athlete competing for a country with a high GDP per capita for the 100-meter race.
-  
-`dist100:sexW`: After adjusting for the year of the race and the BMI of the athlete female athletes’ associated rate of increase in their finishing times per 100m increase of the race is 1.76 second higher than male athletes. \
- •	After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the     country the athlete is competing for, a female athlete is predicted to have a (13.54 +     
-0.02*dist100) second slower finishing time than a male athlete.
+- `dist100`: After adjusting for the year of the race and the BMI of the athlete, each 100-meter increase in the distance of a race is associated with a 16.26 second increase in a male athlete’s finishing time for athletes competing for a country with a high GDP per capita.
 
-`dist100:gdpPerCap_low`: After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 1.43 second higher rate of increase in their finishing times per 100m than an athlete competing for a country with a high GDP per capita. \
-  •	After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing 
-for a country with a low GDP per capita is predicted to have a (17.11 + 0.01*dist100) second 
+- `c_BMI`: For an athlete competing for an average country, each $1 \frac{kg}{m^2}$ increase in an athlete’s BMI is associated with a 4.97 second slower finishing time after adjusting for the distance of the race, the year of the race, sex of the athlete, and GDP per capita of the country the athlete is competing for. 
+
+- `year1896`: After adjusting for the distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, every 4 years (every Summer Olympic Games) is associated with a 1.26 second decrease in the finishing times of races.
+
+- `sexW`: After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the country the athlete is competing for, a female athlete is predicted to have a 13.54 second slower finishing time than a male athlete for the 100-meter race.
+
+- `gdpPerCap_low`:  After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 17.11 second faster finishing time than an athlete competing for a country with a high GDP per capita for the 100-meter race.
+ 
+- `dist100:sexW`: After adjusting for the year of the race and the BMI of the athlete female athletes’ associated rate of increase in their finishing times per 100m increase of the race is 1.76 second higher than male athletes. 
+    - After adjusting for the year of the race, the BMI of the athlete, and GDP per capita of the country the athlete is competing for, a female athlete is predicted to have a (13.54 + 0.02 $\times$ dist100) second slower finishing time than a male athlete. The plot below shows that the sex of the athlete has an effect on the association between distance of the race and finishing time.
+    
+\vspace{8pt}
+
+```{r echo=F, fig.asp=0.4}
+ggplot(track, aes(y=timeSecs, x = dist, color = sex)) +
+  geom_point(size = 0.5) +
+  geom_smooth(method = 'lm', size = 0.5) + 
+  labs(title = "Distance vs Time",
+       subtitle = "Interaction between Sex and Distance",
+       color = "Sex",
+       x = "Distance of Event",
+       y = "Time (Seconds)") +
+  theme(legend.position = "bottom") + 
+  scale_color_brewer(palette = "Dark2") +
+  theme_minimal()
+```
+
+\vspace{8pt}
+
+- `dist100:gdpPerCap_low`: After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing for a country with a low GDP per capita is predicted to have a 1.43 second higher rate of increase in their finishing times per 100m than an athlete competing for a country with a high GDP per capita.
+    - After adjusting for the year of the race, the sex, and BMI of the athlete, an athlete competing 
+for a country with a low GDP per capita is predicted to have a (17.11 + 0.01 $\times$ dist100) second 
 faster/slower finishing time compared to an athlete competing for a country with a high GDP per 
 capita.
+    - Looking at the plot below, we can see that this interaction is very subtle. We dive more into the interpretation and implications of this in the discussion section.
 
-$\hat{\sigma}_{u0}^2=460.78$: After adjusting for the BMI of an athlete, the standard deviation of countries’ predicted finishing time for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita is 21.47 seconds.
+\vspace{8pt}
 
-$\hat{\sigma}_{u1}^2 =0.0002$:  After adjusting for the year of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of countries’ rate of increase in finishing time per 100m is 1.28 seconds.
+```{r echo=F, fig.asp = 0.65}
+track <- track %>% mutate(
+  longdist = case_when(dist == 100 ~ "Short Distance",
+                       dist == 200 ~ "Short Distance",
+                       dist == 400 ~ "Short Distance",
+                       dist == 800 ~ "Short Distance",
+                       dist == 1500 ~ "Short Distance",
+                       TRUE ~ "Long Distance") %>% as.factor())
 
-$\hat{\sigma}^{2}=284.69$: After adjusting for the year and distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of athletes’ finishing time within a country is 16.87 seconds.
+ggplot(track, aes(y=timeSecs, x = dist, color = gdpPerCap_)) +
+  geom_point(size = 0.5) +
+  geom_smooth(method = "lm", se=F, size = 0.5) +
+  facet_wrap(~longdist, ncol=1, scales = "free") +
+  labs(title = "Time vs Distance",
+       subtitle = "Interaction between Distance and GDP per Capita",
+       x = "Distance of Event",
+       y = "Time (Seconds)",
+       color = "GDP per Capita") + 
+  theme(legend.position = "bottom") + 
+  scale_color_brewer(palette = "Dark2") +
+  theme_minimal()
+```
 
-$cov(u_{0j},u_{1j})=\hat{\tau}_{01}=-0.95*21.47*0.01276=-0.26$: (interpreting the negative sign on the covariance term): After adjusting for the BMI of an athlete, countries that have higher predicted finishing times for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita tend to have a lower rate of increase in finishing time per 100m increase of the race. \
-	• Countries with high intercepts don’t tend to slow down as much as the distance of the race 
-	  increases compared to countries with lower intercepts.
+\vspace{8pt}
 
-Although the estimate for the variance for the random slopes of distance (${\sigma}_{u1}^2$) is very small ($\hat{\sigma}_{u1}^2 =0.0002$), performing a log-likelihood ratio test to compare our final model to the same model without the random slopes produces $\chi^{2}=376.96$ with $df =2$, resulting in an extremely small p-value. In fact, including random slopes for distance reduces the within country variance by  53.44% ($\frac{284.69-611.51}{611.51}*100$).
+- $\hat{\sigma}_{u0}^2=460.78$: After adjusting for the BMI of an athlete, the standard deviation of countries’ predicted finishing time for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita is 21.47 seconds.
 
-Notably, all the parameter estimates discussed above are highly statistially significant, with the intercept having the smallest t-value equal to 3.77 (df = 102) corresponding to a p-value of 0.0001. The parameter estimate with the largest t-value belongs to `dist100` with a t-value of 67.49 (df = 36) interestingly followed by the interaction between `dist100` and `sex` with a smaller p-value and t-value equal to 28.45 (df = 542) and then the interaction between `dist100` and `gdpPerCap_` with a t-value equal t0 17.25 (df = 550), note that `lmer` package reports p-values using using Kenward-Roger standard errors and d.f. throught the `pbkrtest` package. 
+- $\hat{\sigma}_{u1}^2 =0.0002$:  After adjusting for the year of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of countries’ rate of increase in finishing time per 100m is 1.28 seconds. As evidenced by the plot below, there are differing slopes for distance vs time depending on the country the athlete is representing.
+  
+  Although the estimate for the variance for the random slopes of distance (${\sigma}_{u1}^2$) is very small ($\hat{\sigma}_{u1}^2 =0.0002$), performing a log-likelihood ratio test to compare our final model to the same model without the random slopes produces $\chi^{2}=376.96$ with $df =2$, resulting in an extremely small p-value. In fact, including random slopes for distance reduces the within country variance by  53.44% ($\frac{284.69-611.51}{611.51}*100$). Because there are a large range of values for distance, this small variance of just 0.0002 does make a contribution to our model in predicting finishing times.
 
+\vspace{8pt}
 
-
-```{r out.width="100%", echo=F}
+```{r fig.asp = 0.4, echo=F}
 ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
   geom_point(size = 0.5, position = "Jitter", show.legend = F) +
   geom_smooth(show.legend=F, se=F, size = 0.3, method = "lm") +
   labs(title = "Time in Seconds vs. Distance of Event",
        subtitle = "Grouped by Country of Athlete",
        y = "Time (Seconds)",
-       x = "Distance of Event (Meters)")
+       x = "Distance of Event (Meters)") + 
+  theme_minimal()
 ```
+\vspace{8pt}
 
-```{r echo=F}
+- $\hat{\sigma}^{2}=284.69$: After adjusting for the year and distance of the race, the BMI and sex of the athlete, and GDP per capita of the country the athlete is competing for, the standard deviation of athletes’ finishing time within a country is 16.87 seconds.
+
+- $cov(u_{0j},u_{1j})=\hat{\tau}_{01}=-0.95*21.47*0.01276=-0.26$: After adjusting for the BMI of an athlete, countries that have higher predicted finishing times for the 100-meter race in the year 1896 for a male athlete competing for a country with a high GDP per capita tend to have a lower rate of increase (i.e. don't slow down as fast) in finishing time per 100m increase of the race. This relationship can be seen in the graph below.
+
+\vspace{8pt}
+
+```{r echo=F, fig.asp=0.4}
 ggplot(data = track, aes(x=dist100, y=timeSecs)) + 
-  geom_abline(intercept = mod13$coefficients$random$country2[,1], slope = mod13$coefficients$random$country2[,2]) + 
+  geom_abline(intercept = mod13$coefficients$random$country2[,1], 
+              slope = mod13$coefficients$random$country2[,2], 
+              alpha=0.3) + 
   scale_x_continuous(limits = c(0, 9900)) + 
   scale_y_continuous(limits = c(-500, 500)) + 
-  ggtitle("Random Intercepts of Countries and Random Slopes for Distance by Country")
+  labs(title = "Random Intercepts and Random Slopes",
+       subtitle = "For Countries and Event Distances",
+       x = "Distance of Event",
+       y = "Time (Seconds)")
 ```
 
+\vspace{8pt}
+
+Notably, all the parameter estimates discussed above are highly statistically significant, with the intercept having the smallest t-value equal to 3.77 (df = 102) corresponding to a p-value of 0.0001. The parameter estimate with the largest t-value belongs to `dist100` with a t-value of 67.49 (df = 36) interestingly followed by the interaction between `dist100` and `sex` with a smaller p-value and t-value equal to 28.45 (df = 542) and then the interaction between `dist100` and `gdpPerCap_` with a t-value equal t0 17.25 (df = 550), note that `lmer` package reports p-values using using Kenward-Roger standard errors and d.f. through the `pbkrtest` package. 
 
 
-
-
-```{r echo=F, fig.asp = 1.2, fig.height=6}
-ggplot(track, aes(y=timeSecs, x = BMI, color = sex)) +
-  geom_point(size = 0.5) +
-  geom_smooth(method = "lm", se=F, size = 0.5) +
-  facet_wrap(~dist, ncol=1, scales = "free_y")
-```
 
 ## Discussion
-```
-A few paragraphs that:
-  1. Begin with an accurate summary statement; describe how the results help answer your research        questions and what was most interesting from your analysis. In fact, the first paragraph of the      Discussion is very important – in professional journals, it is often the first and sometimes        the only paragraph that is read in a paper. After the first sentence highlights primary             results, the remainder of the first paragraph might compare your results to others in the           literature or include interesting secondary results.
-  2. Discuss possible implications of the results in the context of the research question.
-  3. Make a statement regarding potential confounding variables in your study.
-  4. Make a statement about the generalizability of your results. Don’t give generic statements of       possible causation and generalizability, but thoughtfully discuss relevant issues – confounding      variables, representativeness of the sample, etc.
-  5. Identify any limitations of your study. Discuss the potential impact of such limitations on the
-     conclusions.
-  6. Identify strengths and weaknesses of your analysis.
-  7. Make suggestions for future research. Identify important next steps that a researcher could         take to build on your work.
-  8. Do not include test statistics or p-values in this section. 
-```
-
-  In our attempt to predict an Olympic track athlete's finishing time, we found that when grouping the athletes by their country there are a number of significant predictors at both the athlete level and country level. As one would expect, at the athlete level we found that distance, BMI, year, and sex are all highly significant. Surprisingly, age was not a significant predictor of finishing time in the presence of the other explanatory variables. This could due to the constraints of our data as we only have information on the top three finishers for any particular event and year. Then, at the country level we found that GDP per capita was a significant predictor of finishing time in the presence of the other explanatory variables although the effect is different from what we expected. This is not what we expected because we thought the resources of a wealthier country and larger population would result in a deeper athlete pool and more specialized training which could be associated with faster times for all races. However, due to the significant interaction between distance and GDP per capita, we found that for the short distance events of 100m to 800m, athletes representing a low GDP per capita country tend to have faster finishing times on average compared to athletes representing a high GDP per capita country. For events longer than 800m, athletes representing high GDP per Capita countries tend to have faster finishing times on average. It seems that a country's GDP per capita in a given year is associated with whether that country tends to perform better in short distance events or long distance events overall for that year. In a paper that addresses a similar topic, Xun Bian concludes that high GDP per capita countries tend to specialize less on particular events but do well over a broad range of events. Although this is in answer to a different research question (a country's number of medals earned), it is interesting to compare the effect of GDP per capita on finishing time across different track events with their findings. A key difference between our studies is that Xun Bian analyzed all Olympic events whereas we studied just track events. 
-  Also mentioned in Xun Bian's study, the economic structure of the country (capitalist or communist) played a significant role in a country's medal count. As we did not distinguish countries by their economic structure, this could be a confounding variable in the effect of GDP per capita and the variation between countries. Furthermore, the number of athletes a country sends to the Olympics as a part of their Olympic team varies greatly between countries and could affect their performance overall. As touched on earlier, the data we used only includes the top three athletes from each event. The results of this study can only be generalized to Olympic medaling athletes in (non-hurdle, non-relay) running track events. 
-  The multilevel model that we employed to address our reseach question allowed us to investigate both athlete level and country level characteristics and study the variability in finishing times at each of these levels. We found after adjusting for our explanatory variables, 61.81% of the variation in athlete's finishing times was due to variation between countries. Many of the suggested extensions of this study involve attempting to account for that variability. It would be beneficial to use data that include every athlete's finishing time, not only the medaling athletes. This would provide much more information about each country, as many countries in our current dataset only have less than athletes representing them. Moreover, an addition of country level variables would be useful in accounting for more country-level variation such as metrics of quality of life. Another extension would be including an autoregressive error structure to account for the use of years as an explanatory variable.
+  In our attempt to predict an Olympic track athlete's finishing time, we found that when grouping the athletes by their country there are a number of significant predictors at both the athlete level and country level. As one would expect, at the athlete level we found that distance, BMI, year, and sex are all highly significant. Surprisingly, age was not a significant predictor of finishing time in the presence of the other explanatory variables. This could due to the constraints of our data as we only have information on the top three finishers for any particular event and year. Then, at the country level we found that GDP per capita was a significant predictor of finishing time in the presence of the other explanatory variables although the effect is different from what we expected. This is not what we expected because we thought the resources of a wealthier country and larger population would result in a deeper athlete pool and more specialized training which could be associated with faster times for all races. However, due to the significant interaction between distance and GDP per capita, we found that for the short distance events of 100m to 800m, athletes representing a low GDP per capita country tend to have faster finishing times on average compared to athletes representing a high GDP per capita country. For events longer than 800m, athletes representing high GDP per Capita countries tend to have faster finishing times on average. It seems that a country's GDP per capita in a given year is associated with whether that country tends to perform better in short distance events or long distance events overall for that year. In a paper that addresses a similar topic, Xun Bian concludes that high GDP per capita countries tend to specialize less on particular events but do well over a broad range of events. Although this is in answer to a different research question (a country's number of medals earned), it is interesting to compare the effect of GDP per capita on finishing time across different track events with their findings. A key difference between our studies is that Xun Bian analyzed all Olympic events whereas we studied just track events.  
   
+  Also mentioned in Xun Bian's study, the economic structure of the country (capitalist or communist) played a significant role in a country's medal count. As we did not distinguish countries by their economic structure, this could be a confounding variable in the effect of GDP per capita and the variation between countries. Furthermore, the number of athletes a country sends to the Olympics as a part of their Olympic team varies greatly between countries and could affect their performance overall. As touched on earlier, the data we used only includes the top three athletes from each event. The results of this study can only be generalized to Olympic medaling athletes in (non-hurdle, non-relay) running track events.  
   
+  The multilevel model that we employed to address our research question allowed us to investigate both athlete level and country level characteristics and study the variability in finishing times at each of these levels. We found after adjusting for our explanatory variables, 61.81% of the variation in athlete's finishing times was due to variation between countries. Many of the suggested extensions of this study involve attempting to account for that variability. It would be beneficial to use data that include every athlete's finishing time, not only the medaling athletes. This would provide much more information about each country, as many countries in our current data set only have less than athletes representing them. Moreover, an addition of country level variables would be useful in accounting for more country-level variation such as metrics of quality of life. Another extension would be including an auto regressive error structure to account for the use of years as an explanatory variable.
   
-** BRAINSTORMING **  
-  Confounding: Not every country competed every year, political events such as the cold war highlighting particular countries or events. Location of the event, economic structure of the country, the number of athletes a country sends to the Olympics
-  "Similarly, don’t overuse the term “confounding.”  There will always be other variables, but they are not confounding unless they work differently between your treatment groups (e.g., cold weather and holiday season – two things change at a time).  Remember bias describes a potential problem when we want our sample to represent the population and confounding describes a potential problem with dissimilar treatment groups."
-  
-  strengths: multilevel
-  
-  weaknesses: We only have medalists, it would be interesting to do this again with all athletes, odd nesting (weird level 1 unit of an "athlete's race") 
-  
-  Suggestions: get all athletes, more quality of life metrics for countries, more country level variables, account for autocorrelation, events like marathon
-
-
-
 
 \pagebreak
+
+
 ## Annotated Appendix
 
 #### Handling Missing Data
@@ -247,6 +271,9 @@ Since we did our own merging in order to compile data at both the athlete level 
 Because this data consisted of only the athletes that earned medals, all their track times were fairly similar and we did not come into any many outliers with respect to Time. The one place that did have outliers was GDP and Population, particularly when looking at China and India. We also noticed that these two variables were highly multicollinear. To take care of these two problems, we included a variable in our model, GDP per Capita. We chose to treat this as categorical and recoded the values to be either `low` or `high`, depending on whether the GDP per capita was above or below $10,000.
 
 #### Residual Plots for Final Model
+
+\vspace{8pt}
+
 ```{r echo=FALSE}
 mod13_diagnosics <- data.frame(fittedValues = fitted.values(mod13), residuals = residuals(mod13))
 m13.1 <- ggplot(mod13_diagnosics, aes(x=fittedValues, y=residuals)) + 
@@ -549,7 +576,7 @@ ggplot(track, aes(y=logtimeSecs, x = logdist100)) +
 
 #### Intermediate Model 4
 
-In this model, we attempted to improve on Intermediate Model 1 by factoring GDP into countries that have either `small`, `medium`, or `large` GDP with cutoffs at the 25th and 75th percentile of GDP. There are no transformations of variables in this model, so it is reasonable to compare this to Intermediate Model 1 with AIC, BIC, and logLik. For this model, the AIC is 5260, BIC is 5322, and logLik is -2614. Compared to Intermediate Model 1, this is an improvement!  
+In this model, we attempted to improve on Intermediate Model 1 by factoring GDP into countries that have either `small`, `medium`, or `large` GDP with cutoffs at the 25th and 75th percentile of GDP. There are no transformations of variables in this model, so it is reasonable to compare this to Intermediate Model 1 with AIC and BIC. For this model, the AIC is 5260 and the BIC is 5325. Compared to Intermediate Model 1, this is an improvement!  
   
   Looking now at the residual plots, it seems as if the assumptions of linearity and equal variance are in a similar as in Intermediate Model 1. The histograms for random slopes and random intercepts both appear to be good, so we can move forward with this model now.  
   
