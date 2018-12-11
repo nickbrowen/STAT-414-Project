@@ -53,14 +53,15 @@ Initially, a two level random intercepts model was fit predicting finishing time
 - 585 total observations (completed track events by a medaling athlete)
 - 410 total athletes
 - 45 total countries
-
+  
+\vspace{12pt}
 ```{r echo=F}
-table1 <- track %>% group_by(country2) %>% summarise(n = n()) %>% arrange(desc(n)) %>% filter(n > 15)
+table1 <- track %>% group_by(country2) %>% summarise(n = n()) %>% arrange(desc(n)) %>% filter(n > 30)
 colnames(table1) <- c("Country", "Number of Athletes")
 
-table1 %>% t() %>% kable() %>% kable_styling()
+table1 %>% t() %>% kable() %>% kable_styling(position = "left")
 ```
-
+\vspace{12pt}
   
   The following variables are used in our final model to predict `timeSecs`:
   
@@ -73,41 +74,46 @@ and a GDP per Capita of less than $10,000 is considered "low"
 
     
 
-
+\vspace{12pt}
 ```{r echo=F}
 table2 <- track %>% group_by(dist) %>% summarise(n=n()) 
 colnames(table2) <- c("Distance of Event", "Number of Observations")
 
-table2 %>% t() %>% kable() %>% kable_styling()
+table2 %>% t() %>% kable() %>% kable_styling(position = "left")
 ```
-
+\vspace{12pt}
 ```{r echo=F}
 table3 <- track %>% group_by(gdpPerCap_) %>% summarise(n=n()) 
 colnames(table3) <- c("GDP/Capita of Country", "Number of Observations")
 
-table3 %>% t() %>% kable() %>% kable_styling()
+table3 %>% t() %>% kable() %>% kable_styling(position = "left")
 ```
-
+\vspace{12pt}
 ```{r echo=F}
 table2 <- track %>% group_by(sex) %>% summarise(n=n()) 
 colnames(table2) <- c("Sex of Athlete", "Number of Observations")
 
-table2 %>% t() %>% kable() %>%kable_styling()
+table2 %>% t() %>% kable() %>%kable_styling(position = "left")
 ```
+\pagebreak
 
 #### Final Model
 
-Level 1 Equation: $FinishingTime_{ij}=\beta_{0j} + \beta_{1j}(dist100_{ij})+\beta_{1}(cBMI_{ij}) +\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij}) + \epsilon_{ij}$ \
+##### Level 1 Equation: 
+$$FinishingTime_{ij}=\beta_{0j} + \beta_{1j}(dist100_{ij})+\beta_{1}(cBMI_{ij}) $$ $$+\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij}) + \epsilon_{ij}$$
 
-Level 2 Equation: $\beta_{0j}=\beta_{00}+\beta_{01}(gdpPerCap_{ij})+u_{0j}$
-$\beta_{1j}=\beta_{10}+\beta_{11}(gdpPerCap_{ij})+u_{1j}$ \
+##### Level 2 Equation: 
+$$\beta_{0j}=\beta_{00}+\beta_{01}(gdpPerCap_{ij})+u_{0j}$$
+$$\beta_{1j}=\beta_{10}+\beta_{11}(gdpPerCap_{ij})+u_{1j}$$
 
-$\epsilon \sim N(0,\sigma^{2})$ 
-$u_{0j} \sim N(0,\sigma_{u0}^{2})$
-$u_{1j} \sim N(0,\sigma_{u1}^{2})$
-$cov(u_{0j},u_{1j}) = \tau_{01}$ \
+$$\epsilon \sim N(0,\sigma^{2})$$
+$$u_{0j} \sim N(0,\sigma_{u0}^{2})$$
+$$u_{1j} \sim N(0,\sigma_{u1}^{2})$$
+$$cov(u_{0j},u_{1j}) = \tau_{01}$$
 
-Composite Equation: $FinishingTime_{ij}= \beta_{00}+\beta_{10}(dist100_{ij})+\beta_{01}(gdpPerCap_{ij})+\beta{11}(gdpPerCap_{j}*dist100_{ij}) +\beta_{1}(cBMI_{ij}) +\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij})+u_{0j}+u_{1j}(dist100_{ij})+ \epsilon_{ij}$
+##### Composite Equation:
+$$FinishingTime_{ij}= \beta_{00}+\beta_{10}(dist100_{ij})+\beta_{01}(gdpPerCap_{ij})+\beta_{11}(gdpPerCap_{j}*dist100_{ij}) +\beta_{1}(cBMI_{ij}) $$ 
+$$+\beta_{2}(year1896_{ij})+\beta_{3}(sex_{ij})+\beta_{4}(sex_{ij}*dist100_{ij})+u_{0j}+u_{1j}(dist100_{ij})+ \epsilon_{ij}$$
 
 ##### Parameter Estimates
 
@@ -176,10 +182,23 @@ ggplot(track, aes(y=timeSecs, x=dist, color = country2)) +
 ```
 
 ```{r echo=F}
-ggplot(data = track, aes(x=dist100, y=timeSecs)) + geom_abline(intercept = mod13$coefficients$random$country2[,1], slope = mod13$coefficients$random$country2[,2]) + scale_x_continuous(limits = c(0, 9900)) + scale_y_continuous(limits = c(-500, 500)) + ggtitle("Random Intercepts of Countries and Random Slopes for Distance by Country")
+ggplot(data = track, aes(x=dist100, y=timeSecs)) + 
+  geom_abline(intercept = mod13$coefficients$random$country2[,1], slope = mod13$coefficients$random$country2[,2]) + 
+  scale_x_continuous(limits = c(0, 9900)) + 
+  scale_y_continuous(limits = c(-500, 500)) + 
+  ggtitle("Random Intercepts of Countries and Random Slopes for Distance by Country")
 ```
 
 
+
+
+
+```{r echo=F, fig.asp = 1.2, fig.height=6}
+ggplot(track, aes(y=timeSecs, x = BMI, color = sex)) +
+  geom_point(size = 0.5) +
+  geom_smooth(method = "lm", se=F, size = 0.5) +
+  facet_wrap(~dist, ncol=1, scales = "free_y")
+```
 
 ## Discussion
 ```
@@ -213,6 +232,8 @@ A few paragraphs that:
 
 
 
+
+\pagebreak
 ## Annotated Appendix
 
 #### Handling Missing Data
