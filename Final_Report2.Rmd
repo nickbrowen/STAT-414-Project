@@ -130,7 +130,7 @@ lmer_mod13 <- lmer(data = track, timeSecs ~ dist100 + c_BMI + year1896 + sex + s
 
 
 ```{r results="asis", echo=F}
-summ(lmer_mod13, r.squared = F, re.variance = "var", digits = 4, pvals =T)
+summ(lmer_mod13, r.squared = F, re.variance = "var", digits =2, pvals =T)
 ```
 
 *Intercept*: The predicted finishing time for the 100-meter race in the year 1896 for a male athlete with an average BMI in a country with a high GDP per capita is 21.68 seconds. 
